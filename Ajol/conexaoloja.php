@@ -1,7 +1,7 @@
 <?php
 
 $bd = 'ajol';
-$host = '10.37.46.23';
+$host = '10.37.46.58';
 $user = 'root';
 $pass = '';
 
