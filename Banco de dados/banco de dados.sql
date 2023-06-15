@@ -1,5 +1,6 @@
-create database loja
-use loja
+create database ajol;
+use ajol;
+
 create table usuario
 (
 id_usuario	int	not null	auto_increment primary key,
