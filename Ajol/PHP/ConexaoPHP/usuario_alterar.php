@@ -1,5 +1,5 @@
 <?php 
-    include_once('../ConexaoPHP/conexao.php')
+    include_once('../ConexaoPHP/conexao.php');
     
     if($_POST)
     {
@@ -15,6 +15,7 @@
         $numero = $_POST['txtNumero'];
         $complemento = $_POST['txtComplemento'];
         $cep = $_POST['txtCep'];
+        $email = $_POST['txtEmail'];
         $obs = $_POST['txtObs']; 
         $status = $_POST['txtStatus'];
 
@@ -43,6 +44,7 @@
                     numero_usuario=:numero_usuario,
                     compl_usuario=:compl_usuario,
                     cep_usuario=:cep_usuario,
+                    email_usuario=:email_usuario,
                     obs_usuario=:obs_usuario,
                     status_usuario=:status_usuario
                 where id_usuario=:id_usuario
@@ -62,6 +64,7 @@
                 ':numero_usuario'=>$numero,
                 ':compl_usuario'=>$complemento,
                 ':cep_usuario'=>$cep,
+                ':email_usuario'=>$email,
                 ':obs_usuario'=>$obs,
                 ':status_usuario'=>$status
 
