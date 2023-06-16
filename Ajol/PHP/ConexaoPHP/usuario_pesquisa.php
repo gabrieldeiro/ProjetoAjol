@@ -1,5 +1,5 @@
 <?php
-    include_once('conexaoloja.php')
+    include_once('../ConexaoPHP/conexaoloja.php');
 
     $idUsuario = '';
     $nomeUsuario = '';

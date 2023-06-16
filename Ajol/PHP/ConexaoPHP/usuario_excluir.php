@@ -1,5 +1,5 @@
 <?php
-    include_once('conexaoloja.php');
+    include_once('../ConexaoPHP/conexaoloja.php');
 
     if($_POST)
     {
@@ -25,7 +25,7 @@
     }
     else
     {
-        header('Locatiom:##') //Link de direcionamento para a tela dps do cadastro
+        header('Locatiom:##'); //Link de direcionamento para a tela dps do cadastro
     }
 
 ?>

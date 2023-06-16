@@ -1,14 +1,15 @@
 <?php 
-    include_once('conexaoloja.php')
+    include_once('../ConexaoPHP/conexaoloja.php');
     
     if($_POST)
     {
+        $id =$_POST['txtId'];
         $nome = $_POST['txtNome'];
         $login = $_POST['txtLogin'];
         $senha = $_POST['txtSenha'];
         $cpf = $_POST['txtCpf'];
         $datanascimento = $_POST['txtNascimento'];
-        $img = '';
+        $img = $_FILES['txtImg']['name'];
         $endereco = $_POST['txtEndereco'];
         $bairro = $_POST['txtBairro'];
         $numero = $_POST['txtNumero'];
@@ -25,47 +26,31 @@
             }
             else
             {
-                echo 'Erro, a imagem deve ser enviada';
-                return;
+                $img = '';
             }
 
+
             $sql = $conn->prepare("
-                insert into usuario
-                (
-                    nome_usuario,
-                    login_usuario,
-                    senha_usuario,
-                    cpf_usuario,
-                    data_nasc_usuario,
-                    img_usuario,
-                    endereco_usuario,
-                    bairro_usuario,
-                    numero_usuario,
-                    compl_usuario,
-                    cep_usuario,
-                    obs_usuario,
-                    status_usuario
-                )
-                values
-                (
-                    :nome_usuario,
-                    :login_usuario,
-                    :senha_usuario,
-                    :cpf_usuario,
-                    :data_nasc_usuario,
-                    :img_usuario,
-                    :endereco_usuario
-                    :bairro_usuario,
-                    :numero_usuario,
-                    :compl_usuario,
-                    :cep_usuario,
-                    :obs_usuario,
-                    :status_usuario
-                )
+                update usuario set
+                    nome_usuario=:nome_usuario,
+                    login_usuario=:login_usuario,
+                    senha_usuario=:senha_usuario,
+                    cpf_usuario=:cpf_usuario,
+                    data_nasc_usuario=:data_nasc_usuario,
+                    img_usuario=:img_usuario,
+                    endereco_usuario=:endereco_usuario,
+                    bairro_usuario=:bairro_usuario,
+                    numero_usuario=:numero_usuario,
+                    compl_usuario=:compl_usuario,
+                    cep_usuario=:cep_usuario,
+                    obs_usuario=:obs_usuario,
+                    status_usuario=:status_usuario
+                where id_usuario=:id_usuario
 
             ");
             
             $sql ->execute(array(
+                ':id_usuario'=>$id,
                 ':nome_usuario'=>$nome,
                 ':login_usuario'=>$login,
                 ':senha_usuario'=>$senha,
@@ -84,12 +69,10 @@
 
             if($sql->rowCount()>=1)
             {
-                echo '<p>Dados cadastrados com sucesso!</p>';
-                echo '<p>ID Gerado: ' .$conn->lastInsertId(). '</p>';
+                echo '<p>Dados alterados com sucesso!</p>';
 
-                $pasta = 'img/'.$conn->lastInsertId().'/';
-
-                if(!file_exists($pasta))
+                $pasta = 'img/'.$id.'/';
+                if (!file_exists($pasta))
                 {
                     mkdir($pasta);
                 }
@@ -99,14 +82,15 @@
                 move_uploaded_file($img['tmp_name'],$foto);
             }
 
-        } catch (PDOException $ex) {
+        } catch (PDOException $ex) 
+        {
             echo $ex->getMessage();
         }
 
     }
     else
     {
-        header('Locatiom:##') //Link de direcionamento para a tela dps do cadastro
+        header('Location:##'); //Link de direcionamento para a tela dps do cadastro
     }
 
 ?>

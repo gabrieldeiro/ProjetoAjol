@@ -6,8 +6,9 @@ $loginusuariologin = '';
 
 session_start();
 
-if ($_SESSION) {
-    if (isset($_SESSION['id_usuario']) && isset($_SESSION['login_usuario']) && isset($_SESSION['senha_usuario']) ))
+if ($_SESSION) 
+{
+    if (isset($_SESSION['id_usuario']) && isset($_SESSION['login_usuario']) && isset($_SESSION['senha_usuario']) )
     // dados sql
     {
         $idusuariologin = $_SESSION['id_usuario'];

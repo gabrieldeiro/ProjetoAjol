@@ -9,7 +9,7 @@
 </head>
 <body>
     <?php
-    include_once ('conexaoloja.php');
+    include_once('../ConexaoPHP/conexaoloja.php');
 
     try {
         $sql = $conn->query('select * from usuario');
