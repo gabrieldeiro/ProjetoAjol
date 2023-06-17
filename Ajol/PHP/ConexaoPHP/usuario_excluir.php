@@ -1,9 +1,5 @@
 <?php
-<<<<<<<< HEAD:Ajol/PHP/ConexaoPHP/usuario_excluir.php
-    include_once('../ConexaoPHP/conexaoloja.php');
-========
-    include_once('../ConexaoPHP/conexao.php');
->>>>>>>> ab480fe045266483f159a3ddd213f531a5115177:Ajol/PHP/TelasPHP/usuario_excluir.php
+    include_once('conexao.php');
 
     if($_POST)
     {
@@ -29,7 +25,7 @@
     }
     else
     {
-        header('Locatiom:##'); //Link de direcionamento para a tela dps do cadastro
+        header('Location:##'); //Link de direcionamento para a tela dps do cadastro
     }
 
 ?>

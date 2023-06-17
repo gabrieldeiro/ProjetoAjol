@@ -1,9 +1,6 @@
 <?php
-<<<<<<<< HEAD:Ajol/PHP/ConexaoPHP/usuario_pesquisa.php
-    include_once('../ConexaoPHP/conexaoloja.php');
-========
-    include_once('../ConexaoPHP/conexao.php')
->>>>>>>> ab480fe045266483f159a3ddd213f531a5115177:Ajol/PHP/TelasPHP/usuario_pesquisa.php
+    include_once('conexao.php');
+
 
     $idUsuario = '';
     $nomeUsuario = '';
@@ -17,6 +14,7 @@
     $numeroUsuario = '';
     $complementoUsuario = '';
     $cepUsuario = '';
+    $emailUsuario = '';
     $obsUsuario = '';
     $statusUsuario = '';
 
@@ -42,6 +40,7 @@
                 $numeroUsuario=$row[7];
                 $complementoUsuario=$row[8];
                 $cepUsuario=$row[10];
+                $emailUsuario=$row[13];
                 $obsUsuario=$row[11];
                 $statusUsuario=$row[12];
 

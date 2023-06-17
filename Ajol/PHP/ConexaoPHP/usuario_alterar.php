@@ -1,9 +1,5 @@
 <?php 
-<<<<<<<< HEAD:Ajol/PHP/ConexaoPHP/usuario_alterar.php
-    include_once('../ConexaoPHP/conexaoloja.php');
-========
-    include_once('../ConexaoPHP/conexao.php')
->>>>>>>> ab480fe045266483f159a3ddd213f531a5115177:Ajol/PHP/TelasPHP/usuario_alterar.php
+    include_once('conexao.php');
     
     if($_POST)
     {
@@ -19,6 +15,7 @@
         $numero = $_POST['txtNumero'];
         $complemento = $_POST['txtComplemento'];
         $cep = $_POST['txtCep'];
+        $email = $_POST['txtEmail'];
         $obs = $_POST['txtObs']; 
         $status = $_POST['txtStatus'];
 
@@ -47,6 +44,7 @@
                     numero_usuario=:numero_usuario,
                     compl_usuario=:compl_usuario,
                     cep_usuario=:cep_usuario,
+                    email_usuario=:email_usuario,
                     obs_usuario=:obs_usuario,
                     status_usuario=:status_usuario
                 where id_usuario=:id_usuario
@@ -66,6 +64,7 @@
                 ':numero_usuario'=>$numero,
                 ':compl_usuario'=>$complemento,
                 ':cep_usuario'=>$cep,
+                ':email_usuario'=>$email,
                 ':obs_usuario'=>$obs,
                 ':status_usuario'=>$status
 
@@ -75,7 +74,7 @@
             {
                 echo '<p>Dados alterados com sucesso!</p>';
 
-                $pasta = 'img/'.$id.'/';
+                $pasta = 'img/usu/'.$id.'/';
                 if (!file_exists($pasta))
                 {
                     mkdir($pasta);
