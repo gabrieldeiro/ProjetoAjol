@@ -1,5 +1,5 @@
 <?php 
-    include_once('../ConexaoPHP/conexao.php');
+    include_once('conexao.php');
     
     if($_POST)
     {
@@ -74,7 +74,7 @@
             {
                 echo '<p>Dados alterados com sucesso!</p>';
 
-                $pasta = 'img/'.$id.'/';
+                $pasta = 'img/usu/'.$id.'/';
                 if (!file_exists($pasta))
                 {
                     mkdir($pasta);

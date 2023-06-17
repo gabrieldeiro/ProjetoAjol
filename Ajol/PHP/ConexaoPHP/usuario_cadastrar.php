@@ -1,5 +1,5 @@
 <?php 
-    include_once('../ConexaoPHP/conexao.php');
+    include_once('conexao.php');
     
     if($_POST)
     {
@@ -48,7 +48,7 @@
                     obs_usuario,
                     status_usuario
                 )
-                values
+                value
                 (
                     :nome_usuario,
                     :login_usuario,
@@ -91,7 +91,7 @@
                 echo '<p>Dados cadastrados com sucesso!</p>';
                 echo '<p>ID Gerado: ' .$conn->lastInsertId(). '</p>';
 
-                $pasta = 'img/'.$conn->lastInsertId().'/';
+                $pasta = 'img/usu/'.$conn->lastInsertId().'/';
 
                 if(!file_exists($pasta))
                 {

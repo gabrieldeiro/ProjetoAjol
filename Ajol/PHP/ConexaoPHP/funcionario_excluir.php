@@ -3,23 +3,22 @@
 
     if($_POST)
     {
-        $id = $_POST['txtId'];
+        $id=$_POST['txtId'];
 
         try 
         {
-            $sql = $conn->prepare("
-                delete from categoria where id_categoria=:id_categoria
+            $sql=$conn->prepare("
+                delete from funcionario where id_funcionario=:id_funcionario
             ");
 
             $sql->execute(array(
-                ':id_categoria'=> $id
+                ':id_funcionario'=>$id
             ));
 
-            if($sql->rowCount()>= 1)
+            if ($sql->rowCount()>=1)
             {
-                echo '<p>Dados excluidos com sucesso!</p>';
+                echo '<p>Dados Excluidos com sucesso!</p>';
             }
-            
 
         } catch (PDOException $ex) {
             echo $ex->getMessage();
