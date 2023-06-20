@@ -11,13 +11,13 @@
 </head>
 
 <body>
-    <form action="" method="post" class="form-control">
+    <form action="" method="post" class="form-control " style="background-color: darkgray;">
         <div class="row mt-3 ">
             <div class="col-sm-6">Nome do Produto
                 <input type="text" class="form-control" style="border-radius: 25px;" name="txtNome" id="txtNome">
             </div>
             <div class="col-sm-3 mt-4">
-                <input type="date" class="form-control" style="border-radius: 25px;" name="txtCadastro" id="txtCadastro">
+                <input type="date" class="form-control" style="border-radius: 25px;" name="txtCadastro" id="txtCadastro" hidden>
             </div>
             <div class="col-sm-2"> ID do Produto
                 <input type="number" class="form-control" style="border-radius: 25px;" name="txtID" min="0">
@@ -58,40 +58,36 @@
             </div>
         </div>
         <div class="row mt-3 ">
-            <div class="col-sm-5">
-                <input type="file" class="btn btn-primary btn-lg btn-block">
+            <div class="col-sm-4">
+                <input type="file" class="btn btn-primary btn-lg btn-block" name="image[]" multiple="multiple"></label>
             </div>
         </div>
-                        <div class="row mt-3 float-sm-end">
-                            <div class="col-sm-3">Altura (cm)
-                                <input type="text" class="form-control" style="border-radius: 25px;" name="txtNome" id="txtNome">
-                            </div>
-                            <div class="col-sm-3">Largura (cm)
-                                <input type="text" class="form-control" style="border-radius: 25px;" name="txtNome" id="txtNome">
-                            </div>
-                            <div class="col-sm-3">Comprimento (cm)
-                                <input type="text" class="form-control" style="border-radius: 25px;" name="txtNome" id="txtNome">
-                            </div>
-                            <div class="col-sm-3">Peso (kg)
-                                <input type="text" class="form-control" style="border-radius: 25px;" name="txtNome" id="txtNome">
-                            </div>
-                        </div>
-                        
-
-                 <div class="row mt-3 ">
-                    <div class="col-sm-4">
-
-                    <button type="button" class="btn btn-primary btn-lg">Large button</button>
-                      </div>
-                    <div class="col-sm-4">
-                    <button type="button" class="btn btn-primary btn-lg">Large button</button>
-                    </div>
-                <div class="col-sm-4">
-                    <button type="button" class="btn btn-primary btn-lg">Large button</button>
-                </div>
+        <div class="row mt-3">
+            <div class="col-sm-3">Altura (cm)
+                <input type="text" class="form-control" style="border-radius: 25px;" name="txtNome" id="txtNome">
             </div>
-                     
-            
+            <div class="col-sm-3">Largura (cm)
+                <input type="text" class="form-control" style="border-radius: 25px;" name="txtNome" id="txtNome">
+            </div>
+            <div class="col-sm-3">Comprimento (cm)
+                <input type="text" class="form-control" style="border-radius: 25px;" name="txtNome" id="txtNome">
+            </div>
+            <div class="col-sm-3">Peso (kg)
+                <input type="text" class="form-control" style="border-radius: 25px;" name="txtNome" id="txtNome">
+            </div>
+        </div>
+
+
+        <div class="row mt-3">
+            <div class="col-sm-12 text-end">
+                <button type="button" class="btn btn-danger btn-lg">Excluir</button>
+                <button type="button" class="btn btn-warning btn-lg">Alterar</button>
+                <button type="button" class="btn btn-success btn-lg">Cadastrar</button>
+                <button type="button" class="btn btn-primary btn-lg">Limpar</button>
+            </div>
+        </div>
+
+
     </form>
 </body>
 
