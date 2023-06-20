@@ -30,7 +30,7 @@
 
             <div class="row mt-3">
                 <div class="col-sm-4">
-                    <input type="text" class="form-control"  style="border-radius: 25px;" name="txtnomecategoria"
+                    <input type="text" class="form-control"  style="border-radius: 25px;" name="txtNome"
                         placeholder="nome categoria">
                 </div>
                 <!-- <div class="col-sm-4">
@@ -41,39 +41,38 @@
            
             <div class="row mt-3">
                 <div class="col-sm-4">
-                    <input type="text" class="form-control" style="border-radius: 25px;" name="txtdescricaocategoria"  placeholder="descricao categoria">
+                    <input type="text" class="form-control" style="border-radius: 25px;" name="txtDescricao"  placeholder="descricao categoria">
 
                   </div>
             
             
                 
                 <div class="col-sm-4">
-                    <select name="txtstatuscategoria" class="form-control">
+                    <select name="txtStatus" class="form-control">
                         <option value="">--Selecione um Status--</option>
-                        <option value="ativo" <?= ($status_categoria == 'ativo' ? 'selected' : "") ?>>Ativo</option>
-                        <option value="inativo" <?= ($status_categoria == 'inativo' ? 'selected' : "") ?>>Inativo</option>
+                        <option value="ativo" <?= ($status == 'ativo' ? 'selected' : "") ?>>Ativo</option>
+                        <option value="inativo" <?= ($status == 'inativo' ? 'selected' : "") ?>>Inativo</option>
                     </select>
                 </div>
             </div>
             
             <div class="row mt-3">
                 <div class="col-sm-12">
-                    <textarea class="form-control" name="txtobscategoria" id="txtobscategoria" rows="5"
+                    <textarea class="form-control" name="txtObs" id="txtObs" rows="5"
                         placeholder="Observação "></textarea>
                 </div>
             </div>
             
             <div class="row mt-3">
                 <div class="col-sm-12 text-end">
-                    <button name="btoCadastrar"  class="btn btn-primary"formaction="categoria_cadastrar.php">Cadastrar</button>
-                    <button name="btoAlterar"  class="btn btn-danger"formaction="categoria_alterar.php">Alterar</button>
-                    <button <a href="categoria_cadastrar.php" name="btoLimpar" id="btoLimpar" class="btn btn-secundary">Limpar</button>
-                    <button name="btoExcluir"  class="btn btn-warning" formaction="carrinho_excluir.php">Excluir</button>
+                    <button name="btoCadastrar"  class="btn btn-primary"formaction="../ConexaoPHP/categoria_cadastrar.php">Cadastrar</button>
+                    <button name="btoAlterar"  class="btn btn-danger"formaction="../ConexaoPHP/categoria_alterar.php">Alterar</button>
+                    <button name="btoLimpar" id="btoLimpar" class="btn btn-secundary" >Limpar</button><a href="categoria_cadastrar.php"></a>
                     <button name="btoExcluir"  class="btn btn-warning" formaction="frm_categoria.php">Sair</button>
                 </div>
             </div>
         </form>
     </div>
-   
+     
 </body>
-</html>
+</html> 
