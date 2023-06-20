@@ -45,9 +45,9 @@
     }
     else
     {
-        header('Location:##');
+        header('Location:../TelasPHP/frm_categoria.php');
     }
 
 ?>
 
-<a href="##">Voltar</a>
+<a href="../TelasPHP/frm_categoria.php">Voltar</a>
