@@ -25,9 +25,9 @@
     }
     else
     {
-        header('Location:##'); //Link de direcionamento para a tela dps do cadastro
+        header('Location:../TelasPHP/frm_usuario.php');
     }
 
 ?>
 
-<a href="##">Voltar</a>
+<a href="../TelasPHP/frm_usuario.php">Voltar</a>

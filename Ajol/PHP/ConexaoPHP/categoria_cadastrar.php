@@ -53,7 +53,7 @@
     }
     else
     {
-        header('Location:##');
+        header('Location:frm_categoria');
     }
 
 ?>
