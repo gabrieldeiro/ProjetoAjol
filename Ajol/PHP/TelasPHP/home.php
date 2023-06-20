@@ -22,13 +22,13 @@
             <?
             //TOPO 
             ?>
-            <div class="col-md-12" style="background-color: #1F5881;">
+            <div class="col-md-12 bg-gradient" style="background-color: black;">
                 <div class="row mt-3">
                     <div class="col-sm-1">
                         <img src="../../img/AjolIcon.png" class="img-fluid mt-2" alt="">
                     </div>
                     <div class="col-sm-1">
-                        <a href="" class="btn" style="background-color: #5986A6; border-radius:10px; color:white;">Categorias</a>
+                        <a href="" class="btn" style="background-color: #FF7415; border-radius:10px; color:white;">Categorias</a>
                     </div>
                     <div class="col-sm-5">
                         <input type="text" placeholder="Pesquisa..." class="form-control ms-4" style="border-radius: 25px;" name="txtPesquisa" id="txtPesquisa">
@@ -38,14 +38,14 @@
                             <a href="">
                                 <img src="../../img/icone-loupe-gris.png" class="img-fluid ms-3 me-2" style="width: 33px; height:30px" alt="">
                             </a>
-                            <img src="../../img/6522516.png" class="img-fluid" style="width: 43px; height:40px" alt="">
+                            <img src="../../img/6522516.png" class="img-fluid ms-3" style="width: 43px; height:40px" alt="">
                             Usuário
                         </p>
                     </div>
                     <div class="col-sm-3">
                         <p style="display: inline-block; color:white">
                             <img src="../../img/Carinho.png" class="img-fluid me-4" style="width: 43px; height:40px" alt="">
-                            <img src="../../img/Historico.png" class="img-fluid" style="width: 43px; height:40px" alt="">
+                            <img src="../../img/Historico.png" class="img-fluid ms-5" style="width: 43px; height:40px" alt="">
                             Histórico
                         </p>
                     </div>
@@ -55,7 +55,7 @@
         <?
         //Carrosel 
         ?>
-        <div class="row border border-1 mt-2" style="background-color: #1F5881; border-radius:10px">
+        <div class="row border border-1 mt-2" style="background-color: black; border-radius:10px">
             <div class="col-sm-3">
 
             </div>
@@ -74,10 +74,10 @@
                             <img src="../../img/figuraLuffy.png" class="w-100 img-fluid">
                         </div>
                         <div class="item">
-                            <img src="../../img/figuraNoku.png" class="w-100 img-fluid" alt="Chicago">
+                            <img src="../../img/figuraNoku.png" class="w-100 img-fluid">
                         </div>
                         <div class="item">
-                            <img src="../../img/figuraSerra.png" class="w-100 img-fluid" alt="New York">
+                            <img src="../../img/figuraSerra.png" class="w-100 img-fluid">
                         </div>
                     </div>
 
@@ -92,6 +92,31 @@
                     </a>
                 </div>
                 <div class="col-sm-3">
+
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="col-sm-1">
+
+                </div>
+                <div class="col-md-2">
+
+                </div>
+                <div class="col-md-2">
+
+                </div>
+                <div class="col-md-2">
+
+                </div>
+                <div class="col-md-2">
+
+                </div>
+                <div class="col-md-2">
+
+                </div>
+                <div class="col-sm-1">
 
                 </div>
             </div>
