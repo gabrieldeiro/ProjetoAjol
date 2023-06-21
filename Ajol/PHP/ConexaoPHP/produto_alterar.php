@@ -74,8 +74,7 @@
 
             if($sql->rowCount()>=1)
             {
-                echo '<p>Dados cadastrados com sucesso!</p>';
-                echo '<p>ID Gerado: '. $conn->lastInsertId().'</p>';
+                echo '<p>Dados alterados com sucesso!</p>';
 
                 $pasta = 'img/prod'.$conn->lastInsertId().'/';
 
