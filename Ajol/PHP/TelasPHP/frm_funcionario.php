@@ -16,11 +16,11 @@
     <form action="" method="post" class="form-control" style="background-color: darkgray;"enctype="multipart/form-data">
         <div class="row mt-3 ">
             <div class="col-sm-2"> ID do Usuario
-                <input type="text" class="form-control" style="border-radius: 25px;" name="txtID"  >
+                <input type="text" class="form-control" style="border-radius: 25px;" name="txtId" id="txtId" value="<?$nome?>" >
             </div>
         
         <div class="col-sm-6">Nome do Usuario
-                <input type="text" class="form-control" style="border-radius: 25px;" name="txtNome" id="txtNome" >
+                <input type="text" class="form-control" style="border-radius: 25px;" name="txtNome" id="txtNome" value="<?$nome?>">
             </div>
                     
             <div class="col-sm-1 text-center mt-4">
@@ -32,33 +32,33 @@
 
         <div class="row mt-3 ">
             <div class="col-sm-4">Cpf
-                <input type="text" class="form-control" style="border-radius: 25px;" name="txtCpf" id="txtCpf">
+                <input type="text" class="form-control" style="border-radius: 25px;" name="txtCpf" id="txtCpf" value="<?$cpf?>">
             </div>
             <div class="col-sm-4"> Data de Nascimento
-                <input type="date" class="form-control" style="border-radius: 25px;" name="txtNascimento" id="txtNascimento">
+                <input type="date" class="form-control" style="border-radius: 25px;" name="txtNascimento" id="txtNascimento" value="<?$datanascimento?>">
             </div>
         
              <div class="col-mt-5">Foto funcionario
-                <input type="file" class="form-control"  name="txtImg" id="txtImg">
+                <input type="file" class="form-control"  name="txtImg" id="txtImg" value="<?$img?>">
 
              </div>
         </div>
         <div class="row mt-3 ">
             <div class="col-sm-4">Login
-            <input type="text" class="form-control" style="border-radius: 25px;" name="txtLogin" id="txtLogin">
+            <input type="text" class="form-control" style="border-radius: 25px;" name="txtLogin" id="txtLogin" value="<?$login?>">
             </div>
             <div class="col-sm-4"> Senha
-                <input type="password" class="form-control" style="border-radius: 25px;" name="txtSenha" id="txtSenha">
+                <input type="password" class="form-control" style="border-radius: 25px;" name="txtSenha" id="txtSenha" value="<?$senha?>">
             </div>
             
         </div>
 
         <div class="row mt-3 ">
             <div class="col-sm-4">Endereço
-            <input type="text" class="form-control" style="border-radius: 25px;" name="txtEndereco" id="txtEndereco">
+            <input type="text" class="form-control" style="border-radius: 25px;" name="txtEndereco" id="txtEndereco" value="<?$endereco?>">
             </div>
             <div class="col-sm-2"> Numero
-                <input type="text" class="form-control" style="border-radius: 25px;" name="txtNumero" id="txtNumero">
+                <input type="text" class="form-control" style="border-radius: 25px;" name="txtNumero" id="txtNumero" value="<?$numero?>">
             </div>
 
             <div class="col-sm-2">Complemento
