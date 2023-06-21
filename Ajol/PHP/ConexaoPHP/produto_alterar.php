@@ -42,18 +42,19 @@
                     lote_produto=:lote_produto,
                     qtde_produto=:qtde_produto,
                     peso_produto=:peso_produto,
-                    escala_produto,
-                    valor_produto,
-                    desconto_produto,
-                    img_produto,
-                    img2_produto,
-                    img3_produto,
-                    obs_produto,
-                    status_produto
+                    escala_produto=:escala_produto,
+                    valor_produto=:valor_produto,
+                    desconto_produto=:desconto_produto,
+                    img_produto=:img_produto,
+                    img2_produto=:img2_produto,
+                    img3_produto=:img3_produto,
+                    obs_produto=:obs_produto,
+                    status_produto=:status_produto
                 where id_produto=:id_produto
             ");
 
             $sql->execute(array(
+                ':id_produto'=>$id,
                 ':id_categoria_produto'=>$idcategoria,
                 ':nome_produto'=>$nome,
                 ':marca_produto'=>$marca,
