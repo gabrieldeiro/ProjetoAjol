@@ -24,8 +24,7 @@
             if(isset($_FILES['txtImg']))
             {
                 $img = $_FILES['txtImg'];
-                $img2 = $_FILES['txtImg2'];
-                $img3 = $_FILES['txtImg3'];
+
             }
             else
             {
