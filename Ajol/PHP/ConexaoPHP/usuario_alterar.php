@@ -74,7 +74,7 @@
             {
                 echo '<p>Dados alterados com sucesso!</p>';
 
-                $pasta = 'img/usu/'.$id.'/';
+                $pasta = '../Ajol/img/usu/'.$id.'/';
                 if (!file_exists($pasta))
                 {
                     mkdir($pasta);
