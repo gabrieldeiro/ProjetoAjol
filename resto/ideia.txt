@@ -1,0 +1,134 @@
+				Ecommerce
+
+              
+-Usuario(final)
+	Nome
+	CPF
+	Nascimento
+	Endereço 1(blabla)
+	Endereço 2(blabla) null
+	Endereço 3(blabla) null
+	Telefone
+	Email
+	Login/Senha
+	*Obs/Status
+
+
+-Usuario(fornecedor)
+	Nome
+	Nome empresa(razão social)/ Nome fantasia
+	CPF/CNPJ
+	Endereço/Comercial(blabla)
+	Telefone
+	Email
+	Login/Senha
+	*Obs/Status
+
+-Estatistica(de vendas do fornecedor)
+	Periodo de venda
+		+Produto
+			img
+			nome
+			qtde de venda
+			valor final de venda
+			Lucro/Preju
+		Total vendido $
+		Quantidade de itens vendidos
+		Lucro/Preju total
+		Valores divididos por forma de pagamento
+	(tem a img pra se inspirar)
+
+				
+-Usuario(Adm)
+	Nome
+	CPF
+	Nascimento
+	Endereço(blabla)
+	Telefone
+	Email
+	Login/Senha
+	*Obs/Status 
+
+
+-Produto
+	+Usuario(fornecedor)
+		CEP	
+	+Categoria
+	img
+	Nome
+	Data de cadastro do produto
+	Marca
+	Valor de custo (null)
+	Valor unitario (null)
+	Percentual de lucro(quanto o vendedor quer lucar com o produto. (null)
+	Cupom de desconto
+	Altura
+	Largura
+	Comprimento
+	Peso
+	qtde
+	
+
+-Categoria
+	Nome
+	Desc
+	Descontos validos
+	*Obs/Status
+
+-Tags/sub categoria
+
+
+
+-Histórico(historico de compras do usuario)
+	Img do produto
+	Nome do produto
+	Valor de compra
+	*Tela de detalhe*
+		Usuario que comprou
+		Img do produto
+		Nome do produto
+		Data de compra
+		Valor de compra
+		Endereço de envio
+		Forma de pagamento
+
+
+-Carrinho (compras acima de R$120 o frete vai ser gratis) - (frete por produto)
+	+Produto
+		img
+		nome
+		valor unitario
+		qtde
+		frete
+		 +Produto
+			cupom de desconto
+		 +categoria
+			desconto valido
+		 +fornecedor
+			nome
+		forma de pagamento
+		 +Usuario
+			Endereço
+		valor de compra (valor uni * qtde + frete - cupom)
+	
+		
+
+-Tela principal(com todos os produtos)
+
+
+
+Botão de filtro
+Sistema para calcular o frete(definir frete gratis?)
+reputação do fornecedor
+
+Cores do site
+Cor principal: 1F5881(azul)
+Cor secundaria: 042F4E(azul mais escuro)
+Cor terciaria: 5986A6(azul claro)
+
+Novo:
+
+Cor Primária: 783ebf(roxo)
+Cor Secundária: 8946db(roxo claro)
+Cor terciaria: d7fb41(neon)
+Background: 404040(cinza)

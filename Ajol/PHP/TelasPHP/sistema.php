@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,6 +16,42 @@
     ?>
 </head>
 <body>
+<div class="container">
     
+    <?php
+        include_once('topo.php');
+    ?>
+    
+    <div class="row">
+        <div class="col-sm-12" style="height:400px; background-color:darkgray">
+            <?php
+                if (isset($_GET['tela'])) 
+                {
+                    if ($_GET['tela'] == 'usuario') 
+                    {
+                        include_once('frm_usuario.php');
+                    }
+                    if ($_GET['tela'] == 'produto') 
+                    {
+                        include_once('frm_produto.php');
+                    }
+                    if ($_GET['tela'] == 'categoria') 
+                    {
+                        include_once('frm_categoria.php');
+                    }
+                    if ($_GET['tela'] == 'subcategoria') 
+                    {
+                        include_once('frm_subcategoria.php');
+                    }
+                }
+            ?>
+        </div>
+    </div>
+    
+    <?php 
+    include_once('rodape.php')
+    ?>
+    
+</div>
 </body>
 </html>
