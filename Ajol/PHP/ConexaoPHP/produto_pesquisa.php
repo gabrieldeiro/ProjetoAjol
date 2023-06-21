@@ -19,7 +19,7 @@
     $statusProduto = '';
 
 
-    if()
+    if($)
 
 ?>
 
