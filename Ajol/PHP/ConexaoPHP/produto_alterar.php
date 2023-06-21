@@ -3,6 +3,7 @@
 
     if($_POST)
     {
+        $id = $_POST['txtId'];
         $idcategoria = $_POST['txtIdcategoria'];
         $nome = $_POST['txtNome'];
         $marca = $_POST['txtMatca'];
@@ -28,51 +29,32 @@
             }
             else
             {
-                echo 'Erro, a imagem deve ser enviada';
-                return;
+                $img = '';
             }
 
             $sql = $conn->prepare("
-                insert into produto
-                (
-                    id_categoria_produto,
-                    nome_produto,
-                    marca_produto,
-                    datacadastro_produto,
-                    lote_produto,
-                    qtde_produto,
-                    peso_produto,
-                    escala_produto,
-                    valor_produto,
-                    desconto_produto,
-                    img_produto,
-                    img2_produto,
-                    img3_produto,
-                    obs_produto,
-                    status_produto
-                )
-                value
-                (
-                    :id_categoria_produto,
-                    :nome_produto,
-                    :marca_produto,
-                    :datacadastro_produto,
-                    :lote_produto,
-                    :qtde_produto,
-                    :peso_produto,
-                    :escala_produto,
-                    :valor_produto,
-                    :desconto_produto,
-                    :img_produto,
-                    :img2_produto,
-                    :img3_produto,
-                    :obs_produto,
-                    :status_produto
-                )
-            
+                update produto set
+                    id_produto=:id_produto,
+                    id_categoria_produto=:id_categoria_produto,
+                    nome_produto=:nome_produto,
+                    marca_produto=:marca_produto,
+                    datacadastro_produto=:datacadastro_produto,
+                    lote_produto=:lote_produto,
+                    qtde_produto=:qtde_produto,
+                    peso_produto=:peso_produto,
+                    escala_produto=:escala_produto,
+                    valor_produto=:valor_produto,
+                    desconto_produto=:desconto_produto,
+                    img_produto=:img_produto,
+                    img2_produto=:img2_produto,
+                    img3_produto=:img3_produto,
+                    obs_produto=:obs_produto,
+                    status_produto=:status_produto
+                where id_produto=:id_produto
             ");
 
             $sql->execute(array(
+                ':id_produto'=>$id,
                 ':id_categoria_produto'=>$idcategoria,
                 ':nome_produto'=>$nome,
                 ':marca_produto'=>$marca,
@@ -92,8 +74,7 @@
 
             if($sql->rowCount()>=1)
             {
-                echo '<p>Dados cadastrados com sucesso!</p>';
-                echo '<p>ID Gerado: '. $conn->lastInsertId().'</p>';
+                echo '<p>Dados alterados com sucesso!</p>';
 
                 $pasta = 'img/prod'.$conn->lastInsertId().'/';
 

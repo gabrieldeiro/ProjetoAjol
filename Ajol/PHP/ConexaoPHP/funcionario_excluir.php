@@ -26,9 +26,9 @@
     }
     else
     {
-        header('Location:##');
+        header('Location:../TelasPHP/frm_funcionario.php');
     }
 
 ?>
 
-<a href="##">Voltar</a>
+<a href="../TelasPHP/frm_funcionario.php">Voltar</a>
