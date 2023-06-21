@@ -16,7 +16,7 @@
     <?php
     $mensagem = '';
     if ($_POST) {
-        include_once('conexaoloja.php');
+        include_once('../ConexaoPHP/conexao.php');
         $login = $_POST['txtlogin'];
         $senha = $_POST['txtsenha'];
 
