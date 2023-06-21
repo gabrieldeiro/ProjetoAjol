@@ -1,25 +1,27 @@
 <?php
-    include_once('conexao')
+    include_once('conexao');
+
+    $idProduto = '';
+    $idcategoriaProduto = '';
+    $nomeProduto = '';
+    $marcaProduto = '';
+    $datacadastroProduto = '';
+    $loteProduto = '';
+    $qtdeProduto = '';
+    $pesoProduto = '';
+    $escalaProduto = '';
+    $valorProduto = '';
+    $descontoProduto = '';
+    $imgProduto = '';
+    $img2Produto = '';
+    $img3Produto = '';
+    $obsProduto = '';
+    $statusProduto = '';
 
 
-
+    if()
 
 ?>
 
 
 
-$idcategoria = $_POST['txtIdcategoria'];
-$nome = $_POST['txtNome'];
-$marca = $_POST['txtMatca'];
-$datacadastro = $_POST['txtData'];
-        $lote = $_POST['txtLote'];
-        $qtde = $_POST['txtQtde'];
-        $peso = $_POST['txtPeso'];
-        $escala = $_POST['txtEscala'];
-        $valor = $_POST['txtValor'];
-        $desconto = $_POST['txtDesconto'];
-        $img = '';
-        $img2 = '';
-        $img3 = '';
-        $obs = $_POST['txtObs'];
-        $status = $_POST['txtStatus'];
