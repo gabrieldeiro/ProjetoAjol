@@ -1,17 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/bootstrap.css">
-    <link rel="stylesheet" href="../js/bootstrap.bundle.js">
-    <title>Cadastro Produto</title>
-</head>
-
-<body>
-    <form action="" method="post" class="form-control " style="background-color: darkgray;">
+    <form action="" method="post" style="background-color: darkgray;">
         <div class="row mt-3 ">
             <div class="col-sm-6">Nome do Produto
                 <input type="text" class="form-control" style="border-radius: 25px;" name="txtNome" id="txtNome">
@@ -86,9 +73,4 @@
                 <button type="button" class="btn btn-primary btn-lg">Limpar</button>
             </div>
         </div>
-
-
     </form>
-</body>
-
-</html>

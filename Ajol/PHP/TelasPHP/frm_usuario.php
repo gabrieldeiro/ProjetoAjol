@@ -1,16 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/bootstrap.css">
-    <link rel="stylesheet" href="../js/bootstrap.bundle.js">
-    <title>Cadastro Usuario </title>
-</head>
-
-<body>
-    <form action="" method="post" class="form-control " style="background-color: darkgray;">
+    <form action="" method="post">
         <div class="row mt-3 ">
             <div class="col-sm-6">Nome do Usuario
                 <input type="text" class="form-control" style="border-radius: 25px;" name="txtNome" id="txtNome">
@@ -38,16 +27,12 @@
         </div>
         <div class="row mt-3 ">
             <div class="col-sm-4">Login
-            <input type="text" class="form-control" style="border-radius: 25px;" name="txtlogin" id="txtlogin">
+                <input type="text" class="form-control" style="border-radius: 25px;" name="txtlogin" id="txtlogin">
             </div>
             <div class="col-sm-4"> Senha
                 <input type="password" class="form-control" style="border-radius: 25px;" name="txtsenha" id="txtsenha">
             </div>
-            
+
         </div>
 
     </form>
-
-</body>
-
-</html>
