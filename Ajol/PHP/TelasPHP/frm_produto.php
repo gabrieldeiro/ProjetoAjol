@@ -1,30 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/bootstrap.css">
-    <link rel="stylesheet" href="../js/bootstrap.bundle.js">
-    <title>Cadastro Produto</title>
-</head>
-
-<body>
-    <div class="container">
         <div class="col-sm-12">
-            <form action="" method="post" class="form-control " style="background-color: darkgray;">
+            <form action="" method="post" style="background-color: darkgray;">
                 <div class="row mt-3 ">
                     <div class="col-sm-6">Nome do Produto
-                        <input type="text" class="form-control" style="border-radius: 25px;" name="txtNome" id="txtNome"
-                         value="<?= $nome ?>">
+                        <input type="text" class="form-control" style="border-radius: 25px;" name="txtNome" id="txtNome" value="<?= $nome ?>">
                     </div>
                     <div class="col-sm-3 mt-4">
                         <input type="date" class="form-control" style="border-radius: 25px;" name="txtCadastro" id="txtCadastro" hidden>
                     </div>
                     <div class="col-sm-2"> ID do Produto
-                        <input type="number" class="form-control" style="border-radius: 25px;" name="txtID" min="0"
-                        >
+                        <input type="number" class="form-control" style="border-radius: 25px;" name="txtID" min="0">
                     </div>
                     <div class="col-sm-1 text-center mt-4">
                         <button class="btn btn-primary" style="border-radius: 25px;" name="btoPesquisa" id="btoPesquisa" formaction="_sistema.php?tela=produto">&#128269;</button>
@@ -39,7 +23,7 @@
                     <div class="col-sm-8">
                         <div class="row mt-3">
                             <div class="col-sm-4">Categoria
-                                    <select name="txtStatus" id="textStatus" class="form-control" style="border-radius: 25px;" >
+                                <select name="txtStatus" id="textStatus" class="form-control" style="border-radius: 25px;">
                                     <option value="">--Selecione uma Categoria --</option>
                                     <option value="ativo">Ativo</option>
                                     <option value="inativo">Inativo</option>
@@ -98,14 +82,4 @@
 
             </form>
 
-
-
-
-
         </div>
-
-    </div>
-
-</body>
-
-</html>

@@ -28,9 +28,8 @@
     }
     else
     {
-        header('location:../TelaPHP/frm_produto')
+        header('location:../TelaPHP/frm_produto.php');
     }
-
-
-
 ?>
+
+<a href="../TelaPHP/frm_produto.php">Voltar</a>
