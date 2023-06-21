@@ -55,8 +55,11 @@
         <?
         //Carrosel 
         ?>
-        <div class="row mt-2">
-            <div class="col-sm-2">
+        <div class="row mt-2" style="background-color: #783ebf;">
+        <div class="col-sm-1">
+
+        </div>
+            <div class="col-sm-1" style="border-top-left-radius:30px; border-bottom-left-radius:30px">
 
             </div>
             <div class="col-sm-7" style="background-color: #783ebf;">
@@ -74,13 +77,13 @@
 
                     <div class="carousel-inner justify-content-center">
                         <div class="item active">
-                            <img src="../../img/figuraLuffy.png" class="w-75 img-fluid">
+                            <img src="../../img/figuraLuffy.png" class="w-100 img-fluid">
                         </div>
                         <div class="item">
-                            <img src="../../img/figuraNoku.png" class="w-75 img-fluid">
+                            <img src="../../img/figuraNoku.png" class="w-100 img-fluid">
                         </div>
                         <div class="item">
-                            <img src="../../img/figuraSerra.png" class="w-75 img-fluid">
+                            <img src="../../img/figuraSerra.png" class="w-100 img-fluid">
                         </div>
                     </div>
 
@@ -94,7 +97,10 @@
                         <span class="sr-only">Next</span>
                     </a>
                 </div>
-                <div class="col-sm-2">
+                <div class="col-sm-1" style="background-color: #783ebf; border-top-right-radius:30px; border-bottom-right-radius:30px">
+
+                </div>
+                <div class="col-sm-1">
 
                 </div>
             </div>

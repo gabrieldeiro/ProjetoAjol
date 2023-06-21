@@ -11,7 +11,7 @@
     {
         $id= $_POST['txtId'];
 
-        $sql = $conn->query('select * from categoria where id_categoria'.$id);
+        $sql = $conn->query('select * from categoria where id_categoria='.$id);
 
         if($sql->rowCount()>=1)
         {

@@ -1,5 +1,5 @@
 <?php
-    include_once('conexao.php');
+    include_once('../ConexaoPHP/conexao.php');
 
     if($_POST)
     {
@@ -53,9 +53,9 @@
     }
     else
     {
-        header('Location:##');
+        header('Location:../ConexaoPHP/frm_categoria.php');
     }
 
 ?>
 
-<a href="##">Voltar</a>
+<a href="../ConexaoPHP/frm_categoria.php">Voltar</a>
