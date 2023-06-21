@@ -32,7 +32,7 @@
             <div class="row mt-3">
                 <div class="col-sm-4">
                     <input type="text" class="form-control"  style="border-radius: 25px;" name="txtNome"
-                        placeholder="nome categoria"value="<?=$nomeCategoria?>">
+                        placeholder="nome categoria"value="<?= $nomeFuncionario?>">
                 </div>
                 <div class="col-sm-4">
                     <button class="btn btn-primary" name="btopesquisar" id="btopesquisar"

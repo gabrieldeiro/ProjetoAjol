@@ -1,0 +1,8 @@
+.butao
+{
+    transition: 0.5s;
+}
+.butao:hover
+{
+    background-color: #84A400;
+}

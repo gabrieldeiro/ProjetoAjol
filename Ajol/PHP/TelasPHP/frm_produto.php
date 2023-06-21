@@ -16,13 +16,15 @@
             <form action="" method="post" class="form-control " style="background-color: darkgray;">
                 <div class="row mt-3 ">
                     <div class="col-sm-6">Nome do Produto
-                        <input type="text" class="form-control" style="border-radius: 25px;" name="txtNome" id="txtNome">
+                        <input type="text" class="form-control" style="border-radius: 25px;" name="txtNome" id="txtNome"
+                         value="<?= $nome ?>">
                     </div>
                     <div class="col-sm-3 mt-4">
                         <input type="date" class="form-control" style="border-radius: 25px;" name="txtCadastro" id="txtCadastro" hidden>
                     </div>
                     <div class="col-sm-2"> ID do Produto
-                        <input type="number" class="form-control" style="border-radius: 25px;" name="txtID" min="0">
+                        <input type="number" class="form-control" style="border-radius: 25px;" name="txtID" min="0"
+                        >
                     </div>
                     <div class="col-sm-1 text-center mt-4">
                         <button class="btn btn-primary" style="border-radius: 25px;" name="btoPesquisa" id="btoPesquisa" formaction="_sistema.php?tela=produto">&#128269;</button>
