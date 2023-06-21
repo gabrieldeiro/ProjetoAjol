@@ -72,7 +72,7 @@
             {
                 echo '<p>Dados alterados com sucesso!</p>';
 
-                $pasta = 'img/fun/'.$conn->lastInsertId().'/';
+                $pasta = '../Ajol/img/fun/'.$conn->lastInsertId().'/';
 
                 if(!file_exists($pasta))
                 {

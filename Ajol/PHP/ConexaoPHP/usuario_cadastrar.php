@@ -91,7 +91,7 @@
                 echo '<p>Dados cadastrados com sucesso!</p>';
                 echo '<p>ID Gerado: ' .$conn->lastInsertId(). '</p>';
 
-                $pasta = 'img/usu/'.$conn->lastInsertId().'/';
+                $pasta = '../Ajol/img/usu/'.$conn->lastInsertId().'/';
 
                 if(!file_exists($pasta))
                 {
