@@ -15,13 +15,15 @@
             <form action="" method="post" class="form-control " style="background-color: darkgray;">
                 <div class="row mt-3 ">
                     <div class="col-sm-6">Nome do Usuario
-                        <input type="text" class="form-control" style="border-radius: 25px;" name="txtNome" id="txtNome">
+                        <input type="text" class="form-control" style="border-radius: 25px;" name="txtNome" id="txtNome"
+                        value="<?$nome?>">
                     </div>
                     <div class="col-sm-3 mt-4">
                         <input type="date" class="form-control" style="border-radius: 25px;" name="txtCadastro" id="txtCadastro" hidden>
                     </div>
                     <div class="col-sm-2"> ID do Usuario
-                        <input type="number" class="form-control" style="border-radius: 25px;" name="txtID" min="0">
+                        <input type="number" class="form-control" style="border-radius: 25px;" name="txtID" min="0"
+                            value="<?=$idUsuario?>">
                     </div>
                     <div class="col-sm-1 text-center mt-4">
                         <button class="btn btn-primary" style="border-radius: 25px;" name="btoPesquisa" id="btoPesquisa" formaction="_sistema.php?tela=produto">&#128269;</button>
@@ -31,13 +33,16 @@
 
                 <div class="row mt-3 ">
                     <div class="col-sm-3">Login
-                        <input type="text" class="form-control" style="border-radius: 25px;" name="txtlogin" id="txtlogin">
+                        <input type="text" class="form-control" style="border-radius: 25px;" name="txtLogin" id="txtLogin"
+                        value="<?=$login?>">>
                     </div>
                     <div class="col-sm-3"> Senha
-                        <input type="password" class="form-control" style="border-radius: 25px;" name="txtsenha" id="txtsenha">
+                        <input type="password" class="form-control" style="border-radius: 25px;" name="txtsenha" id="txtsenha"
+                            value="<?=$senha?>">
                     </div>
                     <div class="col-sm-3"> Data de Nascimento
-                        <input type="date" class="form-control" style="border-radius: 25px;" name="txtCadastro" id="txtCadastro">
+                        <input type="date" class="form-control" style="border-radius: 25px;" name="txtCadastro" id="txtCadastro"
+                            value="<?= substr($datanascimento, 0, 10) ?>"> 
                     </div>
                     <div class="col-sm-3">CPF
                         <input type="text" class="form-control" style="border-radius: 25px;" name="txtcpf" id="txtcpf">
