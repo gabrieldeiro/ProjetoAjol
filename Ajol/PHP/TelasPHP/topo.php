@@ -1,7 +1,9 @@
 
     <div class="row p-3" style="background-color:#783ebf;">
         <div class="col-sm-1 me-2">
-            <img src="../../../resto/Logo-prototipo.png" class="w-100 img-fluid ms-4 p-1" alt="">
+            <a href="loja.php">
+                <img src="../../../resto/Logo-prototipo.png" class="w-100 img-fluid ms-4 p-1" alt="">
+            </a>
         </div>
         <div class="col-sm-1 ms-3 me-2 mt-3">
             <a href="sistema.php?tela=usuario" class="btn bg-gradient butao" style="background-color:#d7fb41; text-decoration:none;">
@@ -28,8 +30,8 @@
 
         </div>
         <div class="col-sm-1 me-5 mt-3">
-            <a href="sistema.php?tela=subcategoria" class="btn bg-gradient butao" style="background-color:#d7fb41; text-decoration:none;">
-                Gerenciador de Sub-Categoria
+            <a href="sistema.php?tela=funcionario" class="btn bg-gradient butao" style="background-color:#d7fb41; text-decoration:none;">
+                Gerenciador de Funcionário
             </a>
         </div>
         <div class="col-sm-1">
