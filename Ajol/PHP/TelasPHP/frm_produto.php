@@ -1,14 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/bootstrap.css">
-    <link rel="stylesheet" href="../js/bootstrap.bundle.js">
-    <h1>Cadastro funcionario <h1>
-</head>
-
 <?php include_once('../ConexaoPHP/funcionario_pesquisa.php') ?>
 
 <body>
@@ -16,7 +5,7 @@
             <div class="row mt-3 ">
                 <div class="col-sm-6">Nome do Produto
                     <input type="text" class="form-control" style="border-radius: 25px;" name="txtNome" id="txtNome"
-                        value="<?= $nome ?>">
+                        value="<? $nome ?>">
                 </div>
                 <div class="col-sm-3 mt-4">
                     <input type="date" class="form-control" style="border-radius: 25px;" name="txtCadastro"
@@ -106,6 +95,3 @@
 
 
         </form>
-
-    </div>
-</body>

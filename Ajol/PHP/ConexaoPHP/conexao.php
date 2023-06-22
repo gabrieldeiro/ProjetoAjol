@@ -1,5 +1,5 @@
 <?php
-$host = "10.37.46.62";
+$host = "10.37.46.80";
 $dbn = "ajol";
 $user = "root";
 $pass = "";
