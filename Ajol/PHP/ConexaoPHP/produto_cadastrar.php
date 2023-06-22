@@ -95,7 +95,7 @@
                 echo '<p>Dados cadastrados com sucesso!</p>';
                 echo '<p>ID Gerado: '. $conn->lastInsertId().'</p>';
 
-                $pasta = '../Ajol/img/prod'.$conn->lastInsertId().'/';
+                $pasta = '../../img/prod'.$conn->lastInsertId().'/';
 
                 if(!file_exists($pasta))
                 {
@@ -121,9 +121,9 @@
     }
     else
     {
-        header('Location:../TelasPHP/frm_produto.php');
+        header('Location:../TelasPHP/sistema.php?tela=produto');
     }
 
 ?>
 
-<a href="../TelasPHP/frm_produto.ph">Voltar</a>
+<a href="../TelasPHP/sistema.php?tela=produto">Voltar</a>
