@@ -48,7 +48,7 @@
                     obs_usuario,
                     status_usuario
                 )
-                value
+                values
                 (
                     :nome_usuario,
                     :login_usuario,
@@ -68,7 +68,7 @@
 
             ");
             
-            $sql ->execute(array(
+            $sql->execute(array(
                 ':nome_usuario'=>$nome,
                 ':login_usuario'=>$login,
                 ':senha_usuario'=>$senha,
@@ -91,7 +91,7 @@
                 echo '<p>Dados cadastrados com sucesso!</p>';
                 echo '<p>ID Gerado: ' .$conn->lastInsertId(). '</p>';
 
-                $pasta = '../Ajol/img/usu/'.$conn->lastInsertId().'/';
+                $pasta = '../../img/usu/'.$conn->lastInsertId().'/';
 
                 if(!file_exists($pasta))
                 {
