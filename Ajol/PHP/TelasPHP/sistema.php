@@ -24,7 +24,7 @@
         ?>
 
         <div class="row">
-            <div class="col-sm-12" style="height:500px; background-color:darkgray">
+            <div class="col-sm-12" style="height:540px; background-color:darkgray">
                 <?php
                 if (isset($_GET['tela'])) {
                     if ($_GET['tela'] == 'usuario') {
@@ -36,8 +36,8 @@
                     if ($_GET['tela'] == 'categoria') {
                         include_once('frm_categoria.php');
                     }
-                    if ($_GET['tela'] == 'subcategoria') {
-                        include_once('frm_subcategoria.php');
+                    if ($_GET['tela'] == 'funcionario') {
+                        include_once('frm_funcionario.php');
                     }
                 }
                 ?>
