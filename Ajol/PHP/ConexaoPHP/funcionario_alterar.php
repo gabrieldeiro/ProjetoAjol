@@ -10,7 +10,7 @@
         $senha = $_POST['txtSenha'];
         $cpf = $_POST['txtCpf'];
         $datanascimento = $_POST['txtNascimento'];
-        $img = $_FILES['txtimg']['name'];
+        $img = $_FILES['txtImg']['name'];
         $endereco = $_POST['txtEndereco'];
         $bairro = $_POST['txtBairro'];
         $numero = $_POST['txtNumero'];
@@ -40,6 +40,7 @@
                     cpf_funcionario=:cpf_funcionario,
                     data_nasc_funcionario=:data_nasc_funcionario,
                     img_funcionario=:img_funcionario,
+                    endereco_funcionario=:endereco_funcionario,
                     bairro_funcionario=:bairro_funcionario,
                     numero_funcionario=:numero_funcionario,
                     compl_funcionario=:compl_funcionario,
@@ -59,6 +60,7 @@
                 ':cpf_funcionario'=>$cpf,
                 ':data_nasc_funcionario'=>$datanascimento,
                 ':img_funcionario'=>$img['name'],
+                ':endereco_funcionario'=>$endereco,
                 ':bairro_funcionario'=>$bairro,
                 ':numero_funcionario'=>$numero,
                 ':compl_funcionario'=>$complemento,
@@ -72,7 +74,7 @@
             {
                 echo '<p>Dados alterados com sucesso!</p>';
 
-                $pasta = 'img/fun/'.$conn->lastInsertId().'/';
+                $pasta = '../../img/fun/'.$id.'/';
 
                 if(!file_exists($pasta))
                 {
