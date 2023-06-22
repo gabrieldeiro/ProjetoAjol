@@ -27,7 +27,7 @@
                 </div>
                 <div class="col-sm-1 text-center mt-4">
                     <button class="btn btn-primary" style="border-radius: 25px;" name="btoPesquisa" id="btoPesquisa"
-                        formaction="_sistema.php?tela=produto">&#128269;</button>
+                        formaction="../ConexaoPHP/produto_pesquisa.php">&#128269;</button>
                 </div>
 
             </div>
