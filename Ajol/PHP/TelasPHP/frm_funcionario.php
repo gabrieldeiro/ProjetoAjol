@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/bootstrap.css">
     <link rel="stylesheet" href="../js/bootstrap.bundle.js">
-    <h1>Cadastro funcionario <h1>
+    <h1 style= "text-align: center;">Cadastro Funcionario <h1>
 </head>
 
 <?php include_once('../ConexaoPHP/funcionario_pesquisa.php') ?>
@@ -26,7 +26,7 @@
             <div class="col-sm-1 text-center mt-4">
                 <button class="btn btn-primary" style="border-radius: 25px;" name="btoPesquisa" id="btoPesquisa" formaction="frm_funcionario.php">&#128269;</button>
             </div>
-            pesquisar
+           
 
         </div>
 
