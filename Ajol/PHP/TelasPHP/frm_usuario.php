@@ -45,40 +45,47 @@
                             value="<?= substr($datanascimento, 0, 10) ?>"> 
                     </div>
                     <div class="col-sm-3">CPF
-                        <input type="text" class="form-control" style="border-radius: 25px;" name="txtcpf" id="txtcpf">
+                        <input type="text" class="form-control" style="border-radius: 25px;" name="txtCpf" id="txtCpf"
+                            value="<?=$cpf?>"> 
                     </div>
 
                 </div>
 
                 <div class="row mt-3 ">
                     <div class="col-sm-3">CEP
-                        <input type="text" class="form-control" style="border-radius: 25px;" name="txtCep" id="txtCep">
+                        <input type="text" class="form-control" style="border-radius: 25px;" name="txtCep" id="txtCep"
+                            value="<?=$cep?>"> 
                     </div>
                     <div class="col-sm-5">Endereço
-                        <input type="text" class="form-control" style="border-radius: 25px;" name="txtendereço" id="txtendereço">
+                        <input type="text" class="form-control" style="border-radius: 25px;" name="txtEndereço" id="txtEndereço"
+                            value="<?=$endereco?>"> 
                     </div>
                     <div class="col-sm-2">Bairro
-                        <input type="text" class="form-control" style="border-radius: 25px;" name="txtbairro" id="txtbairro">
+                        <input type="text" class="form-control" style="border-radius: 25px;" name="txtBairro" id="txtBairro"
+                            value="<?=$endereco?>"> 
                     </div>
                     <div class="col-sm-1">Numero
-                        <input type="text" class="form-control" style="border-radius: 25px;" name="txtnumero" id="txtnumero">
+                        <input type="text" class="form-control" style="border-radius: 25px;" name="txtNumero" id="txtNumero"
+                            value="<?=$numero?>">
                     </div>
                     <div class="col-sm-5">Complemento
-                        <textarea name="text" class="form-control" id="txtcomplemento" style="border-radius: 25px;" cols="15" rows="2"></textarea>
+                        <textarea name="text" class="form-control" id="txtComplemento" style="border-radius: 25px;" cols="15" rows="2"></textarea
+                            value="<?=$complemento?>"> 
                     </div>
                     <div class="col-sm-2">
 
                     </div>
                     <div class="col-sm-5">Observação
-                        <textarea name="textObs" class="form-control" id="txtObs" style="border-radius: 25px;" cols="15" rows="2"></textarea>
+                        <textarea name="textObs" class="form-control" id="txtObs" style="border-radius: 25px;" cols="15" rows="2"></textarea
+                            value="<?=$obs?>">
                     </div>
 
                     <div class="row mt-3">
                         <div class="col-sm-3">
                             <select name="txtStatus" id="textStatus" class="form-control" style="border-radius: 25px;" >
                                     <option value="">--Selecione um Status--</option>
-                                    <option value="ativo">Ativo</option>
-                                    <option value="inativo">Inativo</option>
+                                    <option value="ativo" <?= ($statususuario == 'Ativo' ? 'selected' : "") ?>>Ativo</option>
+                                    <option value="inativo" <?= ($statususuario == 'Inativo' ? 'selected' : "") ?>>Inativo</option> 
                         </select>
                         </div>
                     </div>
@@ -86,11 +93,14 @@
                 </div>
                 <div class="row mt-3">
                     <div class="col-sm-12 text-end">
-                        <button type="button" class="btn btn-danger btn-lg">Excluir</button>
-                        <button type="button" class="btn btn-primary btn-lg">Limpar</button>
-                        <button type="button" class="btn btn-warning btn-lg">Alterar</button>
-                        <button type="button" class="btn btn-success btn-lg">Cadastrar</button>
-                    </div>
+                        <button name="btoexcluir" id="btoexcluir" class="btn btn-danger btn-lg" formaction="usuario_excluir.php">Excluir</button>
+                        <button name="btoLimpar" id="btoLimpar"  class="btn btn-primary btn-lg">Limpar</button>
+                        <button id="btnalterar" name="btnalterar" class="btn btn-secondary"
+                            formaction="_sistema.php?tela=usuario">alterar</button>
+                            <button name="btocadastrar" id="btocadastrar" class="btn btn-sucess"
+                                formaction="usuario_cadastrar.php">cadastrar</button>
+
+                     </div>
                 </div>
 
             </form>
