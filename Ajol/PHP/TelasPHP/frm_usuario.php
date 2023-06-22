@@ -1,79 +1,142 @@
- <div class="col-sm-12">
-     <form action="" method="post" style="background-color: darkgray;">
-         <div class="row mt-3 ">
-             <div class="col-sm-6">Nome do Usuario
-                 <input type="text" class="form-control" style="border-radius: 25px;" name="txtNome" id="txtNome" value=<?php $nome ?>>
-             </div>
-             <div class="col-sm-3 mt-4">
-                 <input type="date" class="form-control" style="border-radius: 25px;" name="txtCadastro" id="txtCadastro" hidden>
-             </div>
-             <div class="col-sm-2"> ID do Usuario
-                 <input type="number" class="form-control" style="border-radius: 25px;" name="txtID" min="0" value="<?= $idUsuario ?>">
-             </div>
-             <div class="col-sm-1 text-center mt-4">
-                 <button class="btn btn-primary" style="border-radius: 25px;" name="btoPesquisa" id="btoPesquisa" formaction="_sistema.php?tela=produto">&#128269;</button>
-             </div>
+<!DOCTYPE html>
+<html lang="en">
 
-         </div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../js/bootstrap.bundle.js">
+    <title>Cadastro Usuario </title>
+</head>
 
-         <div class="row mt-3 ">
-             <div class="col-sm-3">Login
-                 <input type="text" class="form-control" style="border-radius: 25px;" name="txtLogin" id="txtLogin" value="<?= $login ?>">>
-             </div>
-             <div class="col-sm-3"> Senha
-                 <input type="password" class="form-control" style="border-radius: 25px;" name="txtsenha" id="txtsenha" value="<?= $senha ?>">
-             </div>
-             <div class="col-sm-3"> Data de Nascimento
-                 <input type="date" class="form-control" style="border-radius: 25px;" name="txtCadastro" id="txtCadastro" value="<?= substr($datanascimento, 0, 10) ?>">
-             </div>
-             <div class="col-sm-3">CPF
-                 <input type="text" class="form-control" style="border-radius: 25px;" name="txtcpf" id="txtcpf">
-             </div>
+<body>
+    <?php include_once('../ConexaoPHP/usuario_pesquisa.php') ?>
+    <div class="container">
+        <div class="col-sm-12">
+            <form action="" method="post" class="form-control" enctype="multipart/form-data" style="background-color: darkgray;">
 
-         </div>
+                <div class="row">
+                    <div class="col-sm-4 mt-3">
+                        <img src="../../img/usu/<?= $idUsuario ?>/<?= $imgUsuario ?>" class="w-50 "
+                            alt="Usuario">
+                    </div>
+                </div>
 
-         <div class="row mt-3 ">
-             <div class="col-sm-3">CEP
-                 <input type="text" class="form-control" style="border-radius: 25px;" name="txtCep" id="txtCep">
-             </div>
-             <div class="col-sm-5">Endereço
-                 <input type="text" class="form-control" style="border-radius: 25px;" name="txtendereço" id="txtendereço">
-             </div>
-             <div class="col-sm-2">Bairro
-                 <input type="text" class="form-control" style="border-radius: 25px;" name="txtbairro" id="txtbairro">
-             </div>
-             <div class="col-sm-1">Numero
-                 <input type="text" class="form-control" style="border-radius: 25px;" name="txtnumero" id="txtnumero">
-             </div>
-             <div class="col-sm-5">Complemento
-                 <textarea name="text" class="form-control" id="txtcomplemento" style="border-radius: 25px;" cols="15" rows="2"></textarea>
-             </div>
-             <div class="col-sm-2">
+                <div class="row mt-3">
+                    <div class="col-mt-5">Foto funcionario
+                        <input type="file" class="form-control" name="txtImg" id="txtImg">
+                    </div>
+                </div>
 
-             </div>
-             <div class="col-sm-5">Observação
-                 <textarea name="textObs" class="form-control" id="txtObs" style="border-radius: 25px;" cols="15" rows="2"></textarea>
-             </div>
 
-             <div class="row mt-3">
-                 <div class="col-sm-3">
-                     <select name="txtStatus" id="textStatus" class="form-control" style="border-radius: 25px;">
-                         <option value="">--Selecione um Status--</option>
-                         <option value="ativo">Ativo</option>
-                         <option value="inativo">Inativo</option>
-                     </select>
-                 </div>
-             </div>
+                <div class="row mt-3 ">
+                    <div class="col-sm-6">Nome do Usuario
+                        <input type="text" class="form-control" style="border-radius: 25px;" name="txtNome" id="txtNome"
+                            value="<?= $nomeUsuario ?>">
+                    </div>
+                    <div class="col-sm-3 mt-4">
+                        <input type="date" class="form-control" style="border-radius: 25px;" name="txtCadastro"
+                            id="txtCadastro" hidden>
+                    </div>
+                    <div class="col-sm-2"> ID do Usuario
+                        <input type="number" class="form-control" style="border-radius: 25px;" name="txtID" min="0"
+                            value="<?= $idUsuario ?>">
+                    </div>
+                    <div class="col-sm-1 text-center mt-4">
+                        <button class="btn btn-primary" style="border-radius: 25px;" name="btoPesquisa" id="btoPesquisa"
+                            formaction="../ConexaoPHP/usuario_pesquisa.php">&#128269;</button>
+                    </div>
 
-         </div>
-         <div class="row mt-3">
-             <div class="col-sm-12 text-end">
-                 <button type="button" class="btn btn-danger btn-lg">Excluir</button>
-                 <button type="button" class="btn btn-primary btn-lg">Limpar</button>
-                 <button type="button" class="btn btn-warning btn-lg">Alterar</button>
-                 <button type="button" class="btn btn-success btn-lg">Cadastrar</button>
-             </div>
-         </div>
+                </div>
 
-     </form>
- </div>
+                <div class="row mt-3 ">
+                    <div class="col-sm-3">Login
+                        <input type="text" class="form-control" style="border-radius: 25px;" name="txtLogin"
+                            id="txtLogin" value="<?= $loginUsuario ?>">
+                    </div>
+                    <div class="col-sm-3"> Senha
+                        <input type="password" class="form-control" style="border-radius: 25px;" name="txtSenha"
+                            id="txtSenha" value="<?= $senhaUsuario ?>">
+                    </div>
+                    <div class="col-sm-3"> Data de Nascimento
+                        <input type="date" class="form-control" style="border-radius: 25px;" name="txtNascimento"
+                            id="txtNascimento" value="<?= substr($datanascimentoUsuario, 0, 10) ?>">
+                    </div>
+                    <div class="col-sm-3">CPF
+                        <input type="text" class="form-control" style="border-radius: 25px;" name="txtCpf" id="txtCpf"
+                            value="<?= $cpfUsuario ?>">
+                    </div>
+
+                </div>
+
+                <div class="row mt-3 ">
+                    <div class="col-sm-6">Email
+                        <input type="text" class="form-control" style="border-radius: 25px;" name="txtEmail"
+                            id="txtEmail" value="<?= $emailUsuario ?>">
+                    </div>
+
+
+                    <div class="row mt-3 ">
+                        <div class="col-sm-3">CEP
+                            <input type="text" class="form-control" style="border-radius: 25px;" name="txtCep"
+                                id="txtCep" value="<?= $cepUsuario ?>">
+                        </div>
+                        <div class="col-sm-5">Endereço
+                            <input type="text" class="form-control" style="border-radius: 25px;" name="txtEndereco"
+                                id="txtEndereco" value="<?= $enderecoUsuario ?>">
+                        </div>
+                        <div class="col-sm-2">Bairro
+                            <input type="text" class="form-control" style="border-radius: 25px;" name="txtBairro"
+                                id="txtBairro" value="<?= $enderecoUsuario ?>">
+                        </div>
+                        <div class="col-sm-1">Numero
+                            <input type="text" class="form-control" style="border-radius: 25px;" name="txtNumero"
+                                id="txtNumero" value="<?= $numeroUsuario ?>">
+                        </div>
+                        <div class="col-sm-5">Complemento
+                            <textarea name="txtComplemento" class="form-control" id="txtComplemento"
+                                style="border-radius: 25px;" cols="15"
+                                rows="2"></textarea
+                            value="<?= $complementoUsuario ?>"> 
+                    </div>
+                    <div class="col-sm-2">
+
+                    </div>
+                    <div class="col-sm-5">Observação
+                        <textarea name="txtObs" class="form-control" id="txtObs" style="border-radius: 25px;" cols="15" rows="2"><?= $obsUsuario ?></textarea>
+                        </div>
+
+                        <div class="row mt-3">
+                            <div class="col-sm-3">
+                                <select name="txtStatus" id="textStatus" class="form-control"
+                                    style="border-radius: 25px;">
+                                    <option value="">--Selecione um Status--</option>
+                                    <option value="ativo" <?= ($statusUsuario == 'Ativo' ? 'selected' : "") ?>>Ativo
+                                    </option>
+                                    <option value="inativo" <?= ($statusUsuario == 'Inativo' ? 'selected' : "") ?>>Inativo
+                                    </option>
+                                </select>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col-sm-12 text-end">
+                            <button name="btoexcluir" id="btoexcluir" class="btn btn-danger btn-lg"
+                                formaction="usuario_excluir.php">Excluir</button>
+                            <a href="../ConexaoPHP/frm_usuario.php" name="btoLimpar" id="btoLimpar" class="btn btn-secondary">Limpar</a>
+                            <button id="btnalterar" name="btnalterar" class="btn btn-secondary"
+                                formaction="_sistema.php?tela=usuario">alterar</button>
+                            <button name="btocadastrar" id="btocadastrar" class="btn btn-sucess"
+                                formaction="../ConexaoPHP/usuario_cadastrar.php">cadastrar</button>
+
+                        </div>
+                    </div>
+
+            </form>
+        </div>
+    </div>
+
+</body>
+
+</html>

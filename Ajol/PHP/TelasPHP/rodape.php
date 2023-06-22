@@ -6,7 +6,7 @@
 
                 </div>
                 <div class="col-sm-2">
-                    <a href="" class="btn btn-danger bg-gradient form-control">
+                    <a href="index.php" class="btn btn-danger bg-gradient form-control">
                         Sair
                     </a>
                 </div>
