@@ -21,7 +21,7 @@
             </div>
 
         </div>
-
+            <hr>
         <div class="row">
             <div class="col-sm-4 mt-3">
                 <img src="../../img/pro/<?=$idProduto?>/<?=$imgProduto?>" class="w-50 " alt="">
@@ -69,6 +69,7 @@
                 <input type="file" class="btn btn-primary btn-lg btn-block" name="txtImg">
             </div>
         </div>
+    <hr>
         <div class="row mt-3">
             <div class="col-sm-3">Lote
                 <input type="text" class="form-control" style="border-radius: 25px;" name="txtLote" id="txtLote"
@@ -114,11 +115,11 @@
             <div class="col-sm-12 text-end">
                 <button type="button" class="btn btn-danger btn-lg"
                     formaction="../ConexaoPHP/produto_excluir.php">Excluir</button>
-                <a href="sistema.php?tela=produto" class="btn btn-success btn-lg" name="btoLimpar" id="btoLimpar"
+                <a href="sistema.php?tela=produto" class="btn btn-primary btn-lg" name="btoLimpar" id="btoLimpar"
                     class="btn btn-secundary">Limpar</a>
                 <button type="button" class="btn btn-warning btn-lg"
                     formaction="../ConexaoPHP/produto_alterar.php">Alterar</button>
-                    <button name="btoCadastrar" class="btn btn-success" formaction="../ConexaoPHP/produto_cadastrar.php">Cadastrar</button>
+                    <button name="btoCadastrar" class="btn btn-success btn-lg" formaction="../ConexaoPHP/produto_cadastrar.php">Cadastrar</button>
             </div>
         </div>
 
