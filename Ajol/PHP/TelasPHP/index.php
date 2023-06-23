@@ -85,7 +85,7 @@
             </div>
             <div class="text-center">
 
-              <input type="submit" name="submit" class="btn btn-info btn-md" value="Entrar">
+              <button class="btn btn-info btn-md" value="Entrar" formaction="index.php">Login</button>
               <!-- botao de entrar na tela loja index -->
 
               <div class="form-text text-center mb-2 text-dark">Primeiro Acesso
@@ -96,7 +96,9 @@
               </div>
 
               <div>
-                <!-- USUÁRIO VAI RESETAR A SENHA -->
+                <!--
+                  USUÁRIO VAI RESETAR A SENHA 
+                -->
                 <button type="button" class="btn btn-danger mt-2 mb-3">
                   <a style="color:white" href="esqueceusenha.php"> Esqueceu a senha?</button>
                 </a>
