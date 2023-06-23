@@ -34,17 +34,17 @@
             $sql = $conn->prepare("
                 update usuario set
                     nome_usuario=:nome_usuario,
+                    cpf_usuario=:cpf_usuario,
                     login_usuario=:login_usuario,
                     senha_usuario=:senha_usuario,
-                    cpf_usuario=:cpf_usuario,
-                    data_nasc_usuario=:data_nasc_usuario,
                     img_usuario=:img_usuario,
+                    email_usuario=:email_usuario,
+                    data_nasc_usuario=:data_nasc_usuario,
                     endereco_usuario=:endereco_usuario,
-                    bairro_usuario=:bairro_usuario,
                     numero_usuario=:numero_usuario,
                     compl_usuario=:compl_usuario,
+                    bairro_usuario=:bairro_usuario,
                     cep_usuario=:cep_usuario,
-                    email_usuario=:email_usuario,
                     obs_usuario=:obs_usuario,
                     status_usuario=:status_usuario
                 where id_usuario=:id_usuario
@@ -54,17 +54,17 @@
             $sql ->execute(array(
                 ':id_usuario'=>$id,
                 ':nome_usuario'=>$nome,
+                ':cpf_usuario'=>$cpf,
                 ':login_usuario'=>$login,
                 ':senha_usuario'=>$senha,
-                ':cpf_usuario'=>$cpf,
-                ':data_nasc_usuario'=>$datanascimento,
                 ':img_usuario'=>$img['name'],
+                ':email_usuario'=>$email,
+                ':data_nasc_usuario'=>$datanascimento,
                 ':endereco_usuario'=>$endereco,
-                ':bairro_usuario'=>$bairro,
                 ':numero_usuario'=>$numero,
                 ':compl_usuario'=>$complemento,
+                ':bairro_usuario'=>$bairro,
                 ':cep_usuario'=>$cep,
-                ':email_usuario'=>$email,
                 ':obs_usuario'=>$obs,
                 ':status_usuario'=>$status
 

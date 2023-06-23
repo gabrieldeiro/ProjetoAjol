@@ -90,6 +90,7 @@ status_itemcompra varchar(30) null,
   constraint FK_ID_Compra_ItemProduto foreign key(id_compra_Itemproduto) references compra(id_compra)
 );
 
+
 create table Compra
 (
 id_compra int not null Auto_increment primary key ,
@@ -100,6 +101,7 @@ status_compra varchar(30) not null,
 
 constraint FK_ID_Usuario_Compra foreign key(id_usuario_compra) references usuario(id_usuario)  
 );
+
 
 select * from usuario;
 select * from funcionario;
