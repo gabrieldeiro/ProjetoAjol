@@ -93,9 +93,9 @@
     }
     else
     {
-        header('Location:../TelasPHP/frm_usuario.php'); 
+        header('Location:../TelasPHP/sistema.php?tela=usuario'); 
     }
 
 ?>
 
-<a href="../TelasPHP/frm_usuario.php">Voltar</a>
+<a href="../TelasPHP/sistema.php?tela=usuario">Voltar</a>
