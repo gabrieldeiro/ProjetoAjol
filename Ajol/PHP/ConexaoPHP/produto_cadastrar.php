@@ -11,7 +11,8 @@
         $qtde = $_POST['txtQtde'];
         $peso = $_POST['txtPeso'];
         $escala = $_POST['txtEscala'];
-        $valor = $_POST['txtValor'];
+        $valorunitario_produto= $_POST['txtvalorunitario_produto'];
+        $valorcusto_produto= $_POST['txtValorcusto_produto'];
         $desconto = $_POST['txtDesconto'];
         $img = '';
         $img2 = '';
@@ -43,7 +44,8 @@
                     qtde_produto,
                     peso_produto,
                     escala_produto,
-                    valor_produto,
+                    valorunitario_produto,
+                    valorcusto_produto,
                     desconto_produto,
                     img_produto,
                     obs_produto,
@@ -59,7 +61,8 @@
                     :qtde_produto,
                     :peso_produto,
                     :escala_produto,
-                    :valor_produto,
+                    :valorunitario_produto,
+                    :valorcusto_produto,
                     :desconto_produto,
                     :img_produto,
                     :obs_produto,
@@ -77,7 +80,8 @@
                 ':qtde_produto'=>$qtde,
                 ':peso_produto'=>$peso,
                 ':escala_produto'=>$escala,
-                ':valor_produto'=>$valor,
+                ':valorunitario_produto'=>$valorunitario_produto,
+                ':valorcusto_produto'=>$valorcusto_produto,
                 ':desconto_produto'=>$desconto,
                 ':img_produto'=>$img['name'],
                 ':obs_produto'=>$obs,
