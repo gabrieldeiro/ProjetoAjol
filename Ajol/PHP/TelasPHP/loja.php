@@ -11,9 +11,36 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="../css/style.css">
+    
     <?php
     include_once('../ConexaoPHP/conexao.php')
     ?>
+    <style>
+        #produto
+        {
+            transition: 0.3s;
+        }
+        #produto:hover
+        {
+            box-shadow: 10px 5px 0px #84A400!important;
+        }
+        #produto2
+        {
+            transition: 0.3s;
+        }
+        #produto2:hover
+        {
+            box-shadow: -10px 5px 0px #84A400!important;
+        }
+        #icone
+        {
+            transition: 0.5s;
+        }
+        #icone:hover
+        {
+            box-shadow: 0px 5px 10px #84A400!important;
+        }
+    </style>
 </head>
 
 <body>
@@ -63,7 +90,7 @@
                                 <!-- 
                                 LINK CARINHO AQUI
                             -->
-                                <img src="../../img/Carinho.png" class="img-fluid me-3" style="width: 43px; height:40px" alt="">
+                                <img src="../../img/Carinho.png"  class="img-fluid me-3" style="width: 43px; height:40px" alt="">
                             </a>
                             <a style="text-decoration: none!important; color:white" href="">
                                 <!-- 
@@ -82,10 +109,10 @@
             <div class="col-sm-1">
 
             </div>
-            <div class="col-sm-2" style="background-color: #783ebf; border-top-left-radius:30px; border-bottom-left-radius:30px">
+            <div class="col-sm-2 bg-gradient" style="background-color: #783ebf; border-top-left-radius:30px; border-bottom-left-radius:30px">
 
             </div>
-            <div class="col-sm-6" style="background-color: #783ebf;">
+            <div class="col-lg-6 bg-gradient" style="background-color: #783ebf;">
                 <div id="myCarousel" class="carousel slide" data-ride="carousel">
                     <!-- Indicators -->
                     <ol class="carousel-indicators">
@@ -119,42 +146,103 @@
                     </a>
                 </div>
             </div>
-            <div class="col-sm-2" style="background-color: #783ebf; border-top-right-radius:30px; border-bottom-right-radius:30px">
+            <div class="col-sm-2 bg-gradient" style="background-color: #783ebf; border-top-right-radius:30px; border-bottom-right-radius:30px">
 
             </div>
         </div>
 
-        <div class="row">
+        <div class="row mt-5">
 
-        <!-- 
+            <!-- 
             Sombra NEON VERDE
         -->
-            <div class="col-md-12 ms-3 ">
+            <div class="col-sm-12 ms-3">
                 <div class="col-sm-1">
 
                 </div>
-                <div class="col-md-2 mt-4 p-2" style="background-color: #783ebf; border-top-left-radius:30px; border-bottom-left-radius:30px">
+                <div class="col-sm-2 mt-4 p-2" id="produto2" style="background-color: #783ebf; border-top-left-radius:30px; border-bottom-left-radius:30px;">
                     <?php
                     //Pesquisar a imagem do produto e inserir aqui e nas próximas col
                     //echo '<img src="" class="img-fluid w-100" alt="">';
                     ?>
                     <img src="../../img/coringa.png" class="img-fluid w-100" style="border-radius: 25px;" alt="">
                 </div>
-                <div class="col-md-2 mt-4 p-2" style="background-color: #783ebf;">
+                <div class="col-sm-2 mt-4 p-2" id="produto" style="background-color: #783ebf;">
                     <img src="../../img/riven.webp" class="img-fluid w-100" style="border-radius: 25px;" alt="">
                 </div>
-                <div class="col-md-2 mt-4 p-2" style="background-color: #783ebf;">
+                <div class="col-sm-2 mt-4 p-2" id="produto" style="background-color: #783ebf;">
                     <img src="../../img/ace.webp" class="img-fluid w-100" style="border-radius: 25px;" alt="">
                 </div>
-                <div class="col-md-2 mt-4 p-2" style="background-color: #783ebf;">
+                <div class="col-sm-2 mt-4 p-2" id="produto" style="background-color: #783ebf;">
                     <img src="../../img/aranha.webp" class="img-fluid w-100" style="border-radius: 25px;" alt="">
                 </div>
-                <div class="col-md-2 mt-4 p-2" style="background-color: #783ebf; border-top-right-radius:30px; border-bottom-right-radius:30px">
+                <div class="col-sm-2 mt-4 p-2" id="produto" style="background-color: #783ebf; border-top-right-radius:30px; border-bottom-right-radius:30px">
                     <img src="../../img/capitao.png" class="img-fluid w-100" style="border-radius: 25px;" alt="">
                 </div>
                 <div class="col-sm-1">
 
                 </div>
+            </div>
+        </div>
+
+        <div class="row mt-5">
+
+            <!-- 
+                Produtos 2
+            -->
+            <div class="col-sm-12 ms-3 ">
+                <div class="col-sm-1">
+
+                </div>
+                <div class="col-sm-2 mt-4 p-2" id="produto2" style="background-color: #783ebf; border-top-left-radius:30px; border-bottom-left-radius:30px">
+                    <?php
+                    //Pesquisar a imagem do produto e inserir aqui e nas próximas col
+                    //echo '<img src="" class="img-fluid w-100 produto" alt="">';
+                    ?>
+                    <img src="../../img/ace.webp" class="img-fluid w-100 produto" style="border-radius: 25px;" alt="">
+                </div>
+                <div class="col-sm-2 mt-4 p-2" id="produto" style="background-color: #783ebf;">
+                    <img src="../../img/coringa.png" class="img-fluid w-100 produto" style="border-radius: 25px;" alt="">
+                </div>
+                <div class="col-sm-2 mt-4 p-2" id="produto" style="background-color: #783ebf;">
+                    <img src="../../img/riven.webp" class="img-fluid w-100 produto" style="border-radius: 25px;" alt="">
+                </div>
+                <div class="col-sm-2 mt-4 p-2" id="produto" style="background-color: #783ebf;">
+                    <img src="../../img/capitao.png" class="img-fluid w-100 produto" style="border-radius: 25px;" alt="">
+                </div>
+                <div class="col-sm-2 mt-4 p-2" id="produto" style="background-color: #783ebf; border-top-right-radius:30px; border-bottom-right-radius:30px">
+                    <img src="../../img/aranha.webp" class="img-fluid w-100 produto" style="border-radius: 25px;" alt="">
+                </div>
+                <div class="col-sm-1">
+
+                </div>
+            </div>
+        </div>
+        <div class="row mt-5 ms-3">
+            <div class="col-sm-1">
+
+            </div>
+
+            <div class="col-sm-5 p-5" id="produto2" style="background-color: #783ebf;  border-top-left-radius:30px; border-bottom-left-radius:30px;">
+                <a href="">
+                    <!-- 
+                        LINK PARA A CATEGORIA CORRESPONDENTE
+                    -->
+                    <img src="../../img/Action Figures Anime.png" alt="" class="img-fluid w-100" style="border-radius: 25px;">
+                </a>
+            </div>
+
+            <div class="col-sm-5 p-5" id="produto" style="background-color: #783ebf;  border-top-right-radius:30px; border-bottom-right-radius:30px">
+                <a href="">
+                    <!-- 
+                        LINK PARA A CATEGORIA CORRESPONDENTE
+                    -->
+                    <img src="../../img/Action Figures Super.png" alt="" class="img-fluid w-100" style="border-radius: 25px;">
+                </a>
+            </div>
+
+            <div class="col-sm-1">
+
             </div>
         </div>
 </body>

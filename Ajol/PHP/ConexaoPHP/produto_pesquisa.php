@@ -1,5 +1,5 @@
 <?php
-    include_once('conexao');
+    include_once('conexao.php');
 
     $idProduto = '';
     $idcategoriaProduto = '';
@@ -24,7 +24,7 @@
     {
         $id = $_POST['txtId'];
 
-        $sql = $conn->query('select produto.*, categoria.nome_categoria from produto inner join categoria on categoria.id_categoria = produto.id_categoria_produto WHERE produto.id_produto ='.$id);
+        $sql = $conn->query('select * from produto where id_produto='.$id);
 
         if($sql->rowCount()>=1)
         {
@@ -32,7 +32,6 @@
             {
                 $idProduto=$row[0];
                 $idcategoriaProduto=$row[1];
-                $nomecategoriaProduto=$row[16];
                 $nomeProduto=$row[2];
                 $marcaProduto=$row[3];
                 $datacadastroProduto=$row[4];
@@ -48,6 +47,13 @@
                 $obsProduto=$row[12];
                 $statusProduto=$row[13];
             }
+
+            $sql = $conn->query('select * from categoria where id_categoria='.$idcategoriaProduto);
+            
+                foreach ($sql as $row) 
+                {
+                    $nomecategoriaProduto=$row[1];
+                }
 
         }
         else

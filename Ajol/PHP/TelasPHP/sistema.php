@@ -17,14 +17,14 @@
 </head>
 
 <body>
-    <div class="container">
+    <div class="container-fluid">
 
         <?php
         include_once('topo.php');
         ?>
 
         <div class="row">
-            <div class="col-sm-12" style="height:540px; background-color:darkgray">
+            <div class="col-sm-12" style="height:570px; background-color:darkgray">
                 <?php
                 if (isset($_GET['tela'])) {
                     if ($_GET['tela'] == 'usuario') {
