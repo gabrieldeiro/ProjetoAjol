@@ -46,8 +46,12 @@
                 </div>
                 <div class="row mt-3 ">
                     <div class="col-sm-4">Valor unitario
-                        <input type="text" class="form-control" style="border-radius: 25px;" name="txtValor"
-                            id="txtValor" value="<?= $valorProduto ?>">
+                        <input type="text" class="form-control" style="border-radius: 25px;" name="txtvalorunitario_produto"
+                            id="txtvalorunitario_produto" value="<?= $valorunitario_produto ?>">
+                    </div>
+                    <div class="col-sm-4">Valor custo
+                        <input type="text" class="form-control" style="border-radius: 25px;" name="txtValorcusto_produto"
+                            id="txtValorcusto_produto" value="<?= $valorcusto_produto ?>">
                     </div>
                     <div class="col-sm-4">desconto
                         <input type="text" class="form-control" style="border-radius: 25px;" name="txtDesconto"

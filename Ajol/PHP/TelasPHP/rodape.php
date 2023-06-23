@@ -1,5 +1,5 @@
  <div class="row" style="background-color:#783ebf;">
-        <div class="col-sm-12 p-3">
+        <div class="col-sm-12 mt-3 mb-3">
             <div class="row">
                 <div class="col-sm-5">
 
