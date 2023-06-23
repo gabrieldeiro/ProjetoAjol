@@ -5,7 +5,7 @@
     {
         $idcategoria = $_POST['txtIdcategoria'];
         $nome = $_POST['txtNome'];
-        $marca = $_POST['txtMatca'];
+        $marca = $_POST['txtMarca'];
         $datacadastro = $_POST['txtData'];
         $lote = $_POST['txtLote'];
         $qtde = $_POST['txtQtde'];
@@ -46,8 +46,6 @@
                     valor_produto,
                     desconto_produto,
                     img_produto,
-                    img2_produto,
-                    img3_produto,
                     obs_produto,
                     status_produto
                 )
@@ -64,8 +62,6 @@
                     :valor_produto,
                     :desconto_produto,
                     :img_produto,
-                    :img2_produto,
-                    :img3_produto,
                     :obs_produto,
                     :status_produto
                 )
@@ -83,9 +79,7 @@
                 ':escala_produto'=>$escala,
                 ':valor_produto'=>$valor,
                 ':desconto_produto'=>$desconto,
-                ':img_produto'=>$img,
-                ':img2_produto'=>$img2['name'],
-                ':img3_produto'=>$img3['name'],
+                ':img_produto'=>$img['name'],
                 ':obs_produto'=>$obs,
                 ':status_produto'=>$status
             ));
@@ -103,16 +97,14 @@
                 }
 
                 $foto = $pasta.$img['name'];
-                $foto2 = $pasta.$img2['name'];
-                $foto3 = $pasta.$img3['name'];
+                //$foto2 = $pasta.$img2['name'];
+                //$foto3 = $pasta.$img3['name'];
 
                 move_uploaded_file($img['tmp_name'],$foto);
-                move_uploaded_file($img2['tmp_name'],$foto2);
-                move_uploaded_file($img3['tmp_name'],$foto3);
+                //move_uploaded_file($img2['tmp_name'],$foto2);
+                //move_uploaded_file($img3['tmp_name'],$foto3);
                 
             }
-
-
 
         } catch (PDOException $ex) {
             echo $ex->getMessage();
