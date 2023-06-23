@@ -74,7 +74,7 @@
             {
                 echo '<p>Dados alterados com sucesso!</p>';
 
-                $pasta = '../Ajol/img/usu/'.$id.'/';
+                $pasta = '../../img/usu/'.$id.'/';
                 if (!file_exists($pasta))
                 {
                     mkdir($pasta);
@@ -93,9 +93,9 @@
     }
     else
     {
-        header('Location:../TelasPHP/frm_usuario.php'); 
+        header('Location:../TelasPHP/sistema.php?tela=usuario'); 
     }
 
 ?>
 
-<a href="../TelasPHP/frm_usuario.php">Voltar</a>
+<a href="../TelasPHP/sistema.php?tela=usuario">Voltar</a>
