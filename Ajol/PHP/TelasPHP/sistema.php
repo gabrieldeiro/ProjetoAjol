@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="style.css">
     <?php
     include_once('../ConexaoPHP/conexao.php');
     ?>
@@ -43,9 +42,19 @@
                 ?>
             </div>
         </div>
-        <?php
-        include_once('rodape.php')
-        ?>
+        <div class="row" style="background-color:#783ebf;">
+            <div class="col-sm-5">
+
+            </div>
+            <div class="col-sm-2 mt-3 mb-3">
+                <a href="index.php" class="btn btn-danger bg-gradient form-control">
+                    Sair
+                </a>
+            </div>
+            <div class="col-sm-4">
+
+            </div>
+        </div>
     </div>
 </body>
 
