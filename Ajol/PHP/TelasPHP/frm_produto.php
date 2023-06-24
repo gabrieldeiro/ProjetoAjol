@@ -1,5 +1,10 @@
 <?php include_once('../ConexaoPHP/produto_pesquisa.php') ?>
-
+<style>
+    .textarea1
+    {
+        resize: none!important;
+    }
+</style>
 <body>
     <form action="" method="post" style="background-color: darkgray;" enctype="multipart/form-data">
         <div class="row mt-3 ">
@@ -108,7 +113,7 @@
                     value="<?= $idcategoriaProduto ?>">
             </div>
             <div class="col-sm-4"> Observação
-                <textarea class="form-control" name="txtObs" id="txtObs" rows="5" placeholder="Observação " value="<?= $obsProduto?>"></textarea>
+                <textarea class="form-control textarea1" name="txtObs" id="txtObs" rows="2" placeholder="Observação " value="<?= $obsProduto?>"></textarea>
             </div>
 
         </div>

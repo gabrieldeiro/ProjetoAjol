@@ -1,10 +1,15 @@
 <?php include_once('../ConexaoPHP/usuario_pesquisa.php') ?>
+<style>
+    .textarea1 {
+        resize: none !important;
+    }
+</style>
 <div class="col-sm-12">
     <form action="" method="post" enctype="multipart/form-data" style="background-color: darkgray;">
 
         <div class="row">
             <div class="col-sm-4 mt-3">
-                <img src="../../img/usu/<?=$idUsuario ?>/<?=$imgUsuario?>" class="w-50 " alt="Usuario">
+                <img src="../../img/usu/<?= $idUsuario ?>/<?= $imgUsuario ?>" class="w-50 " alt="Usuario">
             </div>
         </div>
 
@@ -70,34 +75,34 @@
                     <textarea name="txtComplemento" class="form-control" id="txtComplemento" style="border-radius: 25px;" cols="15" rows="2"></textarea
                             value="<?= $complementoUsuario ?>"> 
                     </div>
-                    <div class="col-sm-2">
-
-                    </div>
-                    <div class="col-sm-5">Observação
-                        <textarea name="txtObs" class="form-control" id="txtObs" style="border-radius: 25px;" cols="15" rows="2"><?= $obsUsuario ?></textarea>
+                  
+                    <div class="col-sm-4"> Observação
+                        <textarea class="form-control textarea1" name="txtObs" id="txtObs" rows="1" placeholder="Observação " value="<?= $obsProduto ?>"></textarea>
                 </div>
+            </div>
+
+            <div class="row mt-3">
+                <div class="col-sm-3">Status
+                    <select name="txtStatus" id="textStatus" class="form-control" style="border-radius: 25px;">
+                        <option value="">--Selecione um Status--</option>
+                        <option value="ativo" <?= ($statusUsuario == 'Ativo' ? 'selected' : "") ?>>Ativo
+                        </option>
+                        <option value="inativo" <?= ($statusUsuario == 'Inativo' ? 'selected' : "") ?>>Inativo
+                        </option>
+                    </select>
+                </div>
+            </div>
+
+        </div>
+
 
                 <div class="row mt-3">
-                    <div class="col-sm-3">Status
-                        <select name="txtStatus" id="textStatus" class="form-control" style="border-radius: 25px;">
-                            <option value="">--Selecione um Status--</option>
-                            <option value="ativo" <?= ($statusUsuario == 'Ativo' ? 'selected' : "") ?>>Ativo
-                            </option>
-                            <option value="inativo" <?= ($statusUsuario == 'Inativo' ? 'selected' : "") ?>>Inativo
-                            </option>
-                        </select>
+                    <div class="col-sm-12 text-end">
+                        <button name="btoexcluir" id="btoexcluir" class="btn btn-danger btn-lg" formaction="usuario_excluir.php">Excluir</button>
+                        <a href="../TelasPHP/sistema.php?tela=usuario" name="btoLimpar" id="btoLimpar" class="btn btn-primary btn-lg">Limpar</a>
+                        <button id="btnalterar" name="btnalterar" class="btn btn-warning btn-lg" formaction="../ConexaoPHP/usuario_alterar.php">Alterar</button>
+                        <button name="btocadastrar" id="btocadastrar" class="btn btn-success btn-lg" formaction="../ConexaoPHP/usuario_cadastrar.php">Cadastrar</button>
                     </div>
-                </div>
-
-            </div>
-            <div class="row mt-3">
-                <div class="col-sm-12 text-end">
-                    <button name="btoexcluir" id="btoexcluir" class="btn btn-danger" formaction="usuario_excluir.php">Excluir</button>
-                    <a href="../TelasPHP/sistema.php?tela=usuario" name="btoLimpar" id="btoLimpar" class="btn btn-secondary">Limpar</a>
-                    <button id="btnalterar" name="btnalterar" class="btn btn-secondary" formaction="../ConexaoPHP/usuario_alterar.php">Alterar</button>
-                    <button name="btocadastrar" id="btocadastrar" class="btn btn-success" formaction="../ConexaoPHP/usuario_cadastrar.php">Cadastrar</button>
-                </div>
-            </div>
-        </div>
+                </div>    
     </form>
-</div>
+</div>  
