@@ -38,7 +38,7 @@
                     login_funcionario,
                     senha_funcionario,
                     cpf_funcionario,
-                    data_nasc_funcionario,
+                    datanasc_funcionario,
                     img_funcionario,
                     bairro_funcionario,
                     numero_funcionario,
@@ -54,7 +54,7 @@
                     :login_funcionario,
                     :senha_funcionario,
                     :cpf_funcionario,
-                    :data_nasc_funcionario,
+                    :datanasc_funcionario,
                     :img_funcionario,
                     :bairro_funcionario,
                     :numero_funcionario,
@@ -71,7 +71,7 @@
                 ':login_funcionario'=>$login,
                 ':senha_funcionario'=>$senha,
                 ':cpf_funcionario'=>$cpf,
-                ':data_nasc_funcionario'=>$datanascimento,
+                ':datanasc_funcionario'=>$datanascimento,
                 ':img_funcionario'=>$img['name'],
                 ':bairro_funcionario'=>$bairro,
                 ':numero_funcionario'=>$numero,
@@ -105,9 +105,9 @@
     } 
     else
     {
-        header('Location:../TelasPHP/frm_funcionario.php');
+        header('Location:../TelasPHP/sistema.php?tela=funcionario');
     }
 
 ?>
 
-<a href="../TelasPHP/frm_funcionario.php">Voltar</a>
+<a href="../TelasPHP/sistema.php?tela=funcionario">Voltar</a>

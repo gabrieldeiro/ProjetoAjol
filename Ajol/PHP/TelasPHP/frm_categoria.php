@@ -14,7 +14,7 @@
 
         <div class="row mt-3">
             <div class="col-sm-4">
-                <input type="text" class="form-control" style="border-radius: 25px;" name="txtNome" placeholder="nome categoria" value="<?= $nomeFuncionario ?>">
+                <input type="text" class="form-control" style="border-radius: 25px;" name="txtNome" placeholder="nome categoria" value="<?= $nomeCategoria ?>">
             </div>
             <div class="col-sm-4">
                 <button class="btn btn-primary" name="btopesquisar" id="btopesquisar" formaction="frm_categoria.php">&#128269;</button>

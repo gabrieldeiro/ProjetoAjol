@@ -4,7 +4,7 @@
 
         <div class="row">
             <div class="col-sm-4 mt-3">
-                <img src="../../img/usu/<?=$idUsuario ?>/<?=$imgUsuario?>" alt="../../img/usu/<?=$idUsuario ?>/<?=$imgUsuario?>" class="w-50 " alt="Usuario">
+                <img src="../../img/usu/<?=$idUsuario ?>/<?=$imgUsuario?>" class="w-50 " alt="Usuario">
             </div>
         </div>
 
