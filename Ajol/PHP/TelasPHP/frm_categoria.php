@@ -17,7 +17,7 @@
                 <input type="text" class="form-control" style="border-radius: 25px;" name="txtNome" placeholder="nome categoria" value="<?= $nomeCategoria ?>">
             </div>
             <div class="col-sm-4">
-                <button class="btn btn-primary" name="btopesquisar" id="btopesquisar" formaction="frm_categoria.php">&#128269;</button>
+                <button class="btn btn-primary" name="btopesquisar" id="btopesquisar" formaction="sistema.php?tela=categoria">&#128269;</button>
 
             </div>
 
@@ -48,7 +48,7 @@
                 <div class="col-sm-12 text-end">
                     <button name="btoCadastrar" class="btn btn-success" formaction="../ConexaoPHP/categoria_cadastrar.php">Cadastrar</button>
                     <button name="btoAlterar" class="btn btn-warning" formaction="../ConexaoPHP/categoria_alterar.php">Alterar</button>
-                    <button name="btoLimpar" id="btoLimpar" class="btn btn-primary">Limpar</button><a href="categoria_cadastrar.php"></a>
+                    <a href="sistema.php?tela=categoria" class="btn btn-primary" name="btoLimpar" id="btoLimpar" class="btn btn-secundary">Limpar</a>
                     <button name="btoExcluir" class="btn btn-danger" formaction="../ConexaoPHP/categoria_excluir.php">Excluir</button>
                 </div>
             </div>
