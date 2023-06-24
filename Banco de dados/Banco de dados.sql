@@ -4,22 +4,26 @@ use ajol;
 create table Usuario
 (
 id_usuario int not null auto_increment primary key,
-nome_usuario varchar(100) not null,
-cpf_usuario char(14) not null unique,
-login_usuario  char(50)  not null unique,
-senha_usuario   char(50) not null, 
-img_usuario longblob not null, 
-email_usuario varchar(30) not null, 
-data_nasc_usuario datetime not null, 
-endereco_usuario varchar(30) not null, 
-numero_usuario int not null,
+nome_usuario varchar(100) null,
+cpf_usuario char(14) null unique,
+login_usuario  char(50)  null unique,
+senha_usuario   char(50) null, 
+img_usuario longblob null, 
+email_usuario varchar(30) null, 
+data_nasc_usuario datetime null, 
+endereco_usuario varchar(30) null, 
+numero_usuario int null,
 compl_usuario decimal(10,3) null, 
-bairro_usuario varchar(100) not null, 
-cep_usuario char(9) not null,
+bairro_usuario varchar(100) null, 
+cep_usuario char(9) null,
 obs_usuario varchar(255) null, 
-status_usuario varchar(20) not null
+status_usuario varchar(20) null
 
 );
+
+drop table usuario
+drop table compra
+drop table itemproduto
 
 select * from usuario;
 
@@ -88,6 +92,15 @@ status_produto varchar(20) null,
 
 constraint FK_ID_Categoria_Produto foreign key(id_categoria_produto) references categoria(id_categoria)
 );
+
+select * from produto;
+select * from categoria;
+
+insert into produto
+	(id_categoria_produto,nome_produto,marca_produto,lote_produto,qtde_produto,peso_produto,dimensao_produto,escala_produto,valorunitario_produto,valorcusto_produto,desconto_produto,img_produto,img2_produto,img3_produto,obs_produto,status_produto)
+values
+	(1,'Produto 1''Marca 1','1',12,'12','2070','15','120','270','','','','','','inativo');
+	
 
 Create table ItemProduto 
 (
