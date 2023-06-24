@@ -33,16 +33,16 @@
                 $loginUsuario=$row[3];
                 $senhaUsuario=$row[4];
                 $cpfUsuario=$row[2];
-                $datanascimentoUsuario=$row[5];
-                $imgUsuario=$row[13];
-                $enderecoUsuario=$row[6];
-                $bairroUsuario=$row[9];
-                $numeroUsuario=$row[7];
-                $complementoUsuario=$row[8];
-                $cepUsuario=$row[10];
-                $emailUsuario=$row[13];
-                $obsUsuario=$row[11];
-                $statusUsuario=$row[12];
+                $datanascimentoUsuario=$row[7];
+                $imgUsuario=$row[5];
+                $enderecoUsuario=$row[8];
+                $bairroUsuario=$row[11];
+                $numeroUsuario=$row[9];
+                $complementoUsuario=$row[10];
+                $cepUsuario=$row[12];
+                $emailUsuario=$row[6];
+                $obsUsuario=$row[13];
+                $statusUsuario=$row[14];
 
             }
         }

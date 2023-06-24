@@ -74,7 +74,7 @@
                 ':cpf_usuario'=>$cpf,
                 ':login_usuario'=>$login,
                 ':senha_usuario'=>$senha,
-                ':img_usuario'=>$img,
+                ':img_usuario'=>$img['name'],
                 ':email_usuario'=>$email,
                 ':data_nasc_usuario'=>$datanascimento,
                 ':endereco_usuario'=>$endereco,
@@ -111,9 +111,9 @@
     }
     else
     {
-        header('Location:../TelasPHP/frm_usuario.php'); 
+        header('Location:../TelasPHP/sistema.php?tela=usuario'); 
     }
 
 ?>
 
-<a href="../TelasPHP/frm_usuario.php">Voltar</a>
+<a href="../TelasPHP/sistema.php?tela=usuario">Voltar</a>
