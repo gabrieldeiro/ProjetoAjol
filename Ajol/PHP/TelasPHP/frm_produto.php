@@ -44,7 +44,7 @@
                             id="txtQuantidade" value="<?= $marcaProduto ?>">
                     </div>
                 </div>
-                <div class="row mt-3 ">
+                <div class="row ">
                     <div class="col-sm-4">Valor unitario
                         <input type="text" class="form-control" style="border-radius: 25px;" name="txtvalorunitario_produto"
                             id="txtvalorunitario_produto" value="<?= $valorunitario_produto ?>">
@@ -61,51 +61,53 @@
                         <input type="text" class="form-control" style="border-radius: 25px;" name="txtPercentualdelucro"
                             id="txtPercentualdelucro">
                     </div>
+                    <div class="col-sm-4">Lote
+                         <input type="text" class="form-control" style="border-radius: 25px;" name="txtLote" id="txtLote"
+                             value="<?= $loteProduto ?>">
+                     </div>
+                     <div class="col-sm-4">Escala
+                         <input type="text" class="form-control" style="border-radius: 25px;" name="txtEscala"
+                            id="txtEscala" value="<?= $escalaProduto ?>">
+                     </div>
+                     <div class="col-sm-4">Peso (kg)
+                        <input type="text" class="form-control" style="border-radius: 25px;" name="txtPeso" id="txtPeso"
+                            value="<?= $pesoProduto ?>">
+                        </div>
+                     <div class="col-sm-4">Status
+                        <select name="txtStatus" class="form-control" style="border-radius: 25px;">
+                            <option value="">--Selecione um Status--</option>
+                            <option value="ativo" <?= ($statusProduto == 'ativo' ? 'selected' : "") ?>>ativo</option>
+                            <option value="inativo" <?= ($statusProduto == 'inativo' ? 'selected' : "") ?>>inativo</option>
+                        </select>
+                    </div>
+                     <div class="col-sm-4">Dimensão (Altura cm / Largura cm)
+                        <input type="text" class="form-control" style="border-radius: 25px;" name="txtPeso" id="txtPeso"
+                            value="<?= $dimensaoProduto ?>">
+                    </div>
                 </div>
-            </div>
+            </div>  
         </div>
-        <div class="row mt-3 ">
+        <div class="row ">
             <div class="col-sm-4">
                 <input type="file" class="btn btn-primary btn-lg btn-block" name="txtImg">
             </div>
         </div>
     <hr>
         <div class="row mt-3">
-            <div class="col-sm-3">Lote
-                <input type="text" class="form-control" style="border-radius: 25px;" name="txtLote" id="txtLote"
-                    value="<?= $loteProduto ?>">
-            </div>
-            <div class="col-sm-3">Quantidade
-                <input type="text" class="form-control" style="border-radius: 25px;" name="txtQtde" id="txtQtde"
-                    value="<?= $qtdeProduto ?>">
-            </div>
-            <div class="col-sm-3">Escala
-                <input type="text" class="form-control" style="border-radius: 25px;" name="txtEscala"
-                    id="txtEscala" value="<?= $escalaProduto ?>">
-            </div>
-            <div class="col-sm-3">Peso (kg)
-                <input type="text" class="form-control" style="border-radius: 25px;" name="txtPeso" id="txtPeso"
-                    value="<?= $pesoProduto ?>">
-            </div>
+           
         </div>
 
         <div class="row mt-3">
-            <div class="col-sm-4">Status
-                <select name="txtStatus" class="form-control" style="border-radius: 25px;">
-                    <option value="">--Selecione um Status--</option>
-                    <option value="ativo" <?= ($statusProduto == 'ativo' ? 'selected' : "") ?>>ativo</option>
-                    <option value="inativo" <?= ($statusProduto == 'inativo' ? 'selected' : "") ?>>inativo</option>
-                </select>
+            
+            <div class="col-sm-4">Nome categoria
+                <input type="text" class="form-control" style="border-radius: 25px;" name="txtCategoria"
+                    id="txtCategoria" value="<?= $nomecategoriaProduto ?>">
             </div>
             <div class="col-sm-4"> ID da categoria
                 <input type="number" class="form-control" style="border-radius: 25px;" name="txtIdcategoria" min="0"
                     value="<?= $idcategoriaProduto ?>">
             </div>
-            <div class="col-sm-4">Nome categoria
-                <input type="text" class="form-control" style="border-radius: 25px;" name="txtCategoria"
-                    id="txtCategoria" value="<?= $nomecategoriaProduto ?>">
-            </div>
-            <div class="col-sm-4">
+            <div class="col-sm-4"> Observação
                 <textarea class="form-control" name="txtObs" id="txtObs" rows="5" placeholder="Observação " value="<?= $obsProduto?>"></textarea>
             </div>
 
