@@ -29,19 +29,19 @@
             {
                 $idFuncionario = $row[0];
                 $nomeFuncionario = $row[1];
-                $loginFuncionario = $row[11];
-                $senhaFuncionario = $row[12];
-                $cpfFuncionario = $row[2];
-                $datanascimentoFuncionario = $row[3];
+                $loginFuncionario = $row[2];
+                $senhaFuncionario = $row[3];
+                $cpfFuncionario = $row[5];
+                $datanascimentoFuncionario = $row[6];
                 $imgFuncionario = $row[14];
-                $enderecoFuncionario = $row[4];
-                $bairroFuncionario = $row[7];
-                $numeroFuncionario = $row[5];
-                $complementoFuncionario = $row[6];
-                $cepFuncionario = $row[8];
-                $emailFuncionario = $row[13];
-                $obsFuncionario = $row[9];
-                $statusFuncionario = $row[10];
+                $enderecoFuncionario = $row[7];
+                $bairroFuncionario = $row[10];
+                $numeroFuncionario = $row[8];
+                $complementoFuncionario = $row[9];
+                $cepFuncionario = $row[11];
+                $emailFuncionario = $row[4];
+                $obsFuncionario = $row[12];
+                $statusFuncionario = $row[13];
 
             }
 

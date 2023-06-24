@@ -3,6 +3,12 @@
 <!-- os que estao no value estao na variavel de funcionario_pesquisa -->
 
 <form action="" method="post" style="background-color: darkgray;" enctype="multipart/form-data">
+    <div class="row">
+         <div class="col-sm-4 mt-3">
+            <img src="../../img/fun/<?=$idFuncionario ?>/<?=$imgFuncionario?>" alt="imagem funcionario" class="w-50 "> 
+        </div>
+    </div>
+
     <div class="row mt-3 ">
         <div class="col-sm-2"> ID do Usuario
             <input type="text" class="form-control" style="border-radius: 25px;" name="txtId" id="txtId" value="<?= $idFuncionario ?>">
@@ -13,7 +19,7 @@
         </div>
 
         <div class="col-sm-1 text-center mt-4">
-            <button class="btn btn-primary" style="border-radius: 25px;" name="btoPesquisa" id="btoPesquisa" formaction="frm_funcionario.php">&#128269;</button>
+            <button class="btn btn-primary" style="border-radius: 25px;" name="btoPesquisa" id="btoPesquisa" formaction="sistema.php?tela=funcionario">&#128269;</button>
         </div>
     </div>
 
@@ -26,7 +32,7 @@
         </div>
 
         <div class="col-mt-5">Foto funcionario
-            <input type="file" class="form-control" name="txtImg" id="txtImg" value="<?= $img ?>">
+            <input type="file" class="form-control" name="txtImg" id="txtImg">
 
         </div>
     </div>
@@ -74,7 +80,7 @@
 
         <div class="row mt-3">
             <div class="col-sm-12">
-                <textarea class="form-control" name="txtObs" id="txtObs" rows="5" placeholder="Observação " value="<?= $obsFuncionario ?>"></textarea>
+                <textarea class="form-control" name="txtObs" id="txtObs" rows="5" placeholder="Observação "><?= $obsFuncionario ?></textarea>
             </div>
         </div>
 
@@ -84,7 +90,7 @@
         <div class="col-sm-12 text-end">
             <button name="btoCadastrar" class="btn btn-success" formaction="../ConexaoPHP/funcionario_cadastrar.php">Cadastrar</button>
             <button name="btoAlterar" class="btn btn-warning" formaction="../ConexaoPHP/funcionario_alterar.php">Alterar</button>
-            <button name="btoLimpar" id="btoLimpar" class="btn btn-primary">Limpar</button><a href="funcionario_cadastrar.php"></a>
+            <a href="sistema.php?tela=funcionario" name="btoLimpar" id="btoLimpar" class="btn btn-secondary">Limpar</a>
             <button name="btoExcluir" class="btn btn-danger" formaction="../ConexaoPHP/funcionario_excluir.php">Excluir</button>
 
         </div>
