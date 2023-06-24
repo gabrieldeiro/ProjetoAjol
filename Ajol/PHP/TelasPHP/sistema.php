@@ -23,7 +23,7 @@
         ?>
 
         <div class="row">
-            <div class="col-sm-12" style="min-height:500px; background-color:darkgray">
+            <div class="col-sm-12" style="min-height:550px; background-color:darkgray">
                 <?php
                 if (isset($_GET['tela'])) {
                     if ($_GET['tela'] == 'usuario') {
