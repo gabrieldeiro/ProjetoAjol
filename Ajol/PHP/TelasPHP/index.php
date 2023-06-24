@@ -91,7 +91,7 @@
               <div class="form-text text-center mb-2 text-dark">Primeiro Acesso
                 <button class="mt-4">
                   <!-- USUÁRIO VAI CRIAR SUA PRÓPRIA CONTA -->
-                  <a href="../ConexaoPHP/" class="text-dark fw-bold"> Crie a sua conta</a>
+                  <a href="../TelasPHP/crie-a-conta.php" class="text-dark fw-bold"> Crie a sua conta</a>
                 </button>
               </div>
 

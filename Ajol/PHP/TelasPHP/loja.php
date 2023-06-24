@@ -161,7 +161,7 @@
 
                 </div>
                 <div class="col-sm-2 mt-4 p-2" id="produto2" style="background-color: #783ebf; border-top-left-radius:30px; border-bottom-left-radius:30px;">
-                    <?php
+    
                     //Pesquisar a imagem do produto e inserir aqui e nas próximas col
                     //echo '<img src="" class="img-fluid w-100" alt="">';
                     ?>
