@@ -21,13 +21,20 @@ status_usuario varchar(20) not null
 
 );
 
+select * from usuario;
+
+insert into usuario
+	(nome_usuario,cpf_usuario,login_usuario,senha_usuario,img_usuario,email_usuario,data_nasc_usuario,endereco_usuario,numero_usuario,compl_usuario,bairro_usuario,cep_usuario,obs_usuario,status_usuario)
+value
+	('Adm','123.123.123.12','admin','admin',' ','adm@gmail.com','10/02/2000','endereco 1',12,'','bairro 1','123456789',' ','ativo');
+
 Create table Funcionario
 (
 id_funcionario int not null auto_increment primary key,
 nome_funcionario varchar(100) not null,
-login_usuario char(50)not null unique,
-senha_usuario char(50) not null,
-email_usuario varchar(50) not null,
+login_funcionario char(50)not null unique,
+senha_funcionario char(50) not null,
+email_funcionario varchar(50) not null,
 cpf_funcionario char(14) not null unique,
 datanasc_funcionario datetime not null,
 endereco_funcionario varchar(30) not null,
@@ -39,6 +46,9 @@ obs_funcionario varchar(255) null,
 status_funcionario varchar(20) null
 );
 
+alter table funcionario
+add column img_funcionario longblob not null
+
 
 Create table Categoria
 (
@@ -48,6 +58,12 @@ descricao_categoria varchar(255)null,
 obs_categoria varchar(255)null,
 status_categoria varchar(30)null
 );
+
+
+
+insert into categoria
+
+select * from categoria;
 
 Create table Produto
 (
