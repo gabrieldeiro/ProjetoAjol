@@ -39,40 +39,23 @@
 
                         </div>
                         <div class="col-sm-4 mb-2">
-                            <h4 class="border border-1 p-2" style="border-radius: 20px;">Etapa 1 de 3</h4>
+                            <h4 class="border border-1 p-2" style="border-radius: 20px;">Etapa 3 de 3</h4>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-sm-12">
-                            <div class="col-sm-5">
-                                <input type="text" class="form-control" name="txtLogin" id="txtLogin" placeholder="Login">
+                            <div class="col-sm-3">
+
                             </div>
-                            <div class="col-sm-7">
-                                <input type="password" class="form-control" name="txtSenha" id="txtSenha" placeholder="Senha">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row mt-3">
-                        <div class="col-sm-12">
-                            <div class="col-sm-12">
-                                <input type="text" class="form-control" name="txtNome" id="txtNome" placeholder="Nome">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row mt-3">
-                        <div class="col-sm-12">
-                            <div class="col-sm-12">
-                                <input type="email" class="form-control" name="txtEmail" id="txtEmail" placeholder="Email">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row mt-3">
-                        <div class="col-sm-12">
-                            <div class="col-sm-5">
-                                <input type="text" class="form-control" name="txtCPF" id="txtCPF" placeholder="CPF">
-                            </div>
-                            <div class="col-sm-7">
-                                <input type="date" class="form-control" name="txtNascimento" id="txtNascimento">
+                            <div class="col-sm-6">
+                                <div id="profile-container">
+                                    <!-- 
+                                        AQUI MOSTRA IMAGEM DE PERFIL
+                                        Boa sorte back-end
+                                    -->
+                                    <img src="../../img/6522516.png" class="w-100 img-fluid" alt="">
+                                </div>
+                                <input type="file" class="form-control" name="imgPerfil" id="imgPerfil">
                             </div>
                         </div>
                     </div>
@@ -84,8 +67,8 @@
                                 </a>
                             </div>
                             <div class="col-sm-6 text-end">
-                                <a href="crie-a-conta-2.php" class="btn btn-success">
-                                    Seguinte
+                                <a href="crie-a-conta-3.php" class="btn btn-success">
+                                    Finalizar
                                 </a>
                             </div>
                         </div>
