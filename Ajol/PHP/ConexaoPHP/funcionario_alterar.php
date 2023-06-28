@@ -15,6 +15,8 @@
         $bairro = $_POST['txtBairro'];
         $numero = $_POST['txtNumero'];
         $complemento = $_POST['txtComplemento'];
+        $cidade = $_POST['txtCidade'];
+        $estado = $_POST['txtEstado'];
         $cep = $_POST['txtCep'];
         $email = $_POST['txtEmail'];
         $obs = $_POST['txtObs']; 
@@ -44,6 +46,8 @@
                     bairro_funcionario=:bairro_funcionario,
                     numero_funcionario=:numero_funcionario,
                     compl_funcionario=:compl_funcionario,
+                    cidade_funcionario:=cidade_funcionario,
+                    estado_funcionario:=estado_funcionario,
                     cep_funcionario=:cep_funcionario,
                     email_funcionario=:email_funcionario,
                     obs_funcionario=:obs_funcionario,
@@ -64,6 +68,8 @@
                 ':bairro_funcionario'=>$bairro,
                 ':numero_funcionario'=>$numero,
                 ':compl_funcionario'=>$complemento,
+                ':cidade_funcionario'=>$cidade,
+                ':estado_funcionario'=>$estado,
                 ':cep_funcionario'=>$cep,
                 ':email_funcionario'=>$email,
                 ':obs_funcionario'=>$obs,

@@ -11,6 +11,8 @@
         $img = '';
         $endereco = $_POST['txtEndereco'];
         $bairro = $_POST['txtBairro'];
+        $cidade = $_POST['txtCidade'];
+        $estado = $_POST['txtEstado'];
         $numero = $_POST['txtNumero'];
         $complemento = $_POST['txtComplemento'];
         $cep = $_POST['txtCep'];
@@ -42,6 +44,8 @@
                     img_funcionario,
                     bairro_funcionario,
                     numero_funcionario,
+                    cidade_funcionario,
+                    estado_funcionario,
                     compl_funcionario,
                     cep_funcionario,
                     email_funcionario,
@@ -58,6 +62,8 @@
                     :img_funcionario,
                     :bairro_funcionario,
                     :numero_funcionario,
+                    :cidade_funcionario,
+                    :estado_funcionario,
                     :compl_funcionario,
                     :cep_funcionario,
                     :email_funcionario,
@@ -75,6 +81,8 @@
                 ':img_funcionario'=>$img['name'],
                 ':bairro_funcionario'=>$bairro,
                 ':numero_funcionario'=>$numero,
+                ':cidade_funcionario'=>$cidade,
+                ':estado_funcionario'=>$estado,
                 ':compl_funcionario'=>$complemento,
                 ':cep_funcionario'=>$cep,
                 ':email_funcionario'=>$email,
