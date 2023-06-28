@@ -12,9 +12,9 @@
                 <input type="text" class="form-control" style="border-radius: 25px;" name="txtNome" id="txtNome"
                     value="<?= $nomeProduto ?>">
             </div>
-            <div class="col-sm-3 mt-4">
-                <input type="date" class="form-control" style="border-radius: 25px;" name="txtData"
-                    id="txtCadastro">
+            <div class="col-sm-3">Data de cadastro
+                <input type="date" class="form-control" style="border-radius: 25px;" name="txtCadastro"
+                    id="txtCadastro" readonly value="<?= substr($datacadastroProduto, 0, 10) ?>">
             </div>
             <div class="col-sm-2"> ID do Produto
                 <input type="number" class="form-control" style="border-radius: 25px;" name="txtId" min="0"
@@ -45,26 +45,25 @@
                             id="txtMarca" value="<?= $marcaProduto ?>">
                     </div>
                     <div class="col-sm-4">Quantidade
-                        <input type="text" class="form-control" style="border-radius: 25px;" name="txtQuantidade"
-                            id="txtQuantidade" value="<?= $marcaProduto ?>">
+                        <input type="text" class="form-control" style="border-radius: 25px;" name="txtQtde"
+                            id="txtQtde" value="<?= $qtdeProduto ?>">
                     </div>
                 </div>
                 <div class="row ">
                     <div class="col-sm-4">Valor unitario
-                        <input type="text" class="form-control" style="border-radius: 25px;" name="txtvalorunitario_produto"
-                            id="txtvalorunitario_produto" value="<?= $valorunitario_produto ?>">
+                        <input type="text" class="form-control" style="border-radius: 25px;" name="txtValorunitario"
+                            id="txtValorunitario" value="<?= $valorunitario_produto ?>">
                     </div>
                     <div class="col-sm-4">Valor custo
-                        <input type="text" class="form-control" style="border-radius: 25px;" name="txtValorcusto_produto"
-                            id="txtValorcusto_produto" value="<?= $valorcusto_produto ?>">
+                        <input type="text" class="form-control" style="border-radius: 25px;" name="txtValorcusto"
+                            id="txtValorcusto" value="<?= $valorcusto_produto ?>">
                     </div>
-                    <div class="col-sm-4">desconto
+                    <div class="col-sm-4">Desconto
                         <input type="text" class="form-control" style="border-radius: 25px;" name="txtDesconto"
                             id="txtDesconto" value="<?= $descontoProduto ?>">
                     </div>
                     <div class="col-sm-4">Percentual de lucro %
-                        <input type="text" class="form-control" style="border-radius: 25px;" name="txtPercentualdelucro"
-                            id="txtPercentualdelucro">
+                        <input type="text" class="form-control" style="border-radius: 25px;" name="txtPercentualdelucro" id="txtPercentualdelucro">
                     </div>
                     <div class="col-sm-4">Lote
                          <input type="text" class="form-control" style="border-radius: 25px;" name="txtLote" id="txtLote"
@@ -86,7 +85,7 @@
                         </select>
                     </div>
                      <div class="col-sm-4">Dimensão (Altura cm / Largura cm)
-                        <input type="text" class="form-control" style="border-radius: 25px;" name="txtPeso" id="txtPeso"
+                        <input type="text" class="form-control" style="border-radius: 25px;" name="txtDimensao" id="txtDimensao"
                             value="<?= $dimensaoProduto ?>">
                     </div>
                 </div>
@@ -106,7 +105,7 @@
             
             <div class="col-sm-4">Nome categoria
                 <input type="text" class="form-control" style="border-radius: 25px;" name="txtCategoria"
-                    id="txtCategoria" value="<?= $nomecategoriaProduto ?>">
+                    id="txtCategoria" readonly value="<?= $nomecategoriaProduto ?>">
             </div>
             <div class="col-sm-4"> ID da categoria
                 <input type="number" class="form-control" style="border-radius: 25px;" name="txtIdcategoria" min="0"
@@ -124,8 +123,7 @@
                     formaction="../ConexaoPHP/produto_excluir.php">Excluir</button>
                 <a href="sistema.php?tela=produto" class="btn btn-primary btn-lg" name="btoLimpar" id="btoLimpar"
                     class="btn btn-secundary">Limpar</a>
-                <button type="button" class="btn btn-warning btn-lg"
-                    formaction="../ConexaoPHP/produto_alterar.php">Alterar</button>
+                <button class="btn btn-warning btn-lg" formaction="../ConexaoPHP/produto_alterar.php">Alterar</button>
                     <button name="btoCadastrar" class="btn btn-success btn-lg" formaction="../ConexaoPHP/produto_cadastrar.php">Cadastrar</button>
             </div>
         </div>
