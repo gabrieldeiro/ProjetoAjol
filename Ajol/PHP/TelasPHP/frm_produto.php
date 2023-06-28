@@ -91,9 +91,9 @@
                 </div>
             </div>  
         </div>
-        <div class="row ">
+        <div class="row">
             <div class="col-sm-4">
-                <input type="file" class="btn btn-primary btn-lg btn-block" name="txtImg">
+                <input type="file" class="btn btn-primary btn-sm" class="auto" name="txtImg">
             </div>
         </div>
     <hr>
