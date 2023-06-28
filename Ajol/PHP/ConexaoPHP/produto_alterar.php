@@ -5,20 +5,22 @@
     {
         $id = $_POST['txtId'];
         $idcategoria = $_POST['txtIdcategoria'];
+        $datacadastro = $_POST['txtCadastro'];
         $nome = $_POST['txtNome'];
-        $marca = $_POST['txtMatca'];
-        $datacadastro = $_POST['txtData'];
+        $marca = $_POST['txtMarca'];
         $lote = $_POST['txtLote'];
         $qtde = $_POST['txtQtde'];
         $peso = $_POST['txtPeso'];
+        $dimensao = $_POST['txtDimensao'];
         $escala = $_POST['txtEscala'];
-        $valor = $_POST['txtValor'];
+        $valorunitario = $_POST['txtValorunitario'];
+        $valorcusto = $_POST['txtValorcusto'];
         $desconto = $_POST['txtDesconto'];
         $img = '';
         $img2 = '';
         $img3 = '';
         $obs = $_POST['txtObs'];
-        $status = $_POST['txtStatus'];
+        $status =$_POST['txtStatus'];
 
         try 
         {
@@ -42,12 +44,12 @@
                     lote_produto=:lote_produto,
                     qtde_produto=:qtde_produto,
                     peso_produto=:peso_produto,
+                    dimensao_produto=:dimensao_produto,
                     escala_produto=:escala_produto,
-                    valor_produto=:valor_produto,
+                    valorunitario_produto=:valorunitario_produto,
+                    valorcusto_produto=:valorcusto_produto,
                     desconto_produto=:desconto_produto,
                     img_produto=:img_produto,
-                    img2_produto=:img2_produto,
-                    img3_produto=:img3_produto,
                     obs_produto=:obs_produto,
                     status_produto=:status_produto
                 where id_produto=:id_produto
@@ -63,11 +65,13 @@
                 ':qtde_produto'=>$qtde,
                 ':peso_produto'=>$peso,
                 ':escala_produto'=>$escala,
-                ':valor_produto'=>$valor,
+                ':dimensao_produto'=>$dimensao,
+                ':valorunitario_produto'=>$valorunitario,
+                ':valorcusto_produto'=>$valorcusto,
                 ':desconto_produto'=>$desconto,
-                ':img_produto'=>$img,
-                ':img2_produto'=>$img2['name'],
-                ':img3_produto'=>$img3['name'],
+                ':img_produto'=>$img['name'],
+                //':img2_produto'=>$img2['name'],
+                //':img3_produto'=>$img3['name'],
                 ':obs_produto'=>$obs,
                 ':status_produto'=>$status
             ));
@@ -76,7 +80,7 @@
             {
                 echo '<p>Dados alterados com sucesso!</p>';
 
-                $pasta = '../Ajol/img/prod'.$conn->lastInsertId().'/';
+                $pasta = '../../img/prod'.$conn->lastInsertId().'/';
 
                 if(!file_exists($pasta))
                 {
@@ -84,12 +88,12 @@
                 }
 
                 $foto = $pasta.$img['name'];
-                $foto2 = $pasta.$img2['name'];
-                $foto3 = $pasta.$img3['name'];
+                //$foto2 = $pasta.$img2['name'];
+                //$foto3 = $pasta.$img3['name'];
 
                 move_uploaded_file($img['tmp_name'],$foto);
-                move_uploaded_file($img2['tmp_name'],$foto2);
-                move_uploaded_file($img3['tmp_name'],$foto3);
+                //move_uploaded_file($img2['tmp_name'],$foto2);
+                //move_uploaded_file($img3['tmp_name'],$foto3);
                 
             }
 
@@ -102,9 +106,9 @@
     }
     else
     {
-        header('Location:../TelasPHP/frm_produto.php');
+        header('Location:../TelasPHP/sistema.php?tela=produto');
     }
 
 ?>
 
-<a href="../TelasPHP/frm_produto.ph">Voltar</a>
+<a href="Location:../TelasPHP/sistema.php?tela=produto">Voltar</a>

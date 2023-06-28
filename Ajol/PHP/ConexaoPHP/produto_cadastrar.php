@@ -6,19 +6,19 @@
         $idcategoria = $_POST['txtIdcategoria'];
         $nome = $_POST['txtNome'];
         $marca = $_POST['txtMarca'];
-        $datacadastro = $_POST['txtData'];
         $lote = $_POST['txtLote'];
         $qtde = $_POST['txtQtde'];
         $peso = $_POST['txtPeso'];
+        $dimensao = $_POST['txtDimensao'];
         $escala = $_POST['txtEscala'];
-        $valorunitario_produto= $_POST['txtvalorunitario_produto'];
-        $valorcusto_produto= $_POST['txtValorcusto_produto'];
+        $valorunitario = $_POST['txtValorunitario'];
+        $valorcusto = $_POST['txtValorcusto'];
         $desconto = $_POST['txtDesconto'];
         $img = '';
         $img2 = '';
         $img3 = '';
         $obs = $_POST['txtObs'];
-        $status = $_POST['txtStatus'];
+        $status =$_POST['txtStatus'];
 
         try 
         {
@@ -39,10 +39,10 @@
                     id_categoria_produto,
                     nome_produto,
                     marca_produto,
-                    datacadastro_produto,
                     lote_produto,
                     qtde_produto,
                     peso_produto,
+                    dimensao_produto,
                     escala_produto,
                     valorunitario_produto,
                     valorcusto_produto,
@@ -50,16 +50,17 @@
                     img_produto,
                     obs_produto,
                     status_produto
+                    
                 )
                 value
                 (
                     :id_categoria_produto,
                     :nome_produto,
                     :marca_produto,
-                    :datacadastro_produto,
                     :lote_produto,
                     :qtde_produto,
                     :peso_produto,
+                    :dimensao_produto,
                     :escala_produto,
                     :valorunitario_produto,
                     :valorcusto_produto,
@@ -68,24 +69,26 @@
                     :obs_produto,
                     :status_produto
                 )
-            
             ");
+            //lembrar de colocar as outras img na tabela de insert
 
             $sql->execute(array(
                 ':id_categoria_produto'=>$idcategoria,
                 ':nome_produto'=>$nome,
                 ':marca_produto'=>$marca,
-                ':datacadastro_produto'=>$datacadastro,
                 ':lote_produto'=>$lote,
                 ':qtde_produto'=>$qtde,
                 ':peso_produto'=>$peso,
+                ':dimensao_produto'=>$dimensao,
                 ':escala_produto'=>$escala,
-                ':valorunitario_produto'=>$valorunitario_produto,
-                ':valorcusto_produto'=>$valorcusto_produto,
+                ':valorunitario_produto'=>$valorunitario,
+                ':valorcusto_produto'=>$valorcusto,
                 ':desconto_produto'=>$desconto,
                 ':img_produto'=>$img['name'],
+                //':img2_produto'=>$img2['name'],
+                //':img3_produto'=>$img3['name'],
                 ':obs_produto'=>$obs,
-                ':status_produto'=>$status
+                ':status_produto'=>$status 
             ));
 
             if($sql->rowCount()>=1)

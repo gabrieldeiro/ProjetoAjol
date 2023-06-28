@@ -11,6 +11,7 @@
     $qtdeProduto = '';
     $pesoProduto = '';
     $escalaProduto = '';
+    $dimensaoProduto = '';
     $valorunitario_produto = '';
     $valorcusto_produto='';
     $descontoProduto = '';
@@ -39,15 +40,16 @@
                 $loteProduto=$row[5];
                 $qtdeProduto=$row[6];
                 $pesoProduto=$row[7];
-                $escalaProduto=$row[8];
-                $valorunitario_produto=$row[9];
-                $valorcusto_produto=$row[10];
-                $descontoProduto=$row[11];
-                $imgProduto=$row[12];
-                $img2Produto=$row[15];
-                $img3Produto=$row[16];
-                $obsProduto=$row[13];
-                $statusProduto=$row[14];
+                $dimensaoProduto=$row[8];
+                $escalaProduto=$row[9];
+                $valorunitario_produto=$row[10];
+                $valorcusto_produto=$row[11];
+                $descontoProduto=$row[12];
+                $imgProduto=$row[13];
+                $img2Produto=$row[14];
+                $img3Produto=$row[15];
+                $obsProduto=$row[16];
+                $statusProduto=$row[17];
             }
 
             $sql = $conn->query('select * from categoria where id_categoria='.$idcategoriaProduto);
