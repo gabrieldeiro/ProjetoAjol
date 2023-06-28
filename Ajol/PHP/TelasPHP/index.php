@@ -15,9 +15,9 @@
   include_once('../ConexaoPHP/conexao.php');
   ?>
 </head>
-
 <body style="background-color: grey!important;">
   <?php
+  include_once('topo2.php');
   $mensagem = '';
   if ($_POST) {
     include_once('../ConexaoPHP/conexao.php');
@@ -73,7 +73,7 @@
           <form class="centro" class="card-body cardbody-color p-lg-5" action="" method="post">
 
             <div class="text-center">
-              <img src="../../../resto/Logo-prototipo.png" class="img-fluid profile-image-pic img-thumbnail my-3" width="200px" alt="profile">
+              <img src="../../../resto/Logo-prototipo.png" class="img-fluid p-3 my-3" width="200px" alt="profile">
             </div>
 
             <div class="col-sm-12 mb-3">

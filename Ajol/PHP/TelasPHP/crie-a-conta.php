@@ -16,55 +16,86 @@
     ?>
 </head>
 
-<body>
-    <div class="container border border-secondary mt-4" style="border-radius: 25px;">
-        <form action="" method="post">
-            <div class="row text-center">
-                <div class="col-sm-3">
+<body class="bg-secondary">
+    <?php
+    include_once("topo2.php");
+    ?>
+    <div class="container" style="border-radius: 25px;">
+        <div class="row">
+            <div class="col-sm-3">
 
-                </div>
-                <div class="col-sm-6">
-                    <h2 class="p-2 mt-2 border border-1 bg-gradient bg-primary" style="border-radius: 20px;">Crie a sua conta</h2>
-                </div>
-                <br>
-                <div class="col-sm-4">
-
-                </div>
-                <div class="col-sm-4 mb-2">
-                    <h4 class="border border-1 p-2" style="border-radius: 20px;">Etapa 1 de 3</h4>
-                </div>
             </div>
+            <div class="col-md-6 border mt-5 bg-white" style="border-radius: 25px;">
+                <form action="" method="post">
+                    <div class="row text-center">
+                        <div class="col-sm-3">
 
-            <!-- 
-                Formulário
-            -->
-            <div class="row">
-                <div class="col-sm-12">
-                    <div class="col-sm-6">
-                        <input type="text" maxlength="100" class="form-control" id="txtNome" name="txtNome" placeholder="Nome completo">
-                    </div>
-                    <div class="col-sm-3">
-                        <input type="text" maxlength="100" class="form-control" id="txtCPF" name="txtCPF" placeholder="CPF">
-                    </div>
-                </div>
-            </div>
-            <div class="row mt-3">
-                <div class="col-sm-12">
-                    <div class="col-sm-4">
-                        <input type="text" maxlength="100" class="form-control" id="txtLogin" name="txtLogin" placeholder="Login">
-                    </div>
-                    <div class="col-sm-3">
-                        <input type="password" maxlength="100" class="form-control" id="txtSenha" name="txtSenha" placeholder="Senha">
-                    </div>
-                    <div class="col-sm-4">
-                        <input type="email" maxlength="100" class="form-control" name="txtEmail" id="txtEmail" placeholder="Email">
-                    </div>
-                </div>
-            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <h2 class="p-2 mt-2 bg-gradient" style="border-radius: 20px; background-color:#d7fb41">Crie a sua conta</h2>
+                        </div>
+                        <br>
+                        <div class="col-sm-4">
 
+                        </div>
+                        <div class="col-sm-4 mb-2">
+                            <h4 class="border border-1 p-2" style="border-radius: 20px;">Etapa 1 de 3</h4>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <input type="text" class="form-control" name="txtNome" id="txtNome" placeholder="Nome">
+                        </div>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col-sm-12">
+                            <input type="password" class="form-control" name="txtSenha" id="txtSenha" placeholder="Senha">
+                        </div>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col-sm-12">
+                            <input type="email" class="form-control" name="txtEmail" id="txtEmail" placeholder="Email">
+                        </div>
+                    </div>
+                    <div class="row mt-4">
+                        <div class="col-sm-12">
+                            <div class="col-sm-6 text-start">
+                                <a href="index.php" class="btn btn-danger">
+                                    Voltar
+                                </a>
+                            </div>
+                            <div class="col-sm-6 text-end">
+                                <a href="" class="btn btn-success">
+                                    Seguinte
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+        </form>
     </div>
-    </div>
-    </form>
 </body>
 
 </html>
+<script>
+    //document.getElementById("txtCPF").addEventListener("input",function()
+    //{
+    //var i = document.getElementById("txtCPF").value.length;
+    //var str = document.getElementById("txtCPF").value;
+    //if (isNaN(Number(str.charAt(i-1)))) 
+    //{
+    //document.getElementById("txtCPF").vale = str.substr(0, i-1)
+    //}
+    //});
+    //document.addEventListener('keydown',function(event)
+    //{
+    //if (event.keyCode != 46 && event.keyCode != 8 ) 
+    //{
+    //if (i === 3 || i === 7)
+    //document.getElementById("CPF").value = document.getElementById("CPF").value + ".";
+    //else if (i === 11) 
+    //document.getElementById("CPF").value = document.getElementById("CPF").value + "-";
+    //}
+    //})
+</script>
