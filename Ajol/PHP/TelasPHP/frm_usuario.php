@@ -6,13 +6,15 @@
 </style>
         <form action="" method="post" enctype="multipart/form-data" style="background-color: darkgray;">
 
-            <div class="card" style="width: 18rem;">
-                  <img src="../../img/usu/<?=$idUsuario?>/<?=$imgUsuario?>" class="w-50" alt="">
-                <div class="card-body">
-                    <input type="file" class="btn btn-primary" name="txtImg">
-                </div>
-            </div>
-                
+            <center>
+                    <div class="card border border-danger" style="width: 325px; height: 204px;">
+                        <img src="../../img/usu/<?=$idUsuario?>/<?=$imgUsuario?>" class="w-100 img-fluid"  alt="">
+
+                    </div>
+                    <div class="card-body">
+                        <input type="file" class="btn btn-primary " name="txtImg">
+                    </div>
+            </center>
         
             <hr> 
 
