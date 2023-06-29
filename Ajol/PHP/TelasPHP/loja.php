@@ -78,16 +78,13 @@
                     <div class="col-sm-3 mt-2">
                         <p style="display: inline-block; color:white">
 
-                            <a href="">
+                            <a href="carrinho.php">
                                 <!-- 
                                 LINK CARINHO AQUI
                             -->
                                 <img src="../../img/Carinho.png"  class="img-fluid me-3" style="width: 43px; height:40px" alt="">
                             </a>
-                            <a style="text-decoration: none!important; color:white" href="">
-                                <!-- 
-                                LINK Histórico AQUI
-                            -->
+                            <a style="text-decoration: none!important; color:white" href="historico.php">
                                 <img src="../../img/Historico.png" class="img-fluid ms-5" style="width: 43px; height:40px" alt="">
                                 Histórico
                             </a>
@@ -145,15 +142,12 @@
 
         <div class="row mt-5">
 
-            <!-- 
-            Sombra NEON VERDE
-        -->
             <div class="col-sm-12 ms-3">
                 <div class="col-sm-1">
 
                 </div>
                 <div class="col-sm-2 mt-4 p-2" id="produto2" style="background-color: #783ebf; border-top-left-radius:30px; border-bottom-left-radius:30px;">
-    
+                    <?php
                     //Pesquisar a imagem do produto e inserir aqui e nas próximas col
                     //echo '<img src="" class="img-fluid w-100" alt="">';
                     ?>
