@@ -39,40 +39,39 @@
 
                         </div>
                         <div class="col-sm-4 mb-2">
-                            <h4 class="border border-1 p-2" style="border-radius: 20px;">Etapa 1 de 3</h4>
+                            <h4 class="border border-1 p-2" style="border-radius: 20px;">Etapa 2 de 3</h4>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-sm-12">
-                            <div class="col-sm-5">
-                                <input type="text" class="form-control" name="txtLogin" id="txtLogin" placeholder="Login">
+                            <div class="col-sm-3">
+                                <input type="text" class="form-control" name="txtCEP" id="txtCEP" placeholder="CEP">
                             </div>
-                            <div class="col-sm-7">
-                                <input type="password" class="form-control" name="txtSenha" id="txtSenha" placeholder="Senha">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row mt-3">
-                        <div class="col-sm-12">
-                            <div class="col-sm-12">
-                                <input type="text" class="form-control" name="txtNome" id="txtNome" placeholder="Nome">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row mt-3">
-                        <div class="col-sm-12">
-                            <div class="col-sm-12">
-                                <input type="email" class="form-control" name="txtEmail" id="txtEmail" placeholder="Email">
+                            <div class="col-sm-9">
+                                <input type="text" placeholder="Endereço" class="form-control" name="txtEndereco" id="txtEndereco">
                             </div>
                         </div>
                     </div>
                     <div class="row mt-3">
                         <div class="col-sm-12">
                             <div class="col-sm-5">
-                                <input type="text" class="form-control" name="txtCPF" id="txtCPF" placeholder="CPF">
+                                <input type="text" class="form-control" name="txtBairro" id="txtBairro" placeholder="Bairro">
                             </div>
                             <div class="col-sm-7">
-                                <input type="date" class="form-control" name="txtNascimento" id="txtNascimento">
+                                <input type="text" class="form-control" placeholder="Cidade" name="txtCidade" id="txtCidade">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col-sm-12">
+                            <div class="col-sm-4">
+                                <input type="text" class="form-control" name="txtEstado" id="txtEstado" placeholder="Estado">
+                            </div>
+                            <div class="col-sm-5">
+                                <input type="text" id="txtComplemento" class="form-control" placeholder="Complemento">
+                            </div>
+                            <div class="col-sm-3">
+                                <input type="text" class="form-control" name="txtNumero" id="txtNumero" placeholder="Número">
                             </div>
                         </div>
                     </div>
@@ -84,7 +83,7 @@
                                 </a>
                             </div>
                             <div class="col-sm-6 text-end">
-                                <a href="crie-a-conta-2.php" class="btn btn-success">
+                                <a href="crie-a-conta-3.php" class="btn btn-success">
                                     Seguinte
                                 </a>
                             </div>
