@@ -51,7 +51,7 @@
                 ':valortotal_compra'=> $valortotal_compra,
                 ':qtde_compra'=>$qtde_compra,
                 ':datafechamento_compra'=>$datafechamento_compra,
-                ':formadepagamento_compra'=$formadepagamento_compra,
+                ':formadepagamento_compra'=>$formadepagamento_compra,
                 ':cupom_compra'=>$cupom_compra,
                 ':valordesconto_compra'=>$valordesconto_compra,
                 ':obs_compra'=>$obs_compra,
@@ -62,7 +62,7 @@
             {
                 echo '<p>Dados cadastrados com sucesso!</p>';
                 echo '<p>ID Gerado: ' .$conn->lastInsertId(). '</p>';
-
+            }
                 
         } catch (PDOException $ex) {
             echo $ex->getMessage();
@@ -73,7 +73,7 @@
     {
         header('Location:../TelasPHP/sistema.php?tela=funcionario');
     }
-    }
+    
 ?>
 
 <a href="../TelasPHP/sistema.php?tela=funcionario">Voltar</a>
