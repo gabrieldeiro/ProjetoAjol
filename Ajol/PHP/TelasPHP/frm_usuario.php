@@ -121,8 +121,8 @@
           if( json.logradouro ) {
               document.querySelector('input[name=txtEndereco]').value = json.logradouro;
             document.querySelector('input[name=txtBairro]').value = json.bairro;
-            document.querySelector('input[name=txtNome]').value = json.localidade;
-            document.querySelector('input[name=txtComplemento]').value = json.uf;
+            document.querySelector('input[name=txtCidade]').value = json.localidade;
+            document.querySelector('input[name=txtEstado]').value = json.uf;
           }
       
       });
