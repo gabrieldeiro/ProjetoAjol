@@ -10,11 +10,11 @@
     </div>
 
     <div class="row mt-3 ">
-        <div class="col-sm-2"> ID do Usuario
+        <div class="col-sm-2"> ID do Fnucionario
             <input type="text" class="form-control" style="border-radius: 25px;" name="txtId" id="txtId" value="<?= $idFuncionario ?>">
         </div>
 
-        <div class="col-sm-6">Nome do Usuario
+        <div class="col-sm-6">Nome do Funcionario
             <input type="text" class="form-control" style="border-radius: 25px;" name="txtNome" id="txtNome" value="<?= $nomeFuncionario ?>">
         </div>
 
@@ -59,10 +59,8 @@
         </div>
         <div class="col-sm-2">Bairro
             <input type="text" class="form-control" style="border-radius: 25px;" name="txtBairro" id="txtBairro" value="<?= $bairroFuncionario ?>">
-
-
         </div>
-        <div class="col-sm-2">CEP
+        <div class="col-sm-2">CEP 
             <input type="text" class="form-control" style="border-radius: 25px;" name="txtCep" id="txtCep" value="<?= $cepFuncionario ?>">
         </div>
 
@@ -79,9 +77,8 @@
         </div>
 
         <div class="row mt-3">
-            <div class="col-sm-12">
-                <textarea class="form-control" name="txtObs" id="txtObs" rows="5" placeholder="Observação "><?= $obsFuncionario ?></textarea>
-            </div>
+            <div class="col-sm-12">Observação
+            <textarea class="form-control textarea1" name="txtObs" id="txtObs" style="border-radius: 25px;" rows="1" value="<?= $obsFuncionario ?>"></textarea>            </div>
         </div>
 
     </div>
@@ -96,3 +93,34 @@
         </div>
     </div>
 </form>
+<Script>
+
+        (function(){
+    
+    const cep = document.querySelector("input[name=txtCep]");
+    
+    cep.addEventListener('blur', e=> {
+          const value = cep.value.replace(/[^0-9]+/, '');
+      const url = `https://viacep.com.br/ws/${value}/json/`;
+      
+      fetch(url)
+      .then( response => response.json())
+      .then( json => {
+              
+          if( json.logradouro ) {
+              document.querySelector('input[name=txtEndereco]').value = json.logradouro;
+            document.querySelector('input[name=txtBairro]').value = json.bairro;
+            document.querySelector('input[name=txtCidade]').value = json.localidade;
+            document.querySelector('input[name=txtEstado]').value = json.uf;
+          }
+      
+      });
+      
+      
+    });
+    
+    
+    })();
+    
+
+</Script>

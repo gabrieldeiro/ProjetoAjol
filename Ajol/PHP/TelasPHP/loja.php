@@ -13,7 +13,8 @@
     <link rel="stylesheet" href="../css/style.css">
     
     <?php
-    include_once('../ConexaoPHP/conexao.php')
+    include_once('../ConexaoPHP/conexao.php');
+    include_once('../ConexaoPHP/loginautenticar.php');
     ?>
     <style>
         #produto
@@ -58,44 +59,32 @@
                             OU
                             AO CLICAR MOSTRAR TODAS AS CATEGORIAS EM UMA TELA SEPARADA
                         -->
-                        <a href="" class="btn" style="background-color: #d7fb41; border-radius:10px; color:black;">Categorias</a>
+                        <a href="sistema.php" class="btn" style="background-color: #d7fb41; border-radius:10px; color:black;">Categorias</a>
                     </div>
                     <div class="col-sm-5 mt-2">
                         <input type="text" placeholder="Pesquisa..." class="form-control ms-2" style="border-radius: 25px;" name="txtPesquisa" id="txtPesquisa">
                     </div>
-                    <div class="col-sm-2">
+                    <div class="col-sm-2 mt-2">
                         <p style="display: inline-block; color:white">
                             <a href="">
-                                <img src="../../img/icone-loupe-gris.png" class="img-fluid ms-3 me-2" style="width: 33px; height:30px; text-decoration:none" alt="">
+                                <img src="../../img/icone-loupe-gris.png" class="img-fluid ms-3 me-2 " style="width: 33px; height:30px; text-decoration:none" alt="">
                             </a>
-                            <?php
-                            //echo
+                            
+                            <img src="../../img/usu/<?=$idusuariologin ?>/<?=$imgusuariologin?>" class="img-fluid ms-5 w-25 border border-dark"  style="border-radius: 25px;" alt="">
+                            <b><?=$nomeusuariologin?></b>
 
-                            //INSERIR A IMAGEM DO USUARIO AQUI
-
-                            //'
-                            //<img src="../../img/usu/' . $idUsuario . '/' . $imgUsuario . '" class="img-fluid ms-5" style="width: 43px; height:40px" alt="">
-                            //' . $nomeUsuario . '
-                            //'
-                            //
-                            ?>
-                            <img src="../../img/6522516.png" class="img-fluid ms-5" style="width: 43px; height:40px" alt="">
-                            Usuário
                         </p>
                     </div>
-                    <div class="col-sm-3">
+                    <div class="col-sm-3 mt-2">
                         <p style="display: inline-block; color:white">
 
-                            <a href="">
+                            <a href="carrinho.php">
                                 <!-- 
                                 LINK CARINHO AQUI
                             -->
                                 <img src="../../img/Carinho.png"  class="img-fluid me-3" style="width: 43px; height:40px" alt="">
                             </a>
-                            <a style="text-decoration: none!important; color:white" href="">
-                                <!-- 
-                                LINK Histórico AQUI
-                            -->
+                            <a style="text-decoration: none!important; color:white" href="historico.php">
                                 <img src="../../img/Historico.png" class="img-fluid ms-5" style="width: 43px; height:40px" alt="">
                                 Histórico
                             </a>
@@ -153,15 +142,12 @@
 
         <div class="row mt-5">
 
-            <!-- 
-            Sombra NEON VERDE
-        -->
             <div class="col-sm-12 ms-3">
                 <div class="col-sm-1">
 
                 </div>
                 <div class="col-sm-2 mt-4 p-2" id="produto2" style="background-color: #783ebf; border-top-left-radius:30px; border-bottom-left-radius:30px;">
-    
+                    <?php
                     //Pesquisar a imagem do produto e inserir aqui e nas próximas col
                     //echo '<img src="" class="img-fluid w-100" alt="">';
                     ?>
@@ -245,6 +231,8 @@
 
             </div>
         </div>
+
+        <p><?=$idusuariologin?></p>
 </body>
 
 </html>
