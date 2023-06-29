@@ -112,7 +112,7 @@
                     value="<?= $idcategoriaProduto ?>">
             </div>
             <div class="col-sm-4"> Observação
-                <textarea class="form-control textarea1" name="txtObs" id="txtObs" rows="2" placeholder="Observação " value="<?= $obsProduto?>"></textarea>
+                <textarea class="form-control textarea1" name="txtObs" id="txtObs" rows="1" style="border-radius: 25px;" placeholder="Observação " value="<?= $obsProduto?>"></textarea>
             </div>
 
         </div>

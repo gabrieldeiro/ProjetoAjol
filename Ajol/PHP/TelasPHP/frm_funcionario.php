@@ -10,11 +10,11 @@
     </div>
 
     <div class="row mt-3 ">
-        <div class="col-sm-2"> ID do Usuario
+        <div class="col-sm-2"> ID do Fnucionario
             <input type="text" class="form-control" style="border-radius: 25px;" name="txtId" id="txtId" value="<?= $idFuncionario ?>">
         </div>
 
-        <div class="col-sm-6">Nome do Usuario
+        <div class="col-sm-6">Nome do Funcionario
             <input type="text" class="form-control" style="border-radius: 25px;" name="txtNome" id="txtNome" value="<?= $nomeFuncionario ?>">
         </div>
 
@@ -79,9 +79,8 @@
         </div>
 
         <div class="row mt-3">
-            <div class="col-sm-12">
-                <textarea class="form-control" name="txtObs" id="txtObs" rows="5" placeholder="Observação "><?= $obsFuncionario ?></textarea>
-            </div>
+            <div class="col-sm-12">Observação
+            <textarea class="form-control textarea1" name="txtObs" id="txtObs" style="border-radius: 25px;" rows="1" value="<?= $obsFuncionario ?>"></textarea>            </div>
         </div>
 
     </div>

@@ -2,6 +2,8 @@
 $idusuariologin = '';
 $nomeusuario = '';
 $loginusuariologin = '';
+$nomeusuariologin = '';
+$imgusuariologin = '';
 
 
 session_start();
@@ -20,6 +22,17 @@ if ($_SESSION)
     {
         header('location:login.php'); 
         // vai p o login
+    }
+
+    $sql = $conn->query('select * from usuario where id_usuario='.$idusuariologin);
+
+    if($sql->rowCount()>=1)
+    {
+        foreach ($sql as $row) 
+        {
+            $nomeusuariologin=$row[1];
+            $imgusuariologin=$row[5];
+        }
     }
 }
 else

@@ -5,7 +5,7 @@
     </div>
 </div>
 
-<form action="" method="post" style="background-color: darkgray;">
+<form action="" method="post" id="frmcategoria" onsubmit="return false;" style="background-color: darkgray;">
     <div class="row mt-3">
         <div class="col-sm-4">
             <input type="text" class="form-control" style="border-radius: 25px;" name="txtId" placeholder="ID categoria" value="<?= $idCategoria ?>">
@@ -55,3 +55,23 @@
         </div>
     </div>
 </form>
+
+<script>
+    let formulario = document.getElementById("frmcategoria");
+    let id =document.getElementById("txtId");
+
+    function Pesquisar()
+    {
+        if(id.value.trim()=="")
+        {
+            alert("Erro, o codigo deve ser preenchido");
+            id.focus();
+            return;
+        }
+
+        formulario.action = "sistema.php?tela=categoria";
+        formulario.submit();
+
+    }
+
+</script>

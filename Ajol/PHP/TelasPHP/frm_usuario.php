@@ -72,12 +72,12 @@
                     <input type="text" class="form-control" style="border-radius: 25px;" name="txtNumero" id="txtNumero" value="<?= $numeroUsuario ?>">
                 </div>
                 <div class="col-sm-5">Complemento
-                    <textarea name="txtComplemento" class="form-control" id="txtComplemento" style="border-radius: 25px;" cols="15" rows="2"></textarea
+                    <textarea name="txtComplemento" class="form-control textarea1" id="txtComplemento" style="border-radius: 25px;"  rows="1"></textarea
                             value="<?= $complementoUsuario ?>"> 
                     </div>
                   
                     <div class="col-sm-4"> Observação
-                        <textarea class="form-control textarea1" name="txtObs" id="txtObs" rows="1" placeholder="Observação " value="<?= $obsProduto ?>"></textarea>
+                        <textarea class="form-control textarea1" name="txtObs" id="txtObs" style="border-radius: 25px;" rows="1" value="<?= $obsProduto ?>"></textarea>
                 </div>
             </div>
 
