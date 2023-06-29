@@ -6,9 +6,8 @@
     $id_compra_itemproduto = '';
     $qtde_itemproduto = '';
     $valortotal_itemproduto = '';
-    $valorparcial_itemproduto = '';
-    $valorlinha_itemproduto = '';
-    $formapg_itemproduto = '';
+    $valorunitario_itemproduto = '';
+    
     $obs_itemproduto = '';
     $status_itemproduto = '';
 
@@ -34,11 +33,9 @@
                 $id_compra_itemproduto = $row[2];
                 $qtde_itemproduto = $row[3];
                 $valortotal_itemproduto = $row[4];
-                $valorparcial_itemproduto = $row[5];
-                $valorlinha_itemproduto = $row[6];
-                $formapg_itemproduto = $row[7];
-                $obs_itemproduto = $row[8];
-                $status_itemproduto = $row[9];
+                $valorunitario_itemproduto = $row[5];
+                $obs_itemproduto = $row[6];
+                $status_itemproduto = $row[7];
 
                 
                

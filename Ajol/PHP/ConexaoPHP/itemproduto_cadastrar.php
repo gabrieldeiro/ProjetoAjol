@@ -3,13 +3,13 @@
 
     if($_POST)
     {
+
+        
         $id_produto_itemproduto = $_POST['txtId_produto_itemproduto'];
         $id_compra_itemproduto = $_POST['txtId_compra_itemproduto'];
         $qtde_itemproduto = $_POST['txtId_qte_itemproduto'];
         $valortotal_itemproduto = $_POST['txtValortotal_itemproduto'];
-        $valorparcial_itemproduto = $_POST['txtValorparcial_itemproduto'];
-        $valorlinha_itemproduto = $_POST['txtValorlinha_itemproduto'];
-        $formapg_itemproduto = $_POST['txtFormapg_itemproduto'];
+        $valorunitario_itemproduto = $_POST['txtValorunitario_itemproduto'];
         $obs_itemproduto = $_POST['txtObs_itemproduto'];
         $status_itemproduto = $_POST['txtStatus_itemproduto'];
 
@@ -24,9 +24,7 @@
                     id_compra_itemproduto,
                     qtde_itemproduto,
                     valortotal_itemproduto,
-                    valorparcial_itemproduto,
-                    valorlinha_itemproduto,
-                    formapg_itemproduto,
+                    valorunitario_itemproduto,
                     obs_itemcompra,
                     status_itemcompra
                     
@@ -37,9 +35,7 @@
                     :id_compra_itemproduto,
                     :qtde_itemproduto,
                     :valortotal_itemproduto,
-                    :valorparcial_itemproduto,
-                    :valorlinha_itemproduto,
-                    :formapg_itemproduto,
+                    :valorunitario_itemproduto,
                     :obs_itemcompra,
                     :status_itemcompra
 
@@ -52,9 +48,8 @@
                 'id_compra_itemproduto'=>$id_compra_itemproduto,
                 ':qtde_itemproduto'=>$qtde_itemproduto,
                 ':valortotal_itemproduto'=> $valortotal_itemproduto,
-                ':valorparcial_itemproduto'=> $valorparcial_itemproduto,
-                ':valorlinha_itemproduto'=> $valorlinha_itemproduto,
-                ':formapg_itemproduto'=>$formapg_itemproduto,
+                ':valorunitario_itemproduto'=> $valorunitario_itemproduto,
+                
                 ':obs_itemcompra'   =>    $obs_itemproduto,
                 ':status_itemcompra' => $status_itemproduto
 
