@@ -78,7 +78,7 @@
                     <div class="row mt-4 p-2">
                         <div class="col-sm-12">
                             <div class="col-sm-6 text-start">
-                                <a href="index.php" class="btn btn-danger">
+                                <a href="crie-a-conta.php" class="btn btn-danger">
                                     Voltar
                                 </a>
                             </div>
