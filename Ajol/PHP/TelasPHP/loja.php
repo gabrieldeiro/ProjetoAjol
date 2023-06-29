@@ -73,10 +73,11 @@
                         <p style="display: inline-block; color:white">
                             <a href="">
                                 <img src="../../img/icone-loupe-gris.png" class="img-fluid ms-3 me-2 " style="width: 33px; height:30px; text-decoration:none" alt="">
-                            </a>
-                            
-                            <img src="../../img/usu/<?=$idusuariologin ?>/<?=$imgusuariologin?>" class="perfil w-25"  alt="">
-                            <b><?=$nomeusuariologin?></b>
+                            </a> 
+                            <img src="../../img/usu/<?=$idusuariologin ?>/<?=$imgusuariologin?>" class="img-fluid ms-5 w-25 border border-dark"  style="border-radius:120px" alt="">
+                            <b>
+                                <?=$nomeusuariologin?>
+                            </b>
 
                         </p>
                     </div>

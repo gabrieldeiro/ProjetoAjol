@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Histórico</title>
+    <title>Carrinho</title>
     <link rel="stylesheet" href="../css/bootstrap.css">
     <link rel="stylesheet" href="../js/bootstrap.bundle.js">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -32,7 +32,7 @@
                 </div>
                 <div class="row">
                     <!-- 
-                        SELECT AQUI
+                        SELECT COMEÇA AQUI
                     -->
                     <div class="col-sm-2">
                         <img src="../../img/ace.webp" class="w-100 img-fluid" alt="">
@@ -50,12 +50,49 @@
                     </div>
                     <div class="col-sm-2 mt-2">
                         <input type="number" class="form-control" min="1" name="" id="">
-                        <h5 class="form-text ms-1">Quantidade</h5>
+                        <h5 class="form-text ms-1 mt-3">Quantidade</h5>
                     </div>
-                    <div class="col-sm-2 text-end">
-                        <h3 class="text-success" style="font-size: 22px; opacity:0.9">
-                            4.000
-                        </h3>
+                    <div class="col-sm-3 text-end">
+                        <p style="font-size: 22px;">
+                            R$
+                            <b>
+                                <!-- Valor do produto AQUI -->
+                                35,90
+                            </b>
+                        </p>
+                    </div>
+                </div>
+                <div class="row mt-2">
+                    <hr>
+                    <!-- 
+                        OUTRO EXEMPLO DO SELECT AQUI
+                    -->
+                    <div class="col-sm-2">
+                        <img src="../../img/coringa.png" class="w-100 img-fluid" alt="">
+                    </div>
+                    <div class="col-sm-5">
+                        <p>
+                        <h4>Coringa Action Figure Joker</h4>
+                        </p>
+                        <div class="row ms-1">
+                            <p>
+                                <a href="">Excluir</a>
+                                <a href="" class="ms-3">Alterar</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-sm-2 mt-2">
+                        <input type="number" class="form-control" min="1" name="" id="">
+                        <h5 class="form-text ms-1 mt-3">Quantidade</h5>
+                    </div>
+                    <div class="col-sm-3 text-end">
+                        <p style="font-size: 22px;">
+                            R$
+                            <b>
+                                <!-- Valor do produto AQUI -->
+                                60,90
+                            </b>
+                        </p>
                     </div>
                 </div>
             </div>
@@ -71,10 +108,12 @@
             <hr>
             <div class="row">
                 <div class="col-sm-6">
-                    <h5>Produtos (<?php //Quantidades ?>)</h5>
+                    <h5>Produtos (<?php //Quantidades 
+                                    ?>)</h5>
                 </div>
                 <div class="col-sm-6 text-end">
-                    <h5>R$<?php //Valor sem frete ?></h5>
+                    <h5>R$<?php //Valor sem frete 
+                            ?></h5>
                 </div>
             </div>
             <div class="row mt-1">
@@ -100,7 +139,8 @@
                         </h4>
                     </div>
                     <div class="col-sm-6">
-                        <h4 class="text-success">R$<?php //Valor Total Aqui ?></h4>
+                        <h4 class="text-success">R$<?php //Valor Total Aqui 
+                                                    ?></h4>
                     </div>
                 </div>
             </div>
