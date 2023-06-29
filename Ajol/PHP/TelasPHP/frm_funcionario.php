@@ -59,10 +59,8 @@
         </div>
         <div class="col-sm-2">Bairro
             <input type="text" class="form-control" style="border-radius: 25px;" name="txtBairro" id="txtBairro" value="<?= $bairroFuncionario ?>">
-
-
         </div>
-        <div class="col-sm-2">CEP
+        <div class="col-sm-2">CEP 
             <input type="text" class="form-control" style="border-radius: 25px;" name="txtCep" id="txtCep" value="<?= $cepFuncionario ?>">
         </div>
 
@@ -95,3 +93,34 @@
         </div>
     </div>
 </form>
+<Script>
+
+        (function(){
+    
+    const cep = document.querySelector("input[name=txtCep]");
+    
+    cep.addEventListener('blur', e=> {
+          const value = cep.value.replace(/[^0-9]+/, '');
+      const url = `https://viacep.com.br/ws/${value}/json/`;
+      
+      fetch(url)
+      .then( response => response.json())
+      .then( json => {
+              
+          if( json.logradouro ) {
+              document.querySelector('input[name=txtEndereco]').value = json.logradouro;
+            document.querySelector('input[name=txtBairro]').value = json.bairro;
+            document.querySelector('input[name=txtNome]').value = json.localidade;
+            document.querySelector('input[name=txtComplemento]').value = json.uf;
+          }
+      
+      });
+      
+      
+    });
+    
+    
+    })();
+    
+
+</Script>
