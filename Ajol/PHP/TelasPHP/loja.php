@@ -228,7 +228,7 @@
                     <img src="../../img/ace.webp" class="img-fluid w-100 produto" style="border-radius: 25px;" alt="">
                 </div>
                 <div class="col-sm-2 mt-4 p-2" id="produto" style="background-color: #783ebf;">
-                    <img src="../../img/coringa.png" class="img-fluid w-100 produto" style="border-radius: 25px;" alt="">
+                     <img src="../../img/coringa.png" class="img-fluid w-100 produto" style="border-radius: 25px;" alt="">
                 </div>
                 <div class="col-sm-2 mt-4 p-2" id="produto" style="background-color: #783ebf;">
                     <img src="../../img/riven.webp" class="img-fluid w-100 produto" style="border-radius: 25px;" alt="">
