@@ -96,7 +96,7 @@
                 echo '<p>Dados cadastrados com sucesso!</p>';
                 echo '<p>ID Gerado: '. $conn->lastInsertId().'</p>';
 
-                $pasta = '../../img/prod'.$conn->lastInsertId().'/';
+                $pasta = '../../img/prod/'.$conn->lastInsertId().'/';
 
                 if(!file_exists($pasta))
                 {
@@ -104,12 +104,8 @@
                 }
 
                 $foto = $pasta.$img['name'];
-                //$foto2 = $pasta.$img2['name'];
-                //$foto3 = $pasta.$img3['name'];
 
                 move_uploaded_file($img['tmp_name'],$foto);
-                //move_uploaded_file($img2['tmp_name'],$foto2);
-                //move_uploaded_file($img3['tmp_name'],$foto3);
                 
             }
 
