@@ -1,9 +1,10 @@
 <?php include_once('../ConexaoPHP/usuario_pesquisa.php') ?>
-<style>
-    .textarea1 {
-        resize: none !important;
-    }
-</style>
+            <style>
+                .textarea1 
+                {
+                    resize: none !important;
+                }
+            </style>
         <form action="" method="post" enctype="multipart/form-data" style="background-color: darkgray;">
 
             <center>
@@ -22,17 +23,25 @@
                 <div class="col-sm-6">Nome do Usuario
                     <input type="text" class="form-control" style="border-radius: 25px;" name="txtNome" id="txtNome" value="<?= $nomeUsuario ?>">
                 </div>
-                <div class="col-sm-3 mt-4">
-                    <input type="date" class="form-control" style="border-radius: 25px;" name="txtCadastro" id="txtCadastro" hidden>
+                <div class="col-sm-3"> Data de Nascimento
+                    <input type="date" class="form-control" style="border-radius: 25px;" name="txtNascimento" id="txtNascimento" value="<?= substr($datanascimentoUsuario, 0, 10) ?>">
                 </div>
-                <div class="col-sm-2"> ID do Usuario
-                    <input type="number" class="form-control" style="border-radius: 25px;" name="txtId" min="0" value="<?= $idUsuario ?>">
+                <div class="col-sm-3">CPF
+                    <input type="text" class="form-control" style="border-radius: 25px;" name="txtCpf" id="txtCpf" value="<?= $cpfUsuario ?>">
                 </div>
-                <div class="col-sm-1 text-center mt-4">
-                    <button class="btn btn-primary" style="border-radius: 25px;" name="btoPesquisa" id="btoPesquisa" formaction="sistema.php?tela=usuario">&#128269;</button>
-                </div>
-
+                  
             </div>
+            
+            <div class="row">
+                <div class="col-sm-6">Email
+                    <input type="text" class="form-control" style="border-radius: 25px;" name="txtEmail" id="txtEmail" value="<?= $emailUsuario ?>">
+                </div>
+                <div class="col-sm-4"> Observação
+                        <textarea class="form-control textarea1" name="txtObs" id="txtObs" style="border-radius: 25px;" rows="1" value="<?= $obsProduto ?>"></textarea>
+                    </div>
+            </div>
+
+            
 
             <div class="row mt-3 ">
                 <div class="col-sm-3">Login
@@ -41,20 +50,27 @@
                 <div class="col-sm-3"> Senha
                     <input type="password" class="form-control" style="border-radius: 25px;" name="txtSenha" id="txtSenha" value="<?= $senhaUsuario ?>">
                 </div>
-                <div class="col-sm-3"> Data de Nascimento
-                    <input type="date" class="form-control" style="border-radius: 25px;" name="txtNascimento" id="txtNascimento" value="<?= substr($datanascimentoUsuario, 0, 10) ?>">
+                <div class="col-sm-3">Status
+                        <select name="txtStatus" id="textStatus" class="form-control" style="border-radius: 25px;">
+                            <option value="">--Selecione um Status--</option>
+                            <option value="ativo" <?= ($statusUsuario == 'Ativo' ? 'selected' : "") ?>>Ativo
+                            </option>
+                            <option value="inativo" <?= ($statusUsuario == 'Inativo' ? 'selected' : "") ?>>Inativo
+                            </option>
+                        </select>
                 </div>
-                <div class="col-sm-3">CPF
-                    <input type="text" class="form-control" style="border-radius: 25px;" name="txtCpf" id="txtCpf" value="<?= $cpfUsuario ?>">
+                <div class="col-sm-2"> ID do Usuario
+                    <input type="number" class="form-control" style="border-radius: 25px;" name="txtId" min="0" value="<?= $idUsuario ?>">
+                </div>                
+                <div class="col-sm-1 text-center mt-4">
+                    <button class="btn btn-primary" style="border-radius: 25px;" name="btoPesquisa" id="btoPesquisa" formaction="sistema.php?tela=usuario">&#128269;</button>
                 </div>
-
             </div>
 
-            <div class="row mt-3 ">
-                <div class="col-sm-6">Email
-                    <input type="text" class="form-control" style="border-radius: 25px;" name="txtEmail" id="txtEmail" value="<?= $emailUsuario ?>">
-                </div>
+            
 
+
+                <hr>
 
             <div class="row mt-3 ">
                 <div class="col-sm-3">CEP
@@ -74,26 +90,9 @@
                             value="<?= $complementoUsuario ?>"> 
                     </div>
                   
-                    <div class="col-sm-4"> Observação
-                        <textarea class="form-control textarea1" name="txtObs" id="txtObs" style="border-radius: 25px;" rows="1" value="<?= $obsProduto ?>"></textarea>
-                </div>
+
             </div>
-
-                <div class="row mt-3">
-                    <div class="col-sm-3">Status
-                        <select name="txtStatus" id="textStatus" class="form-control" style="border-radius: 25px;">
-                            <option value="">--Selecione um Status--</option>
-                            <option value="ativo" <?= ($statusUsuario == 'Ativo' ? 'selected' : "") ?>>Ativo
-                            </option>
-                            <option value="inativo" <?= ($statusUsuario == 'Inativo' ? 'selected' : "") ?>>Inativo
-                            </option>
-                        </select>
-                    </div>
-                </div>
-
-        
-
-
+       
             <div class="row mt-3">
                 <div class="col-sm-12 text-end">
                     <button name="btoexcluir" id="btoexcluir" class="btn btn-danger btn-lg" formaction="usuario_excluir.php">Excluir</button>
@@ -102,33 +101,38 @@
                     <button name="btocadastrar" id="btocadastrar" class="btn btn-success btn-lg" formaction="../ConexaoPHP/usuario_cadastrar.php">Cadastrar</button>
                 </div>
             </div>
-    </form>
+        </form>
 
-    <Script>
+    <script>
 
-        (function(){
+        (function()
+            {
+        
+                const cep = document.querySelector("input[name=txtCep]");
+        
+                    cep.addEventListener('blur', e=>
+                    {
+                        const value = cep.value.replace(/[^0-9]+/, '');
+                        const url = `https://viacep.com.br/ws/${value}/json/`;
+                    
+                                fetch(url)
+                                .then( response => response.json())
+                                .then( json =>
+                        {
+                            
+                            if( json.logradouro ) 
+                            {
+                                    document.querySelector('input[name=txtEndereco]').value = json.logradouro;
+                                    document.querySelector('input[name=txtBairro]').value = json.bairro;
+                                    document.querySelector('input[name=txtCidade]').value = json.localidade;
+                                    document.querySelector('input[name=txtEstado]').value = json.uf;
+                            }
+                        
+                        });
+                    
+                    
+                    });
+        
+            })();
     
-    const cep = document.querySelector("input[name=txtCep]");
-    
-    cep.addEventListener('blur', e=> {
-          const value = cep.value.replace(/[^0-9]+/, '');
-      const url = `https://viacep.com.br/ws/${value}/json/`;
-      
-      fetch(url)
-      .then( response => response.json())
-      .then( json => {
-              
-          if( json.logradouro ) {
-              document.querySelector('input[name=txtEndereco]').value = json.logradouro;
-            document.querySelector('input[name=txtBairro]').value = json.bairro;
-            document.querySelector('input[name=txtCidade]').value = json.localidade;
-            document.querySelector('input[name=txtEstado]').value = json.uf;
-          }
-      
-      });
-      
-      
-    });
-    
-    
-    })();
+    </script>

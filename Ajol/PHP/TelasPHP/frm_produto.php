@@ -34,7 +34,7 @@
             <div class="col-sm-8">
                 <div class="row mt-3">
                     <div class="col-sm-4">Categoria
-                        <select name="tex" id="tex" class="form-control" style="border-radius: 25px;">
+                        <select name="text" id="tex" class="form-control" style="border-radius: 25px;">
                             <option value="">--Selecione uma Categoria --</option>
                             <option value="ativo">Ativo</option>
                             <option value="inativo">Inativo</option>
@@ -112,7 +112,7 @@
                     value="<?= $idcategoriaProduto ?>">
             </div>
             <div class="col-sm-4"> Observação
-                <textarea class="form-control textarea1" name="txtObs" id="txtObs" rows="1" style="border-radius: 25px;" placeholder="Observação " value="<?= $obsProduto?>"></textarea>
+                <textarea class="form-control textarea1" name="txtObs" id="txtObs" rows="1" style="border-radius: 25px;" value="<?= $obsProduto?>"></textarea>
             </div>
 
         </div>
