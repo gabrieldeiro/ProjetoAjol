@@ -70,8 +70,6 @@
                 ':valorcusto_produto'=>$valorcusto,
                 ':desconto_produto'=>$desconto,
                 ':img_produto'=>$img['name'],
-                //':img2_produto'=>$img2['name'],
-                //':img3_produto'=>$img3['name'],
                 ':obs_produto'=>$obs,
                 ':status_produto'=>$status
             ));
@@ -80,7 +78,7 @@
             {
                 echo '<p>Dados alterados com sucesso!</p>';
 
-                $pasta = '../../img/prod'.$conn->lastInsertId().'/';
+                $pasta = '../../img/prod/'.$conn->lastInsertId().'/';
 
                 if(!file_exists($pasta))
                 {
@@ -88,12 +86,9 @@
                 }
 
                 $foto = $pasta.$img['name'];
-                //$foto2 = $pasta.$img2['name'];
-                //$foto3 = $pasta.$img3['name'];
 
                 move_uploaded_file($img['tmp_name'],$foto);
-                //move_uploaded_file($img2['tmp_name'],$foto2);
-                //move_uploaded_file($img3['tmp_name'],$foto3);
+
                 
             }
 
@@ -111,4 +106,4 @@
 
 ?>
 
-<a href="Location:../TelasPHP/sistema.php?tela=produto">Voltar</a>
+<a href="../TelasPHP/sistema.php?tela=produto">Voltar</a>

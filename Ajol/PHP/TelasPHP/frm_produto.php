@@ -29,7 +29,7 @@
             <hr>
         <div class="row">
             <div class="col-sm-4 mt-3">
-                <img src="../../img/pro/<?=$idProduto?>/<?=$imgProduto?>" class="w-50 " alt="">
+                <img src="../../img/prod/<?=$idProduto?>/<?=$imgProduto?>" class="w-50 " alt="">
             </div>
             <div class="col-sm-8">
                 <div class="row mt-3">
@@ -93,7 +93,7 @@
         </div>
         <div class="row">
             <div class="col-sm-4">
-                <input type="file" class="btn btn-primary btn-sm" class="auto" name="txtImg">
+                <input type="file" class="btn btn-primary btn-sm" class="auto" name="txtImg" id="txtImg">
             </div>
         </div>
     <hr>
@@ -119,7 +119,7 @@
 
         <div class="row mt-3">
             <div class="col-sm-12 text-end">
-                <button type="button" class="btn btn-danger btn-lg"
+                <button class="btn btn-danger btn-lg"
                     formaction="../ConexaoPHP/produto_excluir.php">Excluir</button>
                 <a href="sistema.php?tela=produto" class="btn btn-primary btn-lg" name="btoLimpar" id="btoLimpar"
                     class="btn btn-secundary">Limpar</a>

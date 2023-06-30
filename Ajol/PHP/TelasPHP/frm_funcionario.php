@@ -1,11 +1,18 @@
 <?php include_once('../ConexaoPHP/funcionario_pesquisa.php') ?>
+<style>
+    .textarea1 {
+        resize: none !important;
+    }
+</style>
+
+
 
 <!-- os que estao no value estao na variavel de funcionario_pesquisa -->
 
 <form action="" method="post" style="background-color: darkgray;" enctype="multipart/form-data">
     <div class="row">
          <div class="col-sm-4 mt-3">
-            <img src="../../img/fun/<?=$idFuncionario ?>/<?=$imgFuncionario?>" alt="imagem funcionario" class="w-50 "> 
+            <img src="../../img/fun/<?=$idFuncionario ?>/<?=$imgFuncionario?>" alt="imagem funcionario" class="w-50  "> 
         </div>
     </div>
 
@@ -65,7 +72,7 @@
         </div>
 
         <div class="col-sm-4">Status
-            <select name="txtStatus" class="form-control">
+            <select name="txtStatus"  class="form-control" style="border-radius: 25px;">
                 <option value="">--Selecione um Status--</option>
                 <option value="ativo" <?= ($statusFuncionario == 'ativo' ? 'selected' : "") ?>>Ativo</option>
                 <option value="inativo" <?= ($statusFuncionario == 'inativo' ? 'selected' : "") ?>>Inativo</option>
@@ -77,8 +84,9 @@
         </div>
 
         <div class="row mt-3">
-            <div class="col-sm-12">Observação
-            <textarea class="form-control textarea1" name="txtObs" id="txtObs" style="border-radius: 25px;" rows="1" value="<?= $obsFuncionario ?>"></textarea>            </div>
+           <div class="col-sm-12"> Observação
+                <textarea class="form-control textarea1" name="txtObs" id="txtObs" style="border-radius: 25px;" rows="1" value="<?= $obsProduto ?>"></textarea>
+            </div>
         </div>
 
     </div>
