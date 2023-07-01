@@ -218,33 +218,7 @@
             </div>
         </div>
         
-        <div class="row mt-5">
 
-            <div class="col-sm-12 ms-3 ">
-                <div class="col-sm-1">
-
-                </div>
-                <div class="col-sm-2 mt-4 p-2" id="produto2" style="background-color: #783ebf; border-top-left-radius:30px; border-bottom-left-radius:30px">
-                    <img src="../../img/ace.webp" class="img-fluid w-100 produto" style="border-radius: 25px;" alt="">
-                </div>
-                <div class="col-sm-2 mt-4 p-2" id="produto" style="background-color: #783ebf;">
-                     <img src="../../img/coringa.png" class="img-fluid w-100 produto" style="border-radius: 25px;" alt="">
-                </div>
-                <div class="col-sm-2 mt-4 p-2" id="produto" style="background-color: #783ebf;">
-                    <img src="../../img/riven.webp" class="img-fluid w-100 produto" style="border-radius: 25px;" alt="">
-                </div>
-                <div class="col-sm-2 mt-4 p-2" id="produto" style="background-color: #783ebf;">
-                    <img src="../../img/capitao.png" class="img-fluid w-100 produto" style="border-radius: 25px;" alt="">
-                </div>
-                <div class="col-sm-2 mt-4 p-2" id="produto" style="background-color: #783ebf; border-top-right-radius:30px; border-bottom-right-radius:30px">
-                    <img src="../../img/aranha.webp" class="img-fluid w-100 produto" style="border-radius: 25px;" alt="">
-                </div>
-                <div class="col-sm-1">
-
-                </div>
-            </div> 
-        </div>
-            -->
         <div class="row mt-5 ms-3">
             <div class="col-sm-1">
 
