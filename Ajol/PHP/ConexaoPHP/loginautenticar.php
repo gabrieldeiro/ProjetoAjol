@@ -15,8 +15,6 @@ if ($_SESSION)
         $idusuariologin = $_SESSION['id_usuario'];
         $nomeusuario = $_SESSION['login_usuario'];
         $loginusuariologin = $_SESSION['senha_usuario'];
-
-
         
     }
     else
@@ -25,7 +23,7 @@ if ($_SESSION)
         // vai p o login
     }
 
-    $sql = $conn->query('select * from usuario where id_usuario='.$idusuariologin);
+    $sql = $conn->query('select * from usuario where id_usuario='.$idusuariologin);//serve apenas para a foto de perfil
 
     $sqlCompra = $conn->query('select status_compra from compra where id_usuario_compra='.$idusuariologin);
 
@@ -35,33 +33,111 @@ if ($_SESSION)
         
         if ($sqlCompra->rowCount()>=1) 
         {
-            $statusCompra=$row[0];
-
-            if ($statusCompra == 'Ativo') 
+            foreach ($sqlCompra as $row) 
             {
-                
+                $statusCompra=$row[0];
             }
-            else if($statusCompra == '' or $statusCompra == 'Inativo') 
+
+            if ($statusCompra == 'Ativo' or $statusCompra == 'ativo') 
             {
+                return;
+            }
+            else if($statusCompra == '') 
+            {
+
+                $status_compra = 'Ativo';
+
                 try 
                 {
-                    $sqlCompra2 = $conn->prepare("update compra
-                    set status_compra = 'Ativo' where id_usuario_compra = :id_usuario");
-   
-                    $sqlCompra2 = $conn->execute(array(
-                       ':id_usuario' => $idusuariologin
-                    ));
-                    if ($sqlCompra2->rowCount()>=1) 
-                    {
-                        echo "<script> Alert('Compra criada com sucesso, isso é uma mensagem temporária') </script>";
-                    }
+    
+                $sqlCompra2 = $conn->prepare("
+                insert into compra
+                (
+                    id_usuario_compra,
+                    valortotal_compra,
+                    qtde_compra,
+                    datafechamento_compra,
+                    formadepagamento_compra,
+                    cupom_compra,
+                    valordesconto_compra,
+                    obs_compra,
+                    status_compra
+                )
+                value
+                (
+                    :id_usuario_compra,
+                    '',
+                    '',
+                    '',
+                    '',
+                    '',
+                    '',
+                    '',
+                    :status_compra
+                )
+                    ");
+                $sql->execute(array(
+                    ':id_usuario_compra'=>$idusuariologin,
+                    ':status_compra'=>$status_compra
+                ));
+    
+                echo "<p>Compra criada com sucesso, isso é uma mensagem temporária</p>";
                 } 
+                
                 catch (PDOException $erro) 
                 {
                     echo $erro->getMessage();
+                    echo "<p>Erro ao criar cadastro </p>";
                 }
 
             }
+        }
+        if ($sqlCompra->rowCount()<=0) 
+        {
+            try 
+            {
+            $status_compra = 'Ativo';
+
+            $sqlCompra2 = $conn->prepare("
+            insert into compra
+            (
+                id_usuario_compra,
+                valortotal_compra,
+                qtde_compra,
+                datafechamento_compra,
+                formadepagamento_compra,
+                cupom_compra,
+                valordesconto_compra,
+                obs_compra,
+                status_compra
+            )
+            value
+            (
+                :id_usuario_compra,
+                '',
+                '',
+                '',
+                '',
+                '',
+                '',
+                '',
+                :status_compra
+            )
+                ");
+            $sql->execute(array(
+                ':id_usuario_compra'=>$idusuariologin,
+                ':status_compra'=>$status_compra
+            ));
+
+            echo "<p> Alert('Compra criada com sucesso, isso é uma mensagem temporária') </p>";
+            } 
+            
+            catch (PDOException $erro) 
+            {
+                echo $erro->getMessage();
+                echo "<p>Erro ao criar cadastro </p>";
+            }
+
         }
         foreach ($sql as $row) 
         {
@@ -75,4 +151,3 @@ else
     header('location:login.php'); 
     // vai para login
 }
-?>
