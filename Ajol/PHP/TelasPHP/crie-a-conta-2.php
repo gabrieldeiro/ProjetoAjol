@@ -27,6 +27,7 @@
             </div>
             <div class="col-md-6 border mt-5 bg-white" style="border-radius: 25px;">
                 <form action="" method="post">
+                    <input type="text" name="txtIdtemp" id="txtIdtemp" value="<?=$_GET['id']?>">
                     <div class="row text-center">
                         <div class="col-sm-3">
 
@@ -42,10 +43,20 @@
                             <h4 class="border border-1 p-2" style="border-radius: 20px;">Etapa 2 de 3</h4>
                         </div>
                     </div>
-                    <div class="row">
+                    <div class="row" >
+                        <div class="col-sm-12">
+                            <div class="col-sm-5">
+                                <input type="text" class="form-control" name="txtCpf" id="txtCpf" placeholder="CPF">
+                            </div>
+                            <div class="col-sm-7">
+                                <input type="date" class="form-control" name="txtNascimento" id="txtNascimento">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-3">
                         <div class="col-sm-12">
                             <div class="col-sm-3">
-                                <input type="text" class="form-control" name="txtCEP" id="txtCEP" placeholder="CEP">
+                                <input type="text" class="form-control" name="txtCep" id="txtCep" placeholder="CEP">
                             </div>
                             <div class="col-sm-9">
                                 <input type="text" placeholder="Endereço" class="form-control" name="txtEndereco" id="txtEndereco">
@@ -68,7 +79,7 @@
                                 <input type="text" class="form-control" name="txtEstado" id="txtEstado" placeholder="Estado">
                             </div>
                             <div class="col-sm-5">
-                                <input type="text" id="txtComplemento" class="form-control" placeholder="Complemento">
+                                <input type="text" name = "txtComplemento" id="txtComplemento" class="form-control" placeholder="Complemento">
                             </div>
                             <div class="col-sm-3">
                                 <input type="text" class="form-control" name="txtNumero" id="txtNumero" placeholder="Número">
@@ -83,8 +94,9 @@
                                 </a>
                             </div>
                             <div class="col-sm-6 text-end">
-                                <a href="crie-a-conta-3.php" class="btn btn-success">
-                                    Seguinte
+                            <button name="btocadastrar" id="btocadastrar" class="btn btn btn-success" formaction="../ConexaoPHP/crie_contatela2.php">Seguinte</button>  
+                            
+                                  
                                 </a>
                             </div>
                         </div>
