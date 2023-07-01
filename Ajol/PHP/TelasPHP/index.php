@@ -15,6 +15,7 @@
   include_once('../ConexaoPHP/conexao.php');
   ?>
 </head>
+
 <body style="background-color: grey!important;">
   <?php
   include_once('topo2.php');
@@ -25,19 +26,12 @@
     $senha = $_POST['txtsenha'];
 
     try {
-      $sql = $conn->query('
-                        select * from usuario
-                        where 
-                            login_usuario = "' . $login . '" and
-                            senha_usuario = "' . $senha . '"
-                    ');
+      $sql = $conn->query('select * from usuario where login_usuario = "' . $login . '" and senha_usuario = "' . $senha . '"');
       if ($sql->rowcount() == 1) {
         session_start();
 
-        if ($login == 'adm' and $senha == '123') 
-        {
-          foreach ($sql as $row) 
-          {
+        if ($login == 'adm' and $senha == '123') {
+          foreach ($sql as $row) {
             $_SESSION['id_usuario'] = $row[0];
             $_SESSION['login_usuario'] = $row[1];
             $_SESSION['senha_usuario'] = $row[4];
