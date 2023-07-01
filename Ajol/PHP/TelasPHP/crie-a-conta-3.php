@@ -68,7 +68,7 @@
                                 </a>
                             </div>
                             <div class="col-sm-6 text-end">
-                            <button name="btocadastrar" id="btocadastrar" class="btn btn btn-sucess" formaction="../ConexaoPHP/crie_contatela3.php">Finalizar</button> 
+                            <button name="btocadastrar" id="btocadastrar" class="btn btn btn-success" formaction="../ConexaoPHP/crie_contatela3.php">Finalizar</button> 
                                    
                                 </a>
                             </div>

@@ -66,9 +66,6 @@
                 </div>           
             </div>
 
-            
-
-
                 <hr>
 
             <div class="row mt-3 ">

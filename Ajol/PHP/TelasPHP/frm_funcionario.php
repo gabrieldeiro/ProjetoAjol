@@ -21,56 +21,81 @@
             <input type="text" class="form-control" style="border-radius: 25px;" name="txtId" id="txtId" value="<?= $idFuncionario ?>">
         </div>
 
+        <div class="col-sm-1 text-start"><br>
+            <button class="btn btn-primary" style="border-radius: 25px;" name="btoPesquisa" id="btoPesquisa" formaction="sistema.php?tela=funcionario">&#128269;</button>
+        </div>
+
         <div class="col-sm-6">Nome do Funcionario
             <input type="text" class="form-control" style="border-radius: 25px;" name="txtNome" id="txtNome" value="<?= $nomeFuncionario ?>">
         </div>
 
-        <div class="col-sm-1 text-center mt-4">
-            <button class="btn btn-primary" style="border-radius: 25px;" name="btoPesquisa" id="btoPesquisa" formaction="sistema.php?tela=funcionario">&#128269;</button>
-        </div>
-    </div>
-
-    <div class="row mt-3 ">
-        <div class="col-sm-4">CPF
-            <input type="text" class="form-control" style="border-radius: 25px;" name="txtCpf" id="txtCpf" value="<?= $cpfFuncionario ?>">
-        </div>
-        <div class="col-sm-4"> Data de Nascimento
+        <div class="col-sm-3"> Data de Nascimento
             <input type="date" class="form-control" style="border-radius: 25px;" name="txtNascimento" id="txtNascimento" value="<?= $datanascimentoFuncionario ?>">
         </div>
 
-        <div class="col-mt-5">Foto funcionario
-            <input type="file" class="form-control" name="txtImg" id="txtImg">
-
-        </div>
+        
     </div>
+
     <div class="row mt-3 ">
-        <div class="col-sm-4">Login
+        <div class="col-sm-3">CPF
+            <input type="text" class="form-control" style="border-radius: 25px;" name="txtCpf" id="txtCpf" value="<?= $cpfFuncionario ?>">
+        </div>
+
+        <div class="col-sm-3">Login
             <input type="text" class="form-control" style="border-radius: 25px;" name="txtLogin" id="txtLogin" value="<?= $loginFuncionario ?>">
         </div>
-        <div class="col-sm-4"> Senha
+        <div class="col-sm-3"> Senha
             <input type="password" class="form-control" style="border-radius: 25px;" name="txtSenha" id="txtSenha" value="<?= $senhaFuncionario ?>">
         </div>
 
+        <div class="col-sm-3">Email
+            <input type="email" class="form-control" style="border-radius: 25px;" name="txtEmail" id="txtEmail" value="<?= $emailFuncionario ?>">
+        </div>
+       
+        
+    </div>
+    <div class="row mt-3 ">
+        <div class="col-mt-5">Foto funcionario
+            <input type="file" class="form-control" name="txtImg" id="txtImg">
+        </div>
     </div>
 
     <div class="row mt-3 ">
-        <div class="col-sm-4">Endereço
+        <div class="col-sm-3">CEP
+            <input type="text" class="form-control" style="border-radius: 25px;" name="txtCep" id="txtCep" value="<?= $cepFuncionario ?>">
+        </div>
+        <div class="col-sm-5">Endereço
             <input type="text" class="form-control" style="border-radius: 25px;" name="txtEndereco" id="txtEndereco" value="<?= $enderecoFuncionario ?>">
         </div>
-        <div class="col-sm-2"> Numero
+        <div class="col-sm-2">Bairro
+            <input type="text" class="form-control" style="border-radius: 25px;" name="txtBairro" id="txtBairro" value="<?= $enderecoFuncionario ?>">
+        </div>
+        <div class="col-sm-2">Numero
             <input type="text" class="form-control" style="border-radius: 25px;" name="txtNumero" id="txtNumero" value="<?= $numeroFuncionario ?>">
         </div>
 
-        <div class="col-sm-2">Complemento
-            <input type="text" class="form-control" style="border-radius: 25px;" name="txtComplemento" id="txtComplemento" value="<?= $complementoFuncionario ?>">
-        </div>
-        <div class="col-sm-2">Bairro
-            <input type="text" class="form-control" style="border-radius: 25px;" name="txtBairro" id="txtBairro" value="<?= $bairroFuncionario ?>">
-        </div>
-        <div class="col-sm-2">CEP 
-            <input type="text" class="form-control" style="border-radius: 25px;" name="txtCep" id="txtCep" value="<?= $cepFuncionario ?>">
-        </div>
+    </div>
 
+    <div class="row mt-3 ">
+        <div class="col-sm-2">Cidade
+            <input type="text" class="form-control" style="border-radius: 25px;" name="txtCidade" id="txtCidade" value="<?= $cidadeFuncionario ?>">
+        </div>
+        <div class="col-sm-1">Estado/UF
+            <input type="text" class="form-control" style="border-radius: 25px;" name="txtEstado" id="txtEstado" value="<?= $estadoFuncionario ?>">
+        </div>
+        <div class="col-sm-9">Complemento
+            <input type="text" class="form-control" style="border-radius: 25px;" name="txtNumero" id="txtComplemento" value="<?= $complementoFuncionario ?>"> 
+        </div>  
+
+    </div>
+        
+    <div class="row mt-3 ">
+        <div class="col-sm-12"> Observação
+            <textarea class="form-control textarea1" name="txtObs" id="txtObs" style="border-radius: 25px;" rows="1" value="<?= $obsProduto ?>"></textarea>
+        </div>
+    </div>
+
+    <div class="row mt-3">
         <div class="col-sm-4">Status
             <select name="txtStatus"  class="form-control" style="border-radius: 25px;">
                 <option value="">--Selecione um Status--</option>
@@ -78,17 +103,6 @@
                 <option value="inativo" <?= ($statusFuncionario == 'inativo' ? 'selected' : "") ?>>Inativo</option>
             </select>
         </div>
-
-        <div class="col-sm-4">Email
-            <input type="email" class="form-control" style="border-radius: 25px;" name="txtEmail" id="txtEmail" value="<?= $emailFuncionario ?>">
-        </div>
-
-        <div class="row mt-3">
-           <div class="col-sm-12"> Observação
-                <textarea class="form-control textarea1" name="txtObs" id="txtObs" style="border-radius: 25px;" rows="1" value="<?= $obsProduto ?>"></textarea>
-            </div>
-        </div>
-
     </div>
 
     <div class="row mt-3">

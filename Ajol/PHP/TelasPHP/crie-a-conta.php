@@ -75,13 +75,10 @@
                                 </a>
                             </div>
                             <div class="col-sm-3 text-end">
-                            <button name="btocadastrar" id="btocadastrar" class="btn btn btn-warning" formaction="../ConexaoPHP/crie_contatela1.php">Continuar Depois</button>    
-                                                                                                              
-                            
+                                <button name="btocadastrar" id="btocadastrar" class="btn btn btn-warning" formaction="../ConexaoPHP/crie_contatela1_home.php">Pré <abbr title="Faça o pré cadastro e termine mais tarde :)"> Cadastrar</abbr></button>                                                                              
                             </div>
                             <div class="col-sm-3 text-end">
-                            <button name="btocadastrar" id="btocadastrar" class="btn btn btn-warning" formaction="../ConexaoPHP/crie_contatela1.php">Seguinte</button>
-                                    
+                                <button name="btocadastrar" id="btocadastrar" class="btn btn btn-success" formaction="../ConexaoPHP/crie_contatela1.php">Seguinte</button>       
                             </div>
                         </div>
                     </div>

@@ -57,7 +57,6 @@
             if($sql->rowCount()>=1)
             {
                 header('Location:../TelasPHP/crie-a-conta-3.php?id='.$id);
-                // echo '<a href="../TelasPHP/crie-a-conta-2.php?id='.$conn->lastInsertId().'">proximo</a>';
             }
             
 

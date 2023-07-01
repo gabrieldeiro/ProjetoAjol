@@ -4,10 +4,7 @@
     if($_POST)
     {
         $id = $_POST['txtIdtemp'];
-        $img = '';
-
-
-    
+        $img = $_FILES['txtImg']['name'];
 
         try 
         {
@@ -22,18 +19,10 @@
             }
 
           
-        
-            
-
             $sql = $conn->prepare("
             update usuario set
-                
-                    img_usuario
-                    where id_usuario=:id_usuario
-
-                    
-                
-
+                img_usuario=:img_usuario
+                where id_usuario=:id_usuario
             ");
             
             $sql->execute(array(
@@ -62,7 +51,6 @@
             if($sql->rowCount()>=1)
             {
                 header('Location:../TelasPHP/loja.php');
-                // echo '<a href="../TelasPHP/crie-a-conta-2.php?id='.$conn->lastInsertId().'">proximo</a>';
             }
 
 
