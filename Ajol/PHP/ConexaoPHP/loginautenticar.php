@@ -40,7 +40,7 @@ if ($_SESSION)
 
             if ($statusCompra == 'Ativo' or $statusCompra == 'ativo') 
             {
-                return;
+                return;//talvez um header
             }
             else if($statusCompra == '') 
             {
@@ -92,53 +92,7 @@ if ($_SESSION)
 
             }
         }
-        if ($sqlCompra->rowCount()<=0) 
-        {
-            try 
-            {
-            $status_compra = 'Ativo';
-
-            $sqlCompra2 = $conn->prepare("
-            insert into compra
-            (
-                id_usuario_compra,
-                valortotal_compra,
-                qtde_compra,
-                datafechamento_compra,
-                formadepagamento_compra,
-                cupom_compra,
-                valordesconto_compra,
-                obs_compra,
-                status_compra
-            )
-            value
-            (
-                :id_usuario_compra,
-                '',
-                '',
-                '',
-                '',
-                '',
-                '',
-                '',
-                :status_compra
-            )
-                ");
-            $sql->execute(array(
-                ':id_usuario_compra'=>$idusuariologin,
-                ':status_compra'=>$status_compra
-            ));
-
-            echo "<p> Alert('Compra criada com sucesso, isso é uma mensagem temporária') </p>";
-            } 
-            
-            catch (PDOException $erro) 
-            {
-                echo $erro->getMessage();
-                echo "<p>Erro ao criar cadastro </p>";
-            }
-
-        }
+        
         foreach ($sql as $row) 
         {
             $nomeusuariologin=$row[1];
@@ -148,6 +102,6 @@ if ($_SESSION)
 }
 else
 {
-    header('location:login.php'); 
+    //header('location:login.php'); 
     // vai para login
 }
