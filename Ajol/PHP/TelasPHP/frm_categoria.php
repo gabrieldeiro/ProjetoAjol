@@ -27,13 +27,13 @@
            
             <div class="row mt-5">
                 <div class="col-sm-11"> Descrição Categoria
-                    <input type="text" class="form-control" style="border-radius: 25px;" name="txtDescricao" placeholder="descricao categoria" value="<?= $descricaoCategoria ?>">
+                <textarea class="form-control textarea1" name="txtObs" id="txtObs" rows="5"><?= $descricaoCategoria ?></textarea>
                 </div>
            </div>
                            
             <div class="row mt-3">
                 <div class="col-sm-12"> Observação
-                    <textarea class="form-control" name="txtObs" id="txtObs" rows="5"><?= $obsCategoria ?></textarea>
+                    <textarea class="form-control textarea1" name="txtObs" id="txtObs" rows="5"><?= $obsCategoria ?></textarea>
                 </div>
             </div>
         
