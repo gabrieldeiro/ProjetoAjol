@@ -25,12 +25,8 @@ if ($_SESSION)
             foreach ($sqlCompra as $row) 
             {
                 $idCompra = $row[0];
-<<<<<<< Updated upstream
                 $statusCompra=$row[9];
 
-=======
-                $statusCompra = $row[9];
->>>>>>> Stashed changes
             }
         }
         else
