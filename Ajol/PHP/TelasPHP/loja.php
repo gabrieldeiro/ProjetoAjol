@@ -59,6 +59,7 @@
 
 <body>
     <div class="container-fluid" style="background-color: #404040;">
+<<<<<<< Updated upstream
         <div class="row">
             <!-- TOPO -->
             <div class="col-md-12 bg-gradient" style="background-color: #783ebf;">
@@ -116,6 +117,11 @@
                 </div>
             </div>
         </div>
+=======
+        <?php
+        include_once('topoDefinitivo.php');
+        ?>
+>>>>>>> Stashed changes
         <!-- CAROSSEL -->
         <div class="row mt-4">
             <div class="col-sm-1">
@@ -187,23 +193,48 @@
 
                 $gambBorda = 0;
 
+<<<<<<< Updated upstream
                 foreach ($sql as $row) {
                     $gambBorda++;
 
                     if ($gambBorda == 1) {
                         //arredonda o inicio
                         echo "
+=======
+                    foreach ($sql as $row)
+                    {
+                        $gambBorda++;
+                        
+                        //Tentativa de entrar no detalhes do produto ao clicar: em procedimento Aqui
+                        
+                        if($gambBorda == 1)
+                        {
+                            //arredonda o inicio
+                            echo "
+>>>>>>> Stashed changes
                             <div class='row'>
                                 <div class='col-sm-1'></div>
                                 <div class='col-sm-2 mt-4 p-2 padrao' id='produto2'>
-                                    <img src='../../img/prod/$row[0]/$row[13]' class='img-fluid w-100 produtop2' alt=''>
+                                    <a href='detalhes-produto.php?id=".$row[0]."'>
+                                        <img src='../../img/prod/$row[0]/$row[13]' class='img-fluid w-100 produtop2' alt=''>
+                                    </a>
                                 </div>";
+<<<<<<< Updated upstream
                     } elseif ($gambBorda == 5) {
                         //arredonda o fim
                         echo "
                             
+=======
+                        }
+                        elseif($gambBorda == 5)
+                        {
+                            //arredonda o fim
+                            echo "
+>>>>>>> Stashed changes
                                 <div class='col-sm-2 mt-4 p-2 padrao2' id='produto'>
-                                    <img src='../../img/prod/$row[0]/$row[13]' class='img-fluid w-100 produtop2' alt=''>
+                                    <a href='detalhes-produto.php?id=".$row[0]."'>
+                                        <img src='../../img/prod/$row[0]/$row[13]' class='img-fluid w-100 produtop2' alt=''>
+                                    </a>
                                 </div>
                                 <div class='col-sm-1'></div>
                             </div>";
@@ -212,7 +243,9 @@
                     } else {
                         echo "
                             <div class='col-sm-2 mt-4 p-2 corr' id='produto'>
-                                <img src='../../img/prod/$row[0]/$row[13]' class='img-fluid w-100 produtop2' alt=''>
+                                <a href='detalhes-produto.php?id=".$row[0]."'>
+                                    <img src='../../img/prod/$row[0]/$row[13]' class='img-fluid w-100 produtop2' alt=''>
+                                </a>
                            </div>
                         ";
                     }

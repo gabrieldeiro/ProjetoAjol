@@ -30,6 +30,8 @@
       if ($sql->rowcount() == 1) {
         session_start();
 
+        //Login Temporário, remover depois
+        
         if ($login == 'adm' and $senha == '123') {
           foreach ($sql as $row) {
             $_SESSION['id_usuario'] = $row[0];
