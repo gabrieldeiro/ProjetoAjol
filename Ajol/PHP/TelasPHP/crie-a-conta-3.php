@@ -17,6 +17,16 @@
 </head>
 
 <body class="bg-secondary">
+
+    <style>
+        .perfil{
+            height: 220px;
+            width: 225px;
+            border-radius: 200px;
+        }
+
+    </style>
+
     <?php
     include_once("topo2.php");
     ?>
@@ -50,13 +60,9 @@
                             </div>
                             <div class="col-sm-6">
                                 <div id="profile-container">
-                                    <!-- 
-                                        AQUI MOSTRA IMAGEM DE PERFIL
-                                        Boa sorte back-end
-                                    -->
-                                    <img src="../../img/6522516.png" class="w-100 img-fluid" alt="">
+                                    <img src="../../img/6522516.png" id="preview" class="w-100 img-fluid perfil" alt="">
                                 </div>
-                                <input type="file" class="form-control" name="txtImg" id="txtImg">
+                                <input type="file" class="form-control mt-3" name="txtImg" id="txtImg">
                             </div>
                         </div>
                     </div>
@@ -80,3 +86,17 @@
 </body>
 
 </html>
+
+<script>
+    //Preview da img
+    function readImage() { 
+    if (this.files && this.files[0]) {
+        var file = new FileReader();
+        file.onload = function(e) {
+            document.getElementById("preview").src = e.target.result;
+        };       
+        file.readAsDataURL(this.files[0]);
+    }
+}
+document.getElementById("txtImg").addEventListener("change", readImage, false);
+</script>

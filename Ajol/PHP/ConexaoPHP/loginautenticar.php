@@ -2,8 +2,8 @@
 $idusuariologin = '';
 $nomeusuario = '';
 $loginusuariologin = '';
-$nomeusuariologin = '';
-$imgusuariologin = '';
+$nomeusuariologin = ''; //perfil
+$imgusuariologin = ''; //perfil
 $statusCompra='';
 $idCompra='';
 
@@ -26,6 +26,7 @@ if ($_SESSION)
             {
                 $idCompra = $row[0];
                 $statusCompra=$row[9];
+
             }
         }
         else
@@ -51,6 +52,18 @@ if ($_SESSION)
             if($sqlCompra2->rowCount()==1)
             {
                 $idCompra = $conn->lastInsertId();
+            }
+        }
+
+        //sistema para pegar foto e nome do usuário para a home.
+        $sql = $conn->query('select * from usuario where id_usuario='.$idusuariologin);
+
+        if($sql->rowCount()>=1)
+        {
+            foreach ($sql as $row) 
+            {
+                $nomeusuariologin=$row[1];
+                $imgusuariologin=$row[5];
             }
         }
     }
