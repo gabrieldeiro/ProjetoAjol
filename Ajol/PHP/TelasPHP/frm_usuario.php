@@ -53,7 +53,7 @@
                     <input type="password" class="form-control" style="border-radius: 25px;" name="txtSenha" id="txtSenha" value="<?= $senhaUsuario ?>">
                 </div>
                 <div class="col-sm-3">CPF
-                    <input type="text" class="form-control" style="border-radius: 25px;" name="txtCpf" id="txtCpf" value="<?= $cpfUsuario ?>">
+                    <input type="text" class="form-control cpf-mask" style="border-radius: 25px;" name="txtCpf" id="txtCpf" placeholder="Ex.: 000.000.000-00" value="<?= $cpfUsuario ?>">
                 </div>
                 <div class="col-sm-3">Status
                         <select name="txtStatus" id="textStatus" class="form-control" style="border-radius: 25px;">
@@ -70,7 +70,7 @@
 
             <div class="row mt-3 ">
                 <div class="col-sm-3">CEP
-                    <input type="text" class="form-control" style="border-radius: 25px;" name="txtCep" id="txtCep" value="<?= $cepUsuario ?>">
+                    <input type="text" class="form-control cep-mask" style="border-radius: 25px;" name="txtCep" id="txtCep" placeholder="Ex.: 00000-000" value="<?= $cepUsuario ?>">
                 </div>
                 <div class="col-sm-5">Endereço
                     <input type="text" class="form-control" style="border-radius: 25px;" name="txtEndereco" id="txtEndereco" value="<?= $enderecoUsuario ?>">
@@ -92,7 +92,7 @@
                     <input type="text" class="form-control" style="border-radius: 25px;" name="txtEstado" id="txtEstado" value="<?= $estadoUsuario ?>">
                 </div>
                 <div class="col-sm-9">Complemento
-                    <input type="text" class="form-control" style="border-radius: 25px;" name="txtNumero" id="txtComplemento" value="<?= $complementoUsuario ?>"> 
+                    <input type="text" class="form-control" style="border-radius: 25px;" name="txtComplemento" id="txtComplemento" value="<?= $complementoUsuario ?>"> 
                 </div>
                   
 

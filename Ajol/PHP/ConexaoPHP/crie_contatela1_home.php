@@ -45,7 +45,8 @@
 
             if($sql->rowCount()>=1)
             {
-                header('Location:../TelasPHP/loja.php');
+                echo '<p>Dados cadastrados com sucesso!</p>';
+                echo '<a href="../TelasPHP/index.php">Faça login com seu novo usuário!</a>';
             }
             
 

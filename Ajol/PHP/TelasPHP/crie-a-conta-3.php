@@ -22,18 +22,18 @@
     ?>
     <div class="container" style="border-radius: 25px;">
         <div class="row">
-        <input type="text" name="txtIdtemp" id="txtIdtemp" value="<?=$_GET['id']?>">
             <div class="col-sm-3">
-
             </div>
             <div class="col-md-6 border mt-5 bg-white" style="border-radius: 25px;">
                 <form action="" method="post" enctype="multipart/form-data">
+                <input type="text" name="txtIdtemp" hidden id="txtIdtemp" value="<?= $_GET['id'] ?>">
                     <div class="row text-center">
                         <div class="col-sm-3">
 
                         </div>
                         <div class="col-sm-6">
-                            <h2 class="p-2 mt-2 bg-gradient" style="border-radius: 20px; background-color:#d7fb41">Crie a sua conta</h2>
+                            <h2 class="p-2 mt-2 bg-gradient" style="border-radius: 20px; background-color:#d7fb41">Crie
+                                a sua conta</h2>
                         </div>
                         <br>
                         <div class="col-sm-4">
@@ -68,9 +68,8 @@
                                 </a>
                             </div>
                             <div class="col-sm-6 text-end">
-                            <button name="btocadastrar" id="btocadastrar" class="btn btn btn-success" formaction="../ConexaoPHP/crie_contatela3.php">Finalizar</button> 
-                                   
-                                </a>
+                                <button name="btocadastrar" id="btocadastrar" class="btn btn btn-success"
+                                    formaction="../ConexaoPHP/crie_contatela3.php">Finalizar</button>
                             </div>
                         </div>
                     </div>

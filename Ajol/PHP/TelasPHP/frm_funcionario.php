@@ -78,10 +78,10 @@
 
     <div class="row mt-3 ">
         <div class="col-sm-2">Cidade
-            <input type="text" class="form-control" style="border-radius: 25px;" name="txtCidade" id="txtCidade" value="<?= $cidadeFuncionario ?>">
+            <input type="text" class="form-control" style="border-radius: 25px;" name="txtCidade" id="txtCidade" value="<?=$cidadeFuncionario?>">
         </div>
         <div class="col-sm-1">Estado/UF
-            <input type="text" class="form-control" style="border-radius: 25px;" name="txtEstado" id="txtEstado" value="<?= $estadoFuncionario ?>">
+            <input type="text" class="form-control" style="border-radius: 25px;" name="txtEstado" id="txtEstado" value="<?=$estadoFuncionario?>">
         </div>
         <div class="col-sm-9">Complemento
             <input type="text" class="form-control" style="border-radius: 25px;" name="txtNumero" id="txtComplemento" value="<?= $complementoFuncionario ?>"> 
@@ -115,6 +115,7 @@
         </div>
     </div>
 </form>
+
 <Script>
 
         (function(){

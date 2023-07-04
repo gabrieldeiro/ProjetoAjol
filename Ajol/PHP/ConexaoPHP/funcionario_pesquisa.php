@@ -39,8 +39,8 @@
                 $enderecoFuncionario = $row[7];
                 $bairroFuncionario = $row[10];
                 $numeroFuncionario = $row[8];
-                $cidadefuncionario = $row[14];
-                $estadofuncionario= $row[15];
+                $cidadeFuncionario = $row[15];
+                $estadoFuncionario= $row[16];
                 $complementoFuncionario = $row[9];
                 $cepFuncionario = $row[11];
                 $emailFuncionario = $row[4];
