@@ -70,7 +70,7 @@
                             }
                         }
                         ?>
-                        <img src="<?=$imgProduto?>" class="w-100 img-fluid" alt="">
+                        <img src=<?=$imgProduto?> class="w-100 img-fluid" alt="">
                     </div>
                 </div>
             </div>
