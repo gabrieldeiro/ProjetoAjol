@@ -9,14 +9,14 @@
                 <div class="col-sm-5"> Id da Categoria
                     <input type="text" class="form-control" style="border-radius: 25px;" name="txtId" value="<?= $idCategoria ?>">
                 </div>
-                <div class="col-sm-1 text-center mt-4">
+                <div class="col-sm-1 text-start"><br>
                     <button class="btn btn-primary" style="border-radius: 25px;" name="btoPesquisa" id="btoPesquisa"
                     formaction="sistema.php?tela=categoria">&#128269;</button>
                 </div>
            </div>
 
            <div class="row">
-                <div class="col-sm-4"> Status
+                <div class="col-sm-4 mt-3"> Status
                     <select name="txtStatus" class="form-control" style="border-radius: 25px;">
                         <option value="">--Selecione um Status--</option>
                         <option value="ativo" <?= ($statusCategoria == 'ativo' ? 'selected' : "") ?>>Ativo</option>
@@ -25,8 +25,8 @@
                 </div>
            </div>
            
-            <div class="row mt-5">
-                <div class="col-sm-11"> Descrição Categoria
+            <div class="row mt-3">
+                <div class="col-sm-12"> Descrição Categoria
                 <textarea class="form-control textarea1" name="txtObs" id="txtObs" rows="5"><?= $descricaoCategoria ?></textarea>
                 </div>
            </div>

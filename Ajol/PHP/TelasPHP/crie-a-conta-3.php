@@ -22,11 +22,12 @@
     ?>
     <div class="container" style="border-radius: 25px;">
         <div class="row">
+        <input type="text" name="txtIdtemp" id="txtIdtemp" value="<?=$_GET['id']?>">
             <div class="col-sm-3">
 
             </div>
             <div class="col-md-6 border mt-5 bg-white" style="border-radius: 25px;">
-                <form action="" method="post">
+                <form action="" method="post" enctype="multipart/form-data">
                     <div class="row text-center">
                         <div class="col-sm-3">
 
@@ -55,7 +56,7 @@
                                     -->
                                     <img src="../../img/6522516.png" class="w-100 img-fluid" alt="">
                                 </div>
-                                <input type="file" class="form-control" name="imgPerfil" id="imgPerfil">
+                                <input type="file" class="form-control" name="txtImg" id="txtImg">
                             </div>
                         </div>
                     </div>
@@ -67,8 +68,8 @@
                                 </a>
                             </div>
                             <div class="col-sm-6 text-end">
-                                <a href="crie-a-conta-3.php" class="btn btn-success">
-                                    Finalizar
+                            <button name="btocadastrar" id="btocadastrar" class="btn btn btn-success" formaction="../ConexaoPHP/crie_contatela3.php">Finalizar</button> 
+                                   
                                 </a>
                             </div>
                         </div>

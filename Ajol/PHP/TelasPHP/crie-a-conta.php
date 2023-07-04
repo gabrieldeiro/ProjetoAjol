@@ -66,16 +66,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="row mt-3">
-                        <div class="col-sm-12">
-                            <div class="col-sm-5">
-                                <input type="text" class="form-control" name="txtCPF" id="txtCPF" placeholder="CPF">
-                            </div>
-                            <div class="col-sm-7">
-                                <input type="date" class="form-control" name="txtNascimento" id="txtNascimento">
-                            </div>
-                        </div>
-                    </div>
+                    
                     <div class="row mt-4 p-2">
                         <div class="col-sm-12">
                             <div class="col-sm-6 text-start">
@@ -83,10 +74,11 @@
                                     Voltar
                                 </a>
                             </div>
-                            <div class="col-sm-6 text-end">
-                                <a href="crie-a-conta-2.php" class="btn btn-success">
-                                    Seguinte
-                                </a>
+                            <div class="col-sm-3 text-end">
+                                <button name="btocadastrar" id="btocadastrar" class="btn btn btn-warning" formaction="../ConexaoPHP/crie_contatela1_home.php">Pré <abbr title="Faça o pré cadastro e termine mais tarde :)"> Cadastrar</abbr></button>                                                                              
+                            </div>
+                            <div class="col-sm-3 text-end">
+                                <button name="btocadastrar" id="btocadastrar" class="btn btn btn-success" formaction="../ConexaoPHP/crie_contatela1.php">Seguinte</button>       
                             </div>
                         </div>
                     </div>
