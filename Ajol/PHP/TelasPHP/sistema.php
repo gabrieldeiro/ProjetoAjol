@@ -19,6 +19,7 @@
 
     <?php
     include_once('../ConexaoPHP/conexao.php');
+    include_once('../ConexaoPHP/loginautenticar.php');
     ?>
 </head>
 
