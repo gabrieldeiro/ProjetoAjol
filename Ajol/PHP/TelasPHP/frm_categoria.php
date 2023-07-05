@@ -1,17 +1,17 @@
 <?php include_once('../ConexaoPHP/categoria_pesquisa.php') ?>
 
-    <form action="" method="post" id="frmcategoria" onsubmit="return false;" style="background-color:darkgray;">
+    <form action="" method="post" id="frmcategoria" enctype="multipart/form-data" onsubmit="return false;" style="background-color:darkgray;">
 
            <div class="row mt-5">
                 <div class="col-sm-6"> Nome da Categoria
-                    <input type="text" class="form-control" style="border-radius: 25px;" name="txtNome" value="<?= $nomeCategoria ?>">
+                    <input type="text" class="form-control" style="border-radius: 25px;" name="txtNome" id="txtNome" value="<?= $nomeCategoria ?>" >
                 </div>
                 <div class="col-sm-5"> Id da Categoria
-                    <input type="text" class="form-control" style="border-radius: 25px;" name="txtId" value="<?= $idCategoria ?>">
+                    <input type="text" class="form-control" style="border-radius: 25px;" name="txtId" id="txtId" value="<?= $idCategoria ?>">
                 </div>
                 <div class="col-sm-1 text-start"><br>
-                    <button class="btn btn-primary" style="border-radius: 25px;" name="btoPesquisa" id="btoPesquisa"
-                    formaction="sistema.php?tela=categoria">&#128269;</button>
+                    <button class="btn btn-primary" style="border-radius: 25px;" name="btoPesquisa" id="btoPesquisa" 
+                    formaction="sistema.php?tela=categoria"  onclick="Pesquisar()">&#128269;</button>
                 </div>
            </div>
 
@@ -27,7 +27,7 @@
            
             <div class="row mt-3">
                 <div class="col-sm-12"> Descrição Categoria
-                <textarea class="form-control textarea1" name="txtObs" id="txtObs" rows="5"><?= $descricaoCategoria ?></textarea>
+                <textarea class="form-control textarea1" name="txtDescricao" id="txtDescricao" rows="5"><?= $descricaoCategoria ?></textarea>
                 </div>
            </div>
                            
@@ -39,7 +39,7 @@
         
                 <div class="row mt-3">
                     <div class="col-sm-12 text-end">
-                            <button name="btoCadastrar" class="btn btn-success" formaction="../ConexaoPHP/categoria_cadastrar.php">Cadastrar</button>
+                            <button name="btoCadastrar" class="btn btn-success" formaction="../ConexaoPHP/categoria_cadastrar.php" onclick="Nome()">Cadastrar</button>
                         <button name="btoAlterar" class="btn btn-warning" formaction="../ConexaoPHP/categoria_alterar.php">Alterar</button>
                             <a href="sistema.php?tela=categoria" class="btn btn-primary" name="btoLimpar" id="btoLimpar" class="btn btn-secundary">Limpar</a>
                         <button name="btoExcluir" class="btn btn-danger" formaction="../ConexaoPHP/categoria_excluir.php">Excluir</button>
@@ -51,10 +51,12 @@
 <script>
     let formulario = document.getElementById("frmcategoria");
     let id =document.getElementById("txtId");
+    let Nome= document.getElementById("txtNome").;
 
     function Pesquisar()
     {
-        if(id.value.trim()=="")
+        
+        if(id.value.trim() == "")
         {
             alert("Erro, o codigo deve ser preenchido");
             id.focus();
@@ -65,5 +67,22 @@
         formulario.submit();
 
     }
+
+    function Nome()
+    {
+        
+        if(Nome.value == "")
+        {
+            alert("Erro, o nome deve ser preenchido");
+           id.focus();
+           return;
+            
+        }
+
+        formulario.action = "sistema.php?tela=categoria";
+        formulario.submit();
+
+    }
+
 
 </script>
