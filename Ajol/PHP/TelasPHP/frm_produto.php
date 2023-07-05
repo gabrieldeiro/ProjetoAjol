@@ -6,7 +6,7 @@
     }
 </style>
 <body>
-    <form action="" method="post" id="frmproduto" style="background-color: darkgray;" enctype="multipart/form-data">
+    <form action="" method="post" name="frmproduto" id="frmproduto" onsubmit="return false;" style="background-color: darkgray;" enctype="multipart/form-data">
         <div class="row mt-3 ">
             <div class="col-sm-6">Nome do Produto
                 <input type="text" class="form-control" style="border-radius: 25px;" name="txtNome" id="txtNome"
@@ -17,12 +17,12 @@
                     id="txtCadastro" readonly value="<?= substr($datacadastroProduto, 0, 10) ?>">
             </div>
             <div class="col-sm-2"> ID do Produto
-                <input type="number" class="form-control" style="border-radius: 25px;" name="txtId" min="0"
+                <input type="number" class="form-control" style="border-radius: 25px;" name="txtId" id="txtId" min="0"
                     value="<?= $idProduto ?>">
             </div>
             <div class="col-sm-1 text-center mt-4">
                 <button class="btn btn-primary" style="border-radius: 25px;" name="btoPesquisa" id="btoPesquisa"
-                    formaction="sistema.php?tela=produto">&#128269;</button>
+                    formaction="sistema.php?tela=produto" onclick="Pesquisar2()">&#128269;</button>
             </div>
 
         </div>
@@ -124,7 +124,7 @@
                 <a href="sistema.php?tela=produto" class="btn btn-primary btn-lg" name="btoLimpar" id="btoLimpar"
                     class="btn btn-secundary">Limpar</a>
                 <button class="btn btn-warning btn-lg" formaction="../ConexaoPHP/produto_alterar.php">Alterar</button>
-                    <button name="btoCadastrar" class="btn btn-success btn-lg" formaction="../ConexaoPHP/produto_cadastrar.php">Cadastrar</button>
+                    <button name="btoCadastrar" class="btn btn-success btn-lg" formaction="../ConexaoPHP/produto_cadastrar.php" onclick="Cadastrar()">Cadastrar</button>
             </div>
         </div>
     </form>
@@ -144,12 +144,12 @@
     let escala =document.getElementById("txtEscala");
     let valorunitario =document.getElementById("txtValorunitario");
     let valorcusto =document.getElementById("txtValorcusto");
-    // let desconto =document.getElementById("txtDesconto");
-    // let img =document.getElementById("txtImg");
-    // let obs =document.getElementById("txtObs");
+    //NULL let desconto =document.getElementById("txtDesconto");
+    //NULL let img =document.getElementById("txtImg");
+    //NULL let obs =document.getElementById("txtObs");
     let Status =document.getElementById("txtStatus");
 
-    function Pesquisar()
+    function Pesquisar2()
     {
         if(id.value.trim()=="")
         {
@@ -208,13 +208,42 @@
 
         if(dimensao.value.trim()=="")
         {
-            alert("Erro,  deve ser informado");
-            nome.focus();
+            alert("Erro, a DIMENSÃO deve ser informado");
+            dimensao.focus();
             return;
         }
 
+        if(escala.value.trim()=="")
+        {
+            alert("Erro, a ESCALA deve ser informado");
+            escala.focus();
+            return;
+        }
+
+        if(valorunitario.value.trim()=="")
+        {
+            alert("Erro, o VALOR UNITARIO deve ser informado");
+            valorunitario.focus();
+            return;
+        }
+
+        if(valorcusto.value.trim()=="")
+        {
+            alert("Erro, o VALOR DE CUSTO deve ser informado");
+            valorcusto.focus();
+            return;
+        }
+
+        if(status.value.trim()=="")
+        {
+            alert("Erro, o STATUS deve ser informado");
+            status.focus();
+            return;
+        }
+
+        formulario.action = "sistema.php?tela=produto";
+        formulario.submit();
 
     }
-
 
 </script>

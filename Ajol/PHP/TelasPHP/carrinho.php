@@ -20,135 +20,141 @@
     <?php
     include_once('topo2.php')
     ?>
-    <div class="container-fluid p-3" style="background-color: #404040;">
-        <div class="col-sm-2">
+    <form action="" method="post" enctype="multipart/form-data">
+        <div class="container-fluid p-3" style="background-color: #404040;">
+            <div class="col-sm-2">
 
-        </div>
-        <div class="col-sm-6 card-body bg-white" style="border-radius: 10px;">
-            <div class="col-sm-12">
-                <div class="row">
-                    <h4>Produtos</h4>
-                    <hr>
-                </div>
-                <div class="row">
-                    <!-- 
-                        SELECT COMEÇA AQUI
-                    -->
-                    <div class="col-sm-2">
-                        <img src="../../img/ace.webp" class="w-100 img-fluid" alt="">
+            </div>
+            <div class="col-sm-6 card-body bg-white" style="border-radius: 10px;">
+                <div class="col-sm-12">
+                    <div class="row">
+                        <h4>Produtos</h4>
+                        <hr>
                     </div>
-                    <div class="col-sm-5">
-                        <p>
-                        <h4>Ace Action Figure One Piece</h4>
-                        </p>
-                        <div class="row ms-1">
+                    <div class="row">
+                        <!-- 
+                            SELECT COMEÇA AQUI
+                        -->
+                        <div class="col-sm-2">
+                            <img src="../../img/ace.webp" class="w-100 img-fluid" alt=""><!-- temos um problema, puxa de quem ? ou faz oq? sla... vai precisar mexer no banco???..F -->
+                        </div>
+                        <div class="col-sm-5">
                             <p>
-                                <a href="">Excluir</a>
-                                <a href="" class="ms-3">Alterar</a>
+                            <h4><?=$CnomeProduto?></h4>
+                            </p>
+                            <div class="row ms-1">
+                                <p>
+                                    <a href="">Excluir</a> <!-- mudar para botão -->
+                                    <a href="" class="ms-3">Alterar</a> <!-- mudar para botão -->
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-sm-2 mt-2">
+                            <input type="number" class="form-control" min="1" name="" id="">
+                            <h5 class="form-text ms-1 mt-3">Quantidade</h5> <!-- Esse cara vai ter que puxar o qtde e vai ser usado apenas para alterar o itemproduto -->
+                        </div>
+                        <div class="col-sm-3 text-end">
+                            <p style="font-size: 22px;">
+                                R$
+                                <b>
+                                    <!-- Valor do produto AQUI -->
+                                    <?=$CvalorProduto?>
+                                    35,90
+                                </b>
                             </p>
                         </div>
                     </div>
-                    <div class="col-sm-2 mt-2">
-                        <input type="number" class="form-control" min="1" name="" id="">
-                        <h5 class="form-text ms-1 mt-3">Quantidade</h5>
+                    <div class="row mt-2">
+                        <hr>
+                        <!--
+                            a parte de cima tem que ser uma estrutura de repetição? acho que sim?...
+                            OUTRO EXEMPLO DO SELECT AQUI
+                        -->
+                        <div class="col-sm-2">
+                            <img src="../../img/coringa.png" class="w-100 img-fluid" alt="">
+                        </div>
+                        <div class="col-sm-5">
+                            <p>
+                            <h4>Coringa Action Figure Joker</h4>
+                            </p>
+                            <div class="row ms-1">
+                                <p>
+                                    <a href="">Excluir</a>
+                                    <a href="" class="ms-3">Alterar</a>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-sm-2 mt-2">
+                            <input type="number" class="form-control" min="1" name="" id="">
+                            <h5 class="form-text ms-1 mt-3">Quantidade</h5>
+                        </div>
+                        <div class="col-sm-3 text-end">
+                            <p style="font-size: 22px;">
+                                R$
+                                <b>
+                                    <!-- Valor do produto AQUI -->
+                                    60,90
+                                </b>
+                            </p>
+                        </div>
                     </div>
-                    <div class="col-sm-3 text-end">
-                        <p style="font-size: 22px;">
-                            R$
-                            <b>
-                                <!-- Valor do produto AQUI -->
-                                35,90
-                            </b>
-                        </p>
+                </div>
+            </div>
+            <div class="col-sm-1">
+
+            </div>
+            <!-- 
+                FAZER FICAR RELATIVO E SE MOVER DE ACORDO COM A TELA
+            -->
+
+            <!-- esse cara já é o compra? -->
+            <div class="col-sm-2 card-body bg-white position-relative" style="border-radius:10px">
+                <h4>Resumo de Compras</h4>
+                <hr>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <h5>Produtos (<?php //Quantidades 
+                                        ?>)</h5>
+                    </div>
+                    <div class="col-sm-6 text-end">
+                        <h5>R$<?php //Valor sem frete 
+                                ?></h5>
+                    </div>
+                </div>
+                <div class="row mt-1">
+                    <div class="col-sm-6">
+                        <h5>Frete</h5>
+                    </div>
+                    <div class="col-sm-6 text-end">
+                        <h5 class="text-success">R$ 20,00</h5>
                     </div>
                 </div>
                 <div class="row mt-2">
-                    <hr>
-                    <!-- 
-                        OUTRO EXEMPLO DO SELECT AQUI
-                    -->
-                    <div class="col-sm-2">
-                        <img src="../../img/coringa.png" class="w-100 img-fluid" alt="">
+                    <div class="col-sm-12">
+                        <input type="text" class="form-control" placeholder="Cupom" name="txtCupom" id="txtCupom">
                     </div>
-                    <div class="col-sm-5">
-                        <p>
-                        <h4>Coringa Action Figure Joker</h4>
-                        </p>
-                        <div class="row ms-1">
-                            <p>
-                                <a href="">Excluir</a>
-                                <a href="" class="ms-3">Alterar</a>
-                            </p>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-sm-12 text-center">
+                        <div class="col-sm-6">
+                            <h4>
+                                <b>
+                                    Total
+                                </b>
+                            </h4>
+                        </div>
+                        <div class="col-sm-6">
+                            <h4 class="text-success">R$<?php //Valor Total Aqui 
+                                                        ?></h4>
                         </div>
                     </div>
-                    <div class="col-sm-2 mt-2">
-                        <input type="number" class="form-control" min="1" name="" id="">
-                        <h5 class="form-text ms-1 mt-3">Quantidade</h5>
-                    </div>
-                    <div class="col-sm-3 text-end">
-                        <p style="font-size: 22px;">
-                            R$
-                            <b>
-                                <!-- Valor do produto AQUI -->
-                                60,90
-                            </b>
-                        </p>
-                    </div>
                 </div>
             </div>
-        </div>
-        <div class="col-sm-1">
+            <div class="col-sm-1">
 
-        </div>
-        <!-- 
-            FAZER FICAR RELATIVO E SE MOVER DE ACORDO COM A TELA
-        -->
-        <div class="col-sm-2 card-body bg-white position-relative" style="border-radius:10px">
-            <h4>Resumo de Compras</h4>
-            <hr>
-            <div class="row">
-                <div class="col-sm-6">
-                    <h5>Produtos (<?php //Quantidades 
-                                    ?>)</h5>
-                </div>
-                <div class="col-sm-6 text-end">
-                    <h5>R$<?php //Valor sem frete 
-                            ?></h5>
-                </div>
-            </div>
-            <div class="row mt-1">
-                <div class="col-sm-6">
-                    <h5>Frete</h5>
-                </div>
-                <div class="col-sm-6 text-end">
-                    <h5 class="text-success">R$ 20,00</h5>
-                </div>
-            </div>
-            <div class="row mt-2">
-                <div class="col-sm-12">
-                    <input type="text" class="form-control" placeholder="Cupom" name="txtCupom" id="txtCupom">
-                </div>
-            </div>
-            <div class="row mt-3">
-                <div class="col-sm-12 text-center">
-                    <div class="col-sm-6">
-                        <h4>
-                            <b>
-                                Total
-                            </b>
-                        </h4>
-                    </div>
-                    <div class="col-sm-6">
-                        <h4 class="text-success">R$<?php //Valor Total Aqui 
-                                                    ?></h4>
-                    </div>
-                </div>
             </div>
         </div>
-        <div class="col-sm-1">
-
-        </div>
-    </div>
+    </form>
 </body>
 
 </html>
