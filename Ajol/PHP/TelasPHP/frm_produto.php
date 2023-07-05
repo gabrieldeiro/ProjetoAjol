@@ -216,9 +216,5 @@
 
     }
 
-    
-
-    function 
-
 
 </script>
