@@ -19,7 +19,7 @@
                         <input type="file" class="btn btn-primary " name="txtImg">
                     </div>
                 </center>
-
+            <hr>
     <div class="row mt-3 ">
         <div class="col-sm-6">Nome do Funcionario
             <input type="text" class="form-control" style="border-radius: 25px;" name="txtNome" id="txtNome" value="<?= $nomeFuncionario ?>">

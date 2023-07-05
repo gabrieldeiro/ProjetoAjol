@@ -183,7 +183,7 @@
             <div class='col-sm-12 ms-3'>
 
                 <?php
-                $sql = $conn->query('select * from produto');
+                $sql = $conn->query('select * from produto ORDER BY RAND()');
 
                 $gambBorda = 0;
 
