@@ -11,8 +11,8 @@
     $enderecoFuncionario = '';
     $bairroFuncionario = '';
     $numeroFuncionario = '';
-    $cidadefuncionario ='';
-    $estadofuncionario='';
+    $cidadefuncionario = '';
+    $estadofuncionario = '';
     $complementoFuncionario = '';
     $cepFuncionario = '';
     $emailFuncionario = '';
