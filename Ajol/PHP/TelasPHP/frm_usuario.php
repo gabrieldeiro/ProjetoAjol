@@ -100,7 +100,7 @@
        
             <div class="row mt-3 mb-3">
                 <div class="col-sm-12 text-end">
-                    <button name="btoexcluir" id="btoexcluir" class="btn btn-danger btn-lg" formaction="usuario_excluir.php">Excluir</button>
+                    <button name="btoexcluir" id="btoexcluir" class="btn btn-danger btn-lg" formaction="../ConexaoPHP/usuario_excluir.php">Excluir</button>
                     <a href="../TelasPHP/sistema.php?tela=usuario" name="btoLimpar" id="btoLimpar" class="btn btn-primary btn-lg">Limpar</a>
                     <button id="btnalterar" name="btnalterar" class="btn btn-warning btn-lg" formaction="../ConexaoPHP/usuario_alterar.php">Alterar</button>
                     <button name="btocadastrar" id="btocadastrar" class="btn btn-success btn-lg" formaction="../ConexaoPHP/usuario_cadastrar.php">Cadastrar</button>
