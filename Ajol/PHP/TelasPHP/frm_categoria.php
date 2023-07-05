@@ -39,10 +39,10 @@
         
                 <div class="row mt-3">
                     <div class="col-sm-12 text-end">
-                            <button name="btoCadastrar" class="btn btn-success" formaction="../ConexaoPHP/categoria_cadastrar.php">Cadastrar</button>
-                        <button name="btoAlterar" class="btn btn-warning" formaction="../ConexaoPHP/categoria_alterar.php">Alterar</button>
-                            <a href="sistema.php?tela=categoria" class="btn btn-primary" name="btoLimpar" id="btoLimpar" class="btn btn-secundary">Limpar</a>
-                        <button name="btoExcluir" class="btn btn-danger" formaction="../ConexaoPHP/categoria_excluir.php">Excluir</button>
+                            <button name="btoExcluir" class="btn btn-danger btn-lg" formaction="../ConexaoPHP/categoria_excluir.php">Excluir</button>
+                            <a href="sistema.php?tela=categoria" class="btn btn-primary btn-lg" name="btoLimpar" id="btoLimpar" class="btn btn-secundary">Limpar</a>
+                            <button name="btoAlterar" class="btn btn-warning btn-lg" formaction="../ConexaoPHP/categoria_alterar.php">Alterar</button>       
+                            <button name="btoCadastrar" class="btn btn-success btn-lg" formaction="../ConexaoPHP/categoria_cadastrar.php">Cadastrar</button>           
                     </div>
                 </div>
          </div>
