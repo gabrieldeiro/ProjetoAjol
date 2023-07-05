@@ -100,11 +100,10 @@
 
     <div class="row mt-3">
         <div class="col-sm-12 text-end">
-            <button name="btoCadastrar" class="btn btn-success" formaction="../ConexaoPHP/funcionario_cadastrar.php">Cadastrar</button>
-            <button name="btoAlterar" class="btn btn-warning" formaction="../ConexaoPHP/funcionario_alterar.php">Alterar</button>
-            <a href="sistema.php?tela=funcionario" name="btoLimpar" id="btoLimpar" class="btn btn-secondary">Limpar</a>
-            <button name="btoExcluir" class="btn btn-danger" formaction="../ConexaoPHP/funcionario_excluir.php">Excluir</button>
-
+            <button name="btoExcluir" class="btn btn-danger btn-lg" formaction="../ConexaoPHP/funcionario_excluir.php">Excluir</button>
+            <a href="sistema.php?tela=funcionario" name="btoLimpar" id="btoLimpar" class="btn btn-primary btn-lg">Limpar</a>
+            <button name="btoAlterar" class="btn btn-warning btn-lg" formaction="../ConexaoPHP/funcionario_alterar.php">Alterar</button>
+            <button name="btoCadastrar" class="btn btn-success btn-lg" formaction="../ConexaoPHP/funcionario_cadastrar.php">Cadastrar</button>
         </div>
     </div>
 </form>
