@@ -166,8 +166,54 @@
     {
         if(idcategoria.value.trim()=="")
         {
-            alert("Erro, a categoria deve ser informada")
+            alert("Erro, a categoria deve ser informada");
+            idcategoria.focus();
+            return;
         }
+
+        if(nome.value.trim()=="")
+        {
+            alert("Erro, o NOME deve ser informado");
+            nome.focus();
+            return;
+        }
+
+        if(marca.value.trim()=="")
+        {
+            alert("Erro, a MARCA deve ser informado");
+            marca.focus();
+            return;
+        }
+
+        if(lote.value.trim()=="")
+        {
+            alert("Erro, o LOTE deve ser informado");
+            lote.focus();
+            return;
+        }
+
+        if(qtde.value.trim()=="")
+        {
+            alert("Erro, a QUANTIDADE deve ser informado");
+            qtde.focus();
+            return;
+        }
+
+        if(peso.value.trim()=="")
+        {
+            alert("Erro, o PESO deve ser informado");
+            peso.focus();
+            return;
+        }
+
+        if(dimensao.value.trim()=="")
+        {
+            alert("Erro,  deve ser informado");
+            nome.focus();
+            return;
+        }
+
+
     }
 
     
