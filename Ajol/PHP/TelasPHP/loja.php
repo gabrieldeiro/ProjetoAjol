@@ -59,9 +59,63 @@
 
 <body>
     <div class="container-fluid" style="background-color: #404040;">
-        <?php
-        include_once('topoDefinitivo.php');
-        ?>
+        <div class="row">
+            <!-- TOPO -->
+            <div class="col-md-12 bg-gradient" style="background-color: #783ebf;">
+                <div class="row mt-3">
+                    <div class="col-sm-1">
+                        <img src="../../../resto/Logo-prototipo.png" class="img-fluid" alt="">
+                    </div>
+                    <div class="col-sm-1 mt-2">
+                        <!-- 
+                            INSERIR UM HOVER QUE MOSTRA AS CATEGORIAS
+                            OU
+                            AO CLICAR MOSTRAR TODAS AS CATEGORIAS EM UMA TELA SEPARADA
+                        -->
+                        <a href="sistema.php" class="btn"
+                            style="background-color: #d7fb41; border-radius:10px; color:black;">Categorias</a>
+                    </div>
+                    <div class="col-sm-5 mt-2">
+                        <input type="text" placeholder="Pesquisa..." class="form-control ms-2"
+                            style="border-radius: 25px;" name="txtPesquisa" id="txtPesquisa">
+                    </div>
+                    <div class="col-sm-2 mt-2">
+                        <p style="display: inline-block; color:white">
+                            <a href="">
+                                <img src="../../img/icone-loupe-gris.png" class="img-fluid ms-3 me-2 "
+                                    style="width: 33px; height:30px; text-decoration:none" alt="">
+                            </a>
+                            <img src="../../img/usu/<?= $idusuariologin ?>/<?= $imgusuariologin ?>"
+                                class="img-fluid ms-5 w-25 border border-dark" style="border-radius:120px" alt="">
+                            <b>
+                                <?= $nomeusuariologin ?>
+                            </b>
+
+                        </p>
+                    </div>
+                    <div class="col-sm-3 mt-2">
+                        <p style="display: inline-block; color:white">
+
+                            <a href="carrinho.php">
+                                <!-- 
+                                LINK CARINHO AQUI
+                            -->
+                                <img src="../../img/Carinho.png" class="img-fluid me-3" style="width: 43px; height:40px"
+                                    alt="">
+                            </a>
+                            <a style="text-decoration: none!important; color:white" href="historico.php">
+                                <img src="../../img/Historico.png" class="img-fluid ms-5"
+                                    style="width: 43px; height:40px" alt="">
+                                Histórico
+                            </a>
+                            <a href="../ConexaoPHP/logoff.php">
+                                <button name="btosair" id="btosair" style="background: none; border: none;" formaction="../ConexaoPHP/logoff.php"><img src="../../img/Sair.png" class="img-fluid mt-1 ms-4" style="width: 43px; height:40px" alt="Icone de sair"></button>
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
         <!-- CAROSSEL -->
         <div class="row mt-4">
             <div class="col-sm-1">
@@ -133,16 +187,12 @@
 
                 $gambBorda = 0;
 
-                    foreach ($sql as $row)
-                    {
-                        $gambBorda++;
-                        
-                        //Tentativa de entrar no detalhes do produto ao clicar: em procedimento Aqui
-                        
-                        if($gambBorda == 1)
-                        {
-                            //arredonda o inicio
-                            echo "
+                foreach ($sql as $row) {
+                    $gambBorda++;
+
+                    if ($gambBorda == 1) {
+                        //arredonda o inicio
+                        echo "
                             <div class='row'>
                                 <div class='col-sm-1'></div>
                                 <div class='col-sm-2 mt-4 p-2 padrao' id='produto2'>
@@ -150,11 +200,10 @@
                                         <img src='../../img/prod/$row[0]/$row[13]' class='img-fluid w-100 produtop2' alt=''>
                                     </a>
                                 </div>";
-                        }
-                        elseif($gambBorda == 5)
-                        {
-                            //arredonda o fim
-                            echo "
+                    } elseif ($gambBorda == 5) {
+                        //arredonda o fim
+                        echo "
+                            
                                 <div class='col-sm-2 mt-4 p-2 padrao2' id='produto'>
                                     <a href='detalhes-produto.php?id=".$row[0]."'>
                                         <img src='../../img/prod/$row[0]/$row[13]' class='img-fluid w-100 produtop2' alt=''>
@@ -173,6 +222,8 @@
                            </div>
                         ";
                     }
+
+
                 }
                 ?>
 

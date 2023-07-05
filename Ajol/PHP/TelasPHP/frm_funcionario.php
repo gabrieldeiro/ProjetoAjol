@@ -28,7 +28,7 @@
             <input type="date" class="form-control" style="border-radius: 25px;" name="txtNascimento" id="txtNascimento" value="<?= $datanascimentoFuncionario ?>">
         </div>
         <div class="col-sm-3">CPF
-            <input type="text" class="form-control" style="border-radius: 25px;" name="txtCpf" id="txtCpf" value="<?= $cpfFuncionario ?>">
+            <input type="text" class="form-control cpf-mask" style="border-radius: 25px;" name="txtCpf" id="txtCpf" placeholder="Ex.: 000.000.000-00" value="<?= $cpfFuncionario ?>">
         </div>
               
     </div>
@@ -55,7 +55,7 @@
  <hr>
     <div class="row mt-3 ">
         <div class="col-sm-3">CEP
-            <input type="text" class="form-control" style="border-radius: 25px;" name="txtCep" id="txtCep" value="<?= $cepFuncionario ?>">
+            <input type="text" class="form-control cep-mask" style="border-radius: 25px;" name="txtCep" id="txtCep" placeholder="Ex.: 00000-000" value="<?= $cepFuncionario ?>">
         </div>
         <div class="col-sm-5">Endereço
             <input type="text" class="form-control" style="border-radius: 25px;" name="txtEndereco" id="txtEndereco" value="<?= $enderecoFuncionario ?>">
