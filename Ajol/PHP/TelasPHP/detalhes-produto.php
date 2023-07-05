@@ -63,6 +63,25 @@
     }
     ?>
 </head>
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    .img-magnifier-container {
+        position: relative;
+    }
+
+    .img-magnifier-glass {
+        position: absolute;
+        border: 3px solid #000;
+        border-radius: 50%;
+        cursor: none;
+        /*Set the size of the magnifier glass:*/
+        width: 150px;
+        height: 150px;
+    }
+</style>
 
 <body>
     <div class="container-fluid" style="background-color: #404040;">
@@ -76,7 +95,7 @@
             <div class="col-sm-2">
 
             </div>
-            <div class="col-sm-8 bg-white" style="border-radius: 5px;">
+            <div class="col-sm-8 bg-white p-3" style="border-radius: 5px;">
                 <div class="col-sm-12">
                     <div class="col-sm-2 mt-4">
                         <p>
@@ -87,6 +106,7 @@
                         </p>
                     </div>
                     <div class="col-sm-6">
+                        
                         <img src="../../img/prod/<?= $idProduto ?>/<?= $imgProduto ?>" class="w-100 img-fluid" alt="">
                     </div>
                     <div class="col-sm-4 border border-1 mt-4" style="border-radius: 12px;">
@@ -142,60 +162,57 @@
 
         </div>
         <div class="col-sm-8 bg-white mt-4" style="border-radius: 15px;">
-        <div class='col-sm-12 ms-3'>
+            <div class='col-sm-12 ms-3'>
 
-<?php
-$sql = $conn->query('select * from produto ORDER BY RAND() limit 5');
+                <?php
+                $sql = $conn->query('select * from produto ORDER BY RAND() limit 5');
 
-$gambBorda = 0;
+                $gambBorda = 0;
 
-    foreach ($sql as $row)
-    {
-        $gambBorda++;
-        
-        //Tentativa de entrar no detalhes do produto ao clicar: em procedimento Aqui
-        
-        if($gambBorda == 1)
-        {
-            //arredonda o inicio
-            echo "
-            <div class='row'>
-                <div class='col-sm-1'></div>
-                <div class='col-sm-2 mt-4 p-2 padrao' id='produto2'>
-                    <a href='detalhes-produto.php?id=".$row[0]."'>
-                        <img src='../../img/prod/$row[0]/$row[13]' class='img-fluid w-100 produtop2' alt=''>
-                    </a>
-                </div>";
-        }
-        elseif($gambBorda == 5)
-        {
-            //arredonda o fim
-            echo "
-                <div class='col-sm-2 mt-4 p-2 padrao2' id='produto'>
-                    <a href='detalhes-produto.php?id=".$row[0]."'>
+                foreach ($sql as $row) {
+                    $gambBorda++;
+
+                    //Tentativa de entrar no detalhes do produto ao clicar: em procedimento Aqui
+
+                    if ($gambBorda == 1) {
+                        //arredonda o inicio
+                        echo "
+                    <div class='row'>
+                        <div class='col-sm-1'></div>
+                        <div class='col-sm-2 mt-4 p-2 padrao' id='produto2'>
+                            <a href='detalhes-produto.php?id=" . $row[0] . "'>
+                                <img src='../../img/prod/$row[0]/$row[13]' class='img-fluid w-100 produtop2' alt=''>
+                            </a>
+                        </div>";
+                    } elseif ($gambBorda == 5) {
+                        //arredonda o fim
+                        echo "
+                        <div class='col-sm-2 mt-4 p-2 padrao2' id='produto'>
+                            <a href='detalhes-produto.php?id=" . $row[0] . "'>
+                                <img src='../../img/prod/$row[0]/$row[13]' class='img-fluid w-100 produtop2' alt=''>
+                            </a>
+                        </div>
+                        <div class='col-sm-1'></div>
+                    </div>";
+
+                        $gambBorda = 0;
+                    } else {
+                        echo "
+                <div class='col-sm-2 mt-4 p-2 corr' id='produto'>
+                    <a href='detalhes-produto.php?id=" . $row[0] . "'>
                         <img src='../../img/prod/$row[0]/$row[13]' class='img-fluid w-100 produtop2' alt=''>
                     </a>
                 </div>
-                <div class='col-sm-1'></div>
-            </div>";
+                ";
+                    }
+                }
+                ?>
 
-        $gambBorda = 0;
-    } else {
-        echo "
-            <div class='col-sm-2 mt-4 p-2 corr' id='produto'>
-                <a href='detalhes-produto.php?id=".$row[0]."'>
-                    <img src='../../img/prod/$row[0]/$row[13]' class='img-fluid w-100 produtop2' alt=''>
-                </a>
-           </div>
-        ";
-    }
-}
-?>
-
-</div>
+            </div>
         </div>
         <div class="col-sm-2 mt-4">
 
         </div>
     </div>
 </body>
+</html>

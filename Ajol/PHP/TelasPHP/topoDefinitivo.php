@@ -27,7 +27,6 @@
                     <b>
                         <?= $nomeusuariologin ?>
                     </b>
-
                 </p>
             </div>
             <div class="col-sm-3 mt-2">
