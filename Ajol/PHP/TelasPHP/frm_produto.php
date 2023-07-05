@@ -6,7 +6,7 @@
     }
 </style>
 <body>
-    <form action="" method="post" style="background-color: darkgray;" enctype="multipart/form-data">
+    <form action="" method="post" id="frmproduto" style="background-color: darkgray;" enctype="multipart/form-data">
         <div class="row mt-3 ">
             <div class="col-sm-6">Nome do Produto
                 <input type="text" class="form-control" style="border-radius: 25px;" name="txtNome" id="txtNome"
@@ -127,7 +127,98 @@
                     <button name="btoCadastrar" class="btn btn-success btn-lg" formaction="../ConexaoPHP/produto_cadastrar.php">Cadastrar</button>
             </div>
         </div>
-
-
     </form>
 </body>
+
+<script>
+
+    let formulario = document.getElementById("frmproduto");
+    let id =document.getElementById("txtId");
+    let idcategoria =document.getElementById("txtIdcategoria");
+    let nome =document.getElementById("txtNome");
+    let marca =document.getElementById("txtMarca");
+    let lote =document.getElementById("txtLote");
+    let qtde =document.getElementById("txtQtde");
+    let peso =document.getElementById("txtPeso");
+    let dimensao =document.getElementById("txtDimensao");
+    let escala =document.getElementById("txtEscala");
+    let valorunitario =document.getElementById("txtValorunitario");
+    let valorcusto =document.getElementById("txtValorcusto");
+    // let desconto =document.getElementById("txtDesconto");
+    // let img =document.getElementById("txtImg");
+    // let obs =document.getElementById("txtObs");
+    let Status =document.getElementById("txtStatus");
+
+    function Pesquisar()
+    {
+        if(id.value.trim()=="")
+        {
+            alert("Erro, o codigo deve ser preenchido");
+            id.focus();
+            return;
+        }
+
+        formulario.action = "sistema.php?tela=produto";
+        formulario.submit();
+    }
+
+    function Cadastrar()
+    {
+        if(idcategoria.value.trim()=="")
+        {
+            alert("Erro, a categoria deve ser informada");
+            idcategoria.focus();
+            return;
+        }
+
+        if(nome.value.trim()=="")
+        {
+            alert("Erro, o NOME deve ser informado");
+            nome.focus();
+            return;
+        }
+
+        if(marca.value.trim()=="")
+        {
+            alert("Erro, a MARCA deve ser informado");
+            marca.focus();
+            return;
+        }
+
+        if(lote.value.trim()=="")
+        {
+            alert("Erro, o LOTE deve ser informado");
+            lote.focus();
+            return;
+        }
+
+        if(qtde.value.trim()=="")
+        {
+            alert("Erro, a QUANTIDADE deve ser informado");
+            qtde.focus();
+            return;
+        }
+
+        if(peso.value.trim()=="")
+        {
+            alert("Erro, o PESO deve ser informado");
+            peso.focus();
+            return;
+        }
+
+        if(dimensao.value.trim()=="")
+        {
+            alert("Erro,  deve ser informado");
+            nome.focus();
+            return;
+        }
+
+
+    }
+
+    
+
+    function 
+
+
+</script>
