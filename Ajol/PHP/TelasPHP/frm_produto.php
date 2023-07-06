@@ -6,7 +6,11 @@
     }
 </style>
 <body>
+<<<<<<< Updated upstream
     <form action="" method="post" name="frmproduto" id="frmproduto" onsubmit="return false;" style="background-color: darkgray;" enctype="multipart/form-data">
+=======
+    <form action="" method="post" id="frmproduto" style="background-color: darkgray;" enctype="multipart/form-data" onsubmit="return false;">
+>>>>>>> Stashed changes
         <div class="row mt-3 ">
             <div class="col-sm-6">Nome do Produto
                 <input type="text" class="form-control" style="border-radius: 25px;" name="txtNome" id="txtNome"
@@ -22,7 +26,11 @@
             </div>
             <div class="col-sm-1 text-center mt-4">
                 <button class="btn btn-primary" style="border-radius: 25px;" name="btoPesquisa" id="btoPesquisa"
+<<<<<<< Updated upstream
                     formaction="sistema.php?tela=produto" onclick="Pesquisar2()">&#128269;</button>
+=======
+                    formaction="sistema.php?tela=produto" onclick="Pesquisar()"> &#128269;</button>
+>>>>>>> Stashed changes
             </div>
 
         </div>
@@ -108,7 +116,7 @@
                     id="txtCategoria" readonly value="<?= $nomecategoriaProduto ?>">
             </div>
             <div class="col-sm-4"> ID da categoria
-                <input type="number" class="form-control" style="border-radius: 25px;" name="txtIdcategoria" min="0"
+                <input type="number" class="form-control" style="border-radius: 25px;" name="txtIdcategoria"  id="txtIdcategoria" min="0"
                     value="<?= $idcategoriaProduto ?>">
             </div>
             <div class="col-sm-4"> Observação
@@ -118,13 +126,18 @@
         </div>
 
         <div class="row mt-3">
-            <div class="col-sm-12 text-end">
+            <div class="col-sm-12 text-end ">
                 <button class="btn btn-danger btn-lg"
-                    formaction="../ConexaoPHP/produto_excluir.php">Excluir</button>
+                    formaction="../ConexaoPHP/produto_excluir.php" onclick="Excluir()">Excluir</button>
                 <a href="sistema.php?tela=produto" class="btn btn-primary btn-lg" name="btoLimpar" id="btoLimpar"
                     class="btn btn-secundary">Limpar</a>
+<<<<<<< Updated upstream
                 <button class="btn btn-warning btn-lg" formaction="../ConexaoPHP/produto_alterar.php">Alterar</button>
                     <button name="btoCadastrar" class="btn btn-success btn-lg" formaction="../ConexaoPHP/produto_cadastrar.php" onclick="Cadastrar()">Cadastrar</button>
+=======
+                <button class="btn btn-warning btn-lg" formaction="../ConexaoPHP/produto_alterar.php" onclick="Alterar()">Alterar</button>
+                    <button name="btoCadastrar" class="btn btn-success btn-lg" formaction="../ConexaoPHP/produto_cadastrar.php" onclick="Cadastrar()" >Cadastrar</button>
+>>>>>>> Stashed changes
             </div>
         </div>
     </form>
@@ -153,7 +166,7 @@
     {
         if(id.value.trim()=="")
         {
-            alert("Erro, o codigo deve ser preenchido");
+            alert("Erro, o ID do Produto deve ser preenchido");
             id.focus();
             return;
         }
@@ -162,11 +175,42 @@
         formulario.submit();
     }
 
+    
+    function Excluir()
+    {
+        
+        if(id.value.trim() == "")
+        {
+            alert("Erro, o ID do Produto deve ser preenchido");
+            id.focus();
+            return;
+        }
+
+        formulario.action = "sistema.php?tela=produto";
+        formulario.submit();
+
+    }
+
+    function Alterar()
+    {
+        
+        if(id.value.trim() == "")
+        {
+            alert("Erro, o ID do Produto deve ser preenchido");
+            id.focus();
+            return;
+        }
+
+        formulario.action = "sistema.php?tela=produto";
+        formulario.submit();
+
+    }
+
     function Cadastrar()
     {
         if(idcategoria.value.trim()=="")
         {
-            alert("Erro, a categoria deve ser informada");
+            alert("Erro, Id Categoria deve ser informada");
             idcategoria.focus();
             return;
         }
@@ -208,11 +252,16 @@
 
         if(dimensao.value.trim()=="")
         {
+<<<<<<< Updated upstream
             alert("Erro, a DIMENSÃO deve ser informado");
+=======
+            alert("Erro, Dimensao deve ser informado");
+>>>>>>> Stashed changes
             dimensao.focus();
             return;
         }
 
+<<<<<<< Updated upstream
         if(escala.value.trim()=="")
         {
             alert("Erro, a ESCALA deve ser informado");
@@ -246,4 +295,50 @@
 
     }
 
+=======
+        if(valorunitario.value.trim()=="")
+        {
+            alert("Erro, Valor Unitario deve ser informado");
+            dimensao.focus();
+            return;
+        }
+        
+        if(valorcusto.value.trim()=="")
+        {
+            alert("Erro, Valor Custo deve ser informado");
+            dimensao.focus();
+            return;
+        }
+
+        if(escala.value.trim()=="")
+        {
+            alert("Erro, Escalsa deve ser informado");
+            dimensao.focus();
+            return;
+        }
+
+        if(Status.value.trim()=="")
+        {
+            alert("Erro, Escalsa deve ser informado");
+            Status.focus();
+            return;
+        }
+
+
+
+  formulario.action = "../ConexaoPHP/produto_cadastrar.php";
+     formulario.submit();
+
+
+    }
+
+    
+
+  
+
+
+>>>>>>> Stashed changes
 </script>
+nome categoria ver
+calculadora do precentual do lucro
+alterar

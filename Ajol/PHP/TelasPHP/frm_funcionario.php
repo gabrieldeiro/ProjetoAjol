@@ -9,7 +9,7 @@
 
 <!-- os que estao no value estao na variavel de funcionario_pesquisa -->
 
-<form action="" method="post" style="background-color: darkgray;" enctype="multipart/form-data">
+<form action="" method="post"  id="frmfuncionario" style="background-color: darkgray;"  enctype="multipart/form-data" onsubmit="return false;">
                 <center>
                     <div class="card border border-danger" style="width: 325px; height: 204px;">
                         <img src="../../img/usu/<?=$idUsuario?>/<?=$imgUsuario?>" class="w-100 img-fluid"  alt="">
@@ -28,7 +28,7 @@
             <input type="date" class="form-control" style="border-radius: 25px;" name="txtNascimento" id="txtNascimento" value="<?= $datanascimentoFuncionario ?>">
         </div>
         <div class="col-sm-3">CPF
-            <input type="text" class="form-control cpf-mask" style="border-radius: 25px;" name="txtCpf" id="txtCpf" placeholder="Ex.: 000.000.000-00" value="<?= $cpfFuncionario ?>">
+            <input type="text" class="form-control" style="border-radius: 25px;" name="txtCpf" id="txtCpf" placeholder="Ex.: 000.000.000-00" value="<?= $cpfFuncionario ?>">
         </div>
               
     </div>
@@ -48,14 +48,14 @@
         </div>
 
         <div class="col-sm-1 text-start"><br>
-            <button class="btn btn-primary" style="border-radius: 25px;" name="btoPesquisa" id="btoPesquisa" formaction="sistema.php?tela=funcionario">&#128269;</button>
+            <button class="btn btn-primary" style="border-radius: 25px;" name="btoPesquisa" id="btoPesquisa" formaction="sistema.php?tela=funcionario" onclick="Pesquisar()"> &#128269; </button>
         </div>   
         
     </div>
  <hr>
     <div class="row mt-3 ">
         <div class="col-sm-3">CEP
-            <input type="text" class="form-control cep-mask" style="border-radius: 25px;" name="txtCep" id="txtCep" placeholder="Ex.: 00000-000" value="<?= $cepFuncionario ?>">
+            <input type="text" class="form-control" style="border-radius: 25px;" name="txtCep" id="txtCep" placeholder="Ex.: 00000-000" value="<?= $cepFuncionario ?>">
         </div>
         <div class="col-sm-5">Endereço
             <input type="text" class="form-control" style="border-radius: 25px;" name="txtEndereco" id="txtEndereco" value="<?= $enderecoFuncionario ?>">
@@ -77,7 +77,7 @@
             <input type="text" class="form-control" style="border-radius: 25px;" name="txtEstado" id="txtEstado" value="<?=$estadofuncionario?>">
         </div>
         <div class="col-sm-9">Complemento
-            <input type="text" class="form-control" style="border-radius: 25px;" name="txtNumero" id="txtComplemento" value="<?= $complementoFuncionario ?>"> 
+            <input type="text" class="form-control" style="border-radius: 25px;" name="txtComplemento" id="txtComplemento" value="<?= $complementoFuncionario ?>"> 
         </div>  
 
     </div>
@@ -90,7 +90,7 @@
 
     <div class="row mt-3">
         <div class="col-sm-4">Status
-            <select name="txtStatus"  class="form-control" style="border-radius: 25px;">
+            <select name="txtStatus" id="txtStatus"  class="form-control" style="border-radius: 25px;">
                 <option value="">--Selecione um Status--</option>
                 <option value="ativo" <?= ($statusFuncionario == 'ativo' ? 'selected' : "") ?>>Ativo</option>
                 <option value="inativo" <?= ($statusFuncionario == 'inativo' ? 'selected' : "") ?>>Inativo</option>
@@ -100,10 +100,10 @@
 
     <div class="row mt-3">
         <div class="col-sm-12 text-end">
-            <button name="btoExcluir" class="btn btn-danger btn-lg" formaction="../ConexaoPHP/funcionario_excluir.php">Excluir</button>
+            <button name="btoExcluir" class="btn btn-danger btn-lg" formaction="../ConexaoPHP/funcionario_excluir.php" onclick="Excluir()">Excluir</button>
             <a href="sistema.php?tela=funcionario" name="btoLimpar" id="btoLimpar" class="btn btn-primary btn-lg">Limpar</a>
-            <button name="btoAlterar" class="btn btn-warning btn-lg" formaction="../ConexaoPHP/funcionario_alterar.php">Alterar</button>
-            <button name="btoCadastrar" class="btn btn-success btn-lg" formaction="../ConexaoPHP/funcionario_cadastrar.php">Cadastrar</button>
+            <button name="btoAlterar" class="btn btn-warning btn-lg" formaction="../ConexaoPHP/funcionario_alterar.php" onclick="Alterar()">Alterar</button>
+            <button name="btoCadastrar" class="btn btn-success btn-lg" formaction="../ConexaoPHP/funcionario_cadastrar.php" onclick="Cadastrar()">Cadastrar</button>
         </div>
     </div>
 </form>
@@ -139,3 +139,140 @@
     
 
 </Script>
+
+<script>
+    let formulario = document.getElementById("frmfuncionario");
+    let id =document.getElementById("txtId");
+    let Nome= document.getElementById("txtNome");
+    let Status= document.getElementById("txtStatus");
+    let Nascimento= document.getElementById("txtNascimento");
+    let CPF= document.getElementById("txtCpf");
+    let CEP= document.getElementById("txtCep");
+    let Email= document.getElementById("txtEmail");
+    let Login= document.getElementById("txtLogin");
+    let Senha= document.getElementById("txtSenha");
+   
+    
+
+
+
+    function Pesquisar()
+    {
+        
+        if(id.value.trim() == "")
+        {
+            alert("Erro, o Id Funcionario deve ser preenchido");
+            id.focus();
+            return;
+        }
+
+        formulario.action = "sistema.php?tela=funcionario";
+        formulario.submit();
+
+    }
+
+    function Alterar()
+    {
+        
+        if(id.value.trim() == "")
+        {
+            alert("Erro, o ID do Funcionario deve ser preenchido");
+            id.focus();
+            return;
+        }
+
+        formulario.action = "sistema.php?tela=funcionario";
+        formulario.submit();
+
+    }
+
+    function Excluir()
+    {
+        
+        if(id.value.trim() == "")
+        {
+            alert("Erro, o ID do Funcionario deve ser preenchido");
+            id.focus();
+            return;
+        }
+
+        formulario.action = "sistema.php?tela=funcionario";
+        formulario.submit();
+
+    }
+
+    function Cadastrar()
+    {
+    
+        if(Nome.value.trim() == "")
+        {
+            alert("Erro, o nome deve ser preenchido");
+           Nome.focus();
+           return;
+            
+        }
+        
+        if(Status.value == "")
+        {
+            alert("Erro, o Status deve ser preenchido");
+            Status.focus();
+           return;
+            
+        }
+
+        if(Nascimento.value.trim() == "")
+        {
+            alert("Erro, o Data de Nascimento deve ser preenchido");
+            Nascimento.focus();
+           return;
+            
+        }
+        
+        if(CPF.value.trim() == "")
+        {
+           alert("Erro, CPF deve ser preenchido");
+           Cpf.focus();
+           return;
+            
+        }
+
+        if(Email.value.trim() == "")
+        {
+           alert("Erro, Email deve ser preenchido");
+          Email.focus();
+           return;
+            
+        }
+
+        if(Senha.value.trim() == "")
+        {
+           alert("Erro, Senha deve ser preenchido");
+           Senha.focus();
+           return;
+            
+        }
+
+        if(Login.value.trim() == "")
+        {
+           alert("Erro, Login deve ser preenchido");
+          Login.focus();
+           return;
+            
+        }
+        
+        
+        if(CEP.value.trim() == "")
+        {
+            alert("Erro, o CEP deve ser preenchido");
+            CEP.focus();
+           return;
+            
+        }
+
+        formulario.action = "../ConexaoPHP/funcionario_cadastrar.php";
+        formulario.submit();
+
+    }
+
+
+</script>
