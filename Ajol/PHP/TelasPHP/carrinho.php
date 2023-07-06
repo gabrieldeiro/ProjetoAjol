@@ -55,44 +55,49 @@
 
             $CvalorProduto = $Quantidade * $valorunitario_produto;
         }
-        try {
-            $sqlCompra = $conn->prepare("insert into itemproduto
-        (            
-            id_produto_itemproduto,
-            id_compra_itemproduto,
-            qtde_itemproduto,
-            valortotal_itemproduto,
-            valorunitario_itemproduto
-        )
-        value
-        (
-            :id_produto_itemproduto,
-            :id_compra_itemproduto,
-            :qtde_itemproduto,
-            :valortotal_itemproduto,
-            :valorunitario_itemproduto
-        )
-        ");
-            $sqlCompra->execute(array(
-            ':id_produto_itemproduto'=>$idProduto,
-            ':id_compra_itemproduto'=>$idCompra,
-            ':qtde_itemproduto'=>$Quantidade,
-            ':valortotal_itemproduto'=>$CvalorProduto,
-            ':valorunitario_itemproduto'=>$valorunitario_produto
-            ));
-        } 
-        catch (PDOException $erro) 
-        {
-            echo $erro->getMessage();
-        }
-        if($sqlCompra->rowCount()>=1) 
-        {
-            foreach ($sqlCompra as $row) 
-            {
-                //Perdi a linha de RACIOCINIO
-                $idCompra = $row[0];
-            }
-        }
+        // try {
+        //     $sqlCompra = $conn->prepare("insert into itemproduto
+        // (            
+        //     id_produto_itemproduto,
+        //     id_compra_itemproduto,
+        //     qtde_itemproduto,
+        //     valortotal_itemproduto,
+        //     valorunitario_itemproduto
+        // )
+        // value
+        // (
+        //     :id_produto_itemproduto,
+        //     :id_compra_itemproduto,
+        //     :qtde_itemproduto,
+        //     :valortotal_itemproduto,
+        //     :valorunitario_itemproduto
+        // )
+        // ");
+        //     $sqlCompra->execute(array(
+        //     ':id_produto_itemproduto'=>$idProduto,
+        //     ':id_compra_itemproduto'=>$idCompra,
+        //     ':qtde_itemproduto'=>$Quantidade,
+        //     ':valortotal_itemproduto'=>$CvalorProduto,
+        //     ':valorunitario_itemproduto'=>$valorunitario_produto
+        //     ));
+        // } 
+        // catch (PDOException $erro) 
+        // {
+        //     echo $erro->getMessage();
+        // }
+        // if($sqlCompra->rowCount()>=1) 
+        // {
+        //     foreach ($sqlCompra as $row) 
+        //     {
+        //         //Perdi a linha de RACIOCINIO
+        //         $idCompra = $row[0];
+        //         $idProduto_compra = $row[1];
+        //         $idcompra_produto = $row[2];
+        //         $qtdeProduto_compra = $row[3];
+        //         $valorTotalProduto_compra = $row[4];
+        //         $valorUnitarioProduto_compra = $row[1];
+        //     }
+        // }
     }
 
     ?>
