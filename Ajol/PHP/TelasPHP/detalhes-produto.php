@@ -106,7 +106,6 @@
                         </p>
                     </div>
                     <div class="col-sm-6">
-                        
                         <img src="../../img/prod/<?= $idProduto ?>/<?= $imgProduto ?>" class="w-100 img-fluid" alt="">
                     </div>
                     <div class="col-sm-4 border border-1 mt-4" style="border-radius: 12px;">
@@ -135,24 +134,28 @@
                         </div>
                         <div class="row">
                             <div class="col-sm-5">
-                                <h2 class="form-text">
-                                    Quantidade
-                                </h2>
-                                <input type="number" class="form-control" name="txtQuantidade" id="txtQuantidade" min="0" max="<?= $qtdeProduto ?>">
+                                <form action="" method="post">
+                                        <h2 class="form-text">
+                                            Quantidade
+                                        </h2>
+                                        <input type="number" class="form-control" name="txtQuantidade" id="txtQuantidade" min="0" max="<?= $qtdeProduto ?>">
+                                        <input type="number" hidden name="txtID" value="<?=$idProduto?>" id="txtID">
+                                </div>
                             </div>
-                        </div>
-                        <div class="row">
-                            <h2 class="form-text ms-3 mt-3">
-                                Quantidade disponivel: <span class="text-danger"><?= $qtdeProduto ?></span>
-                            </h2>
-                        </div>
-                        <div class="row mt-4">
-                            <!-- 
-                                Vai dar um GET que puxa a quantidade do input e o ID do produto no carrinho 
-                            -->
-                            <button class="btn btn-lg btn-success" formaction="">
-                                Adicionar ao carrinho
-                            </button>
+                            <div class="row">
+                                <h2 class="form-text ms-3 mt-3">
+                                    Quantidade disponivel: <span class="text-danger"><?= $qtdeProduto ?></span>
+                                </h2>
+                            </div>
+                            <div class="row mt-4">
+                                <!-- 
+                                    Vai dar um POST que puxa a quantidade do input e o ID do produto no carrinho 
+                                -->
+                                <button class="btn btn-lg btn-success" formaction="carrinho.php">
+                                    Adicionar ao carrinho
+                                </button>
+                                <!-- -->
+                            </form>
                         </div>
                     </div>
                 </div>
@@ -215,4 +218,5 @@
         </div>
     </div>
 </body>
+
 </html>
