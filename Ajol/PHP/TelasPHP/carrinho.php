@@ -135,7 +135,7 @@
                                     SELECT COMEÇA AQUI
                                 -->
                                 <div class='col-sm-2'>
-                                    <img src='../../img/prod/$row[]/<?= $imgprodutoCarrinho ?>' class='w-100 img-fluid' alt=''><!-- temos um problema, puxa de quem ? ou faz oq? sla... vai precisar mexer no banco???..F -->
+                                    <img src='../../img/prod/$row[1]/<?= $imgprodutoCarrinho ?>' class='w-100 img-fluid' alt=''><!-- temos um problema, puxa de quem ? ou faz oq? sla... vai precisar mexer no banco???..F -->
                                 </div>
                                 <div class='col-sm-5'>
                                     <p>
@@ -148,12 +148,12 @@
                                         </p>
                                     </div>
                                 </div>
-                                <div class="col-sm-2 mt-2">
-                                    <input type="number" class="form-control" readonly min="1" value="<?= $qtdeprodutoCarrinho ?>" name="" id="">
-                                    <h5 class="form-text ms-1 mt-3">Quantidade</h5> <!-- Esse cara vai ter que puxar o qtde e vai ser usado apenas para alterar o itemproduto -->
+                                <div class='col-sm-2 mt-2'>
+                                    <input type='number' class='form-control' readonly min='1' value='<?= $qtdeprodutoCarrinho ?>' name='' id=''>
+                                    <h5 class='form-text ms-1 mt-3'>Quantidade</h5> <!-- Esse cara vai ter que puxar o qtde e vai ser usado apenas para alterar o itemproduto -->
                                 </div>
-                                <div class="col-sm-3 text-end">
-                                    <p style="font-size: 22px;">
+                                <div class='col-sm-3 text-end'>
+                                    <p style='font-size: 22px;'>
                                         R$
                                         <b>
                                             <!-- Valor do produto AQUI -->
@@ -162,7 +162,7 @@
                                     </p>
                                 </div>
                             </div>
-                            <div class="row mt-2">
+                            <div class='row mt-2'>
                                 <hr>
                             
                             
