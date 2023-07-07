@@ -17,8 +17,7 @@
         $valorcusto = $_POST['txtValorcusto'];
         $desconto = $_POST['txtDesconto'];
         $img = '';
-        $img2 = '';
-        $img3 = '';
+        
         $obs = $_POST['txtObs'];
         $status =$_POST['txtStatus'];
 
