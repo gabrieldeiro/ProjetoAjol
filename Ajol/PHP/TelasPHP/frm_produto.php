@@ -6,7 +6,7 @@
     }
 </style>
 <body>
-    <form action="" method="post" name="frmproduto" id="frmproduto" onsubmit="return false;" style="background-color: darkgray;" enctype="multipart/form-data">
+    <form action="" method="post" name="frmproduto" id="frmproduto" onsubmit="return false; style="background-color: darkgray;" enctype="multipart/form-data">
         <div class="row mt-3 ">
             <div class="col-sm-6">Nome do Produto
                 <input type="text" class="form-control" style="border-radius: 25px;" name="txtNome" id="txtNome"
@@ -128,15 +128,9 @@
                     formaction="../ConexaoPHP/produto_excluir.php" onclick="Excluir()">Excluir</button>
                 <a href="sistema.php?tela=produto" class="btn btn-primary btn-lg" name="btoLimpar" id="btoLimpar"
                     class="btn btn-secundary">Limpar</a>
-<<<<<<< Updated upstream
-                <button class="btn btn-warning btn-lg" formaction="../ConexaoPHP/produto_alterar.php">Alterar</button>
+                <button class="btn btn-warning btn-lg" formaction="../ConexaoPHP/produto_alterar.php"onclick="Alterar()">Alterar</button>
                     <button name="btoCadastrar" class="btn btn-success btn-lg" formaction="../ConexaoPHP/produto_cadastrar.php" onclick="Cadastrar()">Cadastrar</button>
             </div>
-=======
-                <button class="btn btn-warning btn-lg" formaction="../ConexaoPHP/produto_alterar.php" onclick="Alterar()">Alterar</button>
-                    <button name="btoCadastrar" class="btn btn-success btn-lg" formaction="../ConexaoPHP/produto_cadastrar.php" onclick="Cadastrar()">Cadastrar</button>
-                </div>
->>>>>>> Stashed changes
         </div>
     </form>
 </body>
@@ -312,7 +306,8 @@
 
 
 
-  formulario.action = "../ConexaoPHP/produto_cadastrar.php";
+        
+    formulario.action = "../ConexaoPHP/produto_cadastrar.php";
      formulario.submit();
 
 

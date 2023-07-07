@@ -17,20 +17,19 @@
         $valorcusto = $_POST['txtValorcusto'];
         $desconto = $_POST['txtDesconto'];
         $img = '';
-        
         $obs = $_POST['txtObs'];
         $status =$_POST['txtStatus'];
 
         try 
         {
-            if(isset($_FILES['txtImg']))
+
+            if (isset($_FILES['txtImg']))
             {
                 $img = $_FILES['txtImg'];
-
-            }
+            }    
             else
             {
-                $img = '';
+                $img='';
             }
 
             if($img['name'] != '')
