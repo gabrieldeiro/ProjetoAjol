@@ -6,11 +6,7 @@
     }
 </style>
 <body>
-<<<<<<< Updated upstream
-    <form action="" method="post" name="frmproduto" id="frmproduto" onsubmit="return false;" style="background-color: darkgray;" enctype="multipart/form-data">
-=======
-    <form action="" method="post" id="frmproduto" style="background-color: darkgray;" enctype="multipart/form-data" onsubmit="return false;">
->>>>>>> Stashed changes
+    <form action="" method="post" name="frmproduto" id="frmproduto" onsubmit="return false; style="background-color: darkgray;" enctype="multipart/form-data">
         <div class="row mt-3 ">
             <div class="col-sm-6">Nome do Produto
                 <input type="text" class="form-control" style="border-radius: 25px;" name="txtNome" id="txtNome"
@@ -26,11 +22,7 @@
             </div>
             <div class="col-sm-1 text-center mt-4">
                 <button class="btn btn-primary" style="border-radius: 25px;" name="btoPesquisa" id="btoPesquisa"
-<<<<<<< Updated upstream
                     formaction="sistema.php?tela=produto" onclick="Pesquisar2()">&#128269;</button>
-=======
-                    formaction="sistema.php?tela=produto" onclick="Pesquisar()"> &#128269;</button>
->>>>>>> Stashed changes
             </div>
 
         </div>
@@ -58,19 +50,24 @@
                     </div>
                 </div>
                 <div class="row ">
+                  <div class="col-sm-4">Valor custo
+                        <input type="text" class="form-control" style="border-radius: 25px;" name="txtValorcusto"
+                            id="txtValorcusto" value="<?= $valorcusto_produto ?>" onblur="Somar()">
+                            <!-- onblur sai do foco calculo automatico -->
+                    </div>                              
+                <div class="col-sm-4">Desconto em %
+                        <input type="text" class="form-control" style="border-radius: 25px;" name="txtDesconto"
+                            id="txtDesconto" value="<?= $descontoProduto ?>" onblur="Somar()">
+                            <!-- onblur sai do foco calculo automatico  no resultado nao colocaor onblur-->
+                    </div>
                     <div class="col-sm-4">Valor unitario
                         <input type="text" class="form-control" style="border-radius: 25px;" name="txtValorunitario"
                             id="txtValorunitario" value="<?= $valorunitario_produto ?>">
+                            <!-- usei o valor unitario como txtvalorunitario eno resultado nao colocaor onblur- -->
                     </div>
-                    <div class="col-sm-4">Valor custo
-                        <input type="text" class="form-control" style="border-radius: 25px;" name="txtValorcusto"
-                            id="txtValorcusto" value="<?= $valorcusto_produto ?>">
-                    </div>
-                    <div class="col-sm-4">Desconto
-                        <input type="text" class="form-control" style="border-radius: 25px;" name="txtDesconto"
-                            id="txtDesconto" value="<?= $descontoProduto ?>">
-                    </div>
-                    <div class="col-sm-4">Percentual de lucro %
+                   
+                    
+                    <div class="col-sm-4">Percentual de lucro 
                         <input type="text" class="form-control" style="border-radius: 25px;" name="txtPercentualdelucro" id="txtPercentualdelucro">
                     </div>
                     <div class="col-sm-4">Lote
@@ -131,13 +128,8 @@
                     formaction="../ConexaoPHP/produto_excluir.php" onclick="Excluir()">Excluir</button>
                 <a href="sistema.php?tela=produto" class="btn btn-primary btn-lg" name="btoLimpar" id="btoLimpar"
                     class="btn btn-secundary">Limpar</a>
-<<<<<<< Updated upstream
-                <button class="btn btn-warning btn-lg" formaction="../ConexaoPHP/produto_alterar.php">Alterar</button>
+                <button class="btn btn-warning btn-lg" formaction="../ConexaoPHP/produto_alterar.php"onclick="Alterar()">Alterar</button>
                     <button name="btoCadastrar" class="btn btn-success btn-lg" formaction="../ConexaoPHP/produto_cadastrar.php" onclick="Cadastrar()">Cadastrar</button>
-=======
-                <button class="btn btn-warning btn-lg" formaction="../ConexaoPHP/produto_alterar.php" onclick="Alterar()">Alterar</button>
-                    <button name="btoCadastrar" class="btn btn-success btn-lg" formaction="../ConexaoPHP/produto_cadastrar.php" onclick="Cadastrar()" >Cadastrar</button>
->>>>>>> Stashed changes
             </div>
         </div>
     </form>
@@ -157,9 +149,9 @@
     let escala =document.getElementById("txtEscala");
     let valorunitario =document.getElementById("txtValorunitario");
     let valorcusto =document.getElementById("txtValorcusto");
-    //NULL let desconto =document.getElementById("txtDesconto");
-    //NULL let img =document.getElementById("txtImg");
-    //NULL let obs =document.getElementById("txtObs");
+    let desconto =document.getElementById("txtDesconto");
+     let img =document.getElementById("txtImg");
+    let lucro =document.getElementById("txtPercentualdelucro");
     let Status =document.getElementById("txtStatus");
 
     function Pesquisar2()
@@ -201,7 +193,7 @@
             return;
         }
 
-        formulario.action = "sistema.php?tela=produto";
+        formulario.action = "../ConexaoPHP/produto_alterar.php";
         formulario.submit();
 
     }
@@ -252,16 +244,12 @@
 
         if(dimensao.value.trim()=="")
         {
-<<<<<<< Updated upstream
             alert("Erro, a DIMENSÃO deve ser informado");
-=======
-            alert("Erro, Dimensao deve ser informado");
->>>>>>> Stashed changes
             dimensao.focus();
             return;
         }
 
-<<<<<<< Updated upstream
+
         if(escala.value.trim()=="")
         {
             alert("Erro, a ESCALA deve ser informado");
@@ -276,12 +264,7 @@
             return;
         }
 
-        if(valorcusto.value.trim()=="")
-        {
-            alert("Erro, o VALOR DE CUSTO deve ser informado");
-            valorcusto.focus();
-            return;
-        }
+      
 
         if(status.value.trim()=="")
         {
@@ -290,12 +273,9 @@
             return;
         }
 
-        formulario.action = "sistema.php?tela=produto";
-        formulario.submit();
+     
 
-    }
 
-=======
         if(valorunitario.value.trim()=="")
         {
             alert("Erro, Valor Unitario deve ser informado");
@@ -326,7 +306,8 @@
 
 
 
-  formulario.action = "../ConexaoPHP/produto_cadastrar.php";
+        
+    formulario.action = "../ConexaoPHP/produto_cadastrar.php";
      formulario.submit();
 
 
@@ -335,10 +316,31 @@
     
 
   
-
-
->>>>>>> Stashed changes
 </script>
-nome categoria ver
-calculadora do precentual do lucro
+
+<script>
+function Somar()
+{
+
+
+    valorunitario.value = 0;
+    valorunitario.value=parseFloat(valorcusto.value) * (-parseFloat (desconto.value) / 100) + parseFloat(valorcusto.value);
+
+    console.log (valorunitario.value);
+    // valorunitario.value = valorunitario.value;
+    
+     lucro.value=0
+     lucro.value=parseFloat(valorunitario.value) - parseFloat(valorcusto.value);
+     console.log (lucro.value);
+    // lucro.value = lucro;
+
+    // so variavel como soma nao precisa de value, mas onde vai dados precisa
+}
+
+</script>
+
+
+
+
 alterar
+

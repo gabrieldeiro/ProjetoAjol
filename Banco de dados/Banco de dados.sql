@@ -98,8 +98,9 @@ select * from categoria;
 
 insert into produto
 	(id_categoria_produto,nome_produto,marca_produto,lote_produto,qtde_produto,peso_produto,dimensao_produto,escala_produto,valorunitario_produto,valorcusto_produto,desconto_produto,img_produto,img2_produto,img3_produto,obs_produto,status_produto)
-values
-	(1,'Produto 1''Marca 1','1',12,'12','2070','15','120','270','','','','','','inativo');
+value
+	(1,'Produto teste','Marca teste','25',10,'2','10x20x30','1/5','130','60','','','','','','ativo')
+
 	
 
 Create table ItemProduto 
@@ -119,6 +120,8 @@ status_itemcompra varchar(30) null,
   constraint FK_ID_Compra_ItemProduto foreign key(id_compra_Itemproduto) references compra(id_compra)
 );
 
+drop table itemproduto;
+
 
 create table Compra
 (
@@ -137,4 +140,15 @@ select * from funcionario;
 select * from categoria;
 select * from produto;
 select * from itemproduto;
+
+select * from itemproduto where id_compra_itemproduto = 33;
+
+select img_produto from produto where id_produto=14, inner join itemproduto 
+
+select * from itemproduto
+
+
 select * from compra;
+
+
+select * from compra where id_usuario_compra= 2 and status_compra='ATIVO'
