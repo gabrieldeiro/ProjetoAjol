@@ -109,9 +109,14 @@
                 
                         if($sqlCarrinho->rowCount()>=1) 
                         {
+                            $contteste = 0;
+                            
 
                             foreach ($sqlCarrinho as $row)
-                            {
+                            {   
+                                $contteste++;
+
+                                $vlparc = $vlparc + $vl;
                                 
                                 echo 
                                 "
@@ -144,9 +149,16 @@
                                         </p>
                                     </div>
                                 </div>
-                                
+
                                 ";
+
+                                $vl = $row[4];
+
+                                echo $vlparc;
+                                
+                                
                             }
+                           
                         } 
                         
                     ?>
@@ -166,12 +178,10 @@
                 <hr>
                 <div class="row">
                     <div class="col-sm-6">
-                        <h5>Produtos (<?php //Quantidades 
-                                        ?>)</h5>
+                        <h5>Produtos (<?=$contteste?>)</h5>
                     </div>
                     <div class="col-sm-6 text-end">
-                        <h5>R$<?php //Valor sem frete 
-                                ?></h5>
+                        <h5>R$<?php //Valor sem frete ?></h5>
                     </div>
                 </div>
                 <div class="row mt-1">
@@ -197,8 +207,8 @@
                             </h4>
                         </div>
                         <div class="col-sm-6">
-                            <h4 class="text-success">R$<?php //Valor Total Aqui 
-                                                        ?></h4>
+                            <h4 class="text-success">R$
+                            <?php //Valor Total Aqui?></h4>
                         </div>
                     </div>
                 </div>
