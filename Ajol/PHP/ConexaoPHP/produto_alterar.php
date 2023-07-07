@@ -126,7 +126,7 @@
             {
                 echo '<p>Dados alterados com sucesso!</p>';
 
-                $pasta = '../../img/prod/'.$conn->lastInsertId().'/';
+                $pasta = '../../img/prod/'.$id.'/';
 
                 if(!file_exists($pasta))
                 {
