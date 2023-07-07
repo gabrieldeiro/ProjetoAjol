@@ -150,7 +150,7 @@
     let valorunitario =document.getElementById("txtValorunitario");
     let valorcusto =document.getElementById("txtValorcusto");
     let desconto =document.getElementById("txtDesconto");
-     let img =document.getElementById("txtImg");
+     //let img =document.getElementById("txtImg");
     let lucro =document.getElementById("txtPercentualdelucro");
     let Status =document.getElementById("txtStatus");
 
@@ -342,5 +342,5 @@ function Somar()
 
 
 
-alterar
+
 
