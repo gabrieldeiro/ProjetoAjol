@@ -110,13 +110,16 @@
                         if($sqlCarrinho->rowCount()>=1) 
                         {
                             $contteste = 0;
+                            $vlparc = 0;
                             
 
                             foreach ($sqlCarrinho as $row)
                             {   
                                 $contteste++;
 
+                                $vl = $row[4];
                                 $vlparc = $vlparc + $vl;
+                                
                                 
                                 echo 
                                 "
@@ -181,7 +184,7 @@
                         <h5>Produtos (<?=$contteste?>)</h5>
                     </div>
                     <div class="col-sm-6 text-end">
-                        <h5>R$<?php //Valor sem frete ?></h5>
+                        <h5>R$<?=$vlparc?></h5>
                     </div>
                 </div>
                 <div class="row mt-1">
@@ -208,7 +211,7 @@
                         </div>
                         <div class="col-sm-6">
                             <h4 class="text-success">R$
-                            <?php //Valor Total Aqui?></h4>
+                            <?=$vlparc + 20?></h4>
                         </div>
                     </div>
                 </div>
