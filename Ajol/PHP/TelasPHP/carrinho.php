@@ -85,32 +85,6 @@
         {
             echo $erro->getMessage();
         }
-
-        $idprodutoCarrinho = '';
-        $qtdeprodutoCarrinho = '';
-        $valototalCarrinho = '';
-        $valorunitarioCarrinho = '';
-        $imgprodutoCarrinho = '';
-        $nomeprodutoCarrinho = '';
-
-
-        $sqlCarrinho = $conn->query('select itemproduto.*, produto.img_produto from itemproduto 
-        inner join produto on itemproduto.id_produto_itemproduto = produto.id_produto where id_compra_itemproduto='. $idCompra);
-
-
-        if($sqlCarrinho->rowCount()>=1) 
-        {
-            foreach ($sqlCarrinho as $row) 
-            {
-                $idprodutoCarrinho = $row[1];
-                $qtdeprodutoCarrinho = $row[3];
-                $valototalCarrinho = $row[4];
-                $valorunitarioCarrinho = $row[5];
-                $imgprodutoCarrinho = $row[8];
-                $nomeprodutoCarrinho = $row[9];
-            }
-        }
-
     }
 
 
@@ -119,6 +93,7 @@
     <form action="" method="post" enctype="multipart/form-data">
         <div class="container-fluid p-3" style="background-color: #404040;">
             <div class="col-sm-2">
+
             </div>
             <div class="col-sm-6 card-body bg-white" style="border-radius: 10px;">
                 <div class="col-sm-12">
@@ -126,124 +101,57 @@
                         <h4>Produtos</h4>
                         <hr>
                     </div>
+                    
                     <?php 
-                        foreach ($sqlCarrinho as $row)
+
+                        $sqlCarrinho = $conn->query('select itemproduto.*, produto.img_produto, produto.nome_produto from itemproduto 
+                        inner join produto on itemproduto.id_produto_itemproduto = produto.id_produto where id_compra_itemproduto='. $idCompra);
+                
+                        if($sqlCarrinho->rowCount()>=1) 
                         {
-                            echo "
+
+                            foreach ($sqlCarrinho as $row)
+                            {
+                                
+                                echo 
+                                "
                                 <div class='row'>
-                                <!-- 
-                                    SELECT COMEÇA AQUI
-                                -->
-                                <div class='col-sm-2'>
-                                    <img src='../../img/prod/$row[1]/<?= $imgprodutoCarrinho ?>' class='w-100 img-fluid' alt=''><!-- temos um problema, puxa de quem ? ou faz oq? sla... vai precisar mexer no banco???..F -->
-                                </div>
-                                <div class='col-sm-5'>
-                                    <p>
-                                    <h4><?= $nomeprodutoCarrinho ?></h4>
-                                    </p>
-                                    <div class='row ms-1'>
+                                    <div class='col-sm-2'>
+                                        <img src='../../img/prod/$row[1]/$row[8]' class='w-100 img-fluid' alt=''>
+                                    </div>
+                                    <div class='col-sm-5'>
                                         <p>
-                                            <a href=''>Excluir</a> <!-- mudar para botão -->
-                                            <a href='' class='ms-3'>Alterar</a> <!-- mudar para botão -->
+                                        <h4>$row[9]</h4>
+                                        </p>
+                                        <div class='row ms-1'>
+                                            <p>
+                                                <a href=''>Excluir</a> <!-- mudar para botão -->
+                                                <a href='' class='ms-3'>Alterar</a> <!-- mudar para botão -->
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class='col-sm-2 mt-2'>
+                                        <input type='number' class='form-control' readonly min='1' value='$row[3]' name='' id=''>
+                                        <h5 class='form-text ms-1 mt-3'>Quantidade</h5> 
+                                    </div>
+                                    <div class='col-sm-3 text-end'>
+                                        <p style='font-size: 22px;'>
+                                            R$
+                                            <b>
+                                                <!-- Valor do produto AQUI -->
+                                                $row[4]
+                                            </b>
                                         </p>
                                     </div>
                                 </div>
-                                <div class='col-sm-2 mt-2'>
-                                    <input type='number' class='form-control' readonly min='1' value='<?= $qtdeprodutoCarrinho ?>' name='' id=''>
-                                    <h5 class='form-text ms-1 mt-3'>Quantidade</h5> <!-- Esse cara vai ter que puxar o qtde e vai ser usado apenas para alterar o itemproduto -->
-                                </div>
-                                <div class='col-sm-3 text-end'>
-                                    <p style='font-size: 22px;'>
-                                        R$
-                                        <b>
-                                            <!-- Valor do produto AQUI -->
-                                            <?= $valototalCarrinho ?>
-                                        </b>
-                                    </p>
-                                </div>
-                            </div>
-                            <div class='row mt-2'>
-                                <hr>
-                            
-                            
-                            ";
+                                
+                                ";
+                            }
                         } 
                         
                     ?>
                 </div>
-           
-                    <div class="row">
-                        <!-- 
-                            SELECT COMEÇA AQUI
-                        -->
-                        <div class="col-sm-2">
-                            <img src="../../img/prod/<?= $idprodutoCarrinho ?>/<?= $imgprodutoCarrinho ?>" class="w-100 img-fluid" alt=""><!-- temos um problema, puxa de quem ? ou faz oq? sla... vai precisar mexer no banco???..F -->
-                        </div>
-                        <div class="col-sm-5">
-                            <p>
-                            <h4><?= $nomeprodutoCarrinho ?></h4>
-                            </p>
-                            <div class="row ms-1">
-                                <p>
-                                    <a href="">Excluir</a> <!-- mudar para botão -->
-                                    <a href="" class="ms-3">Alterar</a> <!-- mudar para botão -->
-                                </p>
-                            </div>
-                        </div>
-                        <div class="col-sm-2 mt-2">
-                            <input type="number" class="form-control" readonly min="1" value="<?= $qtdeprodutoCarrinho ?>" name="" id="">
-                            <h5 class="form-text ms-1 mt-3">Quantidade</h5> <!-- Esse cara vai ter que puxar o qtde e vai ser usado apenas para alterar o itemproduto -->
-                        </div>
-                        <div class="col-sm-3 text-end">
-                            <p style="font-size: 22px;">
-                                R$
-                                <b>
-                                    <!-- Valor do produto AQUI -->
-                                    <?= $valototalCarrinho ?>
-                                </b>
-                            </p>
-                        </div>
-                    </div>
-                    <div class="row mt-2">
-                        <hr>
-                        
-                
 
-                        <!--
-                            a parte de cima tem que ser uma estrutura de repetição? acho que sim?...
-                            OUTRO EXEMPLO DO SELECT AQUI
-                        -->
-
-                        <!-- <div class="col-sm-2">
-                            <img src="../../img/coringa.png" class="w-100 img-fluid" alt="">
-                        </div>
-                        <div class="col-sm-5">
-                            <p>
-                            <h4>Coringa Action Figure Joker</h4>
-                            </p>
-                            <div class="row ms-1">
-                                <p>
-                                    <a href="">Excluir</a>
-                                    <a href="" class="ms-3">Alterar</a>
-                                </p>
-                            </div>
-                        </div>
-                        <div class="col-sm-2 mt-2">
-                            <input type="number" class="form-control" min="1" name="" id="">
-                            <h5 class="form-text ms-1 mt-3">Quantidade</h5>
-                        </div>
-                        <div class="col-sm-3 text-end">
-                            <p style="font-size: 22px;">
-                                R$
-                                <b>
-                                     Valor do produto AQUI
-                                    60,90
-                                </b>
-                            </p>
-                        </div>
-                            -->
-                    </div>
-                </div>
             </div>
             <div class="col-sm-1">
 
