@@ -17,7 +17,7 @@
 
            <div class="row">
                 <div class="col-sm-4 mt-3"> Status
-                    <select name="txtStatus" class="form-control" style="border-radius: 25px;">
+                    <select name="txtStatus" id="txtStatus" class="form-control" style="border-radius: 25px;">
                         <option value="">--Selecione um Status--</option>
                         <option value="ativo" <?= ($statusCategoria == 'ativo' ? 'selected' : "") ?>>Ativo</option>
                         <option value="inativo" <?= ($statusCategoria == 'inativo' ? 'selected' : "") ?>>Inativo</option>
@@ -39,10 +39,10 @@
         
                 <div class="row mt-3">
                     <div class="col-sm-12 text-end">
-                            <button name="btoCadastrar" class="btn btn-success" formaction="../ConexaoPHP/categoria_cadastrar.php" onclick="Nome()">Cadastrar</button>
-                        <button name="btoAlterar" class="btn btn-warning" formaction="../ConexaoPHP/categoria_alterar.php">Alterar</button>
+                            <button name="btoCadastrar" class="btn btn-success" formaction="../ConexaoPHP/categoria_cadastrar.php" onclick="Cadastrar()">Cadastrar</button>
+                        <button name="btoAlterar" class="btn btn-warning" formaction="../ConexaoPHP/categoria_alterar.php" onclick="Alterar()">Alterar</button>
                             <a href="sistema.php?tela=categoria" class="btn btn-primary" name="btoLimpar" id="btoLimpar" class="btn btn-secundary">Limpar</a>
-                        <button name="btoExcluir" class="btn btn-danger" formaction="../ConexaoPHP/categoria_excluir.php">Excluir</button>
+                        <button name="btoExcluir" class="btn btn-danger" formaction="../ConexaoPHP/categoria_excluir.php"onclick="Excluir()">Excluir</button>
                     </div>
                 </div>
          </div>
@@ -51,7 +51,10 @@
 <script>
     let formulario = document.getElementById("frmcategoria");
     let id =document.getElementById("txtId");
-    let Nome= document.getElementById("txtNome").;
+    let Nome= document.getElementById("txtNome");
+    let Status= document.getElementById("txtStatus");
+    let Descricao= document.getElementById("txtDescricao");
+
 
     function Pesquisar()
     {
@@ -68,18 +71,64 @@
 
     }
 
-    function Nome()
+    function Alterar()
     {
         
-        if(Nome.value == "")
+        if(id.value.trim() == "")
+        {
+            alert("Erro, o ID da Categoria deve ser preenchido");
+            id.focus();
+            return;
+        }
+
+        formulario.action = "sistema.php?tela=categoria";
+        formulario.submit();
+
+    }
+
+    function Excluir()
+    {
+        
+        if(id.value.trim() == "")
+        {
+            alert("Erro, o ID da Categoria deve ser preenchido");
+            id.focus();
+            return;
+        }
+
+        formulario.action = "sistema.php?tela=categoria";
+        formulario.submit();
+
+    }
+
+    function Cadastrar()
+    {
+    
+        if(Nome.value.trim() == "")
         {
             alert("Erro, o nome deve ser preenchido");
            id.focus();
            return;
             
         }
+        
+        if(Status.value.trim() == "")
+        {
+            alert("Erro, o Status deve ser preenchido");
+           id.focus();
+           return;
+            
+        }
 
-        formulario.action = "sistema.php?tela=categoria";
+        if(Descricao.value.trim() == "")
+        {
+            alert("Erro, o Descrição deve ser preenchido");
+           id.focus();
+           return;
+            
+        }
+
+        formulario.action = "../ConexaoPHP/categoria_cadastrar.php";
         formulario.submit();
 
     }

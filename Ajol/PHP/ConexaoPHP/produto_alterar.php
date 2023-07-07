@@ -17,62 +17,106 @@
         $valorcusto = $_POST['txtValorcusto'];
         $desconto = $_POST['txtDesconto'];
         $img = '';
-        $img2 = '';
-        $img3 = '';
         $obs = $_POST['txtObs'];
         $status =$_POST['txtStatus'];
 
         try 
         {
-            if(isset($_FILES['txtImg']))
+
+            if (isset($_FILES['txtImg']))
             {
                 $img = $_FILES['txtImg'];
-
-            }
+            }    
             else
             {
-                $img = '';
+                $img='';
             }
 
-            $sql = $conn->prepare("
-                update produto set
-                    id_produto=:id_produto,
-                    id_categoria_produto=:id_categoria_produto,
-                    nome_produto=:nome_produto,
-                    marca_produto=:marca_produto,
-                    datacadastro_produto=:datacadastro_produto,
-                    lote_produto=:lote_produto,
-                    qtde_produto=:qtde_produto,
-                    peso_produto=:peso_produto,
-                    dimensao_produto=:dimensao_produto,
-                    escala_produto=:escala_produto,
-                    valorunitario_produto=:valorunitario_produto,
-                    valorcusto_produto=:valorcusto_produto,
-                    desconto_produto=:desconto_produto,
-                    img_produto=:img_produto,
-                    obs_produto=:obs_produto,
-                    status_produto=:status_produto
-                where id_produto=:id_produto
-            ");
+            if($img['name'] != '')
+            {
+                $sql = $conn->prepare("
+                    update produto set
+                        id_produto=:id_produto,
+                        id_categoria_produto=:id_categoria_produto,
+                        nome_produto=:nome_produto,
+                        marca_produto=:marca_produto,
+                        datacadastro_produto=:datacadastro_produto,
+                        lote_produto=:lote_produto,
+                        qtde_produto=:qtde_produto,
+                        peso_produto=:peso_produto,
+                        dimensao_produto=:dimensao_produto,
+                        escala_produto=:escala_produto,
+                        valorunitario_produto=:valorunitario_produto,
+                        valorcusto_produto=:valorcusto_produto,
+                        desconto_produto=:desconto_produto,
+                        img_produto=:img_produto,
+                        obs_produto=:obs_produto,
+                        status_produto=:status_produto
+                    where id_produto=:id_produto
+                ");
 
-            $sql->execute(array(
-                ':id_produto'=>$id,
-                ':id_categoria_produto'=>$idcategoria,
-                ':nome_produto'=>$nome,
-                ':marca_produto'=>$marca,
-                ':datacadastro_produto'=>$datacadastro,
-                ':lote_produto'=>$lote,
-                ':qtde_produto'=>$qtde,
-                ':peso_produto'=>$peso,
-                ':escala_produto'=>$escala,
-                ':dimensao_produto'=>$dimensao,
-                ':valorunitario_produto'=>$valorunitario,
-                ':valorcusto_produto'=>$valorcusto,
-                ':desconto_produto'=>$desconto,
-                ':img_produto'=>$img['name'],
-                ':obs_produto'=>$obs,
-                ':status_produto'=>$status
-            ));
+                $sql->execute(array(
+                    ':id_produto'=>$id,
+                    ':id_categoria_produto'=>$idcategoria,
+                    ':nome_produto'=>$nome,
+                    ':marca_produto'=>$marca,
+                    ':datacadastro_produto'=>$datacadastro,
+                    ':lote_produto'=>$lote,
+                    ':qtde_produto'=>$qtde,
+                    ':peso_produto'=>$peso,
+                    ':escala_produto'=>$escala,
+                    ':dimensao_produto'=>$dimensao,
+                    ':valorunitario_produto'=>$valorunitario,
+                    ':valorcusto_produto'=>$valorcusto,
+                    ':desconto_produto'=>$desconto,
+                    ':img_produto'=>$img['name'],
+                    ':obs_produto'=>$obs,
+                    ':status_produto'=>$status
+                ));
+            }
+
+            else
+            {
+
+                $sql = $conn->prepare("
+                    update produto set
+                        id_produto=:id_produto,
+                        id_categoria_produto=:id_categoria_produto,
+                        nome_produto=:nome_produto,
+                        marca_produto=:marca_produto,
+                        datacadastro_produto=:datacadastro_produto,
+                        lote_produto=:lote_produto,
+                        qtde_produto=:qtde_produto,
+                        peso_produto=:peso_produto,
+                        dimensao_produto=:dimensao_produto,
+                        escala_produto=:escala_produto,
+                        valorunitario_produto=:valorunitario_produto,
+                        valorcusto_produto=:valorcusto_produto,
+                        desconto_produto=:desconto_produto,
+                        obs_produto=:obs_produto,
+                        status_produto=:status_produto
+                    where id_produto=:id_produto
+                ");
+
+                $sql->execute(array(
+                    ':id_produto'=>$id,
+                    ':id_categoria_produto'=>$idcategoria,
+                    ':nome_produto'=>$nome,
+                    ':marca_produto'=>$marca,
+                    ':datacadastro_produto'=>$datacadastro,
+                    ':lote_produto'=>$lote,
+                    ':qtde_produto'=>$qtde,
+                    ':peso_produto'=>$peso,
+                    ':escala_produto'=>$escala,
+                    ':dimensao_produto'=>$dimensao,
+                    ':valorunitario_produto'=>$valorunitario,
+                    ':valorcusto_produto'=>$valorcusto,
+                    ':desconto_produto'=>$desconto,
+                    ':obs_produto'=>$obs,
+                    ':status_produto'=>$status
+                ));
+
+            }
 
             if($sql->rowCount()>=1)
             {
@@ -92,9 +136,9 @@
                 
             }
 
-
-
-        } catch (PDOException $ex) {
+        }
+        catch (PDOException $ex)
+        {
             echo $ex->getMessage();
         }
 

@@ -6,7 +6,7 @@
     }
 </style>
 <body>
-    <form action="" method="post" name="frmproduto" id="frmproduto" onsubmit="return false;" style="background-color: darkgray;" enctype="multipart/form-data">
+    <form action="" method="post" name="frmproduto" id="frmproduto" onsubmit="return false; style="background-color: darkgray;" enctype="multipart/form-data">
         <div class="row mt-3 ">
             <div class="col-sm-6">Nome do Produto
                 <input type="text" class="form-control" style="border-radius: 25px;" name="txtNome" id="txtNome"
@@ -50,19 +50,24 @@
                     </div>
                 </div>
                 <div class="row ">
+                  <div class="col-sm-4">Valor custo
+                        <input type="text" class="form-control" style="border-radius: 25px;" name="txtValorcusto"
+                            id="txtValorcusto" value="<?= $valorcusto_produto ?>" onblur="Somar()">
+                            <!-- onblur sai do foco calculo automatico -->
+                    </div>                              
+                <div class="col-sm-4">Desconto em %
+                        <input type="text" class="form-control" style="border-radius: 25px;" name="txtDesconto"
+                            id="txtDesconto" value="<?= $descontoProduto ?>" onblur="Somar()">
+                            <!-- onblur sai do foco calculo automatico  no resultado nao colocaor onblur-->
+                    </div>
                     <div class="col-sm-4">Valor unitario
                         <input type="text" class="form-control" style="border-radius: 25px;" name="txtValorunitario"
                             id="txtValorunitario" value="<?= $valorunitario_produto ?>">
+                            <!-- usei o valor unitario como txtvalorunitario eno resultado nao colocaor onblur- -->
                     </div>
-                    <div class="col-sm-4">Valor custo
-                        <input type="text" class="form-control" style="border-radius: 25px;" name="txtValorcusto"
-                            id="txtValorcusto" value="<?= $valorcusto_produto ?>">
-                    </div>
-                    <div class="col-sm-4">Desconto
-                        <input type="text" class="form-control" style="border-radius: 25px;" name="txtDesconto"
-                            id="txtDesconto" value="<?= $descontoProduto ?>">
-                    </div>
-                    <div class="col-sm-4">Percentual de lucro %
+                   
+                    
+                    <div class="col-sm-4">Percentual de lucro 
                         <input type="text" class="form-control" style="border-radius: 25px;" name="txtPercentualdelucro" id="txtPercentualdelucro">
                     </div>
                     <div class="col-sm-4">Lote
@@ -108,7 +113,7 @@
                     id="txtCategoria" readonly value="<?= $nomecategoriaProduto ?>">
             </div>
             <div class="col-sm-4"> ID da categoria
-                <input type="number" class="form-control" style="border-radius: 25px;" name="txtIdcategoria" min="0"
+                <input type="number" class="form-control" style="border-radius: 25px;" name="txtIdcategoria"  id="txtIdcategoria" min="0"
                     value="<?= $idcategoriaProduto ?>">
             </div>
             <div class="col-sm-4"> Observação
@@ -118,12 +123,12 @@
         </div>
 
         <div class="row mt-3">
-            <div class="col-sm-12 text-end">
+            <div class="col-sm-12 text-end ">
                 <button class="btn btn-danger btn-lg"
-                    formaction="../ConexaoPHP/produto_excluir.php">Excluir</button>
+                    formaction="../ConexaoPHP/produto_excluir.php" onclick="Excluir()">Excluir</button>
                 <a href="sistema.php?tela=produto" class="btn btn-primary btn-lg" name="btoLimpar" id="btoLimpar"
                     class="btn btn-secundary">Limpar</a>
-                <button class="btn btn-warning btn-lg" formaction="../ConexaoPHP/produto_alterar.php">Alterar</button>
+                <button class="btn btn-warning btn-lg" formaction="../ConexaoPHP/produto_alterar.php"onclick="Alterar()">Alterar</button>
                     <button name="btoCadastrar" class="btn btn-success btn-lg" formaction="../ConexaoPHP/produto_cadastrar.php" onclick="Cadastrar()">Cadastrar</button>
             </div>
         </div>
@@ -144,16 +149,16 @@
     let escala =document.getElementById("txtEscala");
     let valorunitario =document.getElementById("txtValorunitario");
     let valorcusto =document.getElementById("txtValorcusto");
-    //NULL let desconto =document.getElementById("txtDesconto");
-    //NULL let img =document.getElementById("txtImg");
-    //NULL let obs =document.getElementById("txtObs");
+    let desconto =document.getElementById("txtDesconto");
+     let img =document.getElementById("txtImg");
+    let lucro =document.getElementById("txtPercentualdelucro");
     let Status =document.getElementById("txtStatus");
 
     function Pesquisar2()
     {
         if(id.value.trim()=="")
         {
-            alert("Erro, o codigo deve ser preenchido");
+            alert("Erro, o ID do Produto deve ser preenchido");
             id.focus();
             return;
         }
@@ -162,11 +167,42 @@
         formulario.submit();
     }
 
+    
+    function Excluir()
+    {
+        
+        if(id.value.trim() == "")
+        {
+            alert("Erro, o ID do Produto deve ser preenchido");
+            id.focus();
+            return;
+        }
+
+        formulario.action = "sistema.php?tela=produto";
+        formulario.submit();
+
+    }
+
+    function Alterar()
+    {
+        
+        if(id.value.trim() == "")
+        {
+            alert("Erro, o ID do Produto deve ser preenchido");
+            id.focus();
+            return;
+        }
+
+        formulario.action = "../ConexaoPHP/produto_alterar.php";
+        formulario.submit();
+
+    }
+
     function Cadastrar()
     {
         if(idcategoria.value.trim()=="")
         {
-            alert("Erro, a categoria deve ser informada");
+            alert("Erro, Id Categoria deve ser informada");
             idcategoria.focus();
             return;
         }
@@ -213,6 +249,7 @@
             return;
         }
 
+
         if(escala.value.trim()=="")
         {
             alert("Erro, a ESCALA deve ser informado");
@@ -227,12 +264,7 @@
             return;
         }
 
-        if(valorcusto.value.trim()=="")
-        {
-            alert("Erro, o VALOR DE CUSTO deve ser informado");
-            valorcusto.focus();
-            return;
-        }
+      
 
         if(status.value.trim()=="")
         {
@@ -241,9 +273,74 @@
             return;
         }
 
-        formulario.action = "sistema.php?tela=produto";
-        formulario.submit();
+     
+
+
+        if(valorunitario.value.trim()=="")
+        {
+            alert("Erro, Valor Unitario deve ser informado");
+            dimensao.focus();
+            return;
+        }
+        
+        if(valorcusto.value.trim()=="")
+        {
+            alert("Erro, Valor Custo deve ser informado");
+            dimensao.focus();
+            return;
+        }
+
+        if(escala.value.trim()=="")
+        {
+            alert("Erro, Escalsa deve ser informado");
+            dimensao.focus();
+            return;
+        }
+
+        if(Status.value.trim()=="")
+        {
+            alert("Erro, Escalsa deve ser informado");
+            Status.focus();
+            return;
+        }
+
+
+
+        
+    formulario.action = "../ConexaoPHP/produto_cadastrar.php";
+     formulario.submit();
+
 
     }
 
+    
+
+  
 </script>
+
+<script>
+function Somar()
+{
+
+
+    valorunitario.value = 0;
+    valorunitario.value=parseFloat(valorcusto.value) * (-parseFloat (desconto.value) / 100) + parseFloat(valorcusto.value);
+
+    console.log (valorunitario.value);
+    // valorunitario.value = valorunitario.value;
+    
+     lucro.value=0
+     lucro.value=parseFloat(valorunitario.value) - parseFloat(valorcusto.value);
+     console.log (lucro.value);
+    // lucro.value = lucro;
+
+    // so variavel como soma nao precisa de value, mas onde vai dados precisa
+}
+
+</script>
+
+
+
+
+alterar
+

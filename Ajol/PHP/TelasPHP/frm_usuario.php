@@ -13,7 +13,7 @@
 
                     </div>
                     <div class="card-body">
-                        <input type="file" class="btn btn-primary " name="txtImg">
+                        <input type="file" class="btn btn-primary " name="txtImg" value="<?=$imgUsuario?>">
                     </div>
             </center>
         
