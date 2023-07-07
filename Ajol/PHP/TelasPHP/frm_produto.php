@@ -131,13 +131,8 @@
                     formaction="../ConexaoPHP/produto_excluir.php" onclick="Excluir()">Excluir</button>
                 <a href="sistema.php?tela=produto" class="btn btn-primary btn-lg" name="btoLimpar" id="btoLimpar"
                     class="btn btn-secundary">Limpar</a>
-<<<<<<< Updated upstream
                 <button class="btn btn-warning btn-lg" formaction="../ConexaoPHP/produto_alterar.php">Alterar</button>
                     <button name="btoCadastrar" class="btn btn-success btn-lg" formaction="../ConexaoPHP/produto_cadastrar.php" onclick="Cadastrar()">Cadastrar</button>
-=======
-                <button class="btn btn-warning btn-lg" formaction="../ConexaoPHP/produto_alterar.php" onclick="Alterar()">Alterar</button>
-                    <button name="btoCadastrar" class="btn btn-success btn-lg" formaction="../ConexaoPHP/produto_cadastrar.php" onclick="Cadastrar()" >Cadastrar</button>
->>>>>>> Stashed changes
             </div>
         </div>
     </form>
