@@ -20,6 +20,10 @@
         $obs = $_POST['txtObs'];
         $status =$_POST['txtStatus'];
 
+
+        // no alterar tyem dois if um co imagem e outro sem, ista se significa setrocar a imagem ele faz senao mantem a anterior
+        
+        
         try 
         {
 
@@ -135,6 +139,7 @@
 
                 
             }
+
 
         }
         catch (PDOException $ex)
