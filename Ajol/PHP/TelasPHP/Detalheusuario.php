@@ -24,19 +24,20 @@
     
     <div class="row">
         <div class="col-sm-3"></div>
-        <div class="col-sm-6 text-center"> Usuario
-        <input type="email" class="form-control form-control-lg" id="colFormLabelLg" placeholder="Usuario">
-        </div>
+            <div class="col-sm-6">
+                <div class="col-sm-1 mt-2">usuario</div>
+                 <div class="col-sm-9"><input type="email" class="form-control form-control-lg" id="colFormLabelLg" placeholder="Usuario"></div>
+            </div>
         <div class="col-sm-3"></div>
     </div>
     <div class="row mt-1">
+    <div class="col-sm-3"></div>
+            <div class="col-sm-6">
+                <div class="col-sm-1 mt-2">Login</div>
+                 <div class="col-sm-9"><input type="email" class="form-control form-control-lg" id="colFormLabelLg" placeholder="Usuario"></div>
+            </div>
         <div class="col-sm-3"></div>
-        <div class="col-sm-3 text-center"> Login
-         <input type="email" class="form-control form-control-lg" id="colFormLabelLg" placeholder="Login">
-        </div>
-        <div class="col-sm-3 text-center"> Senha
-            <input type="Text" class="form-control form-control-lg" id="colFormLabelLg" placeholder="Senha">
-        </div>
+    </div>
     </div>
 </form>
 </body>
