@@ -28,11 +28,11 @@
 
 <body>
     <div class="container-fluid">
-
-        <?php
+    
+    <?php
         include_once('topo.php');
-        ?>
-
+    ?>
+    
         <div class="row">
             <div class="col-sm-12" style="min-height:550px; background-color:darkgray">
                 <?php
