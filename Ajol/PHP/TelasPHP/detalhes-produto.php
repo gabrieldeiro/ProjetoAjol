@@ -65,18 +65,18 @@
 </head>
 
 <body>
+    <?php
+    include_once('../ConexaoPHP/loginautenticar.php');
+    include_once('topoDefinitivo.php');
+    ?>
     <div class="container-fluid" style="background-color: #404040;">
         <!-- Pegar ID -->
-        <?php
-        include_once('../ConexaoPHP/loginautenticar.php');
-        include_once('topoDefinitivo.php');
-        ?>
         <input type="text" hidden name="txtIdtemp" id="txtIdtemp" value="<?= $_GET['id'] ?>">
         <div class="row mt-5">
             <div class="col-sm-2">
 
             </div>
-            <div class="col-sm-8 bg-white p-3" style="border-radius: 5px;">
+            <div class="col-sm-8 bg-white p-3 mt-4" style="border-radius: 5px;">
                 <div class="col-sm-12">
                     <div class="col-sm-2 mt-4">
                         <p>

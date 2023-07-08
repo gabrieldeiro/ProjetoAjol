@@ -220,7 +220,7 @@
                 </div>
                 <div class="row mt-3">
                     <div class="col-sm-12 text-center">
-                        <div class="col-sm-6">
+                        <div class="col-sm-3">
                             <h4>
                                 <b>
                                     Total
