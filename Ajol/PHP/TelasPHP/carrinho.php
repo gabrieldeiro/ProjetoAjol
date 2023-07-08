@@ -135,7 +135,7 @@
                                         </div>
                                     </div>
                                     <div class='col-sm-2 mt-2'>
-                                        <input type='number' class='form-control' readonly min='1' value='$row[3]' name='' id=''>
+                                        <input type='number' class='form-control' min='1' value='$row[3]' name='txtQtde' id='txtQtde'>
                                         <h5 class='form-text ms-1 mt-3'>Quantidade</h5> 
                                     </div>
                                     <div class='col-sm-3 text-end'>
@@ -227,9 +227,9 @@
                                 </b>
                             </h4>
                         </div>
-                        <div class="col-sm-6">
-                            <h3 class="text-success">R$
-                            <?=$vltotalf?></h3>
+                        <div class="col-sm-9">
+                            <h4 class="text-success">R$
+                            <?=$vltotalf?></h4>
                         </div>
                     </div>
                 </div>
