@@ -70,7 +70,7 @@ if ($_SESSION)
 }
 else
 {
-    header('location:login.php'); 
+    header('location:index.php'); 
     // vai p o login
 }
 
