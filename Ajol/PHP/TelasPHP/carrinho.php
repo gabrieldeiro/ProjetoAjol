@@ -117,10 +117,6 @@
                             {   
                                 $contteste++;
 
-                                $vl = $row[4];
-                                $vlparc = $vlparc + $vl;
-                                
-                                
                                 echo 
                                 "
                                 <div class='row'>
@@ -154,11 +150,6 @@
                                 </div>
 
                                 ";
-
-                                $vl = $row[4];
-
-                                echo $vlparc;
-                                
                                 
                             }
                            
@@ -175,7 +166,34 @@
                 FAZER FICAR RELATIVO E SE MOVER DE ACORDO COM A TELA
             -->
 
-            <!-- esse cara já é o compra? -->
+            <?php
+                $sqlConta = $conn->query('select sum(valortotal_itemproduto) from itemproduto where id_compra_itemproduto ='. $idCompra);
+                
+                $vltotal = '';
+
+                if($sqlConta->rowCount()>=1) 
+                {
+                     
+                    foreach ($sqlConta as $row)
+                    {   
+                        $vltotal = $row[0];
+                    }
+                }
+
+                $sqlContaf = $conn->query('select sum(valortotal_itemproduto)+20  from itemproduto where id_compra_itemproduto ='. $idCompra);
+                
+                $vltotalf = '';
+
+                if($sqlContaf->rowCount()>=1) 
+                {
+                     
+                    foreach ($sqlContaf as $row)
+                    {   
+                        $vltotalf = $row[0];
+                    }
+                }
+
+            ?>
             <div class="col-sm-2 card-body bg-white" style="border-radius:10px">
                 <h4>Resumo de Compras</h4>
                 <hr>
@@ -184,7 +202,7 @@
                         <h5>Produtos (<?=$contteste?>)</h5>
                     </div>
                     <div class="col-sm-6 text-end">
-                        <h5>R$<?=$vlparc?></h5>
+                        <h5>R$<?=$vltotal?></h5>
                     </div>
                 </div>
                 <div class="row mt-1">
@@ -210,12 +228,14 @@
                             </h4>
                         </div>
                         <div class="col-sm-6">
-                            <h4 class="text-success">R$
-                            <?=$vlparc + 20?></h4>
+                            <h3 class="text-success">R$
+                            <?=$vltotalf?></h3>
                         </div>
                     </div>
                 </div>
+                <button name="btoCadastrar" class="btn btn-success" formaction="#">COMPRAR</button>
             </div>
+                
             <div class="col-sm-1">
 
             </div>
