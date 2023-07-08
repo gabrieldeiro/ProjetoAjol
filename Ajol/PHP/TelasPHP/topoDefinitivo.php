@@ -32,7 +32,7 @@
                             $nomeCategoria = $row[1];
                             echo
                             '<li>
-                                    <a class="dropdown-item" target="_blank" href="detalhes-categoria.php?'  . $row[0] . '">' . $nomeCategoria . '</a>
+                                    <a class="dropdown-item" target="_blank" href="detalhes-categoria.php?id='. $row[0].'">' . $nomeCategoria . '</a>
                             </li>';
                         }
                     }
