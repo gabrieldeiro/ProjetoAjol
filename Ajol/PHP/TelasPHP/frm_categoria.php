@@ -42,7 +42,7 @@
                             <button name="btoCadastrar" class="btn btn-success" formaction="../ConexaoPHP/categoria_cadastrar.php" onclick="Cadastrar()">Cadastrar</button>
                         <button name="btoAlterar" class="btn btn-warning" formaction="../ConexaoPHP/categoria_alterar.php" onclick="Alterar()">Alterar</button>
                             <a href="sistema.php?tela=categoria" class="btn btn-primary" name="btoLimpar" id="btoLimpar" class="btn btn-secundary">Limpar</a>
-                        <button name="btoExcluir" class="btn btn-danger" formaction="../ConexaoPHP/categoria_excluir.php"onclick="Excluir()">Excluir</button>
+                        <button name="btoExcluir" class="btn btn-danger" formaction="../ConexaoPHP/categoria_excluir.php"onclick="Excluir()" >Excluir</button>
                     </div>
                 </div>
          </div>
@@ -81,7 +81,7 @@
             return;
         }
 
-        formulario.action = "sistema.php?tela=categoria";
+        formulario.action = "../ConexaoPHP/categoria_alterar.php";
         formulario.submit();
 
     }
@@ -96,7 +96,7 @@
             return;
         }
 
-        formulario.action = "sistema.php?tela=categoria";
+        formulario.action = "../ConexaoPHP/categoria_excluir.php";
         formulario.submit();
 
     }
