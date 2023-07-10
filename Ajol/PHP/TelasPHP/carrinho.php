@@ -246,7 +246,7 @@
                         </div>
                     </div>
                 </div>
-                <button name="btoCadastrar" class="btn btn-success" formaction="#">COMPRAR</button>
+                <button name="btoCadastrar" class="btn btn-success form-control mt-2" formaction="#">COMPRAR</button>
             </div>
                 
             <div class="col-sm-1">
