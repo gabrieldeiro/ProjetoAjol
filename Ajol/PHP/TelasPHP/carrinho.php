@@ -18,6 +18,17 @@
 </head>
 
 <body>
+    <style>
+
+        .botLimpo{
+            border: none;
+            background-color: transparent;
+        }
+
+    </style>
+
+
+
     <?php
     include_once('topo2.php')
     ?>
@@ -101,6 +112,8 @@
                         <h4>Produtos</h4>
                         <hr>
                     </div>
+
+                    <div id="a"></div>
                     
                     <?php 
 
@@ -116,21 +129,21 @@
                             foreach ($sqlCarrinho as $row)
                             {   
                                 $contteste++;
-
+                                
                                 echo 
                                 "
                                 <div class='row'>
                                     <div class='col-sm-2'>
-                                        <img src='../../img/prod/$row[1]/$row[8]' class='w-100 img-fluid' alt=''>
+                                        <img src='../../img/prod/$row[1]/$row[8]' name='txtImg' class='w-100 img-fluid' alt=''>
                                     </div>
                                     <div class='col-sm-5'>
                                         <p>
-                                        <h4>$row[9]</h4>
+                                        <h4 name='txtNome'>$row[9]</h4>
                                         </p>
                                         <div class='row ms-1'>
                                             <p>
-                                                <a href=''>Excluir</a> <!-- mudar para botão -->
-                                                <a href='' class='ms-3'>Alterar</a> <!-- mudar para botão -->
+                                            <button name='btoExcluir' class='botLimpo' formaction='../ConexaoPHP/carrinho_excluir.php?id=$row[0]'>Excluir</button>
+                                                <button name='btoAlterar' class='botLimpo' formaction='../ConexaoPHP/carrinho_alterar.php?id=$row[0]'>Alterar</button>
                                             </p>
                                         </div>
                                     </div>
@@ -141,7 +154,7 @@
                                     <div class='col-sm-3 text-end'>
                                         <p style='font-size: 22px;'>
                                             R$
-                                            <b>
+                                            <b name='txtValor'>
                                                 <!-- Valor do produto AQUI -->
                                                 $row[4]
                                             </b>
