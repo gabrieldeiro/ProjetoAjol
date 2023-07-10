@@ -13,6 +13,7 @@
     $valordesconto_compra = $_POST['txtvalordesconto_compra'];
     $obs_compra= $_POST['txtobs_compra'];
     $status_compra = $_POST['txtstatus_compra'];
+    $estagio_compra= $_POST['txtestagio_compra'];
 
 
         try 
@@ -30,7 +31,8 @@
                     cupom_compra,
                     valordesconto_compra,
                     obs_compra,
-                    status_compra
+                    status_compra,
+                    estagio_compra
                 )
                 value
                 (
@@ -42,7 +44,8 @@
                     :cupom_compra,
                     :valordesconto_compra,
                     :obs_compra,
-                    :status_compra
+                    :status_compra,
+                    :estagio_compra
                 )
             ");
 
@@ -55,7 +58,8 @@
                 ':cupom_compra'=>$cupom_compra,
                 ':valordesconto_compra'=>$valordesconto_compra,
                 ':obs_compra'=>$obs_compra,
-                ':status_compra'=>$status_compra
+                ':status_compra'=>$status_compra,
+                ':estagio_compra'=>$estagio_compra
             ));
 
             if($sql->rowCount()>=1)
