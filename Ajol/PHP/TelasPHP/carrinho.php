@@ -18,6 +18,17 @@
 </head>
 
 <body>
+    <style>
+
+        .botLimpo{
+            border: none;
+            background-color: transparent;
+        }
+
+    </style>
+
+
+
     <?php
     include_once('topo2.php')
     ?>
@@ -101,6 +112,8 @@
                         <h4>Produtos</h4>
                         <hr>
                     </div>
+
+                    <div id="a"></div>
                     
                     <?php 
 
@@ -109,44 +122,50 @@
                 
                         if($sqlCarrinho->rowCount()>=1) 
                         {
+                            $contteste = 0;
+                            $vlparc = 0;
+                            
 
                             foreach ($sqlCarrinho as $row)
-                            {
+                            {   
+                                $contteste++;
                                 
                                 echo 
                                 "
                                 <div class='row'>
                                     <div class='col-sm-2'>
-                                        <img src='../../img/prod/$row[1]/$row[8]' class='w-100 img-fluid' alt=''>
+                                        <img src='../../img/prod/$row[1]/$row[8]' name='txtImg' class='w-100 img-fluid' alt=''>
                                     </div>
                                     <div class='col-sm-5'>
                                         <p>
-                                        <h4>$row[9]</h4>
+                                        <h4 name='txtNome'>$row[9]</h4>
                                         </p>
                                         <div class='row ms-1'>
                                             <p>
-                                                <a href=''>Excluir</a> <!-- mudar para botão -->
-                                                <a href='' class='ms-3'>Alterar</a> <!-- mudar para botão -->
+                                            <button name='btoExcluir' class='botLimpo' formaction='../ConexaoPHP/carrinho_excluir.php?id=$row[0]'>Excluir</button>
+                                                <button name='btoAlterar' class='botLimpo' formaction='../ConexaoPHP/carrinho_alterar.php?id=$row[0]'>Alterar</button>
                                             </p>
                                         </div>
                                     </div>
                                     <div class='col-sm-2 mt-2'>
-                                        <input type='number' class='form-control' readonly min='1' value='$row[3]' name='' id=''>
+                                        <input type='number' class='form-control' min='1' value='$row[3]' name='txtQtde' id='txtQtde'>
                                         <h5 class='form-text ms-1 mt-3'>Quantidade</h5> 
                                     </div>
                                     <div class='col-sm-3 text-end'>
                                         <p style='font-size: 22px;'>
                                             R$
-                                            <b>
+                                            <b name='txtValor'>
                                                 <!-- Valor do produto AQUI -->
                                                 $row[4]
                                             </b>
                                         </p>
                                     </div>
                                 </div>
-                                
+
                                 ";
+                                
                             }
+                           
                         } 
                         
                     ?>
@@ -160,18 +179,43 @@
                 FAZER FICAR RELATIVO E SE MOVER DE ACORDO COM A TELA
             -->
 
-            <!-- esse cara já é o compra? -->
+            <?php
+                $sqlConta = $conn->query('select sum(valortotal_itemproduto) from itemproduto where id_compra_itemproduto ='. $idCompra);
+                
+                $vltotal = '';
+
+                if($sqlConta->rowCount()>=1) 
+                {
+                     
+                    foreach ($sqlConta as $row)
+                    {   
+                        $vltotal = $row[0];
+                    }
+                }
+
+                $sqlContaf = $conn->query('select sum(valortotal_itemproduto)+20  from itemproduto where id_compra_itemproduto ='. $idCompra);
+                
+                $vltotalf = '';
+
+                if($sqlContaf->rowCount()>=1) 
+                {
+                     
+                    foreach ($sqlContaf as $row)
+                    {   
+                        $vltotalf = $row[0];
+                    }
+                }
+
+            ?>
             <div class="col-sm-2 card-body bg-white" style="border-radius:10px">
                 <h4>Resumo de Compras</h4>
                 <hr>
                 <div class="row">
                     <div class="col-sm-6">
-                        <h5>Produtos (<?php //Quantidades 
-                                        ?>)</h5>
+                        <h5>Produtos (<?=$contteste?>)</h5>
                     </div>
                     <div class="col-sm-6 text-end">
-                        <h5>R$<?php //Valor sem frete 
-                                ?></h5>
+                        <h5>R$<?=$vltotal?></h5>
                     </div>
                 </div>
                 <div class="row mt-1">
@@ -189,20 +233,22 @@
                 </div>
                 <div class="row mt-3">
                     <div class="col-sm-12 text-center">
-                        <div class="col-sm-6">
+                        <div class="col-sm-3">
                             <h4>
                                 <b>
                                     Total
                                 </b>
                             </h4>
                         </div>
-                        <div class="col-sm-6">
-                            <h4 class="text-success">R$<?php //Valor Total Aqui 
-                                                        ?></h4>
+                        <div class="col-sm-9">
+                            <h4 class="text-success">R$
+                            <?=$vltotalf?></h4>
                         </div>
                     </div>
                 </div>
+                <button name="btoCadastrar" class="btn btn-success form-control mt-2" formaction="#">COMPRAR</button>
             </div>
+                
             <div class="col-sm-1">
 
             </div>

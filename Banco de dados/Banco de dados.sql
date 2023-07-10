@@ -140,15 +140,19 @@ select * from funcionario;
 select * from categoria;
 select * from produto;
 select * from itemproduto;
+select * from compra;
+
+select sum(valortotal_itemproduto)+20 from itemproduto where id_compra_itemproduto = 33;
 
 select * from itemproduto where id_compra_itemproduto = 33;
-
-select img_produto from produto where id_produto=14, inner join itemproduto 
-
-select * from itemproduto
+delete from itemproduto where id_itemproduto= 14;
 
 
-select * from compra;
+select itemproduto.*, produto.img_produto, produto.nome_produto from itemproduto
+inner join produto on itemproduto.id_produto_itemproduto = produto.id_produto where id_compra_itemproduto = 33;
+
+
+
 
 
 select * from compra where id_usuario_compra= 2 and status_compra='ATIVO'

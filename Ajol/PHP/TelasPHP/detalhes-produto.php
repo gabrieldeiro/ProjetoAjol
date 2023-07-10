@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
+<!-- QUALQUER COISA -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -63,39 +63,20 @@
     }
     ?>
 </head>
-<style>
-    * {
-        box-sizing: border-box;
-    }
-
-    .img-magnifier-container {
-        position: relative;
-    }
-
-    .img-magnifier-glass {
-        position: absolute;
-        border: 3px solid #000;
-        border-radius: 50%;
-        cursor: none;
-        /*Set the size of the magnifier glass:*/
-        width: 150px;
-        height: 150px;
-    }
-</style>
 
 <body>
+    <?php
+    include_once('../ConexaoPHP/loginautenticar.php');
+    include_once('topoDefinitivo.php');
+    ?>
     <div class="container-fluid" style="background-color: #404040;">
         <!-- Pegar ID -->
-        <?php
-        include_once('../ConexaoPHP/loginautenticar.php');
-        include_once('topoDefinitivo.php');
-        ?>
         <input type="text" hidden name="txtIdtemp" id="txtIdtemp" value="<?= $_GET['id'] ?>">
         <div class="row mt-5">
             <div class="col-sm-2">
 
             </div>
-            <div class="col-sm-8 bg-white p-3" style="border-radius: 5px;">
+            <div class="col-sm-8 bg-white p-3 mt-4" style="border-radius: 5px;">
                 <div class="col-sm-12">
                     <div class="col-sm-2 mt-4">
                         <p>

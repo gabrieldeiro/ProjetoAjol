@@ -68,9 +68,5 @@ if ($_SESSION)
         }
     }
 }
-else
-{
-    header('location:login.php'); 
-    // vai p o login
-}
+
 

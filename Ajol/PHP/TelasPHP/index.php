@@ -60,6 +60,7 @@
   ?>
 
   <div class="container text-center mt-5">
+
     <div class="row">
       <div class="col-md-6 offset-md-3">
 
@@ -96,10 +97,12 @@
                   USUÁRIO VAI RESETAR A SENHA 
                 -->
                 <button type="button" class="btn btn-danger mt-2 mb-3">
-                  <a style="color:white" href="esqueceusenha.php"> Esqueceu a senha?</button>
+                  <a style="color:white" href="esqueceusenha.php">Esqueceu a senha?</button>
                 </a>
+                <button type="button" class="btn btn-warning mb-2" >
+                  <a href="sistema.php" style="color:white">Login administrativo</a>
+                </button>
               </div>
-
           </form>
         </div>
 
