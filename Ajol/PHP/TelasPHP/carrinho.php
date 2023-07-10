@@ -193,7 +193,7 @@
                     }
                 }
 
-                $sqlContaf = $conn->query('select sum(valortotal_itemproduto)+20  from itemproduto where id_compra_itemproduto ='. $idCompra);
+                $sqlContaf = $conn->query('select sum(valortotal_itemproduto) +20  from itemproduto where id_compra_itemproduto ='. $idCompra);
                 
                 $vltotalf = '';
 
