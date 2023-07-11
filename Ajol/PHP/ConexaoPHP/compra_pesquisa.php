@@ -11,6 +11,7 @@
     $valordesconto_compra = '';
     $obs_compra = '';
     $status_compra = '';
+    $estagio_compra = '';
 
 
     
@@ -39,6 +40,7 @@
                     $valordesconto_compra = $row[7];
                     $obs_compra = $row[8];
                     $status_compra = $row[9];
+                    $estagio_compra = $row[10];
                
 
             }

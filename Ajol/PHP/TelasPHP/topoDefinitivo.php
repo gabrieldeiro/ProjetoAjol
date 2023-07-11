@@ -22,6 +22,7 @@
                 </button>
                 <ul class="dropdown-menu" style="background-color:#d7fb41">
                     <?php
+                    include_once('../ConexaoPHP/conexao.php');
                     $sql = $conn->query('select * from categoria');
 
                     //Ele vai pesquisar a categoria
@@ -32,7 +33,7 @@
                             $nomeCategoria = $row[1];
                             echo
                             '<li>
-                                    <a class="dropdown-item" target="_blank" href="detalhes-categoria.php?id='. $row[0].'">' . $nomeCategoria . '</a>
+                                <a class="dropdown-item" href="detalhes-categoria.php?' . $row[0] . '">' . $nomeCategoria . '</a>
                             </li>';
                         }
                     }
