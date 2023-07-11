@@ -30,6 +30,8 @@
     ?>
     <?php
 
+    $contteste = '';
+    
     //se o produto for puxado
     if ($_POST) {
         $ID = $_POST['txtID'];
@@ -152,7 +154,7 @@
                             $contteste = 0;
                         } 
 
-?>
+                    ?>
                     <h4>Produtos</h4>
 
                     <hr>
@@ -280,7 +282,7 @@
                             </h4>
                         </div>
                         <div class="col-sm-9">
-                            <h4 class="text-success">R$
+                            <h4 class="text-success" name="txtValortotal">R$
                             <?= number_format($vltotalf, 2, ',', '.')?></h4>
                         </div>
                     </div>
