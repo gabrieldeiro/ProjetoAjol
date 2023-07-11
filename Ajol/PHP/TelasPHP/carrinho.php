@@ -143,18 +143,6 @@
 
                     <hr>
 
-<<<<<<< Updated upstream
-                        $sqlCarrinho = $conn->query('select itemproduto.*, produto.img_produto, produto.nome_produto from itemproduto 
-                        inner join produto on itemproduto.id_produto_itemproduto = produto.id_produto where id_compra_itemproduto='. $idCompra);
-                
-                        if($sqlCarrinho->rowCount()>=1) 
-                        {
-                            $contteste = 0;
-                            
-=======
->>>>>>> Stashed changes
-
-
                     <h4>Produtos</h4>
 
                     <hr>
@@ -230,7 +218,6 @@
                 }
             }
 
-<<<<<<< Updated upstream
                 $sqlContaf = $conn->query('select sum(valortotal_itemproduto)  from itemproduto where id_compra_itemproduto ='. $idCompra);
                 
                 $vltotalf = 0;
@@ -245,19 +232,8 @@
                     }
 
                     
-=======
-            $sqlContaf = $conn->query('select sum(valortotal_itemproduto)+20  from itemproduto where id_compra_itemproduto =' . $idCompra);
-
-            $vltotalf = '';
-
-            if ($sqlContaf->rowCount() >= 1) {
-
-                foreach ($sqlContaf as $row) {
-                    $vltotalf = $row[0];
->>>>>>> Stashed changes
                 }
-            }
-
+            
             ?>
             <div class="col-sm-2 card-body bg-white" style="border-radius:10px">
                 <h4>Resumo de Compras</h4>
@@ -267,11 +243,7 @@
                         <h5>Produtos (<?= $contteste ?>)</h5>
                     </div>
                     <div class="col-sm-6 text-end">
-<<<<<<< Updated upstream
                         <h5>R$ <?=number_format($vltotal, 2, ',', '.')?></h5>
-=======
-                        <h5>R$<?= $vltotal ?></h5>
->>>>>>> Stashed changes
                     </div>
                 </div>
                 <div class="row mt-1">
@@ -298,29 +270,11 @@
                         </div>
                         <div class="col-sm-9">
                             <h4 class="text-success">R$
-<<<<<<< Updated upstream
                             <?= number_format($vltotalf, 2, ',', '.')?></h4>
                         </div>
                     </div>
                 </div>
                 <button name="btoCadastrar" class="btn btn-success" formaction="#">COMPRAR</button>
-=======
-                                <?= $vltotalf ?></h4>
-                        </div>
-                    </div>
-                </div>
-                <button name="btoCadastrar" class="btn btn-success form-control mt-2" formaction="#">COMPRAR</button>
-                <div class="row mt-3">
-                    <br>                    
-                    <div class="card-body">
-                        <h4 class="mb-3">
-                            <h4 class="text-center">Métodos de Pagamentos</h4>
-                            <button type="button" class="btn me-3 border border-1 ms-5" style="border: inset;">Pix</button>
-                            <button type="button" class="btn border border-1" style="border: inset; border-color:#d7fb41">Boleto Bancário</button>
-                        </h4>
-                    </div>
-                </div>
->>>>>>> Stashed changes
             </div>
             <div class="col-sm-1">
 
