@@ -76,7 +76,7 @@
                     <input type="text" class="form-control" style="border-radius: 25px;" name="txtEndereco" id="txtEndereco" value="<?= $enderecoUsuario ?>">
                 </div>
                 <div class="col-sm-2">Bairro
-                    <input type="text" class="form-control" style="border-radius: 25px;" name="txtBairro" id="txtBairro" value="<?= $enderecoUsuario ?>">
+                    <input type="text" class="form-control" style="border-radius: 25px;" name="txtBairro" id="txtBairro" value="<?= $bairroUsuario ?>">
                 </div>
                 <div class="col-sm-2">Numero
                     <input type="text" class="form-control" style="border-radius: 25px;" name="txtNumero" id="txtNumero" value="<?= $numeroUsuario ?>">
