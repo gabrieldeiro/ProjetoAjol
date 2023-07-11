@@ -19,15 +19,11 @@
 
 <body>
     <style>
-
-        .botLimpo{
+        .botLimpo {
             border: none;
             background-color: transparent;
         }
-
     </style>
-
-
 
     <?php
     include_once('topo2.php')
@@ -85,15 +81,13 @@
         )
         ");
             $sqlCompra->execute(array(
-            ':id_produto_itemproduto'=>$idProduto,
-            ':id_compra_itemproduto'=>$idCompra,
-            ':qtde_itemproduto'=>$Quantidade,
-            ':valortotal_itemproduto'=>$CvalorProduto,
-            ':valorunitario_itemproduto'=>$valorunitario_produto
+                ':id_produto_itemproduto' => $idProduto,
+                ':id_compra_itemproduto' => $idCompra,
+                ':qtde_itemproduto' => $Quantidade,
+                ':valortotal_itemproduto' => $CvalorProduto,
+                ':valorunitario_itemproduto' => $valorunitario_produto
             ));
-        } 
-        catch (PDOException $erro) 
-        {
+        } catch (PDOException $erro) {
             echo $erro->getMessage();
         }
     }
@@ -108,15 +102,48 @@
             </div>
             <div class="col-sm-6 card-body bg-white" style="border-radius: 10px;">
                 <div class="col-sm-12">
-                    <div class="row">
-                        <h4>Produtos</h4>
-                        <hr>
+
+                    <h4>Endereço de entrega</h4>
+
+                    <hr>
+                    <div class="col-sm-12 mb-5 border border-1" style="border-radius: 10px;">
+                        <?php
+
+                        //Pesquisa pelo endereço do usuário
+
+                        $sqlEndereco = $conn->query('select * from usuario where id_usuario=' . $idusuariologin);
+
+                        if ($sqlEndereco->rowCount() >= 1) {
+                            foreach ($sqlEndereco as $row) {
+                                $nomeUsuario = $row[1];
+                                $enderecoUsuario = $row[8];
+                                $bairroUsuario = $row[11];
+                                $numeroUsuario = $row[9];
+                                $complementoUsuario = $row[10];
+                                $cepUsuario = $row[12];
+                                $cidadeUsuario = $row[15];
+                                $estadoUsuario = $row[16];
+                            }
+                        }
+                        ?>
+                        <div class="col-sm-10" style="border-radius: 15px;">
+                            <h4 class="p-1"><b><?= $nomeUsuario ?></b></h4>
+                            <h4 class="p-1"><?= $enderecoUsuario ?>, <?= $numeroUsuario ?></h4>
+                            <h4 class="p-1"><?= $bairroUsuario ?>, <?= $cidadeUsuario ?>, <?= $estadoUsuario ?></h4>
+                            <h4 class="p-1"><?= $cepUsuario ?></h4>
+                            <h4 class="p-1"><b>Complemento:</b> <?= $complementoUsuario ?></h4>
+                        </div>
+                        <div class="col-sm-1">
+                            <div class="col-sm-12 me-5 mt-5 pt-5">
+                                <br>
+                                <a href="" class="">Alterar</a>
+                            </div>
+                        </div>
                     </div>
 
-                    <div id="a"></div>
-                    
-                    <?php 
+                    <hr>
 
+<<<<<<< Updated upstream
                         $sqlCarrinho = $conn->query('select itemproduto.*, produto.img_produto, produto.nome_produto from itemproduto 
                         inner join produto on itemproduto.id_produto_itemproduto = produto.id_produto where id_compra_itemproduto='. $idCompra);
                 
@@ -124,13 +151,28 @@
                         {
                             $contteste = 0;
                             
+=======
+>>>>>>> Stashed changes
 
-                            foreach ($sqlCarrinho as $row)
-                            {   
-                                $contteste++;
-                                
-                                echo 
-                                "
+
+                    <h4>Produtos</h4>
+
+                    <hr>
+                    <?php
+
+                    $sqlCarrinho = $conn->query('select itemproduto.*, produto.img_produto, produto.nome_produto from itemproduto 
+                        inner join produto on itemproduto.id_produto_itemproduto = produto.id_produto where id_compra_itemproduto=' . $idCompra);
+
+                    if ($sqlCarrinho->rowCount() >= 1) {
+                        $contteste = 0;
+                        $vlparc = 0;
+
+
+                        foreach ($sqlCarrinho as $row) {
+                            $contteste++;
+
+                            echo
+                            "
                                 <div class='row'>
                                     <div class='col-sm-2'>
                                         <img src='../../img/prod/$row[1]/$row[8]' name='txtImg' class='w-100 img-fluid' alt=''>
@@ -162,11 +204,9 @@
                                 </div>
 
                                 ";
-                                
-                            }
-                           
-                        } 
-                        
+                        }
+                    }
+
                     ?>
                 </div>
 
@@ -179,19 +219,18 @@
             -->
 
             <?php
-                $sqlConta = $conn->query('select sum(valortotal_itemproduto) from itemproduto where id_compra_itemproduto ='. $idCompra);
-                
-                $vltotal = '';
+            $sqlConta = $conn->query('select sum(valortotal_itemproduto) from itemproduto where id_compra_itemproduto =' . $idCompra);
 
-                if($sqlConta->rowCount()>=1) 
-                {
-                     
-                    foreach ($sqlConta as $row)
-                    {   
-                        $vltotal = $row[0];
-                    }
+            $vltotal = '';
+
+            if ($sqlConta->rowCount() >= 1) {
+
+                foreach ($sqlConta as $row) {
+                    $vltotal = $row[0];
                 }
+            }
 
+<<<<<<< Updated upstream
                 $sqlContaf = $conn->query('select sum(valortotal_itemproduto)  from itemproduto where id_compra_itemproduto ='. $idCompra);
                 
                 $vltotalf = 0;
@@ -206,7 +245,18 @@
                     }
 
                     
+=======
+            $sqlContaf = $conn->query('select sum(valortotal_itemproduto)+20  from itemproduto where id_compra_itemproduto =' . $idCompra);
+
+            $vltotalf = '';
+
+            if ($sqlContaf->rowCount() >= 1) {
+
+                foreach ($sqlContaf as $row) {
+                    $vltotalf = $row[0];
+>>>>>>> Stashed changes
                 }
+            }
 
             ?>
             <div class="col-sm-2 card-body bg-white" style="border-radius:10px">
@@ -214,10 +264,14 @@
                 <hr>
                 <div class="row">
                     <div class="col-sm-6">
-                        <h5>Produtos (<?=$contteste?>)</h5>
+                        <h5>Produtos (<?= $contteste ?>)</h5>
                     </div>
                     <div class="col-sm-6 text-end">
+<<<<<<< Updated upstream
                         <h5>R$ <?=number_format($vltotal, 2, ',', '.')?></h5>
+=======
+                        <h5>R$<?= $vltotal ?></h5>
+>>>>>>> Stashed changes
                     </div>
                 </div>
                 <div class="row mt-1">
@@ -244,16 +298,34 @@
                         </div>
                         <div class="col-sm-9">
                             <h4 class="text-success">R$
+<<<<<<< Updated upstream
                             <?= number_format($vltotalf, 2, ',', '.')?></h4>
                         </div>
                     </div>
                 </div>
                 <button name="btoCadastrar" class="btn btn-success" formaction="#">COMPRAR</button>
+=======
+                                <?= $vltotalf ?></h4>
+                        </div>
+                    </div>
+                </div>
+                <button name="btoCadastrar" class="btn btn-success form-control mt-2" formaction="#">COMPRAR</button>
+                <div class="row mt-3">
+                    <br>                    
+                    <div class="card-body">
+                        <h4 class="mb-3">
+                            <h4 class="text-center">Métodos de Pagamentos</h4>
+                            <button type="button" class="btn me-3 border border-1 ms-5" style="border: inset;">Pix</button>
+                            <button type="button" class="btn border border-1" style="border: inset; border-color:#d7fb41">Boleto Bancário</button>
+                        </h4>
+                    </div>
+                </div>
+>>>>>>> Stashed changes
             </div>
-                
             <div class="col-sm-1">
 
             </div>
+
         </div>
     </form>
 </body>
