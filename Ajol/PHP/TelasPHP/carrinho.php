@@ -123,7 +123,6 @@
                         if($sqlCarrinho->rowCount()>=1) 
                         {
                             $contteste = 0;
-                            $vlparc = 0;
                             
 
                             foreach ($sqlCarrinho as $row)
@@ -156,7 +155,7 @@
                                             R$
                                             <b name='txtValor'>
                                                 <!-- Valor do produto AQUI -->
-                                                $row[4]
+                                                ".number_format($row[4], 2, ',', '.')."
                                             </b>
                                         </p>
                                     </div>
@@ -193,17 +192,20 @@
                     }
                 }
 
-                $sqlContaf = $conn->query('select sum(valortotal_itemproduto)+20  from itemproduto where id_compra_itemproduto ='. $idCompra);
+                $sqlContaf = $conn->query('select sum(valortotal_itemproduto)  from itemproduto where id_compra_itemproduto ='. $idCompra);
                 
-                $vltotalf = '';
+                $vltotalf = 0;
 
                 if($sqlContaf->rowCount()>=1) 
                 {
                      
                     foreach ($sqlContaf as $row)
                     {   
-                        $vltotalf = $row[0];
+                        $vltotalf = $row[0]+20;
+
                     }
+
+                    
                 }
 
             ?>
@@ -215,7 +217,7 @@
                         <h5>Produtos (<?=$contteste?>)</h5>
                     </div>
                     <div class="col-sm-6 text-end">
-                        <h5>R$<?=$vltotal?></h5>
+                        <h5>R$ <?=number_format($vltotal, 2, ',', '.')?></h5>
                     </div>
                 </div>
                 <div class="row mt-1">
@@ -242,7 +244,7 @@
                         </div>
                         <div class="col-sm-9">
                             <h4 class="text-success">R$
-                            <?=$vltotalf?></h4>
+                            <?= number_format($vltotalf, 2, ',', '.')?></h4>
                         </div>
                     </div>
                 </div>

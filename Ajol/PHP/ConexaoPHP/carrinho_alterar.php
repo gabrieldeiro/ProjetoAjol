@@ -36,7 +36,7 @@
 
             $sql->execute(array(
                 ':id_itemproduto'=>$id,
-                ':qtde_itemproduto'=>$qtde, //não está alterando acima de 2
+                ':qtde_itemproduto'=>$qtde,
                 'valortotal_itemproduto'=>$valortotal
             ));
 
