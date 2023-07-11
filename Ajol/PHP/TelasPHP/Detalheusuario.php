@@ -19,11 +19,17 @@
     <script type="text/javascript" src="//assets.locaweb.com.br/locastyle/2.0.6/javascripts/locastyle.js"></script>
     <script type="text/javascript" src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
     <title>Document</title>
+
 </head>
 
 <body>
+<?php 
+    include_once('../ConexaoPHP/conexao.php');
+    include_once('../ConexaoPHP/loginautenticar.php'); 
+    include_once('../ConexaoPHP/usuario_pesquisa2.php');
+
+?>    
 <?php include_once('topoDefinitivo.php') ?>
-<?php include_once('../ConexaoPHP/loginautenticar.php') ?>
     <form action="" method="post" style="background-color: darkgray;" enctype="multipart/form-data">
 
          <h1 class="text-center"> Usuario </h1>
@@ -41,7 +47,7 @@
             <div class="col-sm-3"></div>
             <div class="col-sm-7">
                 <div class="col-sm-1 mt-2">Usuario:</div>
-                <div class="col-sm-9"><input type="email" class="form-control form-control-lg" id="colFormLabelLg" placeholder="Usuario"></div>
+                <div class="col-sm-9"><input type="email" class="form-control form-control-lg" id="colFormLabelLg" value="<?= $nomeUsuario ?>" placeholder="Usuario"></div>
             </div>
             <div class="col-sm-2"></div>
         </div>
@@ -49,7 +55,7 @@
             <div class="col-sm-3"></div>
             <div class="col-sm-7">
                 <div class="col-sm-1 mt-2">CPF:</div>
-                <div class="col-sm-9"><input type="email" class="form-control form-control-lg" id="colFormLabelLg" placeholder="CPF    "></div>
+                <div class="col-sm-9"><input type="email" class="form-control form-control-lg" id="colFormLabelLg" value="<?= $cpfUsuario ?>" placeholder="CPF"></div>
             </div>
             <div class="col-sm-2"></div>
         </div>
@@ -58,7 +64,7 @@
             <div class="col-sm-3"></div>
             <div class="col-sm-7">
                 <div class="col-sm-1 mt-2">Login:</div>
-                <div class="col-sm-9"><input type="email" class="form-control form-control-lg" id="colFormLabelLg" placeholder="Login"></div>
+                <div class="col-sm-9"><input type="email" class="form-control form-control-lg" value="<?= $loginUsuario ?>" id="colFormLabelLg" placeholder="Login"></div>
             </div>
             <div class="col-sm-2"></div>
         </div>
@@ -67,7 +73,7 @@
             <div class="col-sm-3"></div>
             <div class="col-sm-7">
                 <div class="col-sm-1 mt-2">Senha:</div>
-                <div class="col-sm-9"><input type="email" class="form-control form-control-lg" id="colFormLabelLg" placeholder="Senha"></div>
+                <div class="col-sm-9"><input type="email" value="<?= $senhaUsuario ?>" class="form-control form-control-lg" id="colFormLabelLg" placeholder="Senha"></div>
             </div>
             <div class="col-sm-2"></div>
         </div>
@@ -76,7 +82,7 @@
             <div class="col-sm-3"></div>
             <div class="col-sm-7">
                 <div class="col-sm-1 mt-2">Email:</div>
-                <div class="col-sm-9"><input type="email" class="form-control form-control-lg" id="colFormLabelLg" placeholder="Email"></div>
+                <div class="col-sm-9"><input type="email" value="<?= $emailUsuario ?>" class="form-control form-control-lg" id="colFormLabelLg" placeholder="Email"></div>
             </div>
             <div class="col-sm-2"></div>
         </div>
@@ -91,7 +97,7 @@
             <div class="col-sm-3"></div>
             <div class="col-sm-7">
                 <div class="col-sm-1 mt-2">Endereço:</div>
-                <div class="col-sm-9"><input type="email" class="form-control form-control-lg" id="colFormLabelLg" placeholder="Endereço"></div>
+                <div class="col-sm-9"><input type="text" value="<?= $enderecoUsuario ?>" class="form-control form-control-lg" id="colFormLabelLg" placeholder="Endereço"></div>
             </div>
             <div class="col-sm-2"></div>
         </div>
@@ -100,7 +106,7 @@
             <div class="col-sm-3"></div>
             <div class="col-sm-7">
                 <div class="col-sm-1 mt-2">Numero:</div>
-                <div class="col-sm-9"><input type="email" class="form-control form-control-lg" id="colFormLabelLg" placeholder="Numero"></div>
+                <div class="col-sm-9"><input type="text" value="<?= $numeroUsuario ?>" class="form-control form-control-lg" id="colFormLabelLg" placeholder="Numero"></div>
             </div>
             <div class="col-sm-2"></div>
         </div>
@@ -110,7 +116,7 @@
             <div class="col-sm-3"></div>
             <div class="col-sm-7">
                 <div class="col-sm-1 mt-2">Bairro:</div>
-                <div class="col-sm-9"><input type="email" class="form-control form-control-lg" id="colFormLabelLg" placeholder="Bairro"></div>
+                <div class="col-sm-9"><input type="text" value="<?= $bairroUsuario ?>" class="form-control form-control-lg" id="colFormLabelLg" placeholder="Bairro"></div>
             </div>
             <div class="col-sm-2"></div>
         </div>
@@ -119,7 +125,7 @@
             <div class="col-sm-3"></div>
             <div class="col-sm-7">
                 <div class="col-sm-1 mt-2">CEP:</div>
-                <div class="col-sm-9"><input type="email" class="form-control form-control-lg" id="colFormLabelLg" placeholder="CEP"></div>
+                <div class="col-sm-9"><input type="text" value="<?= $cepUsuario ?>" class="form-control form-control-lg" id="colFormLabelLg" placeholder="CEP"></div>
             </div>
             <div class="col-sm-2"></div>
         </div>
@@ -128,7 +134,7 @@
             <div class="col-sm-3"></div>
             <div class="col-sm-7">
                 <div class="col-sm-1 mt-2">Estado:</div>
-                <div class="col-sm-9"><input type="email" class="form-control form-control-lg" id="colFormLabelLg" placeholder="Estado"></div>
+                <div class="col-sm-9"><input type="email" value="<?= $enderecoUsuario ?>" class="form-control form-control-lg" id="colFormLabelLg" placeholder="Estado"></div>
             </div>
             <div class="col-sm-2"></div>
         </div>
@@ -137,7 +143,7 @@
             <div class="col-sm-3"></div>
             <div class="col-sm-7">
                 <div class="col-sm-1 mt-2">Cidade:</div>
-                <div class="col-sm-9"><input type="email" class="form-control form-control-lg" id="colFormLabelLg" placeholder="Cidade"></div>
+                <div class="col-sm-9"><input type="email" value="<?= $cidadeUsuario ?>" class="form-control form-control-lg" id="colFormLabelLg" placeholder="Cidade"></div>
             </div>
             <div class="col-sm-2"></div>
         </div>
