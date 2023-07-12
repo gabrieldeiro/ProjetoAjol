@@ -6,7 +6,7 @@
     }
 </style>
 <body>
-    <form action="" method="post" name="frmproduto" id="frmproduto" onsubmit="return false; style="background-color: darkgray;" enctype="multipart/form-data">
+    <form action="" method="post" name="frmproduto" id="frmproduto" onsubmit="return false;" style="background-color: darkgray;" enctype="multipart/form-data">
         <div class="row mt-3 ">
             <div class="col-sm-6">Nome do Produto
                 <input type="text" class="form-control" style="border-radius: 25px;" name="txtNome" id="txtNome"

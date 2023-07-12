@@ -5,7 +5,7 @@
                     resize: none !important;
                 }
             </style>
-        <form action="" method="post" enctype="multipart/form-data" style="background-color: darkgray;">
+        <form action="" method="post" enctype="multipart/form-data" id="frmusuario" onsubmit="return false;" style="background-color: darkgray;" >
 
             <center>
                     <div class="card border border-danger" style="width: 325px; height: 204px;">
@@ -21,10 +21,10 @@
 
             <div class="row mt-3 ">
             <div class="col-sm-3"> ID do Usuario
-                    <input type="number" class="form-control" style="border-radius: 25px;" name="txtId" min="0" value="<?= $idUsuario ?>">
+                    <input type="number" class="form-control" style="border-radius: 25px;" name="txtId" id="txtId" min="0" value="<?= $idUsuario ?>">
                 </div>   
                 <div class="col-sm-1 text-start"><br>
-                    <button class="btn btn-primary" style="border-radius: 25px;" name="btoPesquisa" id="btoPesquisa" formaction="sistema.php?tela=usuario">&#128269;</button>
+                    <button class="btn btn-primary" style="border-radius: 25px;" name="btoPesquisa" id="btoPesquisa" formaction="sistema.php?tela=usuario" onclick="Pesquisar()">&#128269;</button>
                 </div>
                 <div class="col-sm-5">Nome do Usuario
                     <input type="text" class="form-control" style="border-radius: 25px;" name="txtNome" id="txtNome" value="<?= $nomeUsuario ?>">
@@ -100,10 +100,10 @@
        
             <div class="row mt-3 mb-3">
                 <div class="col-sm-12 text-end">
-                    <button name="btoexcluir" id="btoexcluir" class="btn btn-danger btn-lg" formaction="../ConexaoPHP/usuario_excluir.php">Excluir</button>
+                    <button name="btoexcluir" id="btoexcluir" class="btn btn-danger btn-lg" formaction="../ConexaoPHP/usuario_excluir.php" onclick="Excluir()">Excluir</button>
                     <a href="../TelasPHP/sistema.php?tela=usuario" name="btoLimpar" id="btoLimpar" class="btn btn-primary btn-lg">Limpar</a>
-                    <button id="btnalterar" name="btnalterar" class="btn btn-warning btn-lg" formaction="../ConexaoPHP/usuario_alterar.php">Alterar</button>
-                    <button name="btocadastrar" id="btocadastrar" class="btn btn-success btn-lg" formaction="../ConexaoPHP/usuario_cadastrar.php">Cadastrar</button>
+                    <button id="btnalterar" name="btnalterar" class="btn btn-warning btn-lg" formaction="../ConexaoPHP/usuario_alterar.php" onclick="Alterar()">Alterar</button>
+                    <button name="btocadastrar" id="btocadastrar" class="btn btn-success btn-lg" formaction="../ConexaoPHP/usuario_cadastrar.php"  onclick="Cadastrar()">Cadastrar</button>
                 </div>
             </div>
         </form>
@@ -141,3 +141,154 @@
             })();
     
     </script>
+
+<script>
+
+let formulario = document.getElementById("frmusuario");
+let id = document.getElementById("txtId");
+let nome =document.getElementById("txtNome");
+let nascimento =document.getElementById("txtNascimento");
+let email =document.getElementById("txtEmail");
+let cep =document.getElementById("txtCep");
+let numero =document.getElementById("txtNumero");
+let complemento =document.getElementById("txtComplemento");
+let cpf =document.getElementById("txtCpf");
+let login =document.getElementById("txtLogin");
+let senha =document.getElementById("txtSenha");
+let status =document.getElementById("txtStatus");
+
+function Pesquisar()
+{
+    
+    if(id.value.trim()=="")
+    {
+        alert("Erro, o ID do Usuario deve ser preenchido");
+        id.focus();
+        return;
+    }
+
+    formulario.action = "sistema.php?tela=usuario";
+    formulario.submit();
+}
+
+
+function Excluir()
+{
+    
+    if(id.value.trim() == "")
+    {
+        alert("Erro, o ID do Usuario deve ser preenchido");
+        id.focus();
+        return;
+    }
+
+    formulario.action = "sistema.php?tela=usuario";
+    formulario.submit();
+
+}
+
+function Alterar()
+{
+    
+    if(id.value.trim() == "")
+    {
+        alert("Erro, o ID do Usuario deve ser preenchido");
+        id.focus();
+        return;
+    }
+
+    formulario.action = "../ConexaoPHP/usuario_alterar.php";
+    formulario.submit();
+
+}
+
+function Cadastrar()
+{
+    
+
+    if(nome.value.trim()=="")
+    {
+        alert("Erro, o NOME deve ser informado");
+        nome.focus();
+        return;
+    }
+
+    if(nascimento.value.trim()=="")
+    {
+        alert("Erro, o NASCIMENTO deve ser informado");
+        nascimento.focus();
+        return;
+    }
+
+    if(email.value.trim()=="")
+    {
+        alert("Erro, a EMAIL deve ser informado");
+        email.focus();
+        return;
+    }
+
+
+    if(login.value.trim()=="")
+    {
+        alert("Erro, o Login deve ser informado");
+        login.focus();
+        return;
+    }
+   
+    if(senha.value.trim()=="")
+    {
+        alert("Erro, a Senha deve ser informado");
+        senha.focus();
+        return;
+    }
+
+    
+    if(cpf.value.trim()=="")
+    {
+        alert("Erro, a CPF deve ser informado");
+        cpf.focus();
+        return;
+    }
+    
+    if(cep.value.trim()=="")
+    {
+        alert("Erro, o CEP deve ser informado");
+        cep.focus();
+        return;
+    }
+
+    if(numero.value.trim()=="")
+    {
+        alert("Erro, o NUMERO deve ser informado");
+        numero.focus();
+        return;
+    }
+
+
+    if( complemento.value.trim()=="")
+    {
+        alert("Erro, o COMPLEMENTO deve ser informado");
+        complemento.focus();
+        return;
+    }
+
+ 
+
+     if(status.value.trim()=="")
+    {
+        alert("Erro, o STATUS deve ser informado");
+        status.focus();
+        return;
+    }
+
+ 
+
+    
+formulario.action = "../ConexaoPHP/usuario_cadastrar.php";
+ formulario.submit();
+
+
+}
+</script>
+
+usuario cadastrar excluir e caDASTAR
