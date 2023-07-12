@@ -64,10 +64,10 @@
                         <img src="../../img/icone-loupe-gris.png" class="img-fluid ms-3 me-2 " style="width: 33px; height:30px; text-decoration:none" alt="">
                     </a>
 
-                    <button class="btn btn-primary" style="border-radius: 25px;" name="btoPesquisa" id="btoPesquisa" formaction="detalheusuario.php">&#128269;</button>
-                    
-                    <img src="../../img/usu/<?= $idusuariologin ?>/<?= $imgusuariologin ?>" class="img-fluid ms-5 w-25 mt-3 border border-dark" style="border-radius:120px" alt="">
-
+                    <button class="btn btn-primary" style="border-radius: 25px;" name="btoPesquisa" id="btoPesquisa" formaction="Detalheusuario.php">&#128269;</button>
+                    <button href="Detalheusuario.php"  >
+                        <img src="../../img/usu/<?= $idusuariologin ?>/<?= $imgusuariologin ?>"  class="img-fluid ms-5 w-25 mt-3 border border-dark" style="border-radius:120px" alt="">
+                    </button>
                     <b>
                         <?= $nomeusuariologin ?>
                     </b>
@@ -77,9 +77,6 @@
                 <p style="display: inline-block; color:white">
 
                     <a href="carrinho.php">
-                        <!-- 
-                                LINK CARINHO AQUI
-                            -->
                         <img src="../../img/Carinho.png" class="img-fluid me-3" style="width: 43px; height:40px" alt="">
                     </a>
                     <a style="text-decoration: none!important; color:white" href="historico.php">

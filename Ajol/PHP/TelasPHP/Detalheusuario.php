@@ -245,3 +245,34 @@
 
     }
 </script>
+<Script>
+
+        (function(){
+    
+    const cep = document.querySelector("input[name=txtCep]");
+    
+    cep.addEventListener('blur', e=> {
+          const value = cep.value.replace(/[^0-9]+/, '');
+      const url = `https://viacep.com.br/ws/${value}/json/`;
+      
+      fetch(url)
+      .then( response => response.json())
+      .then( json => {
+              
+          if( json.logradouro ) {
+              document.querySelector('input[name=txtEndereco]').value = json.logradouro;
+            document.querySelector('input[name=txtBairro]').value = json.bairro;
+            document.querySelector('input[name=txtCidade]').value = json.localidade;
+            document.querySelector('input[name=txtEstado]').value = json.uf;
+          }
+      
+      });
+      
+      
+    });
+    
+    
+    })();
+    
+
+</Script>

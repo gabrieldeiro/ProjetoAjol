@@ -1,6 +1,7 @@
 <?php 
     include_once('conexao.php');
     include_once('loginautenticar.php');
+    include_once('usuario_pesquisa2.php');
     
     if($_POST)
     {
@@ -136,4 +137,9 @@
 
 ?>
 
-<a href="../TelasPHP/detalheusuario.php">Voltar</a>
+
+
+<form action="" method="post" enctype="multipart/form-data">
+
+    <button class="btn btn-primary" style="border-radius: 25px;" name="btoPesquisa" id="btoPesquisa" formaction="../TelasPHP/Detalheusuario.php">Voltar </button>
+</form>
