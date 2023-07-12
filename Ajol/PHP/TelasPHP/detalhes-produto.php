@@ -119,7 +119,7 @@
                                         <h2 class="form-text">
                                             Quantidade
                                         </h2>
-                                        <input type="number" class="form-control" name="txtQuantidade" id="txtQuantidade" min="0" max="<?= $qtdeProduto ?>">
+                                        <input type="number" class="form-control" name="txtQuantidade" id="txtQuantidade" min="1" max="<?= $qtdeProduto ?>" value="1">
                                         <input type="number" hidden name="txtID" value="<?=$idProduto?>" id="txtID">
                                 </div>
                             </div>

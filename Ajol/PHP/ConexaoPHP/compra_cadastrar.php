@@ -4,9 +4,9 @@
     if($_POST)
     {
           
-    $id_usuario_compra = $_POST['txtid_usuario_compra'];
-    $valortotal_compra = $_POST['txtvalortotal_compra'];
-    $qtde_compra = $_POST['txtqte_compra'];
+    $id_usuario_compra = $idusuariologin;
+    $valortotal_compra = $_POST['txtValortotal'];
+    $qtde_compra = $contteste;
     $datafechamento_compra = $_POST['txtdatadefechamento_compra'];
     $formadepagamento_compra = $_POST['txtformadepagamento_compraId_compra'];
     $cupom_compra = $_POST['txtcupom_compra'];
