@@ -154,5 +154,94 @@
     </form>
 
 </body>
-
 </html>
+
+<script>
+    let formulario = document.getElementById("Detalheusuario.php");
+    let Nome= document.getElementById("txtNome");
+    let CPF= document.getElementById("txtCpf");
+    let Login= document.getElementById("txtLogin");
+    let Senha= document.getElementById("txtSenha");
+    let Email= document.getElementById("txtEmail");
+    let Endereço= document.getElementById("txtEndereco");
+    let Numero= document.getElementById("txtNumero");
+    let Bairro= document.getElementById("txtBairro");
+    let CEP= document.getElementById("txtCep");
+    let Estado= document.getElementById("txtEstado");
+    let Cidade= document.getElementById("txtCidade");
+    
+    function Alterar()
+    {
+        
+        if(Nome.value.trim() == "")
+        {
+            alert("Erro, o ID do Funcionario deve ser preenchido");
+            Nome.focus();
+            return;
+        }
+        if(CPF.value.trim() == "")
+        {
+            alert("Erro, o ID do Funcionario deve ser preenchido");
+            CPF.focus();
+            return;
+        }
+        if(Login.value.trim() == "")
+        {
+            alert("Erro, o ID do Funcionario deve ser preenchido");
+            Login.focus();
+            return;
+        }
+        if(Senha.value.trim() == "")
+        {
+            alert("Erro, o ID do Funcionario deve ser preenchido");
+            Senha.focus();
+            return;
+        }
+        if(Email.value.trim() == "")
+        {
+            alert("Erro, o ID do Funcionario deve ser preenchido");
+            Email.focus();
+            return;
+        }
+        if(Endereço.value.trim() == "")
+        {
+            alert("Erro, o ID do Funcionario deve ser preenchido");
+            Endereço.focus();
+            return;
+        }
+        if(Numero.value.trim() == "")
+        {
+            alert("Erro, o ID do Funcionario deve ser preenchido");
+            Numero.focus();
+            return;
+        }
+        if(Bairro.value.trim() == "")
+        {
+            alert("Erro, o ID do Funcionario deve ser preenchido");
+            Bairro.focus();
+            return;
+        }
+        if(CEP.value.trim() == "")
+        {
+            alert("Erro, o ID do Funcionario deve ser preenchido");
+            CEP.focus();
+            return;
+        }
+        if(Estado.value.trim() == "")
+        {
+            alert("Erro, o ID do Funcionario deve ser preenchido");
+            Estado.focus();
+            return;
+        }
+        if(Cidade.value.trim() == "")
+        {
+            alert("Erro, o ID do Funcionario deve ser preenchido");
+            Cidade.focus();
+            return;
+        }
+
+        formulario.action = "sistema.php?tela=funcionario";
+        formulario.submit();
+
+    }
+</script>
