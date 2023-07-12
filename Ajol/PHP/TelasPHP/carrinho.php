@@ -253,9 +253,11 @@
                 <hr>
                 <div class="row">
                     <div class="col-sm-6">
+                        <input type="text" hidden name="txtQtde" value="<?= $contteste ?>">
                         <h5>Produtos (<?= $contteste ?>)</h5>
                     </div>
                     <div class="col-sm-6 text-end">
+                        <input type="text" hidden name="txtValorf" value="<?=number_format($vltotal, 2, ',', '.')?>">
                         <h5>R$ <?=number_format($vltotal, 2, ',', '.')?></h5>
                     </div>
                 </div>
@@ -287,7 +289,7 @@
                         </div>
                     </div>
                 </div>
-                <button name="btoCadastrar" class="btn form-control btn-success mt-2" formaction="#">COMPRAR</button>
+                <button name="btoCadastrar" class="btn form-control btn-success mt-2" formaction="../ConexaoPHP/compra_alterar.php">COMPRAR</button>
                 <div class="row mt-3">
                     <br>                    
                     <div class="card-body">
@@ -300,7 +302,7 @@
                 </div>
             </div>
             <div class="col-sm-1">
-
+                
             </div>
 
         </div>
