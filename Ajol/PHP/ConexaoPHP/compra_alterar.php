@@ -5,6 +5,8 @@
     date_default_timezone_set('America/Sao_Paulo');
     $dataf = date("Y-m-d H:i:s");
 
+    $qtde_compra = '';
+
     if($_POST)
     {   
 

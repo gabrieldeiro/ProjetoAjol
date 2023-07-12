@@ -6,6 +6,7 @@ $nomeusuariologin = ''; //perfil
 $imgusuariologin = ''; //perfil
 $statusCompra='';
 $idCompra='';
+$cont = '';
 
 session_start();
 
@@ -66,7 +67,21 @@ if ($_SESSION)
                 $imgusuariologin=$row[5];
             }
         }
+
+        $sqlcont = $conn->query('select sum(qtde_itemproduto) from itemproduto where id_compra_itemproduto='. $idCompra);
+
+        if($sqlcont->rowCount()>=1)
+        {
+            foreach($sqlcont as $row)
+            {
+                $cont = $row[0];
+            }
+        }
     }
+
+    
+
+
 }
 
 

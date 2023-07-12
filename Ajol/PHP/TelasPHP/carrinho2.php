@@ -31,7 +31,7 @@
     <?php
 
     $contteste = '';
-
+    
     //se o produto for puxado
     if ($_POST) {
         $ID = $_POST['txtID'];
@@ -64,24 +64,26 @@
 
             $CvalorProduto = $Quantidade * $valorunitario_produto;
         }
-        try {
+        try 
+        {
             $sqlCompra = $conn->prepare("insert into itemproduto
-        (            
-            id_produto_itemproduto,
-            id_compra_itemproduto,
-            qtde_itemproduto,
-            valortotal_itemproduto,
-            valorunitario_itemproduto
-        )
-        value
-        (
-            :id_produto_itemproduto,
-            :id_compra_itemproduto,
-            :qtde_itemproduto,
-            :valortotal_itemproduto,
-            :valorunitario_itemproduto
-        )
-        ");
+                (            
+                    id_produto_itemproduto,
+                    id_compra_itemproduto,
+                    qtde_itemproduto,
+                    valortotal_itemproduto,
+                    valorunitario_itemproduto
+                )
+                value
+                (
+                    :id_produto_itemproduto,
+                    :id_compra_itemproduto,
+                    :qtde_itemproduto,
+                    :valortotal_itemproduto,
+                    :valorunitario_itemproduto
+                )
+            ");
+
             $sqlCompra->execute(array(
                 ':id_produto_itemproduto' => $idProduto,
                 ':id_compra_itemproduto' => $idCompra,
@@ -89,6 +91,14 @@
                 ':valortotal_itemproduto' => $CvalorProduto,
                 ':valorunitario_itemproduto' => $valorunitario_produto
             ));
+
+            if($sql->rowCount()>=1)
+            {
+                header('Location:../TelasPHP/loja.php');
+
+            }
+
+
         } catch (PDOException $erro) {
             echo $erro->getMessage();
         }

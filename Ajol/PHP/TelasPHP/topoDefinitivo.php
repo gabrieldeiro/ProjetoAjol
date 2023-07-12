@@ -1,3 +1,4 @@
+
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
 <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet">
 <title>Bootstrap Example</title>
@@ -11,6 +12,15 @@
         padding: 0px;
         margin: 0px;
 
+    }
+
+    .notificacao{
+        font-size: 17px;
+        font-weight: bold;
+        color: red;
+        position:absolute;
+        z-index: 1;
+        
     }
 
 </style>
@@ -77,8 +87,10 @@
                 <p style="display: inline-block; color:white">
 
                     <a href="carrinho.php">
-                        <img src="../../img/Carinho.png" class="img-fluid me-3" style="width: 43px; height:40px" alt="">
+                        <img src="../../img/Carinho.png" class="img-fluid me-3" style="width: 43px; height:40px; position: relative;" alt="">
+                        <span class="notificacao"><?=$cont?></span>
                     </a>
+
                     <a style="text-decoration: none!important; color:white" href="historico.php">
                         <img src="../../img/Historico.png" class="img-fluid ms-5" style="width: 43px; height:40px" alt="">
                         Histórico
@@ -87,6 +99,8 @@
                         <img src="../../img/Sair.png" class="img-fluid ms-5" style="width: 43px; height:40px" alt="">
                         Sair
                     </a>
+
+                    
                 </p>
             </div>
         </div>

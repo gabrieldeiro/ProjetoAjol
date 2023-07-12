@@ -133,7 +133,10 @@
                                     Vai dar um POST que puxa a quantidade do input e o ID do produto no carrinho 
                                 -->
                                 <button class="btn btn-lg btn-success" formaction="carrinho.php">
-                                    Adicionar ao carrinho
+                                    Comprar agora
+                                </button>
+                                <button class="btn btn-lg btn-success mt-3" formaction="carrinho2.php">
+                                    Adicionar ao carrinho 
                                 </button>
                                 <!-- -->
                             </form>
