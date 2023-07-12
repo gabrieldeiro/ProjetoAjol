@@ -41,38 +41,37 @@
 
             ");
 
-                $sql->execute(array(
-                    ':id_compra'=>$id_compra,
-                    ':id_usuario_compra'=>$id_usuario_compra,
-                    ':valortotal_compra'=>$valortotal_compra,
-                    ':qtde_compra'=>$qtde_compra,
-                    ':datafechamento_compra'=>$datafechamento_compra,
-                    ':formadepagamento_compra'=>$formadepagamento_compra,
-                    ':cupom_compra'=>$cupom_compra,
-                    ':valordesconto_compra'=>$valordesconto_compra,
-                    ':obs_compra'=>$obs_compra,
-                    ':status_compra'=>$status_compra,
-                    ':estagio_compra'=>$estagio_compra
-                    
-                ));
-                    
-                if($sql->rowCount()>=1)
-                {
-                    echo '<p>Compra feita com sucesso!</p>';
-        
-                }
-        
-            } catch (PDOException $ex) {
-                echo $ex->getMessage();
+            $sql->execute(array(
+                ':id_compra'=>$id_compra,
+                ':id_usuario_compra'=>$id_usuario_compra,
+                ':valortotal_compra'=>$valortotal_compra,
+                ':qtde_compra'=>$qtde_compra,
+                ':datafechamento_compra'=>$datafechamento_compra,
+                ':formadepagamento_compra'=>$formadepagamento_compra,
+                ':cupom_compra'=>$cupom_compra,
+                ':valordesconto_compra'=>$valordesconto_compra,
+                ':obs_compra'=>$obs_compra,
+                ':status_compra'=>$status_compra,
+                ':estagio_compra'=>$estagio_compra
+                
+            ));
+                
+            if($sql->rowCount()>=1)
+            {
+                header('Location:../TelasPHP/finalcompra.php');
+    
             }
         
-        } 
-        else
-        {
-            header('Location:../TelasPHP/frm_funcionario.php');
+        } catch (PDOException $ex) {
+            echo $ex->getMessage();
         }
         
+    } 
+    else
+    {
+        header('Location:../TelasPHP/frm_funcionario.php');
+    }
         
-        ?>
         
-        <a href="../TelasPHP/loja.php">Voltar</a>
+?>
+        
