@@ -10,7 +10,7 @@ login_usuario  char(50)  null unique,
 senha_usuario   char(50) null, 
 img_usuario longblob null, 
 email_usuario varchar(30) null, 
-data_nasc_usuario datetime null,
+data_nasc_usuario datetime null, 
 endereco_usuario varchar(30) null, 
 numero_usuario int null,
 compl_usuario decimal(10,3) null, 
@@ -51,7 +51,7 @@ status_funcionario varchar(20) null
 );
 
 alter table funcionario
-add column img_funcionario longblob not null
+add column img_funcionario longblob not null;
 
 
 Create table Categoria
@@ -99,7 +99,7 @@ select * from categoria;
 insert into produto
 	(id_categoria_produto,nome_produto,marca_produto,lote_produto,qtde_produto,peso_produto,dimensao_produto,escala_produto,valorunitario_produto,valorcusto_produto,desconto_produto,img_produto,img2_produto,img3_produto,obs_produto,status_produto)
 value
-	(1,'Produto teste','Marca teste','25',10,'2','10x20x30','1/5','130','60','','','','','','ativo')
+	(1,'Produto teste','Marca teste','25',10,'2','10x20x30','1/5','130','60','','','','','','ativo');
 
 	
 
@@ -126,10 +126,12 @@ drop table itemproduto;
 create table Compra
 (
 id_compra int not null Auto_increment primary key ,
-id_usuario_compra int not null  ,
-datacadastro timestamp not null,
-obs_compra varchar(255) null  ,
-status_compra varchar(30) not null,
+id_usuario_compra int null  ,
+datacadastro timestamp null,
+-- Não esquecer de adicionar o estagio_compra
+estagio_compra varchar(100) null,
+obs_compra varchar(255) null ,
+status_compra varchar(30) null,
 
 constraint FK_ID_Usuario_Compra foreign key(id_usuario_compra) references usuario(id_usuario)  
 );
