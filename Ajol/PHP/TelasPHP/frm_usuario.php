@@ -56,7 +56,7 @@
                     <input type="text" class="form-control cpf-mask" style="border-radius: 25px;" name="txtCpf" id="txtCpf" placeholder="Ex.: 000.000.000-00" value="<?= $cpfUsuario ?>">
                 </div>
                 <div class="col-sm-3">Status
-                        <select name="txtStatus" id="textStatus" class="form-control" style="border-radius: 25px;">
+                        <select name="txtStatus" id="txtStatus" class="form-control" style="border-radius: 25px;">
                             <option value="">--Selecione um Status--</option>
                             <option value="ativo" <?= ($statusUsuario == 'Ativo' ? 'selected' : "") ?>>Ativo
                             </option>
@@ -103,7 +103,7 @@
                     <button name="btoexcluir" id="btoexcluir" class="btn btn-danger btn-lg" formaction="../ConexaoPHP/usuario_excluir.php" onclick="Excluir()">Excluir</button>
                     <a href="../TelasPHP/sistema.php?tela=usuario" name="btoLimpar" id="btoLimpar" class="btn btn-primary btn-lg">Limpar</a>
                     <button id="btnalterar" name="btnalterar" class="btn btn-warning btn-lg" formaction="../ConexaoPHP/usuario_alterar.php" onclick="Alterar()">Alterar</button>
-                    <button name="btocadastrar" id="btocadastrar" class="btn btn-success btn-lg" formaction="../ConexaoPHP/usuario_cadastrar.php"  onclick="Cadastrar()">Cadastrar</button>
+                    <button name="btocadastrar" id="btocadastrar" class="btn btn-success btn-lg" formaction="../ConexaoPHP/usuario_cadastrar.php" onclick="Cadastrar()">Cadastrar</button>
                 </div>
             </div>
         </form>
@@ -182,7 +182,7 @@ function Excluir()
         return;
     }
 
-    formulario.action = "sistema.php?tela=usuario";
+    formulario.action = "../ConexaoPHP/usuario_excluir.php";
     formulario.submit();
 
 }
@@ -281,14 +281,11 @@ function Cadastrar()
         return;
     }
 
- 
-
-    
-formulario.action = "../ConexaoPHP/usuario_cadastrar.php";
- formulario.submit();
+   
+    formulario.action = "../ConexaoPHP/usuario_cadastrar.php";
+    formulario.submit();
 
 
 }
 </script>
 
-usuario cadastrar excluir e caDASTAR

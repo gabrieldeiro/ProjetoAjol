@@ -23,23 +23,24 @@
 </head>
 
 <body>
-<?php 
+    <?php
     include_once('../ConexaoPHP/conexao.php');
-    include_once('../ConexaoPHP/loginautenticar.php'); 
+    include_once('../ConexaoPHP/loginautenticar.php');
     include_once('../ConexaoPHP/usuario_pesquisa2.php');
 
-?>    
-<?php include_once('topoDefinitivo.php') ?>
+    ?>
+    <?php include_once('topoDefinitivo.php') ?>
+
+
     <form action="" method="post" style="background-color: darkgray;" enctype="multipart/form-data">
 
-         <h1 class="text-center"> Usuario </h1>
+        <h1 class="text-center p-3 mb-3"> <?= $nomeUsuario ?> </h1>
 
         <center>
-            <div class="card border border-danger" style="width: 325px; height: 204px;">
-                <img src="../../img/usu/<?= $idUsuario ?>/<?= $imgUsuario ?>" class="w-100 img-fluid" alt="">
-
+            <div class="card border border-danger mb-3" style="width: 325px; height: 204px;">
+                <img src="../../img/usu/<?= $idUsuario ?>/<?= $imgUsuario ?>" class="w-100 img-fluid p-2" style="width: 300px; height: 190px;">
             </div>
-            <div class="card-body">
+            <div class="card-body mb-3">
                 <input type="file" class="btn btn-primary " name="txtImg">
             </div>
         </center>
@@ -88,9 +89,7 @@
         </div>
         </div>
 
-
-        <hr>
-        <hr>
+        <hr class="mt-5 mb-4">
         <h1 class="text-center"> Endereço </h1>
 
         <div class="row mt-1">
@@ -149,92 +148,80 @@
         </div>
         </div>
         <Center style="margin-top: 20px;">
-        <button id="btnalterar" name="btnalterar" class="btn btn-warning btn-lg" formaction="../ConexaoPHP/usuario_alterar2.php">Alterar</button>
+            <button id="btnalterar" name="btnalterar" class="btn btn-warning btn-lg" formaction="../ConexaoPHP/usuario_alterar2.php">Alterar</button>
         </Center>
     </form>
-
 </body>
+
 </html>
 
 <script>
     let formulario = document.getElementById("Detalheusuario.php");
-    let Nome= document.getElementById("txtNome");
-    let CPF= document.getElementById("txtCpf");
-    let Login= document.getElementById("txtLogin");
-    let Senha= document.getElementById("txtSenha");
-    let Email= document.getElementById("txtEmail");
-    let Endereço= document.getElementById("txtEndereco");
-    let Numero= document.getElementById("txtNumero");
-    let Bairro= document.getElementById("txtBairro");
-    let CEP= document.getElementById("txtCep");
-    let Estado= document.getElementById("txtEstado");
-    let Cidade= document.getElementById("txtCidade");
-    
-    function Alterar()
-    {
-        
-        if(Nome.value.trim() == "")
-        {
+    let Nome = document.getElementById("txtNome");
+    let CPF = document.getElementById("txtCpf");
+    let Login = document.getElementById("txtLogin");
+    let Senha = document.getElementById("txtSenha");
+    let Email = document.getElementById("txtEmail");
+    let Endereço = document.getElementById("txtEndereco");
+    let Numero = document.getElementById("txtNumero");
+    let Bairro = document.getElementById("txtBairro");
+    let CEP = document.getElementById("txtCep");
+    let Estado = document.getElementById("txtEstado");
+    let Cidade = document.getElementById("txtCidade");
+
+    function Alterar() {
+
+        if (Nome.value.trim() == "") {
             alert("Erro, o ID do Funcionario deve ser preenchido");
             Nome.focus();
             return;
         }
-        if(CPF.value.trim() == "")
-        {
+        if (CPF.value.trim() == "") {
             alert("Erro, o ID do Funcionario deve ser preenchido");
             CPF.focus();
             return;
         }
-        if(Login.value.trim() == "")
-        {
+        if (Login.value.trim() == "") {
             alert("Erro, o ID do Funcionario deve ser preenchido");
             Login.focus();
             return;
         }
-        if(Senha.value.trim() == "")
-        {
+        if (Senha.value.trim() == "") {
             alert("Erro, o ID do Funcionario deve ser preenchido");
             Senha.focus();
             return;
         }
-        if(Email.value.trim() == "")
-        {
+        if (Email.value.trim() == "") {
             alert("Erro, o ID do Funcionario deve ser preenchido");
             Email.focus();
             return;
         }
-        if(Endereço.value.trim() == "")
-        {
+        if (Endereço.value.trim() == "") {
             alert("Erro, o ID do Funcionario deve ser preenchido");
             Endereço.focus();
             return;
         }
-        if(Numero.value.trim() == "")
-        {
+        if (Numero.value.trim() == "") {
             alert("Erro, o ID do Funcionario deve ser preenchido");
             Numero.focus();
             return;
         }
-        if(Bairro.value.trim() == "")
-        {
+        if (Bairro.value.trim() == "") {
             alert("Erro, o ID do Funcionario deve ser preenchido");
             Bairro.focus();
             return;
         }
-        if(CEP.value.trim() == "")
-        {
+        if (CEP.value.trim() == "") {
             alert("Erro, o ID do Funcionario deve ser preenchido");
             CEP.focus();
             return;
         }
-        if(Estado.value.trim() == "")
-        {
+        if (Estado.value.trim() == "") {
             alert("Erro, o ID do Funcionario deve ser preenchido");
             Estado.focus();
             return;
         }
-        if(Cidade.value.trim() == "")
-        {
+        if (Cidade.value.trim() == "") {
             alert("Erro, o ID do Funcionario deve ser preenchido");
             Cidade.focus();
             return;
@@ -246,33 +233,30 @@
     }
 </script>
 <Script>
+    (function() {
 
-        (function(){
-    
-    const cep = document.querySelector("input[name=txtCep]");
-    
-    cep.addEventListener('blur', e=> {
-          const value = cep.value.replace(/[^0-9]+/, '');
-      const url = `https://viacep.com.br/ws/${value}/json/`;
-      
-      fetch(url)
-      .then( response => response.json())
-      .then( json => {
-              
-          if( json.logradouro ) {
-              document.querySelector('input[name=txtEndereco]').value = json.logradouro;
-            document.querySelector('input[name=txtBairro]').value = json.bairro;
-            document.querySelector('input[name=txtCidade]').value = json.localidade;
-            document.querySelector('input[name=txtEstado]').value = json.uf;
-          }
-      
-      });
-      
-      
-    });
-    
-    
+        const cep = document.querySelector("input[name=txtCep]");
+
+        cep.addEventListener('blur', e => {
+            const value = cep.value.replace(/[^0-9]+/, '');
+            const url = `https://viacep.com.br/ws/${value}/json/`;
+
+            fetch(url)
+                .then(response => response.json())
+                .then(json => {
+
+                    if (json.logradouro) {
+                        document.querySelector('input[name=txtEndereco]').value = json.logradouro;
+                        document.querySelector('input[name=txtBairro]').value = json.bairro;
+                        document.querySelector('input[name=txtCidade]').value = json.localidade;
+                        document.querySelector('input[name=txtEstado]').value = json.uf;
+                    }
+
+                });
+
+
+        });
+
+
     })();
-    
-
 </Script>
