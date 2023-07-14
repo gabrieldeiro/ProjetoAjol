@@ -6,21 +6,16 @@
 
 <style>
 
-    .btoLimpo{
-        border: none;
-        background-color: transparent;
-        padding: 0px;
-        margin: 0px;
-
-    }
 
     .notificacao{
         font-size: 17px;
         font-weight: bold;
         color: red;
-        position:absolute;
         z-index: 1;
-        
+        border: 10px;
+        border-radius: 25px;
+        border-color: black;
+        text-decoration: none;
     }
 
 </style>
@@ -71,37 +66,37 @@
             <div class="col-sm-2 mt-1">
                 <p style="display: inline-block; color:white">
                     <a href="">
-                        <img src="../../img/icone-loupe-gris.png" class="img-fluid ms-3 me-2 " style="width: 33px; height:30px; text-decoration:none" alt="">
+                        <img src="../../img/icone-loupe-gris.png" class="img-fluid mb-2 me-2 " style="width: 33px; height:30px; text-decoration:none" alt="">
                     </a>
-
-                    <button class="btn btn-primary" style="border-radius: 25px;" name="btoPesquisa" id="btoPesquisa" formaction="Detalheusuario.php">&#128269;</button>
-                    <button href="Detalheusuario.php"  >
-                        <img src="../../img/usu/<?= $idusuariologin ?>/<?= $imgusuariologin ?>"  class="img-fluid ms-5 w-25 mt-3 border border-dark" style="border-radius:120px" alt="">
+                    <button class="btn bg-transparent" style="width: 200px;" formaction="Detalheusuario.php">
+                        <img src="../../img/usu/<?= $idusuariologin?>/<?= $imgusuariologin ?>"  class="img-fluid ms-5 w-25 mt-3 border border-dark" style="border-radius:120px" alt="">
+                        <b class="ms-2"><?= $nomeusuariologin?></b>
                     </button>
-                    <b>
-                        <?= $nomeusuariologin ?>
-                    </b>
                 </p>
             </div>
             <div class="col-sm-3 mt-3">
-                <p style="display: inline-block; color:white">
+                <div class="col-sm-12">
+                    <p style="display: inline-block; color:white">
+                        <div class="col-sm-3">
+                        <a href="carrinho.php" style="text-decoration: none;">
+                            <img src="../../img/Carinho.png" class="img-fluid me-3" style="width: 43px; height:40px;" alt="">
+                        </a>
+                    </div>
+                        <div class="col-sm-1 border border-1 p-1 text-center me-3" style="border-radius: 90px;">
+                            <span class="notificacao"><?=$cont?></span>
+                        </div>
+                        <a style="text-decoration: none!important; color:white" href="historico.php">
+                            <img src="../../img/Historico.png" class="img-fluid ms-5" style="width: 43px; height:40px" alt="">
+                            Histórico
+                        </a>
+                        <a style="text-decoration: none!important; color:white" href="../ConexaoPHP/logoff.php">
+                            <img src="../../img/Sair.png" class="img-fluid ms-5" style="width: 43px; height:40px" alt="">
+                            Sair
+                        </a>
 
-                    <a href="carrinho.php">
-                        <img src="../../img/Carinho.png" class="img-fluid me-3" style="width: 43px; height:40px; position: relative;" alt="">
-                        <span class="notificacao"><?=$cont?></span>
-                    </a>
 
-                    <a style="text-decoration: none!important; color:white" href="historico.php">
-                        <img src="../../img/Historico.png" class="img-fluid ms-5" style="width: 43px; height:40px" alt="">
-                        Histórico
-                    </a>
-                    <a style="text-decoration: none!important; color:white" href="../ConexaoPHP/logoff.php">
-                        <img src="../../img/Sair.png" class="img-fluid ms-5" style="width: 43px; height:40px" alt="">
-                        Sair
-                    </a>
-
-                    
-                </p>
+                    </p>
+                </div>
             </div>
         </div>
     </div>
