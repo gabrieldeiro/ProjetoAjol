@@ -32,14 +32,13 @@
 <?php include_once('topoDefinitivo.php') ?>
     <form action="" method="post" style="background-color: darkgray;" enctype="multipart/form-data">
 
-         <h1 class="text-center"> Usuario </h1>
+         <h1 class="text-center p-3 mb-3"> <?=$nomeUsuario?> </h1>
 
         <center>
-            <div class="card border border-danger" style="width: 325px; height: 204px;">
-                <img src="../../img/usu/<?= $idUsuario ?>/<?= $imgUsuario ?>" class="w-100 img-fluid" alt="">
-
+            <div class="card border border-danger mb-3" style="width: 325px; height: 204px;">
+                <img src="../../img/usu/<?= $idUsuario ?>/<?= $imgUsuario ?>" class="w-100 img-fluid p-2" style="width: 300px; height: 190px;">
             </div>
-            <div class="card-body">
+            <div class="card-body mb-3">
                 <input type="file" class="btn btn-primary " name="txtImg">
             </div>
         </center>
