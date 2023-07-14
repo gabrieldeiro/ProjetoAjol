@@ -181,7 +181,7 @@
             return;
         }
 
-        formulario.action = "sistema.php?tela=funcionario";
+        formulario.action = "../ConexaoPHP/funcionario_alterar.php";
         formulario.submit();
 
     }
