@@ -69,8 +69,7 @@
             <div class="col-sm-1">
 
             </div>
-            <div class="col-sm-2 bg-gradient"
-                style="background-color: #783ebf; border-top-left-radius:30px; border-bottom-left-radius:30px">
+            <div class="col-sm-2 bg-gradient" style="background-color: #783ebf; border-top-left-radius:30px; border-bottom-left-radius:30px">
 
             </div>
             <div class="col-lg-6 bg-gradient" style="background-color: #783ebf;">
@@ -107,8 +106,7 @@
                     </a>
                 </div>
             </div>
-            <div class="col-sm-2 bg-gradient"
-                style="background-color: #783ebf; border-top-right-radius:30px; border-bottom-right-radius:30px">
+            <div class="col-sm-2 bg-gradient" style="background-color: #783ebf; border-top-right-radius:30px; border-bottom-right-radius:30px">
 
             </div>
         </div>
@@ -144,7 +142,7 @@
                             <div class='row'>
                                 <div class='col-sm-1'></div>
                                 <div class='col-sm-2 mt-4 p-2 padrao' id='produto2'>
-                                    <a href='detalhes-produto.php?id=".$row[0]."'>
+                                    <a href='detalhes-produto.php?id=" . $row[0] . "'>
                                         <img src='../../img/prod/$row[0]/$row[13]' class='img-fluid w-100 produtop2' alt=''>
                                     </a>
                                 </div>";
@@ -153,7 +151,7 @@
                         echo "
                             
                                 <div class='col-sm-2 mt-4 p-2 padrao2' id='produto'>
-                                    <a href='detalhes-produto.php?id=".$row[0]."'>
+                                    <a href='detalhes-produto.php?id=" . $row[0] . "'>
                                         <img src='../../img/prod/$row[0]/$row[13]' class='img-fluid w-100 produtop2' alt=''>
                                     </a>
                                 </div>
@@ -164,14 +162,12 @@
                     } else {
                         echo "
                             <div class='col-sm-2 mt-4 p-2 corr' id='produto'>
-                                <a href='detalhes-produto.php?id=".$row[0]."'>
+                                <a href='detalhes-produto.php?id=" . $row[0] . "'>
                                     <img src='../../img/prod/$row[0]/$row[13]' class='img-fluid w-100 produtop2' alt=''>
                                 </a>
                            </div>
                         ";
                     }
-
-
                 }
                 ?>
 
@@ -184,25 +180,21 @@
 
             </div>
 
-            <div class="col-sm-5 p-5" id="produto2"
-                style="background-color: #783ebf;  border-top-left-radius:30px; border-bottom-left-radius:30px;">
+            <div class="col-sm-5 p-5" id="produto2" style="background-color: #783ebf;  border-top-left-radius:30px; border-bottom-left-radius:30px;">
                 <a href="">
                     <!-- 
                         LINK PARA A CATEGORIA CORRESPONDENTE
                     -->
-                    <img src="../../img/Action Figures Anime.png" alt="" class="img-fluid w-100"
-                        style="border-radius: 25px;">
+                    <img src="../../img/Action Figures Anime.png" alt="" class="img-fluid w-100" style="border-radius: 25px;">
                 </a>
             </div>
 
-            <div class="col-sm-5 p-5" id="produto"
-                style="background-color: #783ebf;  border-top-right-radius:30px; border-bottom-right-radius:30px">
+            <div class="col-sm-5 p-5" id="produto" style="background-color: #783ebf;  border-top-right-radius:30px; border-bottom-right-radius:30px">
                 <a href="">
                     <!-- 
                         LINK PARA A CATEGORIA CORRESPONDENTE
                     -->
-                    <img src="../../img/Action Figures Super.png" alt="" class="img-fluid w-100"
-                        style="border-radius: 25px;">
+                    <img src="../../img/Action Figures Super.png" alt="" class="img-fluid w-100" style="border-radius: 25px;">
                 </a>
             </div>
 

@@ -20,27 +20,30 @@
   <?php
   include_once('topo2.php');
 
-  $mensagem = '';
+  $mensagemadm = '';
   
   if ($_POST) {
     include_once('../ConexaoPHP/conexao.php');
     $login = $_POST['txtlogin'];
     $senha = $_POST['txtsenha'];
 
+    
+
     try {
-      $sql = $conn->query('select * from usuario where login_usuario = "' . $login . '" and senha_usuario = "' . $senha . '"');
+      $sql = $conn->query('select * from funcionario where login_funcionario = "' . $login . '" and senha_funcionario = "' . $senha . '"');
       if ($sql->rowcount() == 1) {
         session_start();
 
         foreach ($sql as $row) {
-          $_SESSION['id_usuario'] = $row[0];
-          $_SESSION['login_usuario'] = $row[1];
+          $idfuncionario = $row[0];
+          $_SESSION['id_funcionario'] = $row[0];
+          $_SESSION['login_funcionario'] = $row[1];
           $_SESSION['senha_usuario'] = $row[4];
 
-          header('Location:loja.php');
+          header('Location:sistema.php'); 
         }
       } else {
-        $mensagem = 'Erro, usuário ou senha inválido';
+        $mensagemadm = 'Erro, login ou senha inválido';
       }
     } catch (PDOException $ex) {
       $ex->getMessage();
@@ -69,10 +72,10 @@
               <input type="password" class="form-control" id="txtsenha" name="txtsenha" placeholder="Senha">
 
             </div>
-              <p><?=$mensagem?></p>
+              <p><?=$mensagemadm?></p>
             <div class="text-center">
               
-              <button class="btn btn-info btn-md" value="Entrar" formaction="index.php">Login</button>
+              <button class="btn btn-info btn-md" value="Entrar" formaction="indexadm.php">Login</button>
               <!-- botao de entrar na tela loja index -->
 
               <div class="form-text text-center mb-2 text-dark">Primeiro Acesso
@@ -88,9 +91,6 @@
                 -->
                 <button type="button" class="btn btn-danger mt-2 mb-3">
                   <a style="color:white" href="esqueceusenha.php">Esqueceu a senha?</button>
-                </a>
-                <a href="indexadm.php">
-                <button type="button" style="color:white" class="btn btn-warning mb-2" >Login administrativo</button>
                 </a>
               </div>
           </form>
