@@ -34,7 +34,7 @@
             <div class="col-sm-8">
                 <div class="row mt-3">
                     <div class="col-sm-4">Categoria
-                        <select name="text" id="tex" class="form-control" style="border-radius: 25px;">
+                        <select name="text" id="txtCategoria" class="form-control" style="border-radius: 25px;">
                             <option value="">--Selecione uma Categoria --</option>
                             <option value="ativo">Ativo</option>
                             <option value="inativo">Inativo</option>
@@ -83,7 +83,7 @@
                             value="<?= $pesoProduto ?>">
                         </div>
                      <div class="col-sm-4">Status
-                        <select name="txtStatus" class="form-control" style="border-radius: 25px;">
+                        <select name="txtStatus" id="txtStatus" class="form-control" style="border-radius: 25px;">
                             <option value="">--Selecione um Status--</option>
                             <option value="ativo" <?= ($statusProduto == 'ativo' ? 'selected' : "") ?>>ativo</option>
                             <option value="inativo" <?= ($statusProduto == 'inativo' ? 'selected' : "") ?>>inativo</option>
@@ -178,7 +178,7 @@
             return;
         }
 
-        formulario.action = "sistema.php?tela=produto";
+        formulario.action = "../ConexaoPHP/produto_excluir.php";
         formulario.submit();
 
     }
@@ -200,13 +200,7 @@
 
     function Cadastrar()
     {
-        if(idcategoria.value.trim()=="")
-        {
-            alert("Erro, Id Categoria deve ser informada");
-            idcategoria.focus();
-            return;
-        }
-
+         
         if(nome.value.trim()=="")
         {
             alert("Erro, o NOME deve ser informado");
@@ -266,16 +260,7 @@
 
       
 
-        if(status.value.trim()=="")
-        {
-            alert("Erro, o STATUS deve ser informado");
-            status.focus();
-            return;
-        }
-
-     
-
-
+        
         if(valorunitario.value.trim()=="")
         {
             alert("Erro, Valor Unitario deve ser informado");
@@ -292,19 +277,26 @@
 
         if(escala.value.trim()=="")
         {
-            alert("Erro, Escalsa deve ser informado");
+            alert("Erro, Escala deve ser informado");
             dimensao.focus();
             return;
         }
 
         if(Status.value.trim()=="")
         {
-            alert("Erro, Escalsa deve ser informado");
+            alert("Erro, STATUS deve ser informado");
             Status.focus();
             return;
         }
 
+        if(idcategoria.value.trim()=="")
+        {
+            alert("Erro, ID CATEGORIA deve ser informado");
+            idcategoria.focus();
+            return;
+        }
 
+        // alert("teste");
 
         
     formulario.action = "../ConexaoPHP/produto_cadastrar.php";
