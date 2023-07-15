@@ -11,11 +11,15 @@
         <?php
         $sql = $conn->query('select * from categoria where id_categoria=' . $_GET['id']);
         if ($sql->rowCount() >= 1) {
-            foreach ($sql as $row1) {
-                $nome = $row1[1];
+            foreach ($sql as $row) {
+                $idCategoria = $row[0];
+                $nomeCategoria = $row[1];
+                $descricaoCategoria = $row[2];
+                $obsCategoria = $row[3];
+                $statusCategoria = $row[4];
             }
         }
-        echo $nome;
+        echo $nomeCategoria;
         ?>
     </title>
     <link rel="stylesheet" href="../css/bootstrap.css">
@@ -24,20 +28,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="../css/style.css">
-    <?php
-    $sql = $conn->query('select * from categoria where id_categoria=' . $_GET['id']);
-
-    if ($sql->rowCount() >= 1) {
-        foreach ($sql as $row) {
-            $idCategoria = $row[0];
-            $nomeCategoria = $row[1];
-            $descricaoCategoria = $row[2];
-            $obsCategoria = $row[3];
-            $statusCategoria = $row[4];
-        }
-    }
-
-    ?>
 </head>
 
 <body>
@@ -66,11 +56,13 @@
         <div class="col-sm-8 bg-white mt-5" style="border-radius: 20px;">
             <div class="col-sm-12">
                 <?php
-                $sql = $conn->query('select * from produto where id_categoria_produto=' . $idCategoria . ' ORDER BY RAND() ');
+                $sql = $conn->query('select * from produto where id_categoria_produto=' . $_GET['id'] . ' ORDER BY RAND() ');
 
                 $gambBorda = 0;
 
-                foreach ($sql as $row2) {
+
+                foreach ($sql as $row2) 
+                {
                     $gambBorda++;
 
                     //Tentativa de entrar no detalhes do produto ao clicar: em procedimento aqui
@@ -118,11 +110,10 @@
         </div>
     </div>
     <div class="col-sm-12" style="background-color: #404040;">
-                <br>
-                <br>
-                <br>
-                <br>
-                
+        <br>
+        <br>
+        <br>
+        <br>
     </div>
 </body>
 
