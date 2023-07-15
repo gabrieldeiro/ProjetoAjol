@@ -37,7 +37,11 @@
         {
           try {
 
-            foreach ($sql as $row) {
+            foreach ($sql as $row) 
+            {
+
+              $sql = $conn2->query('select * from itemproduto where id_');
+              //CONTINUA NO PRÓXIMO EP
 
               echo "
                 <div class='row card-body p-3'>
