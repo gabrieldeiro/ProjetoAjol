@@ -73,7 +73,7 @@
                 foreach ($sql as $row2) {
                     $gambBorda++;
 
-                    //Tentativa de entrar no detalhes do produto ao clicar: em procedimento Aqui
+                    //Tentativa de entrar no detalhes do produto ao clicar: em procedimento aqui
 
                     if ($gambBorda == 1) {
                         //arredonda o inicio
