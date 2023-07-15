@@ -201,6 +201,9 @@
                             </div>
                         </div>   
                         ";
+
+                        $contmast = 0;
+                        
                         if ($gambBorda == 1) {
                             //arredonda o inicio
                             echo "
@@ -214,7 +217,6 @@
                         } elseif ($gambBorda == 5) {
                             //arredonda o fim
                             echo "
-                                
                                     <div class='col-sm-2 mt-4 p-2 padrao2' id='produto'>
                                         <a href='detalhes-produto.php?id=" . $row[0] . "'>
                                             <img src='../../img/prod/$row[0]/$row[13]' class='img-fluid w-100 produtop2' alt=''> 
@@ -224,7 +226,6 @@
                                 </div>";
 
                             $gambBorda = 0;
-                        
                         
                         }else {
                             echo "

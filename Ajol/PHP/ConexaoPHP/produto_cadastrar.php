@@ -121,4 +121,4 @@
 
 ?>
 
-<a href="../TelasPHP/sistema.php?tela=produto">Voltar</a>
+<a href="../TelasPHP/sistema.php?tela=produto&id=<?=$GET['id']?>">Voltar</a>
