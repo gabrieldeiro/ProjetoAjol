@@ -62,6 +62,8 @@
                                 </li>';
                             }
                         }
+
+                        
                         ?>
                     </ul>
                 </div>
@@ -72,7 +74,7 @@
             <div class="col-sm-2">
                 <p style="display: inline-block; color:white">
                     <a href="" style="text-decoration: none;">
-                        <img src="../../img/icone-loupe-gris.png" class="img-fluid mb-2 me-2 " style="width: 33px; height:30px; text-decoration:none" alt="">
+                        <img src="../../img/icone-loupe-gris.png" class="img-fluid mb-2 mt-4 me-2 " style="width: 33px; height:30px; text-decoration:none" alt="">
                     </a>
                     <!-- 
                         Antiga Imagem e nome de Usuário
@@ -81,15 +83,15 @@
                         <b class="ms-2">< ?= $nomeusuariologin ?></b>
 
                     -->
-                    <button class="btn w-50" formaction="Detalheusuario.php">
+                    <button <?php $teste = ''; if($idusuariologin == ''){$teste = 'hidden';}else{$teste='';}?> <?=$teste?> class="btn w-50" formaction="Detalheusuario.php">
                         <span>
-                            <img src="../../img/usu/<?=$idusuariologin?>/<?=$imgusuariologin?>" class="img-fluid ms-5 mt-2 border border-dark w-50" style="border-radius:120px">
+                            <img src="../../img/usu/<?=$idusuariologin?>/<?=$imgusuariologin?>" <?=$teste?> class="img-fluid ms-5 mt-2 border border-dark w-50" style="border-radius:120px">
                         </span>
                         <?=$nomeusuariologin?>
                     </button>
                 </p>
             </div>
-            <div class="col-sm-3 mt-4">
+            <div class="col-sm-3 mt-3">
                 <div class="col-sm-12">
                     <p style="display: inline-block; color:white">
                         <a href="carrinho.php" style="text-decoration: none;">
@@ -100,9 +102,9 @@
                         <img src="../../img/Historico.png" class="img-fluid ms-5" style="width: 43px; height:40px" alt="">
                         Histórico
                     </a>
-                    <a style="text-decoration: none!important; color:white" href="../ConexaoPHP/logoff.php">
+                    <a <?php $teste2 = ''; if($idusuariologin == ''){$teste2 = 'Logar';}else{$teste2='Sair';}?> style="text-decoration: none!important; color:white" href="../ConexaoPHP/logoff.php">
                         <img src="../../img/Sair.png" class="img-fluid ms-5" style="width: 43px; height:40px" alt="">
-                        Sair
+                        <?=$teste2?>
                     </a>
                     </p>
                 </div>
@@ -110,3 +112,8 @@
         </form>
     </div>
 </div>
+
+<script>
+
+
+</script>
