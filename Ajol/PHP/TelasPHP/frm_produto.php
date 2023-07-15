@@ -1,4 +1,4 @@
-<?php include_once('../ConexaoPHP/produto_pesquisa.php') ?>
+<?php include_once('../ConexaoPHP/produto_pesquisa.php')?>
 <style>
     .textarea1
     {
@@ -22,7 +22,7 @@
             </div>
             <div class="col-sm-1 text-center mt-4">
                 <button class="btn btn-primary" style="border-radius: 25px;" name="btoPesquisa" id="btoPesquisa"
-                    formaction="sistema.php?tela=produto" onclick="Pesquisar2()">&#128269;</button>
+                    formaction="sistema.php?tela=produto&id=<?=$idt?>" onclick="Pesquisar2()">&#128269;</button>
             </div>
 
         </div>

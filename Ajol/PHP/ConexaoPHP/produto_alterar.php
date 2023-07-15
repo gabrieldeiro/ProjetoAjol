@@ -1,6 +1,8 @@
 <?php
     include_once('conexao.php');
 
+    $idt = $_GET['id'];
+
     if($_POST)
     {
         $id = $_POST['txtId'];
@@ -155,4 +157,4 @@
 
 ?>
 
-<a href="../TelasPHP/sistema.php?tela=produto">Voltar</a>
+<a href="../TelasPHP/sistema.php?tela=produto&id=<?=$idt?>">Voltar</a>

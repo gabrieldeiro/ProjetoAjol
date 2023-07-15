@@ -49,7 +49,9 @@
                     if ($_GET['tela'] == 'funcionario') {
                         include_once('frm_funcionario.php');
                     }
+                    
                 }
+                
                 ?>
             </div>
         </div>

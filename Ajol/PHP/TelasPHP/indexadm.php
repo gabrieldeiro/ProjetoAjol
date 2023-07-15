@@ -40,7 +40,7 @@
           $_SESSION['login_funcionario'] = $row[1];
           $_SESSION['senha_usuario'] = $row[4];
 
-          header('Location:sistema.php'); 
+          header('Location:sistema.php?id='.$row[0]); 
         }
       } else {
         $mensagemadm = 'Erro, login ou senha inválido';
