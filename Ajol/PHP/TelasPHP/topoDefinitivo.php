@@ -4,6 +4,10 @@
 
 <style>
     .notificacao {
+        display: block;
+        text-align: center;
+        width: 25px;
+        height: 25px;
         font-size: 17px;
         font-weight: bold;
         color: red;
@@ -12,6 +16,8 @@
         position: absolute;
         top: -10px;
         right: 305px;
+        background-color: white;
+        border-radius: 50%;
     }
     BUTTON SPAN 
     {
