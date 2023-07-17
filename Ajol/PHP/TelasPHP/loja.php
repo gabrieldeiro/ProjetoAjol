@@ -123,6 +123,13 @@
                 border-top-right-radius: 30px;
                 border-bottom-right-radius: 30px;
             }
+
+            .imgpp{
+                width: 350px;
+                height: 350px;
+                object-fit: cover;
+                object-position: 50% 0%;
+            }
         </style>
 
         <div class="row mt-5">
@@ -147,7 +154,7 @@
                                     <div class='col-sm-1'></div>
                                     <div class='col-sm-2 mt-4 p-2 padrao' id='produto2'>
                                         <a href='detalhes-produto.php?id=" . $row[0] . "'>
-                                            <img src='../../img/prod/$row[0]/$row[13]' class='img-fluid w-100 produtop2' alt=''>
+                                            <img src='../../img/prod/$row[0]/$row[13]' class='img-fluid imgpp w-100 produtop2' alt=''> $contmast
                                         </a>
                                     </div>";
                         } elseif ($gambBorda == 5) {
@@ -156,7 +163,7 @@
                                 
                                     <div class='col-sm-2 mt-4 p-2 padrao2' id='produto'>
                                         <a href='detalhes-produto.php?id=" . $row[0] . "'>
-                                            <img src='../../img/prod/$row[0]/$row[13]' class='img-fluid w-100 produtop2' alt=''> 
+                                            <img src='../../img/prod/$row[0]/$row[13]' class='img-fluid imgpp w-100 produtop2' alt=''>  $contmast
                                         </a>
                                     </div>
                                     <div class='col-sm-1'></div> 
@@ -169,14 +176,14 @@
                             echo "
                                 <div class='col-sm-2 mt-4 p-2 corr' id='produto'>
                                     <a href='detalhes-produto.php?id=" . $row[0] . "'>
-                                        <img src='../../img/prod/$row[0]/$row[13]' class='img-fluid w-100 produtop2' alt=''>  
+                                        <img src='../../img/prod/$row[0]/$row[13]' class='img-fluid imgpp produtop2' alt=''>  
                                     </a>
                             </div>
                             "; 
                         }
 
                     }
-                    elseif($contmast ==11){
+                    elseif($contmast == 11){
                         echo"
                         <div class='row mt-5 ms-3'>
                             <div class='col-sm-1'>
@@ -185,14 +192,14 @@
                 
                             <div class='col-sm-5 p-5' id='produto2' style='background-color: #783ebf;  border-top-left-radius:30px; border-bottom-left-radius:30px;'>
                                 <a href=''>
-                                    <img src='../../img/Action Figures Anime.png' alt='' class='img-fluid w-100' style='border-radius: 25px;'>
+                                    <img src='../../img/Action Figures Anime.png' alt='' class='img-fluid w-100' style='border-radius: 25px;'> $contmast
                                 </a>
                             </div>
                 
                             <div class='col-sm-5 p-5' id='produto' style='background-color: #783ebf;  border-top-right-radius:30px; border-bottom-right-radius:30px'>
                                 <a href=''>
 
-                                    <img src='../../img/Action Figures Super.png' alt='' class='img-fluid w-100' style='border-radius: 25px;'>
+                                    <img src='../../img/Action Figures Super.png' alt='' class='img-fluid w-100' style='border-radius: 25px;'> $contmast
                                 </a>
                             </div>
                 
@@ -201,17 +208,16 @@
                             </div>
                         </div>   
                         ";
-
-                        $contmast = 0;
+                        
                         
                         if ($gambBorda == 1) {
                             //arredonda o inicio
                             echo "
                                 <div class='row'>
                                     <div class='col-sm-1'></div>
-                                    <div class='col-sm-2 mt-4 p-2 padrao' id='produto2'>
+                                    <div class='col-sm-2 mt-4 p-2 padrao' id='produto2'> $contmast
                                         <a href='detalhes-produto.php?id=" . $row[0] . "'>
-                                            <img src='../../img/prod/$row[0]/$row[13]' class='img-fluid w-100 produtop2' alt=''>
+                                            <img src='../../img/prod/$row[0]/$row[13]' class='img-fluid imgpp w-100 produtop2' alt=''> $contmast
                                         </a>
                                     </div>";
                         } elseif ($gambBorda == 5) {
@@ -219,7 +225,7 @@
                             echo "
                                     <div class='col-sm-2 mt-4 p-2 padrao2' id='produto'>
                                         <a href='detalhes-produto.php?id=" . $row[0] . "'>
-                                            <img src='../../img/prod/$row[0]/$row[13]' class='img-fluid w-100 produtop2' alt=''> 
+                                            <img src='../../img/prod/$row[0]/$row[13]' class='img-fluid imgpp w-100 produtop2' alt=''> $contmast
                                         </a>
                                     </div>
                                     <div class='col-sm-1'></div> 
@@ -231,11 +237,13 @@
                             echo "
                                 <div class='col-sm-2 mt-4 p-2 corr' id='produto'>
                                     <a href='detalhes-produto.php?id=" . $row[0] . "'>
-                                        <img src='../../img/prod/$row[0]/$row[13]' class='img-fluid w-100 produtop2' alt=''> 
+                                        <img src='../../img/prod/$row[0]/$row[13]' class='img-fluid imgpp w-100 produtop2' alt=''> $contmast
                                     </a>
                             </div>
                             "; 
                         }
+
+                        $contmast = 0;
                     }  
                 }
                 ?>
