@@ -31,23 +31,38 @@
       <div class="col-sm-12">
         <?php
 
+        //Pesquisa de compra aonde condiz com o id do usuário e o status compra for finalizado
         $sql = $conn->query('select * from compra where id_usuario_compra= ' . $idusuariologin . ' and status_compra = "FINALIZADO"');
 
+        //Caso ele encontre
         if ($sql->rowCount() >= 1) 
         {
           try {
 
+            //Para cada coluna encontrada
             foreach ($sql as $row) 
             {
+              //Ele vai pesquisar o item produto aonde o id de compra for condizente com o encontrado
+              $sql2 = $conn->query('select * from itemproduto where id_compra_itemproduto='.$row[0]);
+              {
+                foreach ($sql2 as $row2) 
+                {
+                  //Como evitar mais um foreach?
+                  //Para cada item produto encontrado
+                  $sqlProduto = $conn->query('select * from produto where id_produto='.$row2[1]);
 
-              $sql = $conn2->query('select * from itemproduto where id_');
-              //CONTINUA NO PRÓXIMO EP
+                  foreach ($sqlProduto as $rowProduto) 
+                  {
+                    $rowProduto[13];
+                  }
+                }
+              }
 
               echo "
                 <div class='row card-body p-3'>
                   <div class='col-sm-12 border border-1'>
                       <div class='col-sm-1'>
-                        <h3>$row[0]</h3>
+                        <img src='../../img/prod/$rowProduto[0]/$rowProduto[13]' class='img-fluid w-100' style='min-height:150px; min-width:150px' alt=''>
                       </div>
                       <div class='col-sm-1'>
 
