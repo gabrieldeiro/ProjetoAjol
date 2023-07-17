@@ -15,7 +15,7 @@
         text-decoration: none;
         position: absolute;
         top: -10px;
-        right: 305px;
+        right: 295px;
         background-color: white;
         border-radius: 50%;
     }
@@ -80,7 +80,7 @@
             <div class="col-sm-2">
                 <p style="display: inline-block; color:white">
                     <a href="" style="text-decoration: none;">
-                        <img src="../../img/icone-loupe-gris.png" class="img-fluid mb-2 mt-4 me-2 " style="width: 33px; height:30px; text-decoration:none" alt="">
+                        <img src="../../img/icone-loupe-gris.png" class="img-fluid mb-2 me-2 " style="width: 33px; height:30px; text-decoration:none" alt="">
                     </a>
                     <!-- 
                         Antiga Imagem e nome de Usuário
@@ -97,7 +97,7 @@
                     </button>
                 </p>
             </div>
-            <div class="col-sm-3 mt-3">
+            <div class="col-sm-3 mt-4">
                 <div class="col-sm-12">
                     <p style="display: inline-block; color:white">
                         <a href="carrinho.php" style="text-decoration: none;">
