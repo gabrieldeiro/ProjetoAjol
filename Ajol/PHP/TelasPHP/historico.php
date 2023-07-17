@@ -29,6 +29,9 @@
     </div>
     <div class="col-sm-8 bg-white mt-5" style="border-radius: 20px;">
       <div class="col-sm-12">
+        <div class="row text-center mt-2">
+          <h1>Histórico de compras</h1>
+        </div>
         <?php
 
         //Pesquisa de compra aonde condiz com o id do usuário e o status compra for finalizado
@@ -52,40 +55,36 @@
                   $sqlProduto = $conn->query('select * from produto where id_produto='.$row2[1]);
 
                   foreach ($sqlProduto as $rowProduto) 
-                  {
-                    $rowProduto[13];
-                  }
+                  {}
                 }
               }
 
               echo "
                 <div class='row card-body p-3'>
-                  <div class='col-sm-12 border border-1'>
-                      <div class='col-sm-1'>
-                        <img src='../../img/prod/$rowProduto[0]/$rowProduto[13]' class='img-fluid w-100' style='min-height:150px; min-width:150px' alt=''>
-                      </div>
-                      <div class='col-sm-1'>
-
-                      </div>
-                      <div class='col-sm-4'>
-
-                      </div>
-                      <div class='col-sm-4'>
-                        <p>
-                          Quantidade de Itens: <span class='text-success'>$row[3]</span>
-                        </p>
-                        <p>
-                          Valor de Desconto: <span class='text-danger'>$row[2]</span>
-                        </p>
-                        <p>
-                          Valor Total: <span class='text-success'>$row[2]</span>
-                        </p>
-                        
-                      </div>
+                  <div class='col-sm-12 border border-1 p-4' style='border-radius:20px'>
                       <div class='col-sm-2'>
-                        <p>
+                        <img src='../../img/prod/$rowProduto[0]/$rowProduto[13]' class='img-fluid w-100' alt=''>
+                      </div>
+
+                      <div class='col-sm-4'>
+
+                      </div>
+                      <div class='col-sm-4 mt-4'>
+                        <h4 class='p-2'>
+                          Quantidade de Itens: <span class='text-success'>$row[3]</span>
+                        </h4>
+                        <h4 class='p-2'>
+                          Valor de Desconto: <span class='text-danger'>$row[2]</span>
+                        </h4>
+                        <h4 class='p-2'>
+                          Valor Total: <span class='text-success'>$row[2]</span>
+                        </h4>
                         
-                        </p>
+                      </div>
+                      <div class='col-sm-2 mt-5'>
+                        <h5>
+                          Data de Fechamento da compra:<br><br> $row[4]
+                        </h5>
                       </div>
                   </div>
                 </div>
