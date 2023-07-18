@@ -1,3 +1,5 @@
+<link rel="shortcut icon" href="../../../resto/icone.png" type="image/x-icon">
+
 <?php
 
 include_once('../ConexaoPHP/loginautenticar.php');

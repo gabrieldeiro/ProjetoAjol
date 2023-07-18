@@ -5,3 +5,4 @@
         </a>
     </div>
 </div>
+<link rel="shortcut icon" href="../../../resto/icone.png" type="image/x-icon">

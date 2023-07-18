@@ -19,6 +19,8 @@
     <!---->
     <script type="text/javascript" src="//assets.locaweb.com.br/locastyle/2.0.6/javascripts/locastyle.js"></script>
     <script type="text/javascript" src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+    <link rel="shortcut icon" href="../../../resto/icone.png" type="image/x-icon">
+
 
     <?php
     include_once('../ConexaoPHP/conexao.php');
