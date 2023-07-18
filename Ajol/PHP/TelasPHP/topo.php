@@ -25,7 +25,7 @@ if ($_GET['id']) {
     <div class="col-sm-12">
         <div class="col-sm-1 me-2">
             <a href="loja.php?id=<?= $id ?>">
-                <img src="../../../resto/Logo-prototipo.png" class="w-100 img-fluid ms-4 p-1" alt="">
+                <img src="../../../resto/icone.png" class="img-fluid w-75 p-3" alt="">
             </a>
         </div>
         <div class="col-sm-1 ms-3 mt-3">

@@ -39,7 +39,7 @@
         <div class="row mt-3">
             <div class="col-sm-1">
                 <a href="loja.php">
-                    <img src="../../../resto/Logo-prototipo.png" class="img-fluid" alt="">
+                    <img src="../../../resto/icone.png" class="img-fluid w-75 p-3" alt="">
                 </a>
             </div>
             <div class="col-sm-1 mt-4">
