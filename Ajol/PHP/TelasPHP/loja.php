@@ -55,6 +55,10 @@
             background-color: #783ebf;
             border: none;
         }
+        body
+        {
+            background-color: #404040;
+        }
     </style>
 </head>
 
