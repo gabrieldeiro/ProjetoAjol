@@ -44,6 +44,10 @@
             border-top-right-radius: 20px;
             border-bottom-right-radius: 20px;
         }
+        body
+        {
+            background-color: #404040;
+        }
     </style>
     <?php
     include_once('../ConexaoPHP/loginautenticar.php');
@@ -108,12 +112,6 @@
         <div class="col-sm-2">
 
         </div>
-    </div>
-    <div class="col-sm-12" style="background-color: #404040;">
-        <br>
-        <br>
-        <br>
-        <br>
     </div>
 </body>
 

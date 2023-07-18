@@ -11,7 +11,8 @@
         <?php
         $sql = $conn->query('select * from produto where id_produto=' . $_GET['id']);
         if ($sql->rowCount() >= 1) {
-            foreach ($sql as $row3) {
+            foreach ($sql as $row3) 
+            {
                 $nome = $row3[2];
             }
         }

@@ -55,7 +55,7 @@
                 ?>
             </div>
         </div>
-        <div class="row" style="background-color:#783ebf;">
+        <div class="row" style="background-color:#783ebf; min-height:150px">
             <div class="col-sm-5">
 
             </div>

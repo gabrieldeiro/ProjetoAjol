@@ -19,9 +19,14 @@
 
 <body>
     <style>
-        .botLimpo {
+        .botLimpo 
+        {
             border: none;
             background-color: transparent;
+        }
+        body
+        {
+            background-color: #404040;
         }
     </style>
 
