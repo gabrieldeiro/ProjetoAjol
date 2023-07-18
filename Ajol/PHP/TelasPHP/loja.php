@@ -140,6 +140,7 @@
 
                 $gambBorda = 0;
                 $contmast = 0;
+                $limit = 0;
 
                 foreach ($sql as $row) {
                     $gambBorda++;
@@ -166,7 +167,7 @@
                                             <img src='../../img/prod/$row[0]/$row[13]' class='img-fluid imgpp w-100 produtop2' alt=''>  $contmast
                                         </a>
                                     </div>
-                                    <div class='col-sm-1'></div> 
+                                    <div class='col-sm-1'></div>
                                 </div>";
 
                             $gambBorda = 0;
@@ -178,12 +179,12 @@
                                     <a href='detalhes-produto.php?id=" . $row[0] . "'>
                                         <img src='../../img/prod/$row[0]/$row[13]' class='img-fluid imgpp produtop2' alt=''>  
                                     </a>
-                            </div>
+                            </div>$
                             "; 
                         }
 
                     }
-                    elseif($contmast == 11){
+                    elseif($contmast == 11 && $limit != 1){
                         echo"
                         <div class='row mt-5 ms-3'>
                             <div class='col-sm-1'>
@@ -199,7 +200,7 @@
                             <div class='col-sm-5 p-5' id='produto' style='background-color: #783ebf;  border-top-right-radius:30px; border-bottom-right-radius:30px'>
                                 <a href=''>
 
-                                    <img src='../../img/Action Figures Super.png' alt='' class='img-fluid w-100' style='border-radius: 25px;'> $contmast
+                                    <img src='../../img/Action Figures Super.png' alt='' class='img-fluid w-100' style='border-radius: 25px;'> $contmast $limit
                                 </a>
                             </div>
                 
@@ -208,7 +209,6 @@
                             </div>
                         </div>   
                         ";
-                        
                         
                         if ($gambBorda == 1) {
                             //arredonda o inicio
@@ -245,6 +245,8 @@
 
                         $contmast = 0;
                     }  
+
+                    
                 }
                 ?>
             </div>
