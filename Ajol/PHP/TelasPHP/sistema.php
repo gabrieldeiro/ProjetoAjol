@@ -33,6 +33,8 @@
     
     <?php
         include_once('topo.php');
+
+        $idt = $_GET['id'];
     ?>
     
         <div class="row">
