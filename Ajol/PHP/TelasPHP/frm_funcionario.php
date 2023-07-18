@@ -1,4 +1,5 @@
 <?php include_once('../ConexaoPHP/funcionario_pesquisa.php') ?>
+<link rel="shortcut icon" href="../../../resto/icone.png" type="image/x-icon">
 <style>
     .textarea1 {
         resize: none !important;
