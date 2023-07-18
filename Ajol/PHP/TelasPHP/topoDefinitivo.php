@@ -1,9 +1,15 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
 <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+<link rel="shortcut icon" href="../../../resto/icone.png" type="image/x-icon">
+
 
 <style>
     .notificacao {
+        display: block;
+        text-align: center;
+        width: 25px;
+        height: 25px;
         font-size: 17px;
         font-weight: bold;
         color: red;
@@ -11,7 +17,9 @@
         text-decoration: none;
         position: absolute;
         top: -10px;
-        right: 305px;
+        right: 295px;
+        background-color: white;
+        border-radius: 50%;
     }
     BUTTON SPAN 
     {
@@ -31,7 +39,7 @@
         <div class="row mt-3">
             <div class="col-sm-1">
                 <a href="loja.php">
-                    <img src="../../../resto/Logo-prototipo.png" class="img-fluid" alt="">
+                    <img src="../../../resto/icone.png" class="img-fluid w-75 p-3" alt="">
                 </a>
             </div>
             <div class="col-sm-1 mt-4">
@@ -74,7 +82,7 @@
             <div class="col-sm-2">
                 <p style="display: inline-block; color:white">
                     <a href="" style="text-decoration: none;">
-                        <img src="../../img/icone-loupe-gris.png" class="img-fluid mb-2 mt-4 me-2 " style="width: 33px; height:30px; text-decoration:none" alt="">
+                        <img src="../../img/icone-loupe-gris.png" class="img-fluid mb-2 me-2 " style="width: 33px; height:30px; text-decoration:none" alt="">
                     </a>
                     <!-- 
                         Antiga Imagem e nome de Usuário
@@ -91,7 +99,7 @@
                     </button>
                 </p>
             </div>
-            <div class="col-sm-3 mt-3">
+            <div class="col-sm-3 mt-4">
                 <div class="col-sm-12">
                     <p style="display: inline-block; color:white">
                         <a href="carrinho.php" style="text-decoration: none;">

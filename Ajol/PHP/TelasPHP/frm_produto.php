@@ -1,4 +1,7 @@
-<?php include_once('../ConexaoPHP/produto_pesquisa.php')?>
+<?php 
+    include_once('../ConexaoPHP/produto_pesquisa.php');
+    $idt = $_GET['id'];
+?>
 <style>
     .textarea1
     {
@@ -20,6 +23,7 @@
                 <input type="number" class="form-control" style="border-radius: 25px;" name="txtId" id="txtId" min="0"
                     value="<?= $idProduto ?>">
             </div>
+
             <div class="col-sm-1 text-center mt-4">
                 <button class="btn btn-primary" style="border-radius: 25px;" name="btoPesquisa" id="btoPesquisa"
                     formaction="sistema.php?tela=produto&id=<?=$idt?>" onclick="Pesquisar2()">&#128269;</button>
@@ -126,7 +130,7 @@
             <div class="col-sm-12 text-end ">
                 <button class="btn btn-danger btn-lg"
                     formaction="../ConexaoPHP/produto_excluir.php" onclick="Excluir()">Excluir</button>
-                <a href="sistema.php?tela=produto" class="btn btn-primary btn-lg" name="btoLimpar" id="btoLimpar"
+                <a href="sistema.php?tela=produto&id=<?=$idt?>" class="btn btn-primary btn-lg" name="btoLimpar" id="btoLimpar"
                     class="btn btn-secundary">Limpar</a>
                 <button class="btn btn-warning btn-lg" formaction="../ConexaoPHP/produto_alterar.php"onclick="Alterar()">Alterar</button>
                     <button name="btoCadastrar" class="btn btn-success btn-lg" formaction="../ConexaoPHP/produto_cadastrar.php" onclick="Cadastrar()">Cadastrar</button>
@@ -163,7 +167,7 @@
             return;
         }
 
-        formulario.action = "sistema.php?tela=produto";
+        formulario.action = "sistema.php?tela=produto&id=<?=$idt?>";
         formulario.submit();
     }
 
@@ -178,7 +182,7 @@
             return;
         }
 
-        formulario.action = "../ConexaoPHP/produto_excluir.php";
+        formulario.action = "../ConexaoPHP/produto_excluir.php&id=<?=$idt?>";
         formulario.submit();
 
     }
@@ -193,7 +197,7 @@
             return;
         }
 
-        formulario.action = "../ConexaoPHP/produto_alterar.php";
+        formulario.action = "../ConexaoPHP/produto_alterar.php?id=<?=$idt?>";
         formulario.submit();
 
     }
@@ -258,9 +262,6 @@
             return;
         }
 
-      
-
-        
         if(valorunitario.value.trim()=="")
         {
             alert("Erro, Valor Unitario deve ser informado");
@@ -299,7 +300,7 @@
         // alert("teste");
 
         
-    formulario.action = "../ConexaoPHP/produto_cadastrar.php";
+    formulario.action = "../ConexaoPHP/produto_cadastrar.php?id=<?=$idt?>";
      formulario.submit();
 
 

@@ -13,6 +13,8 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="../css/style.css">
+  <link rel="shortcut icon" href="../../../resto/icone.png" type="image/x-icon">
+
 </head>
 
 <body>
@@ -29,48 +31,62 @@
     </div>
     <div class="col-sm-8 bg-white mt-5" style="border-radius: 20px;">
       <div class="col-sm-12">
+        <div class="row text-center mt-2">
+          <h1>Histórico de compras</h1>
+        </div>
         <?php
 
+        //Pesquisa de compra aonde condiz com o id do usuário e o status compra for finalizado
         $sql = $conn->query('select * from compra where id_usuario_compra= ' . $idusuariologin . ' and status_compra = "FINALIZADO"');
 
+        //Caso ele encontre
         if ($sql->rowCount() >= 1) 
         {
           try {
 
+            //Para cada coluna encontrada
             foreach ($sql as $row) 
             {
+              //Ele vai pesquisar o item produto aonde o id de compra for condizente com o encontrado
+              $sql2 = $conn->query('select * from itemproduto where id_compra_itemproduto='.$row[0]);
+              {
+                foreach ($sql2 as $row2) 
+                {
+                  //Como evitar mais um foreach?
+                  //Para cada item produto encontrado
+                  $sqlProduto = $conn->query('select * from produto where id_produto='.$row2[1]);
 
-              $sql = $conn2->query('select * from itemproduto where id_');
-              //CONTINUA NO PRÓXIMO EP
+                  foreach ($sqlProduto as $rowProduto) 
+                  {}
+                }
+              }
 
               echo "
                 <div class='row card-body p-3'>
-                  <div class='col-sm-12 border border-1'>
-                      <div class='col-sm-1'>
-                        <h3>$row[0]</h3>
-                      </div>
-                      <div class='col-sm-1'>
-
-                      </div>
-                      <div class='col-sm-4'>
-
-                      </div>
-                      <div class='col-sm-4'>
-                        <p>
-                          Quantidade de Itens: <span class='text-success'>$row[3]</span>
-                        </p>
-                        <p>
-                          Valor de Desconto: <span class='text-danger'>$row[2]</span>
-                        </p>
-                        <p>
-                          Valor Total: <span class='text-success'>$row[2]</span>
-                        </p>
-                        
-                      </div>
+                  <div class='col-sm-12 border border-1 p-4' style='border-radius:20px'>
                       <div class='col-sm-2'>
-                        <p>
+                        <img src='../../img/prod/$rowProduto[0]/$rowProduto[13]' class='img-fluid w-100' alt=''>
+                      </div>
+
+                      <div class='col-sm-4'>
+
+                      </div>
+                      <div class='col-sm-4 mt-4'>
+                        <h4 class='p-2'>
+                          Quantidade de Itens: <span class='text-success'>$row[3]</span>
+                        </h4>
+                        <h4 class='p-2'>
+                          Valor de Desconto: <span class='text-danger'>$row[2]</span>
+                        </h4>
+                        <h4 class='p-2'>
+                          Valor Total: <span class='text-success'>$row[2]</span>
+                        </h4>
                         
-                        </p>
+                      </div>
+                      <div class='col-sm-2 mt-5'>
+                        <h5>
+                          Data de Fechamento da compra:<br><br> $row[4]
+                        </h5>
                       </div>
                   </div>
                 </div>

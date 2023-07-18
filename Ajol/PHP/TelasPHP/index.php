@@ -10,13 +10,14 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="shortcut icon" href="../../../resto/icone.png" type="image/x-icon">
   <link rel="stylesheet" href="../css/style.css">
   <?php
   include_once('../ConexaoPHP/conexao.php');
   ?>
 </head>
 
-<body style="background-color: grey!important;">
+<body style="background-color: #404040;">
   <?php
   include_once('topo2.php');
 

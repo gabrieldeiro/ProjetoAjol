@@ -11,7 +11,8 @@
         <?php
         $sql = $conn->query('select * from produto where id_produto=' . $_GET['id']);
         if ($sql->rowCount() >= 1) {
-            foreach ($sql as $row3) {
+            foreach ($sql as $row3) 
+            {
                 $nome = $row3[2];
             }
         }
@@ -24,6 +25,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="shortcut icon" href="../../../resto/icone.png" type="image/x-icon">
+
     <?php
     $sql = $conn->query('select * from produto where id_produto=' . $_GET['id']);
 
