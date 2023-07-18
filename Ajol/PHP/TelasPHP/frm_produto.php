@@ -1,4 +1,6 @@
 <?php include_once('../ConexaoPHP/produto_pesquisa.php')?>
+<link rel="shortcut icon" href="../../../resto/icone.png" type="image/x-icon">
+
 <style>
     .textarea1
     {

@@ -28,6 +28,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="shortcut icon" href="../../../resto/icone.png" type="image/x-icon">
+
 </head>
 
 <body>
@@ -44,6 +46,7 @@
             border-top-right-radius: 20px;
             border-bottom-right-radius: 20px;
         }
+<<<<<<< HEAD
 
         .imgpp{
                 width: 350px;
@@ -51,6 +54,12 @@
                 object-fit: cover;
                 object-position: 50% 0%;
             }
+=======
+        body
+        {
+            background-color: #404040;
+        }
+>>>>>>> 45110c77de699fb060921be3d7f103c7f7ce5410
     </style>
     <?php
     include_once('../ConexaoPHP/loginautenticar.php');
@@ -115,12 +124,6 @@
         <div class="col-sm-2">
 
         </div>
-    </div>
-    <div class="col-sm-12" style="background-color: #404040;">
-        <br>
-        <br>
-        <br>
-        <br>
     </div>
 </body>
 
