@@ -39,7 +39,7 @@
         <div class="row mt-3">
             <div class="col-sm-1">
                 <a href="loja.php">
-                    <img src="../../../resto/icone.png" class="img-fluid w-75 p-2 mb-1 border border-2 border-white" style="border-radius:120px" alt="">
+                    <img src="../../../resto/icone.png" class="img-fluid w-75 p-3 mb-1 bg-dark" style="border-radius:20px" alt="">
                 </a>
             </div>
             <div class="col-sm-1 mt-4">
@@ -79,7 +79,7 @@
             <div class="col-sm-5 mt-4">
                 <input type="text" placeholder="Pesquisa..." class="form-control ms-2 mt-1" style="border-radius: 25px;" name="txtPesquisa" id="txtPesquisa">
             </div>
-            <div class="col-sm-2 mt-3">
+            <div class="col-sm-2 mt-2">
                 <p style="display: inline-block; color:white">
                     <a href="" style="text-decoration: none;">
                         <img src="../../img/icone-loupe-gris.png" class="img-fluid mb-2 me-2 " style="width: 33px; height:30px; text-decoration:none" alt="">
