@@ -39,7 +39,7 @@
         <div class="row mt-3">
             <div class="col-sm-1">
                 <a href="loja.php">
-                    <img src="../../../resto/icone.png" class="img-fluid w-75 p-3" alt="">
+                    <img src="../../../resto/icone.png" class="img-fluid w-75 p-2 mb-1 border border-2 border-white" style="border-radius:120px" alt="">
                 </a>
             </div>
             <div class="col-sm-1 mt-4">
@@ -48,7 +48,7 @@
                         OU
                         AO CLICAR MOSTRAR TODAS AS CATEGORIAS EM UMA TELA SEPARADA
                     -->
-                <div class="dropdown-center ms-4 mt-1">
+                <div class="dropdown-center ms-4 mt-2">
                     <button class="btn btn-secondary dropdown-toggle btn-lg" style="background-color:#d7fb41;color:black" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Categorias
                     </button>
@@ -77,9 +77,9 @@
                 </div>
             </div>
             <div class="col-sm-5 mt-4">
-                <input type="text" placeholder="Pesquisa..." class="form-control ms-2" style="border-radius: 25px;" name="txtPesquisa" id="txtPesquisa">
+                <input type="text" placeholder="Pesquisa..." class="form-control ms-2 mt-1" style="border-radius: 25px;" name="txtPesquisa" id="txtPesquisa">
             </div>
-            <div class="col-sm-2">
+            <div class="col-sm-2 mt-3">
                 <p style="display: inline-block; color:white">
                     <a href="" style="text-decoration: none;">
                         <img src="../../img/icone-loupe-gris.png" class="img-fluid mb-2 me-2 " style="width: 33px; height:30px; text-decoration:none" alt="">
@@ -105,7 +105,7 @@
                         <a href="carrinho.php" style="text-decoration: none;">
                             <img src="../../img/Carinho.png" class="img-fluid me-3" style="width: 43px; height:40px;" alt="">
                         </a>
-                        <span class="notificacao"><?= $cont ?></span>
+                        <span <?php $teste2 = ''; if($cont == ''){$teste2 = 'hidden';}else{$teste2='';}?> <?=$teste2?> class="notificacao"><?= $cont ?></span>
                     <a style="text-decoration: none!important; color:white" href="historico.php">
                         <img src="../../img/Historico.png" class="img-fluid ms-5" style="width: 43px; height:40px" alt="">
                         Histórico

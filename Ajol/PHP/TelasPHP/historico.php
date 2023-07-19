@@ -17,6 +17,7 @@
 
 </head>
 
+
 <body>
 
   <?php
@@ -76,12 +77,11 @@
                           Quantidade de Itens: <span class='text-success'>$row[3]</span>
                         </h4>
                         <h4 class='p-2'>
-                          Valor de Desconto: <span class='text-danger'>$row[2]</span>
+                          Valor de Desconto: <span class='text-danger'>$row[7]</span>
                         </h4>
                         <h4 class='p-2'>
-                          Valor Total: <span class='text-success'>$row[2]</span>
+                          Valor Total: <span class='text-success'>".number_format($row[2],2,',','.')."</span>
                         </h4>
-                        
                       </div>
                       <div class='col-sm-2 mt-5'>
                         <h5>
@@ -117,7 +117,34 @@
 
     </div>
   </div>
+  <!--ampliei a gambiarra. ~gabriel -->
   <div class="col-sm-12" style="background-color: #404040;">
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
     <br>
     <br>
     <br>
