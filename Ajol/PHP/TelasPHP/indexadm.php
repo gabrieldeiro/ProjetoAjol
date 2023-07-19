@@ -18,7 +18,7 @@
   ?>
 </head>
 
-<body style="background-color: grey!important;">
+<body style="background-color: #404040;">
   <?php
   include_once('topo2.php');
 

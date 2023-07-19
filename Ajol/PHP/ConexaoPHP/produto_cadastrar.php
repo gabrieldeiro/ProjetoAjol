@@ -131,7 +131,7 @@
     }
     else
     {
-        header('Location:../TelasPHP/sistema.php?tela=produto');
+        header('Location:../TelasPHP/sistema.php?tela=produto&id='.$idt);
     }
 
 ?>

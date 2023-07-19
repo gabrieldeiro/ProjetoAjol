@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 14-Jul-2023 às 03:16
+-- Tempo de geração: 19-Jul-2023 às 00:10
 -- Versão do servidor: 10.4.28-MariaDB
 -- versão do PHP: 8.2.4
 
@@ -69,14 +69,17 @@ CREATE TABLE `compra` (
 --
 
 INSERT INTO `compra` (`id_compra`, `id_usuario_compra`, `valortotal_compra`, `qtde_compra`, `datafechamento_compra`, `formadepagamento_compra`, `cupom_compra`, `Valordesconto_compra`, `obs_compra`, `status_compra`, `estagio_compra`) VALUES
-(31, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(31, 1, 2.68, 3, '2023-07-14 21:57:33', ' ', ' ', 0.00, ' ', 'FINALIZADO', ' '),
 (32, 54, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
 (33, 2, 340.00, 28, '2023-07-13 20:02:14', ' ', ' ', 0.00, ' ', 'FINALIZADO', ' '),
 (34, 55, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
 (35, 59, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
-(36, 61, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(36, 61, 20.00, 2, '2023-07-14 22:06:56', ' ', ' ', 0.00, ' ', 'FINALIZADO', ' '),
 (37, 62, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
-(38, 2, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL);
+(38, 2, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(39, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(40, 61, 13.52, 3, '2023-07-14 22:09:13', ' ', ' ', 0.00, ' ', 'FINALIZADO', ' '),
+(41, 61, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL);
 
 -- --------------------------------------------------------
 
@@ -169,7 +172,21 @@ INSERT INTO `itemproduto` (`id_itemproduto`, `id_produto_itemproduto`, `id_compr
 (29, 7, 33, 2, 20.000, 10.000, NULL, NULL),
 (30, 7, 33, 2, 20.000, 10.000, NULL, NULL),
 (31, 14, 33, 2, 20.000, 10.000, NULL, NULL),
-(32, 12, 37, 1, 10.000, 10.000, NULL, NULL);
+(32, 12, 37, 1, 10.000, 10.000, NULL, NULL),
+(34, 47, 31, 1, 270.000, 270.000, NULL, NULL),
+(35, 55, 31, 2, 2400.000, 1200.000, NULL, NULL),
+(36, 12, 36, 1, 10.000, 10.000, NULL, NULL),
+(37, 13, 36, 1, 10.000, 10.000, NULL, NULL),
+(38, 17, 40, 1, 13500.000, 13500.000, NULL, NULL),
+(39, 41, 40, 1, 9.000, 9.000, NULL, NULL),
+(40, 12, 40, 1, 10.000, 10.000, NULL, NULL),
+(41, 56, 39, 1, 390.000, 390.000, NULL, NULL),
+(42, 52, 39, 1, 720.000, 720.000, NULL, NULL),
+(43, 55, 39, 1, 1200.000, 1200.000, NULL, NULL),
+(44, 47, 39, 1, 270.000, 270.000, NULL, NULL),
+(45, 53, 39, 1, 450.000, 450.000, NULL, NULL),
+(46, 41, 39, 1, 9.000, 9.000, NULL, NULL),
+(47, 51, 39, 1, 720.000, 720.000, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -213,7 +230,17 @@ INSERT INTO `produto` (`id_produto`, `id_categoria_produto`, `nome_produto`, `ma
 (39, 2, 'produto oficial 39', 'sad', '2023-07-06 03:00:00', 'sad', 0, 0.000, 'sad', 0, 10.000, 10.000, -5.000, 0x747268796e646572636174732e6a7067, NULL, NULL, '', 'ativo'),
 (41, 2, 'Produto Oficial 41', 's', '2023-07-06 03:00:00', '11', 1, 0.000, '2', 2, 9.000, 10.000, 2.000, 0x6c6173742e6a7067, NULL, NULL, '', 'ativo'),
 (42, 1, 'Produto oficial teste ', 'Marca oficial 7', '2023-07-07 03:00:00', '12', 8, 12.000, '100x100', 1, 10.000, 100.000, 0.000, 0x696e646963616e612e77656270, NULL, NULL, '', 'ativo'),
-(44, 1, 'mayco', 's', '2023-07-14 00:10:55', '1', 1, 1.000, '1', 1, 0.990, 1.000, 1.000, '', NULL, NULL, '1', 'ativo');
+(44, 1, 'mayco', 's', '2023-07-13 03:00:00', '1', 1, 1.000, '1', 1, 0.990, 1.000, 1.000, 0x6361706974616f2e706e67, NULL, NULL, '', 'ativo'),
+(47, 1, 'Produto 63', 'Marca', '2023-07-15 00:31:45', '7', 10, 2.000, '10/32', 5, 270.000, 70.000, 0.000, 0x70726f6475746f20312e706e67, NULL, NULL, 'teste', 'ativo'),
+(48, 1, 'Produto 68', 'Marca', '2023-07-15 00:35:23', '7', 10, 2.000, '10/32', 5, 270.000, 70.000, 0.000, 0x6b616b617368692e706e67, NULL, NULL, '', 'ativo'),
+(49, 1, 'Produto 68', 'Marca', '2023-07-15 00:38:39', '7', 10, 2.000, '10/32', 5, 270.000, 70.000, 0.000, 0x6172616e68612e77656270, NULL, NULL, '', 'ativo'),
+(50, 1, 'Produto 532', 'Marca', '2023-07-15 00:44:12', '7', 10, 2.000, '10/32', 5, 270.000, 70.000, 0.000, 0x476f6c204420526f6765722e6a7067, NULL, NULL, '', 'ativo'),
+(51, 1, 'Thor', 'Marca', '2023-07-15 00:54:14', '7', 10, 2.000, '10/32', 5, 720.000, 70.000, 0.000, 0x74686f722e706e67, NULL, NULL, '', 'ativo'),
+(52, 1, 'Thanos', 'Marca', '2023-07-15 00:54:30', '7', 10, 2.000, '10/32', 5, 720.000, 70.000, 0.000, 0x7468616e6f732e6a7067, NULL, NULL, '', 'ativo'),
+(53, 1, 'Homem aranha de ferro', 'Marca', '2023-07-15 00:54:54', '7', 10, 2.000, '10/32', 5, 450.000, 70.000, 0.000, 0x686f6d656d6172616e68616c6567616c2e706e67, NULL, NULL, '', 'ativo'),
+(54, 1, 'Batman', 'Marca', '2023-07-14 03:00:00', '7', 10, 2.000, '10/32', 5, 270.000, 70.000, 0.000, 0x6261746d616e636572746f2e706e67, NULL, NULL, '', 'ativo'),
+(55, 1, 'Buzz', 'Marca', '2023-07-15 00:55:45', '7', 10, 2.000, '10/32', 5, 1200.000, 70.000, 0.000, 0x62757a7a2e6a7067, NULL, NULL, '', 'ativo'),
+(56, 1, 'Capitao America 2', 'Marca', '2023-07-15 00:56:11', '7', 10, 2.000, '10/32', 5, 390.000, 70.000, 0.000, 0x6361706974616f322e6a7067, NULL, NULL, '', 'ativo');
 
 -- --------------------------------------------------------
 
@@ -324,7 +351,7 @@ ALTER TABLE `categoria`
 -- AUTO_INCREMENT de tabela `compra`
 --
 ALTER TABLE `compra`
-  MODIFY `id_compra` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
+  MODIFY `id_compra` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=42;
 
 --
 -- AUTO_INCREMENT de tabela `funcionario`
@@ -336,13 +363,13 @@ ALTER TABLE `funcionario`
 -- AUTO_INCREMENT de tabela `itemproduto`
 --
 ALTER TABLE `itemproduto`
-  MODIFY `id_itemproduto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
+  MODIFY `id_itemproduto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=48;
 
 --
 -- AUTO_INCREMENT de tabela `produto`
 --
 ALTER TABLE `produto`
-  MODIFY `id_produto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=47;
+  MODIFY `id_produto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=57;
 
 --
 -- AUTO_INCREMENT de tabela `usuario`
