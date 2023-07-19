@@ -141,7 +141,7 @@
             <div class='col-sm-12 ms-3'>
 
                 <?php
-                $sql = $conn->query('select * from produto ORDER BY RAND()');
+                $sql = $conn->query('select * from produto limit 16 offset 0');
 
                 $gambBorda = 0;
                 $contmast = 0;
@@ -230,6 +230,9 @@
                 ?>
             </div>
         </div>
+        
+        <p><b>AAAAAAAAAAA</b></p>
+
     </div>
 </body>
 
