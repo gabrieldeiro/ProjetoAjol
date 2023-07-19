@@ -35,15 +35,15 @@
 
         <div class="row">
             <div class="col-sm-4 mt-3">
-             <h1> <img src="../../img/prod/<?=$idProduto?>/<?=$imgProduto?>"  class="w-50 " alt=""> 1</h1> <br><br>
+             <h1> <img src="../../img/prod/<?=$idProduto?>/<?=$imgProduto?>" class="imagemadelimitada" class="w-50 " alt=""> 1</h1> <br><br>
              </div>
 
              <div class="col-sm-4 mt-3">
-             <h1> <img src="../../img/prod/<?=$idProduto?>/<?=$img2Produto?>" class="w-50 " alt="">  2</h1><br><br>
+             <h1> <img src="../../img/prod/<?=$idProduto?>/<?=$img2Produto?>" class="imagemadelimitada" class="w-50 " alt="">  2</h1><br><br>
              </div>
              
              <div class="col-sm-4 mt-3">
-             <h1> <img src="../../img/prod/<?=$idProduto?>/<?=$img3Produto?>" class="w-50 " alt="">  3</h1><br><br>
+             <h1> <img src="../../img/prod/<?=$idProduto?>/<?=$img3Produto?>" class="imagemadelimitada" class="w-50 " alt="">  3</h1><br><br>
             </div>
             <div class="row">
             <div class="col-sm-4">
@@ -52,6 +52,14 @@
                 <input type="file" class="btn btn-primary btn-sm" class="auto" name="txtImg3" id="txtImg3" >
             </div>
         </div>
+
+        <style>
+.imagemadelimitada {
+  width: 227px;
+  height: 227px;
+  object-fit: fill;
+}
+</style>
 
 
             <div class="col-sm-12">
