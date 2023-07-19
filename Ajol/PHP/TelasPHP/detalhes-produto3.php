@@ -27,17 +27,6 @@
     <link rel="stylesheet" href="../css/style.css">
     <link rel="shortcut icon" href="../../../resto/icone.png" type="image/x-icon">
 
-    <style>
-    .imgpp{
-            width: 200px;
-            height: 200px;
-            object-fit: cover;
-            object-position: 50% 0%;
-        }
-
-    </style>
-
-
     <?php
     $sql = $conn->query('select * from produto where id_produto=' . $_GET['id']);
 
@@ -97,11 +86,11 @@
                             <a href="detalhes-produto2.php?id=<?=$_GET['id']?>"><img src="../../img/prod/<?= $idProduto ?>/<?= $img2Produto ?>" class="img-thumbnail w-75" alt=""></a>
                         </p>
                         <p>
-                        <a href="detalhes-produto3.php?id=<?=$_GET['id']?>"><img src="../../img/prod/<?= $idProduto ?>/<?= $img3Produto ?>" class="img-thumbnail w-75" alt=""></a>
+                        <a href="detalhes-produto.php?id=<?=$_GET['id']?>"><img src="../../img/prod/<?= $idProduto ?>/<?= $imgProduto ?>" class="img-thumbnail w-75" alt=""></a>
                         </p>
                     </div>
                     <div class="col-sm-6">
-                        <img src="../../img/prod/<?= $idProduto ?>/<?= $imgProduto ?>" class="w-100 img-fluid" alt="">
+                        <img src="../../img/prod/<?= $idProduto ?>/<?= $img3Produto ?>" class="w-100 img-fluid" alt="">
                     </div>
                     <div class="col-sm-4 border border-1 mt-4" style="border-radius: 12px;">
                         <h5 class="form-text ms-3 mt-4">
@@ -182,7 +171,7 @@
                         <div class='col-sm-1'></div>
                         <div class='col-sm-2 mt-4 p-2 padrao' id='produto2'>
                             <a href='detalhes-produto.php?id=" . $row[0] . "'>
-                                <img src='../../img/prod/$row[0]/$row[13]' class='img-fluid imgpp produtop2' alt=''>
+                                <img src='../../img/prod/$row[0]/$row[13]' class='img-fluid w-100 produtop2' alt=''>
                             </a>
                         </div>";
                     } elseif ($gambBorda == 5) {
@@ -190,7 +179,7 @@
                         echo "
                         <div class='col-sm-2 mt-4 p-2 padrao2' id='produto'>
                             <a href='detalhes-produto.php?id=" . $row[0] . "'>
-                                <img src='../../img/prod/$row[0]/$row[13]' class='img-fluid imgpp produtop2' alt=''>
+                                <img src='../../img/prod/$row[0]/$row[13]' class='img-fluid w-100 produtop2' alt=''>
                             </a>
                         </div>
                         <div class='col-sm-1'></div>
@@ -201,7 +190,7 @@
                         echo "
                 <div class='col-sm-2 mt-4 p-2 corr' id='produto'>
                     <a href='detalhes-produto.php?id=" . $row[0] . "'>
-                        <img src='../../img/prod/$row[0]/$row[13]' class='img-fluid imgpp produtop2' alt=''>
+                        <img src='../../img/prod/$row[0]/$row[13]' class='img-fluid w-100 produtop2' alt=''>
                     </a>
                 </div>
                 ";
