@@ -8,7 +8,7 @@
     }
 </style>
 <body>
-    <form action="" method="post" name="frmproduto" id="frmproduto" onsubmit="return false;" style="background-color: darkgray;" enctype="multipart/form-data">
+    <form action="" method="post" name="frmproduto" id="frmproduto" onsubmit="return false;" style="background-color: darkgray;" enctype="multipart/form-data"   >
         <div class="row mt-3 ">
             <div class="col-sm-6">Nome do Produto
                 <input type="text" class="form-control" style="border-radius: 25px;" name="txtNome" id="txtNome"
@@ -29,12 +29,31 @@
 
         </div>
             <hr>
+<!-- imagens -->
+
         <div class="row">
             <div class="col-sm-4 mt-3">
-                <img src="../../img/prod/<?=$idProduto?>/<?=$imgProduto?>" class="w-50 " alt="">
+             <h1> <img src="../../img/prod/<?=$idProduto?>/<?=$imgProduto?>"  class="w-50 " alt=""> 1</h1> <br><br>
+             </div>
+
+             <div class="col-sm-4 mt-3">
+             <h1> <img src="../../img/prod/<?=$idProduto?>/<?=$img2Produto?>" class="w-50 " alt="">  2</h1><br><br>
+             </div>
+             
+             <div class="col-sm-4 mt-3">
+             <h1> <img src="../../img/prod/<?=$idProduto?>/<?=$img3Produto?>" class="w-50 " alt="">  3</h1><br><br>
             </div>
-            <div class="col-sm-8">
-                <div class="row mt-3">
+            <div class="row">
+            <div class="col-sm-4">
+                <input type="file" class="btn btn-primary btn-sm" class="auto" name="txtImg" id="txtImg" >
+                <input type="file" class="btn btn-primary btn-sm" class="auto" name="txtImg2" id="txtImg2" >
+                <input type="file" class="btn btn-primary btn-sm" class="auto" name="txtImg3" id="txtImg3" >
+            </div>
+        </div>
+
+
+            <div class="col-sm-12">
+                <div class="row mt-3 ">
                     <div class="col-sm-4">Categoria
                         <select name="text" id="txtCategoria" class="form-control" style="border-radius: 25px;">
                             <option value="">--Selecione uma Categoria --</option>
@@ -98,11 +117,7 @@
                 </div>
             </div>  
         </div>
-        <div class="row">
-            <div class="col-sm-4">
-                <input type="file" class="btn btn-primary btn-sm" class="auto" name="txtImg" id="txtImg">
-            </div>
-        </div>
+        
     <hr>
         <div class="row mt-3">
            

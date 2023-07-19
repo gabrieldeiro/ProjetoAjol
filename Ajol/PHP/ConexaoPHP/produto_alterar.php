@@ -19,6 +19,8 @@
         $valorcusto = $_POST['txtValorcusto'];
         $desconto = $_POST['txtDesconto'];
         $img = '';
+        $img2 ='';
+        $img3 ='';
         $obs = $_POST['txtObs'];
         $status =$_POST['txtStatus'];
 
@@ -56,6 +58,8 @@
                         valorcusto_produto=:valorcusto_produto,
                         desconto_produto=:desconto_produto,
                         img_produto=:img_produto,
+                        img2_produto=img2_produto,
+                        img3_produto=img3_produto,
                         obs_produto=:obs_produto,
                         status_produto=:status_produto
                     where id_produto=:id_produto
@@ -76,6 +80,8 @@
                     ':valorcusto_produto'=>$valorcusto,
                     ':desconto_produto'=>$desconto,
                     ':img_produto'=>$img['name'],
+                    ':img2_produto'=>$img2['name'],
+                    ':img3_produto'=>$img3['name'],
                     ':obs_produto'=>$obs,
                     ':status_produto'=>$status
                 ));

@@ -17,8 +17,8 @@
         $valorcusto = $_POST['txtValorcusto'];
         $desconto = $_POST['txtDesconto'];
         $img = '';
-        // $img2 = '';
-        // $img3 = '';
+        $img2 = '';
+        $img3 = '';
         $obs = $_POST['txtObs'];
         $status =$_POST['txtStatus'];
 
@@ -27,8 +27,11 @@
             if(isset($_FILES['txtImg']))
             {
                 $img = $_FILES['txtImg'];
+                $img2 = $_FILES['txtImg2'];
+                $img3 = $_FILES['txtImg3'];
 
             }
+            
             else
             {
                 echo 'Erro, a imagem deve ser enviada';
@@ -50,6 +53,8 @@
                     valorcusto_produto,
                     desconto_produto,
                     img_produto,
+                    img2_produto,
+                    img3_produto,
                     obs_produto,
                     status_produto
                     
@@ -68,6 +73,8 @@
                     :valorcusto_produto,
                     :desconto_produto,
                     :img_produto,
+                    :img2_produto,
+                    :img3_produto,
                     :obs_produto,
                     :status_produto
                 )
@@ -87,8 +94,8 @@
                 ':valorcusto_produto'=>$valorcusto,
                 ':desconto_produto'=>$desconto,
                 ':img_produto'=>$img['name'],
-                //':img2_produto'=>$img2['name'],
-                //':img3_produto'=>$img3['name'],
+                ':img2_produto'=>$img2['name'],
+                ':img3_produto'=>$img3['name'],
                 ':obs_produto'=>$obs,
                 ':status_produto'=>$status 
             ));
@@ -106,8 +113,14 @@
                 }
 
                 $foto = $pasta.$img['name'];
+                $foto1 = $pasta.$img2['name'];
+                $foto2 = $pasta.$img3['name'];
+                
 
                 move_uploaded_file($img['tmp_name'],$foto);
+                move_uploaded_file($img2['tmp_name'],$foto1);
+                move_uploaded_file($img3['tmp_name'],$foto2);
+               
                 
             }
 

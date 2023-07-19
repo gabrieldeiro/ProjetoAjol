@@ -83,10 +83,10 @@
                 <div class="col-sm-12">
                     <div class="col-sm-2 mt-4">
                         <p>
-                            <img src="../../img/prod/<?= $idProduto ?>/<?= $imgProduto ?>" class="img-thumbnail w-75" alt="">
+                            <img src="../../img/prod/<?= $idProduto ?>/<?= $img2Produto ?>" class="img-thumbnail w-75" alt="">
                         </p>
                         <p>
-                            <img src="../../img/prod/<?= $idProduto ?>/<?= $imgProduto ?>" class="img-thumbnail w-75" alt="">
+                            <img src="../../img/prod/<?= $idProduto ?>/<?= $img3Produto ?>" class="img-thumbnail w-75" alt="">
                         </p>
                     </div>
                     <div class="col-sm-6">
