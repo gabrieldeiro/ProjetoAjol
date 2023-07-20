@@ -30,7 +30,6 @@ if ($_SESSION)
             {
                 $idCompra = $row[0];
                 $statusCompra=$row[9];
-
             }
         }
         else

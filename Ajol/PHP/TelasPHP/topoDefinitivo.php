@@ -3,7 +3,6 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 <link rel="shortcut icon" href="../../../resto/icone.png" type="image/x-icon">
 
-
 <style>
     .notificacao {
         display: block;
@@ -30,16 +29,59 @@
     vertical-align: middle;
     text-align: center;    
     }
-
 </style>
+<?php 
+
+    include_once('../conexaoPHP/conexao.php');
+
+    //Frescurinhas de aniversário
+    $sqlAniversario = $conn->query('select data_nasc_usuario from usuario where id_usuario='.$idusuariologin);
+    $dataAtual = 0;
+    $dataNiver = 0;
+
+    foreach ($sqlAniversario as $row) 
+    {
+        $dataAniversario = $row[0];
+    }
+    if ($sqlAniversario->rowCount()==1) 
+    {
+        date_default_timezone_set('America/Sao_Paulo');
+
+        $dataNiver = new DateTime($dataAniversario);
+        $dataAtual = new DateTime();
+
+        $diaNiver = $dataNiver->format('d');
+        $mesNiver = $dataNiver->format('m');
+
+        $diaAtual = $dataAtual->format('d');
+        $mesAtual = $dataAtual->format('m');
+
+        if ($mesAtual == $mesNiver and $diaAtual == $diaNiver) 
+        {
+            $corFrufu = true;
+        }
+        else 
+        {
+            $corFrufu = false;
+        }
+    }
+
+?>
 
 <!-- TOPO -->
 <form action="" method="post" class="bg-gradient" enctype="multipart/form-data" style="background-color: #783ebf;">
     <div class="col-md-12 bg-gradient" style="background-color: #783ebf;">
         <div class="row mt-3">
             <div class="col-sm-1">
+            
+            <!--
+                Verificação de dia de aniversário
+
+                //echo 'Dia Aniversário: ';echo $diaNiver;echo '<br>Dia Atual: '; echo $diaAtual;echo'<br>Mês Atual: '; echo$mesAtual;echo '<br>Mês Aniversário: ';echo$mesNiver 
+            -->
+            
                 <a href="loja.php">
-                    <img src="../../../resto/icone.png" class="img-fluid w-75 p-3 mb-1 bg-dark" style="border-radius:20px" alt="">
+                    <img src="../../../resto/icone.png" class="img-fluid w-75 p-3 mb-3 bg-dark" style="border-radius:20px" alt="">
                 </a>
             </div>
             <div class="col-sm-1 mt-4">
@@ -49,29 +91,35 @@
                         AO CLICAR MOSTRAR TODAS AS CATEGORIAS EM UMA TELA SEPARADA
                     -->
                 <div class="dropdown-center ms-4 mt-2">
-                    <button class="btn btn-secondary dropdown-toggle btn-lg" style="background-color:#d7fb41;color:black" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Categorias
+                    <button <?= ($corFrufu ? 'class="btn-dark btn dropdown-toggle btn-lg"' : 'class="btn btn-secondary dropdown-toggle btn-lg" style="background-color:#d7fb41;color:black"')?> type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <span <?= ($corFrufu ? 'class="css-rainbow-text"' : 'class=""')?>>Categorias</span>
                     </button>
-                    <ul class="dropdown-menu" style="background-color:#d7fb41">
+                    <ul class="dropdown-menu me-3" style="background-color:#d7fb41">
                         <?php
                         include_once('../ConexaoPHP/conexao.php');
                         $sql = $conn->query('select * from categoria');
 
                         //Ele vai pesquisar a categoria
 
-                        if ($sql->rowCount() >= 1) {
-                            foreach ($sql as $row) {
+                        if ($sql->rowCount() >= 1) 
+                        {
+                            foreach ($sql as $row) 
+                            {
                                 //Para cada categoria encontrada, ele vai criar um item no menu e um link personalizado para cada categoria
                                 $idCategoria = $row[0];
                                 $nomeCategoria = $row[1];
-                                echo
-                                '<li>
-                                    <a class="dropdown-item" href="detalhes-categoria.php?id=' . $idCategoria . '">' . $nomeCategoria . '</a>
-                                </li>';
+                                echo 
+                                ($corFrufu ? 
+                                "<li class='css-rainbow-text'>
+                                    <a class='dropdown-item' href='detalhes-categoria.php?id=' . $idCategoria . ''>' . $nomeCategoria . '</a>
+                                </li>" 
+                                : 
+                                "<li>
+                                    <a class='dropdown-item' href='detalhes-categoria.php?id=' . $idCategoria . ''>' . $nomeCategoria . '</a>
+                                </li>"
+                        );
                             }
                         }
-
-                        
                         ?>
                     </ul>
                 </div>
