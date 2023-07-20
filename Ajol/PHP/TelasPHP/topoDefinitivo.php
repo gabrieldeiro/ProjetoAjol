@@ -115,7 +115,7 @@
                                 </li>" 
                                 : 
                                 "<li>
-                                    <a class='dropdown-item' href='detalhes-categoria.php?id=' . $idCategoria . ''>' . $nomeCategoria . '</a>
+                                    <a class='dropdown-item' href='detalhes-categoria.php?id=$idCategoria'> $nomeCategoria'</a>
                                 </li>"
                         );
                             }

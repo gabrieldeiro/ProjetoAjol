@@ -46,20 +46,13 @@
             border-top-right-radius: 20px;
             border-bottom-right-radius: 20px;
         }
-<<<<<<< HEAD
 
         .imgpp{
-                width: 350px;
-                height: 350px;
+                width: 150px;
+                height: 150px;
                 object-fit: cover;
                 object-position: 50% 0%;
             }
-=======
-        body
-        {
-            background-color: #404040;
-        }
->>>>>>> 45110c77de699fb060921be3d7f103c7f7ce5410
     </style>
     <?php
     include_once('../ConexaoPHP/loginautenticar.php');
@@ -89,7 +82,7 @@
                     <div class='row'>
                         <div class='col-sm-1'></div>
                         <div class='col-sm-2 mt-4 p-2 padrao' id='produto2' style='background-color:#783ebf'>
-                            <h3 style='color:black; background-color:#d7fb41; border-radius:10px' class='p-2' >$row2[2]</h3>
+                            <h5 style='color:black; background-color:#d7fb41; border-radius:10px' class='p-2' >$row2[2]</h5>
                             <a href='detalhes-produto.php?id=" . $row2[0] . "'>
                                 <img src='../../img/prod/$row2[0]/$row2[13]' class='img-fluid  w-100 produtop2'class='imgpp'  style='border-radius: 20px; max-height: 300px; min-height:200px' alt=''>
                             </a>
@@ -98,7 +91,7 @@
                         //arredonda o fim
                         echo "
                         <div class='col-sm-2 mt-4 p-2 padrao2' id='produto' style='background-color:#783ebf'>
-                            <h3 style='color:black; background-color:#d7fb41; border-radius:10px' class='p-2' >$row2[2]</h3>
+                            <h5 style='color:black; background-color:#d7fb41; border-radius:10px' class='p-2' >$row2[2]</h5>
                             <a href='detalhes-produto.php?id=" . $row2[0] . "'>
                                 <img src='../../img/prod/$row2[0]/$row2[13]' class='img-fluid  w-100 produtop2' class='imgpp' style='border-radius: 20px; max-height: 300px; min-height:200px' alt=''>
                             </a>
@@ -110,7 +103,7 @@
                     } else {
                         echo "
                 <div class='col-sm-2 mt-4 p-2 corr' id='produto' style='background-color:#783ebf'>
-                        <h3 style='color:black; background-color:#d7fb41; border-radius:10px' class='p-2' >$row2[2]</h3>
+                        <h5 style='color:black; background-color:#d7fb41; border-radius:10px' class='p-2' >$row2[2]</h5>
                     <a href='detalhes-produto.php?id=" . $row2[0] . "'>
                         <img src='../../img/prod/$row2[0]/$row2[13]' class='img-fluid  w-100 produtop2'class='imgpp'  style='border-radius: 20px; max-height: 300px; min-height:200px' alt=''>
                     </a>
