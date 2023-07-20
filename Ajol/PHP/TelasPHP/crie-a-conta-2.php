@@ -51,7 +51,7 @@
                         <div class="col-sm-4">
 
                         </div>
-                        <div class="col-sm-4 mb-2">
+                        <div class="col-sm-4 mt-2 mb-2">
                             <h4 class="border border-1 p-2" style="border-radius: 20px;">Etapa 2 de 3</h4>
                         </div>
                     </div>
