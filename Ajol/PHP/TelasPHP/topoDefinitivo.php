@@ -67,25 +67,33 @@
     }
     if ($sqlAniversario->rowCount()==1) 
     {
-        date_default_timezone_set('America/Sao_Paulo');
-
-        $dataNiver = new DateTime($dataAniversario);
-        $dataAtual = new DateTime();
-
-        $diaNiver = $dataNiver->format('d');
-        $mesNiver = $dataNiver->format('m');
-
-        $diaAtual = $dataAtual->format('d');
-        $mesAtual = $dataAtual->format('m');
-
-        if ($mesAtual == $mesNiver and $diaAtual == $diaNiver) 
-        {
-            $corFrufu = true;
-        }
-        else 
+        if ($dataAniversario == '') 
         {
             $corFrufu = false;
         }
+        else 
+        {
+            date_default_timezone_set('America/Sao_Paulo');
+
+            $dataNiver = new DateTime($dataAniversario);
+            $dataAtual = new DateTime();
+
+            $diaNiver = $dataNiver->format('d');
+            $mesNiver = $dataNiver->format('m');
+
+            $diaAtual = $dataAtual->format('d');
+            $mesAtual = $dataAtual->format('m');
+
+            if ($mesAtual == $mesNiver and $diaAtual == $diaNiver) 
+            {
+                $corFrufu = true;
+            }
+            else 
+            {
+                $corFrufu = false;
+            }
+        }
+        
     }
     else 
     {
@@ -203,8 +211,3 @@
         </form>
     </div>
 </div>
-
-<script>
-
-
-</script>
