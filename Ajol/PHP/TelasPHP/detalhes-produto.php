@@ -113,7 +113,7 @@
                         <hr>
                         <div class="row">
                             <h3 class="ms-3 mt-2" style="font-size: 30px;">
-                                R$ <?= $valorunitario_produto ?>
+                                R$ <?= number_format($valorunitario_produto,2,',','.')?>
                             </h3>
                         </div>
                         <div class="row">

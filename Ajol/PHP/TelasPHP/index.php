@@ -38,7 +38,7 @@
           $_SESSION['login_usuario'] = $row[1];
           $_SESSION['senha_usuario'] = $row[4];
 
-          header('Location:loja.php');
+          header('Location:loja.php?pag=');
         }
       } else {
         $mensagem = 'Erro, usuário ou senha inválido';
