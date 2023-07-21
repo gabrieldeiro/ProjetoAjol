@@ -60,6 +60,8 @@
     include_once('../conexaoPHP/conexao.php');
 
     //Frescurinhas de aniversário
+    if ($idusuariologin) 
+    {
     $sqlAniversario = $conn->query('select data_nasc_usuario from usuario where id_usuario='.$idusuariologin);
     $dataAtual = 0;
     $dataNiver = 0;
@@ -90,7 +92,13 @@
             $corFrufu = false;
         }
     }
+    else 
+    {
+        $corFrufu = false;
+    }
 
+    }
+    
 ?>
 
 <!-- TOPO -->
