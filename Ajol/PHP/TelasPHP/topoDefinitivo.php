@@ -63,6 +63,19 @@
         top: -50px;
 >>>>>>> 6c8e6c335ed4e14dc3e997d7193129a9fdb940e2
     }
+    .balao1
+    {
+        position: absolute;
+        right: -150px;
+        top: 80px;
+    }
+    .balao2
+    {
+        position: absolute;
+        right: -150px;
+        top: 80px;
+    }
+
 </style>
 <?php 
 
@@ -209,7 +222,7 @@
                     </a>
                     <a <?php $teste2 = ''; if($idusuariologin == ''){$teste2 = 'Logar';}else{$teste2='Sair';}?> style="text-decoration: none!important; color:white" href="../ConexaoPHP/logoff.php">
                         <img src="../../img/Sair.png" class="img-fluid ms-5" style="width: 43px; height:40px" alt="">
-                        <?=$teste2?>
+                        <?=($corFrufu ? '<span class="css-rainbow-text">'.$teste2.'</span>' : ''.$teste2.'')?>  
                     </a>
                     </p>
                 </div>
