@@ -13,7 +13,14 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <link rel="shortcut icon" href="../../../resto/icone.png" type="image/x-icon">
     <link rel="stylesheet" href="../css/style.css">
-
+    <style>
+    .balao1
+    {
+        position: absolute;
+        right: -120px;
+        top: 80px;
+    }
+    </style>
     <?php
     include_once('../ConexaoPHP/conexao.php');
     include_once('../ConexaoPHP/loginautenticar.php');
@@ -119,8 +126,7 @@
             <div class="col-sm-1">
 
             </div>
-            <div class="col-sm-2 bg-gradient"
-                style="background-color: #783ebf; border-top-left-radius:30px; border-bottom-left-radius:30px">
+            <div class="col-sm-2 bg-gradient" style="background-color: #783ebf; border-top-left-radius:30px; border-bottom-left-radius:30px">
 
             </div>
             <div class="col-lg-6 bg-gradient" style="background-color: #783ebf;">
@@ -157,8 +163,7 @@
                     </a>
                 </div>
             </div>
-            <div class="col-sm-2 bg-gradient"
-                style="background-color: #783ebf; border-top-right-radius:30px; border-bottom-right-radius:30px">
+            <div class="col-sm-2 bg-gradient" style="background-color: #783ebf; border-top-right-radius:30px; border-bottom-right-radius:30px">
 
             </div>
         </div>
@@ -310,7 +315,6 @@
                                 $i2 = $i+1;
                                 echo"<li class='page-item'><a class='page-link' href='loja.php?pag=$i1'>$i2</a></li>";
                             }
-
                         ?>
                     </ul>
                 </nav>
