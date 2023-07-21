@@ -29,12 +29,39 @@
     vertical-align: middle;
     text-align: center;    
     }
+<<<<<<< HEAD
 
     .perfil{
         width: 70px;
         height: 50px;
         object-fit: cover;
         object-position: 50% 0%;
+=======
+    .css-rainbow-text {
+        background: linear-gradient(90deg, #f00, #ff2b00, #f50, #ff8000, #fa0, #ffd500, #ff0, #d4ff00, #af0, #80ff00, #5f0, #2bff00, #0f0, #00ff2b, #0f5, #00ff80, #0fa, #00ffd5, #0ff, #00d4ff, #0af, #007fff, #05f, #002bff, #00f, #2a00ff, #50f, #7f00ff, #a0f, #d400ff, #f0f, #ff00d4, #f0a, #ff0080, #f05, #ff002b, #f00);
+        color: #0000;
+        -webkit-background-clip: text;
+        background-clip: text;
+        font-weight: bold;
+        text-decoration: none;
+    }
+    .rainbow
+    {
+        text-decoration: none;
+        background: linear-gradient(90deg, #f00, #ff2b00, #f50, #ff8000, #fa0, #ffd500, #ff0, #d4ff00, #af0, #80ff00, #5f0, #2bff00, #0f0, #00ff2b, #0f5, #00ff80, #0fa, #00ffd5, #0ff, #00d4ff, #0af, #007fff, #05f, #002bff, #00f, #2a00ff, #50f, #7f00ff, #a0f, #d400ff, #f0f, #ff00d4, #f0a, #ff0080, #f05, #ff002b, #f00);
+    }
+    .chapeu
+    {
+        position: absolute;
+        right: 100px;
+        top: -25px;
+    }
+    .chapeu2
+    {
+        position: absolute;
+        right: 135px;
+        top: -50px;
+>>>>>>> 6c8e6c335ed4e14dc3e997d7193129a9fdb940e2
     }
 </style>
 <?php 
@@ -42,6 +69,8 @@
     include_once('../conexaoPHP/conexao.php');
 
     //Frescurinhas de aniversário
+    if ($idusuariologin) 
+    {
     $sqlAniversario = $conn->query('select data_nasc_usuario from usuario where id_usuario='.$idusuariologin);
     $dataAtual = 0;
     $dataNiver = 0;
@@ -72,7 +101,13 @@
             $corFrufu = false;
         }
     }
+    else 
+    {
+        $corFrufu = false;
+    }
 
+    }
+    
 ?>
 
 <!-- TOPO -->
@@ -89,9 +124,12 @@
             
                 <a href="loja.php?pag=">
                     <img src="../../../resto/icone.png" class="img-fluid w-75 p-3 mb-3 bg-dark" style="border-radius:20px" alt="">
+                    
                 </a>
+                
             </div>
             <div class="col-sm-1 mt-4">
+                <?= ($corFrufu ? '<img src="../../img/chapeu-mickey.png" class="chapeu2 w-75"' : '')?>
                 <!-- 
                         INSERIR UM HOVER QUE MOSTRA AS CATEGORIAS
                         OU
@@ -101,7 +139,7 @@
                     <button <?= ($corFrufu ? 'class="btn-dark btn dropdown-toggle btn-lg"' : 'class="btn btn-secondary dropdown-toggle btn-lg" style="background-color:#d7fb41;color:black"')?> type="button" data-bs-toggle="dropdown" aria-expanded="false">
                         <span <?= ($corFrufu ? 'class="css-rainbow-text"' : 'class=""')?>>Categorias</span>
                     </button>
-                    <ul class="dropdown-menu me-3" style="background-color:#d7fb41">
+                    <ul <?= ($corFrufu ? 'class="bg-dark dropdown-menu me-3"' : 'class="dropdown-menu me-3" style="background-color:#d7fb41"')?>>
                         <?php
                         include_once('../ConexaoPHP/conexao.php');
                         $sql = $conn->query('select * from categoria');
@@ -118,11 +156,11 @@
                                 echo 
                                 ($corFrufu ? 
                                 "<li class='css-rainbow-text'>
-                                    <a class='dropdown-item' href='detalhes-categoria.php?id=' . $idCategoria . ''>' . $nomeCategoria . '</a>
+                                    <a class='dropdown-item bg-dark' href='detalhes-categoria.php?id=$idCategoria'><span class='css-rainbow-text'> $nomeCategoria<span></a>
                                 </li>" 
                                 : 
                                 "<li>
-                                    <a class='dropdown-item' href='detalhes-categoria.php?id=$idCategoria'> $nomeCategoria'</a>
+                                    <a class='dropdown-item' href='detalhes-categoria.php?id=$idCategoria'> $nomeCategoria</a>
                                 </li>"
                         );
                             }
@@ -150,8 +188,11 @@
                         <span>
                             <img src="../../img/usu/<?=$idusuariologin?>/<?=$imgusuariologin?>" <?=$teste?> class="img-fluid ms-5 mt-2 border border-dark w-50" style="border-radius:120px">
                         </span>
-                        <?=$nomeusuariologin?>
+                        <?= ($corFrufu ? '<span class="css-rainbow-text">'.$nomeusuariologin.' </span>' : ''.$nomeusuariologin.'')?>
+                        
+    
                     </button>
+                    <?= ($corFrufu ? '<img src="../../img/chapeu-peppa.png" class="chapeu w-25"' : '')?>
                 </p>
             </div>
             <div class="col-sm-3 mt-4">
@@ -163,7 +204,8 @@
                         <span <?php $teste2 = ''; if($cont == ''){$teste2 = 'hidden';}else{$teste2='';}?> <?=$teste2?> class="notificacao"><?= $cont ?></span>
                     <a style="text-decoration: none!important; color:white" href="historico.php">
                         <img src="../../img/Historico.png" class="img-fluid ms-5" style="width: 43px; height:40px" alt="">
-                        Histórico
+                        <?=($corFrufu ? '<span class="css-rainbow-text">Histórico</span>' : ''.'Histórico'.'')?>
+                        
                     </a>
                     <a <?php $teste2 = ''; if($idusuariologin == ''){$teste2 = 'Logar';}else{$teste2='Sair';}?> style="text-decoration: none!important; color:white" href="../ConexaoPHP/logoff.php">
                         <img src="../../img/Sair.png" class="img-fluid ms-5" style="width: 43px; height:40px" alt="">
