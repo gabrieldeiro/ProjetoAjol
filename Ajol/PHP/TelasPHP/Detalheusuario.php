@@ -20,7 +20,7 @@
     <script type="text/javascript" src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
     <link rel="shortcut icon" href="../../../resto/icone.png" type="image/x-icon">
 
-    <title>Document</title>
+    <title>Detalhes do usuário</title>
 
 </head>
 
@@ -50,7 +50,7 @@
             <div class="col-sm-3"></div>
             <div class="col-sm-7">
                 <div class="col-sm-1 mt-2">Usuario:</div>
-                <div class="col-sm-9"><input type="text" name="txtNome" class="form-control form-control-lg" id="txtNome" value="<?= $nomeUsuario ?>" placeholder="Usuario"></div>
+                <div class="col-sm-9"><input type="text" name="txtNome" maxlength="20" class="form-control form-control-lg" id="txtNome" value="<?= $nomeUsuario ?>" placeholder="Usuario"></div>
             </div>
             <div class="col-sm-2"></div>
         </div>
