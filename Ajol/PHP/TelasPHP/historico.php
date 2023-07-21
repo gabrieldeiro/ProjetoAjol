@@ -77,10 +77,10 @@
                           Quantidade de Itens: <span class='text-success'>$row[3]</span>
                         </h4>
                         <h4 class='p-2'>
-                          Valor de Desconto: <span class='text-danger'>$row[7]</span>
+                          Valor de Desconto: <span class='text-danger'>R$".number_format($row[7],2,',','.')."</span>
                         </h4>
                         <h4 class='p-2'>
-                          Valor Total: <span class='text-success'>".number_format($row[2],2,',','.')."</span>
+                          Valor Total: <span class='text-success'>R$".number_format($row[2],2,',','.')."</span>
                         </h4>
                       </div>
                       <div class='col-sm-2 mt-5'>

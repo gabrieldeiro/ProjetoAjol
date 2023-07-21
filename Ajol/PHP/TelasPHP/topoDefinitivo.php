@@ -20,7 +20,7 @@
         background-color: white;
         border-radius: 50%;
     }
-    BUTTON SPAN 
+    .BUTTON SPAN 
     {
     line-height: 14px;
     font-size: 14px;
@@ -28,6 +28,13 @@
     display: inline-block;
     vertical-align: middle;
     text-align: center;    
+    }
+
+    .perfil{
+        width: 70px;
+        height: 50px;
+        object-fit: cover;
+        object-position: 50% 0%;
     }
 </style>
 <?php 
@@ -80,7 +87,7 @@
                 //echo 'Dia Aniversário: ';echo $diaNiver;echo '<br>Dia Atual: '; echo $diaAtual;echo'<br>Mês Atual: '; echo$mesAtual;echo '<br>Mês Aniversário: ';echo$mesNiver 
             -->
             
-                <a href="loja.php">
+                <a href="loja.php?pag=">
                     <img src="../../../resto/icone.png" class="img-fluid w-75 p-3 mb-3 bg-dark" style="border-radius:20px" alt="">
                 </a>
             </div>

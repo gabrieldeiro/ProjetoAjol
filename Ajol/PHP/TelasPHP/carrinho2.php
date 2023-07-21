@@ -95,7 +95,7 @@
 
             if($sql->rowCount()>=1)
             {
-                header('Location:../TelasPHP/loja.php');
+                header('Location:../TelasPHP/loja.php?pag=');
 
             }
 
