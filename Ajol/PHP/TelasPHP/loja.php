@@ -40,6 +40,9 @@
             }
         }
     }
+    else {
+        $corFrufu = false;
+    }
     
     ?>
     <style>
