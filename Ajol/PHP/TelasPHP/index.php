@@ -38,7 +38,7 @@
           $_SESSION['login_usuario'] = $row[1];
           $_SESSION['senha_usuario'] = $row[4];
 
-          header('Location:loja.php');
+          header('Location:loja.php?pag=');
         }
       } else {
         $mensagem = 'Erro, usuário ou senha inválido';
@@ -60,7 +60,7 @@
           <form class="centro" class="card-body cardbody-color p-lg-5" action="" method="post">
 
             <div class="text-center">
-              <img src="../../../resto/Logo-prototipo.png" class="img-fluid p-3 my-3" width="200px" alt="profile">
+              <img src="../../../resto/icone.png" class="img-fluid w-25 p-3 my-3" width="200px" alt="profile">
             </div>
 
             <div class="col-sm-12 mb-3">
