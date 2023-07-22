@@ -57,7 +57,7 @@
                     <div class="row mt-3">
                         <div class="col-sm-12">
                             <div class="col-sm-12">
-                                <input type="text" class="form-control" name="txtNome" id="txtNome" placeholder="Nome">
+                                <input type="text" class="form-control" name="txtNome" id="txtNome" maxlength="20" placeholder="Nome">
                             </div>
                         </div>
                     </div>

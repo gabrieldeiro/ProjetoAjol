@@ -4,7 +4,6 @@
     if($_POST)
     {
 
-        
         $id_produto_itemproduto = $_POST['txtId_produto_itemproduto'];
         $id_compra_itemproduto = $_POST['txtId_compra_itemproduto'];
         $qtde_itemproduto = $_POST['txtId_qte_itemproduto'];
@@ -19,7 +18,6 @@
             $sql = $conn->prepare('
                 insert into itemproduto
                 (
-                   
                     id_produto_itemproduto,
                     id_compra_itemproduto,
                     qtde_itemproduto,
@@ -49,7 +47,6 @@
                 ':qtde_itemproduto'=>$qtde_itemproduto,
                 ':valortotal_itemproduto'=> $valortotal_itemproduto,
                 ':valorunitario_itemproduto'=> $valorunitario_itemproduto,
-                
                 ':obs_itemcompra'   =>    $obs_itemproduto,
                 ':status_itemcompra' => $status_itemproduto
 

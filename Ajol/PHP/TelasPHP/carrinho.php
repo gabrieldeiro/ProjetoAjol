@@ -290,8 +290,8 @@
                             </h4>
                         </div>
                         <div class="col-sm-9">
-                            <h4 class="text-success" name="txtValortotal">R$
-                            <?= number_format($vltotalf, 2, ',', '.')?></h4>
+                            <input type="text-success" hidden name="txtValortotal" value="<?= number_format($vltotalf, 2, '', '.')?>">
+                            <h4 class="text-success"><?= number_format($vltotalf, 2, ',', '.')?></h4>
                         </div>
                     </div>
                 </div>

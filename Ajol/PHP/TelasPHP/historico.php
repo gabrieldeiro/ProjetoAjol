@@ -61,7 +61,7 @@
                   {}
                 }
               }
-
+              $multi = $row[2] * 1000;
               echo "
                 <div class='row card-body p-3'>
                   <div class='col-sm-12 border border-1 p-4' style='border-radius:20px'>
@@ -80,7 +80,7 @@
                           Valor de Desconto: <span class='text-danger'>R$".number_format($row[7],2,',','.')."</span>
                         </h4>
                         <h4 class='p-2'>
-                          Valor Total: <span class='text-success'>R$".number_format($row[2],2,',','.')."</span>
+                          Valor Total: <span class='text-success'>R$".number_format($multi,2,',','.')."</span>
                         </h4>
                       </div>
                       <div class='col-sm-2 mt-5'>
