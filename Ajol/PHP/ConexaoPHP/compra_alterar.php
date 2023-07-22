@@ -61,7 +61,6 @@
                 ':obs_compra'=>$obs_compra,
                 ':status_compra'=>$status_compra,
                 ':estagio_compra'=>$estagio_compra
-                
             ));
                 
             if($sql->rowCount()>=1)
