@@ -61,7 +61,15 @@
                   {}
                 }
               }
-              $multi = $row[2] * 1000;
+              //AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+              $multi = 0;
+              if ($row[2] < 1000 ) 
+              {
+                $multi = $row[2] * 1000;
+              }
+              else {
+                $multi = $row[2];
+              }
               echo "
                 <div class='row card-body p-3'>
                   <div class='col-sm-12 border border-1 p-4' style='border-radius:20px'>

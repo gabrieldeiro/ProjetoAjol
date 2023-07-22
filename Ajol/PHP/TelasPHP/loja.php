@@ -265,13 +265,13 @@
                                 </div>
                     
                                 <div class='col-sm-5 p-5' id='produto2' style='background-color: #783ebf;  border-top-left-radius:30px; border-bottom-left-radius:30px;'>
-                                    <a href=''>
+                                    <a href='detalhes-categoria.php?id=7'>
                                         <img src='../../img/Action Figures Anime.png' alt='' class='img-fluid w-100' style='border-radius: 25px;'>
                                     </a>
                                 </div>
                     
                                 <div class='col-sm-5 p-5' id='produto' style='background-color: #783ebf;  border-top-right-radius:30px; border-bottom-right-radius:30px'>
-                                    <a href=''>
+                                    <a href='detalhes-categoria.php?id=1'>
 
                                         <img src='../../img/Action Figures Super.png' alt='' class='img-fluid w-100' style='border-radius: 25px;'> 
                                     </a>
