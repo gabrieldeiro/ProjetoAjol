@@ -4,6 +4,9 @@ $nomeusuario = '';
 $loginusuariologin = '';
 $nomeusuariologin = ''; //perfil
 $imgusuariologin = ''; //perfil
+$idfuncionario = '';//perfil funcionario
+$nomefuncionario = '';//perfil funcionario
+$imgfuncinario = '';//perfil funcionario
 $statusCompra='';
 $idCompra='';
 $cont = '';
@@ -27,7 +30,6 @@ if ($_SESSION)
             {
                 $idCompra = $row[0];
                 $statusCompra=$row[9];
-
             }
         }
         else
@@ -68,6 +70,25 @@ if ($_SESSION)
             }
         }
 
+        //sistema para pegar foto e nome do funcionario para a home.
+        if (isset($_SESSION['id_funcionario']))
+        {   
+
+            $idfuncionario = $_SESSION['id_funcionario'];
+            
+            $sql = $conn->query('select * from funcionario where id_funcionario='.$idfuncionario);
+
+            if($sql->rowCount()>=1)
+            {
+                foreach ($sql as $row) 
+                {
+                    $nomefuncionario=$row[1];
+                    $imgfuncionario=$row[5];
+                }
+            }
+        }
+
+        //variavel publica para qtde do carrinho
         $sqlcont = $conn->query('select sum(qtde_itemproduto) from itemproduto where id_compra_itemproduto='. $idCompra);
 
         if($sqlcont->rowCount()>=1)

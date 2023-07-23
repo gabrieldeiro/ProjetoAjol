@@ -1,0 +1,835 @@
+-- phpMyAdmin SQL Dump
+-- version 5.2.1
+-- https://www.phpmyadmin.net/
+--
+-- Host: 127.0.0.1
+-- Tempo de geração: 22-Jul-2023 às 03:09
+-- Versão do servidor: 10.4.28-MariaDB
+-- versão do PHP: 8.2.4
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Banco de dados: `ajol`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `categoria`
+--
+
+CREATE TABLE `categoria` (
+  `id_categoria` int(11) NOT NULL,
+  `nome_categoria` varchar(30) NOT NULL,
+  `descricao_categoria` varchar(255) DEFAULT NULL,
+  `obs_categoria` varchar(255) DEFAULT NULL,
+  `status_categoria` varchar(30) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Extraindo dados da tabela `categoria`
+--
+
+INSERT INTO `categoria` (`id_categoria`, `nome_categoria`, `descricao_categoria`, `obs_categoria`, `status_categoria`) VALUES
+(1, 'Filme', 'Filme', 'Teste', 'ativo'),
+(2, 'Series', 'Series', '', 'ativo'),
+(3, 'DESENHO', 's', 's', 'ativo'),
+(7, 'Animes', 'Animes', '', 'ativo'),
+(8, 'Jogos', 'Jogos', '', 'ativo');
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `compra`
+--
+
+CREATE TABLE `compra` (
+  `id_compra` int(11) NOT NULL,
+  `id_usuario_compra` int(11) NOT NULL,
+  `valortotal_compra` decimal(10,2) DEFAULT NULL,
+  `qtde_compra` int(11) DEFAULT NULL,
+  `datafechamento_compra` datetime DEFAULT NULL,
+  `formadepagamento_compra` varchar(30) DEFAULT NULL,
+  `cupom_compra` varchar(30) DEFAULT NULL,
+  `Valordesconto_compra` decimal(10,2) DEFAULT NULL,
+  `obs_compra` varchar(200) DEFAULT NULL,
+  `status_compra` varchar(30) NOT NULL,
+  `estagio_compra` varchar(120) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Extraindo dados da tabela `compra`
+--
+
+INSERT INTO `compra` (`id_compra`, `id_usuario_compra`, `valortotal_compra`, `qtde_compra`, `datafechamento_compra`, `formadepagamento_compra`, `cupom_compra`, `Valordesconto_compra`, `obs_compra`, `status_compra`, `estagio_compra`) VALUES
+(31, 1, 2.68, 3, '2023-07-14 21:57:33', ' ', ' ', 0.00, ' ', 'FINALIZADO', ' '),
+(32, 54, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(33, 2, 340.00, 28, '2023-07-13 20:02:14', ' ', ' ', 0.00, ' ', 'FINALIZADO', ' '),
+(34, 55, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(35, 59, 2.29, 3, '2023-07-21 21:05:18', ' ', ' ', 0.00, ' ', 'FINALIZADO', ' '),
+(36, 61, 20.00, 2, '2023-07-14 22:06:56', ' ', ' ', 0.00, ' ', 'FINALIZADO', ' '),
+(37, 62, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(38, 2, 881.00, 4, '2023-07-20 21:13:57', ' ', ' ', 0.00, ' ', 'FINALIZADO', ' '),
+(39, 1, 3.76, 7, '2023-07-18 20:22:55', ' ', ' ', 0.00, ' ', 'FINALIZADO', ' '),
+(40, 61, 13.52, 3, '2023-07-14 22:09:13', ' ', ' ', 0.00, ' ', 'FINALIZADO', ' '),
+(41, 61, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(42, 1, 10.00, 1, '2023-07-18 20:46:08', ' ', ' ', 0.00, ' ', 'FINALIZADO', ' '),
+(43, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(44, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(45, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(46, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(47, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(48, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(49, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(50, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(51, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(52, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(53, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(54, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(55, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(56, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(57, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(58, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(59, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(60, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(61, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(62, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(63, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(64, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(65, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(66, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(67, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(68, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(69, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(70, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(71, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(72, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(73, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(74, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(75, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(76, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(77, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(78, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(79, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(80, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(81, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(82, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(83, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(84, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(85, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(86, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(87, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(88, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(89, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(90, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(91, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(92, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(93, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(94, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(95, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(96, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(97, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(98, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(99, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(100, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(101, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(102, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(103, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(104, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(105, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(106, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(107, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(108, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(109, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(110, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(111, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(112, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(113, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(114, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(115, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(116, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(117, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(118, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(119, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(120, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(121, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(122, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(123, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(124, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(125, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(126, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(127, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(128, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(129, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(130, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(131, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(132, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(133, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(134, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(135, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(136, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(137, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(138, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(139, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(140, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(141, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(142, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(143, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(144, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(145, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(146, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(147, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(148, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(149, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(150, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(151, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(152, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(153, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(154, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(155, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(156, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(157, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(158, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(159, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(160, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(161, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(162, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(163, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(164, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(165, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(166, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(167, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(168, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(169, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(170, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(171, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(172, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(173, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(174, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(175, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(176, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(177, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(178, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(179, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(180, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(181, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(182, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(183, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(184, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(185, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(186, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(187, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(188, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(189, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(190, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(191, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(192, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(193, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(194, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(195, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(196, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(197, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(198, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(199, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(200, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(201, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(202, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(203, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(204, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(205, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(206, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(207, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(208, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(209, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(210, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(211, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(212, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(213, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(214, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(215, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(216, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(217, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(218, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(219, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(220, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(221, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(222, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(223, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(224, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(225, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(226, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(227, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(228, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(229, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(230, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(231, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(232, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(233, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(234, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(235, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(236, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(237, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(238, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(239, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(240, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(241, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(242, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(243, 65, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(244, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(245, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(246, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(247, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(248, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(249, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(250, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(251, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(252, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(253, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(254, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(255, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(256, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(257, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(258, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(259, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(260, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(261, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(262, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(263, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(264, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(265, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(266, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(267, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(268, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(269, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(270, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(271, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(272, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(273, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(274, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(275, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(276, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(277, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(278, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(279, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(280, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(281, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(282, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(283, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(284, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(285, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(286, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(287, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(288, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(289, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(290, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(291, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(292, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(293, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(294, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(295, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(296, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(297, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(298, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(299, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(300, 67, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(301, 68, 6.00, 4, '2023-07-20 20:26:17', ' ', ' ', 0.00, ' ', 'FINALIZADO', ' '),
+(302, 68, 720.00, 1, '2023-07-20 20:27:02', ' ', ' ', 0.00, ' ', 'FINALIZADO', ' '),
+(303, 68, 3.60, 1, '2023-07-20 20:27:38', ' ', ' ', 0.00, ' ', 'FINALIZADO', ' '),
+(304, 68, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(305, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(306, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(307, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(308, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(309, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(310, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(311, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(312, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(313, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(314, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(315, 2, 289.00, 3, '2023-07-21 19:16:44', ' ', ' ', 0.00, ' ', 'FINALIZADO', ' '),
+(316, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(317, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(318, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(319, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(320, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(321, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(322, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(323, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(324, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(325, 69, 4.59, 3, '2023-07-20 21:45:29', ' ', ' ', 0.00, ' ', 'FINALIZADO', ' '),
+(326, 69, 1.42, 2, '2023-07-20 21:46:25', ' ', ' ', 0.00, ' ', 'FINALIZADO', ' '),
+(327, 69, 720.00, 1, '2023-07-20 21:46:59', ' ', ' ', 0.00, ' ', 'FINALIZADO', ' '),
+(328, 69, 2.58, 3, '2023-07-20 21:55:48', ' ', ' ', 0.00, ' ', 'FINALIZADO', ' '),
+(329, 69, 860.00, 1, '2023-07-20 21:57:11', ' ', ' ', 0.00, ' ', 'FINALIZADO', ' '),
+(330, 69, 4.30, 1, '2023-07-20 21:57:42', ' ', ' ', 0.00, ' ', 'FINALIZADO', ' '),
+(331, 69, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(332, 70, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(333, 2, 2.30, 4, '2023-07-21 19:18:01', ' ', ' ', 0.00, ' ', 'FINALIZADO', ' '),
+(334, 2, 2.58, 3, '2023-07-21 19:40:44', ' ', ' ', 0.00, ' ', 'FINALIZADO', ' '),
+(335, 71, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(336, 2, 1.72, 2, '2023-07-21 19:47:25', ' ', ' ', 0.00, ' ', 'FINALIZADO', ' '),
+(337, 2, NULL, 2, '2023-07-21 20:02:15', ' ', ' ', 0.00, ' ', 'FINALIZADO', ' '),
+(338, 73, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(339, 2, 1.44, 1, '2023-07-21 20:04:17', ' ', ' ', 0.00, ' ', 'FINALIZADO', ' '),
+(340, 2, 1.63, 2, '2023-07-21 20:14:01', ' ', ' ', 0.00, ' ', 'FINALIZADO', ' '),
+(341, 2, 1.46, 1, '2023-07-21 20:18:21', ' ', ' ', 0.00, ' ', 'FINALIZADO', ' '),
+(342, 2, 1.46, 1, '2023-07-21 20:27:33', ' ', ' ', 0.00, ' ', 'FINALIZADO', ' '),
+(343, 2, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(344, 59, 2.09, 8, '2023-07-21 21:43:01', ' ', ' ', 0.00, ' ', 'FINALIZADO', ' '),
+(345, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(346, 59, 3.78, 7, '2023-07-21 21:45:04', ' ', ' ', 0.00, ' ', 'FINALIZADO', ' '),
+(347, 59, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(348, 74, 99280.00, 3, '2023-07-21 21:57:45', ' ', ' ', 0.00, ' ', 'FINALIZADO', ' '),
+(349, 74, 9.21, 3, '2023-07-21 22:03:15', ' ', ' ', 0.00, ' ', 'FINALIZADO', ' '),
+(350, 74, 92515.00, 2, '2023-07-21 22:03:42', ' ', ' ', 0.00, ' ', 'FINALIZADO', ' '),
+(351, 74, 1.85, 3, '2023-07-21 22:04:00', ' ', ' ', 0.00, ' ', 'FINALIZADO', ' '),
+(352, 74, 7880.00, 1, '2023-07-21 22:05:03', ' ', ' ', 0.00, ' ', 'FINALIZADO', ' '),
+(353, 74, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `funcionario`
+--
+
+CREATE TABLE `funcionario` (
+  `id_funcionario` int(11) NOT NULL,
+  `nome_funcionario` varchar(100) NOT NULL,
+  `login_funcionario` char(50) NOT NULL,
+  `senha_funcionario` char(50) NOT NULL,
+  `email_funcionario` varchar(50) NOT NULL,
+  `cpf_funcionario` char(14) NOT NULL,
+  `datanasc_funcionario` datetime NOT NULL,
+  `endereco_funcionario` varchar(30) NOT NULL,
+  `numero_funcionario` int(11) NOT NULL,
+  `compl_funcionario` decimal(10,3) DEFAULT NULL,
+  `bairro_funcionario` varchar(100) NOT NULL,
+  `cep_funcionario` char(9) NOT NULL,
+  `obs_funcionario` varchar(255) DEFAULT NULL,
+  `status_funcionario` varchar(20) DEFAULT NULL,
+  `img_funcionario` longblob NOT NULL,
+  `cidade_funcionario` varchar(100) NOT NULL,
+  `estado_funcionario` varchar(2) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Extraindo dados da tabela `funcionario`
+--
+
+INSERT INTO `funcionario` (`id_funcionario`, `nome_funcionario`, `login_funcionario`, `senha_funcionario`, `email_funcionario`, `cpf_funcionario`, `datanasc_funcionario`, `endereco_funcionario`, `numero_funcionario`, `compl_funcionario`, `bairro_funcionario`, `cep_funcionario`, `obs_funcionario`, `status_funcionario`, `img_funcionario`, `cidade_funcionario`, `estado_funcionario`) VALUES
+(1, 'Roger Guedes', 'rg10', '', 'roger.guedes@gmail.com', '123.123.123-12', '0000-00-00 00:00:00', '', 12, 0.000, 'end', '123', 'OLA', 'ativo', 0x726f6765722e6a7067, '', ''),
+(2, '', '', '', '', '', '0000-00-00 00:00:00', '', 0, 0.000, '', '', '', 'ativo', '', '', ''),
+(5, 'ss', 'sss', 'ss', 'ss@uol.m', '25825825814521', '2023-07-06 00:00:00', '', 0, NULL, '', '', '', '', '', '', ''),
+(6, 'm', 's', 's', 'eee@ddd.com', '12512512511', '2023-06-28 00:00:00', '', 0, 0.000, '', '', '', '', '', '', ''),
+(8, '21', '2', '2', 'eee@ddd.com', '1111', '2023-07-05 00:00:00', '', 0, 0.000, '', '', '', '', '', '', ''),
+(9, 'm', 'ad', 'as', 'ss@uol.m', '11122233345', '2023-06-29 00:00:00', '', 20, 0.000, 'Vila Rosália', '07072250', '', 'ativo', '', 'Guarulhos', 'SP'),
+(10, 'AdmT', 'admt', 'admt', 'fsafafsa@fafsa', '123', '2003-12-20 00:00:00', '', 0, 0.000, 'fasfasfs', '156156156', 'gdsgds', 'ativo', 0x467058634c4a3558734149432d5f38312d343230783330302e6a7067, 'sfafsad', 'sp');
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `itemproduto`
+--
+
+CREATE TABLE `itemproduto` (
+  `id_itemproduto` int(11) NOT NULL,
+  `id_produto_itemproduto` int(11) NOT NULL,
+  `id_compra_itemproduto` int(11) NOT NULL,
+  `qtde_itemproduto` int(11) NOT NULL,
+  `valortotal_itemproduto` decimal(10,2) DEFAULT NULL,
+  `valorunitario_itemproduto` decimal(10,2) DEFAULT NULL,
+  `obs_itemcompra` varchar(255) DEFAULT NULL,
+  `status_itemcompra` varchar(30) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Extraindo dados da tabela `itemproduto`
+--
+
+INSERT INTO `itemproduto` (`id_itemproduto`, `id_produto_itemproduto`, `id_compra_itemproduto`, `qtde_itemproduto`, `valortotal_itemproduto`, `valorunitario_itemproduto`, `obs_itemcompra`, `status_itemcompra`) VALUES
+(1, 14, 33, 1, 10.00, 10.00, NULL, NULL),
+(2, 14, 33, 1, 10.00, 10.00, NULL, NULL),
+(3, 14, 33, 1, 10.00, 10.00, NULL, NULL),
+(4, 14, 33, 1, 10.00, 10.00, NULL, NULL),
+(5, 13, 31, 1, 10.00, 10.00, NULL, NULL),
+(6, 10, 35, 1, 10.00, 10.00, NULL, NULL),
+(7, 10, 33, 1, 10.00, 10.00, NULL, NULL),
+(8, 10, 33, 1, 10.00, 10.00, NULL, NULL),
+(9, 10, 33, 1, 10.00, 10.00, NULL, NULL),
+(10, 10, 33, 1, 10.00, 10.00, NULL, NULL),
+(11, 10, 33, 1, 10.00, 10.00, NULL, NULL),
+(12, 10, 33, 1, 10.00, 10.00, NULL, NULL),
+(13, 10, 33, 1, 10.00, 10.00, NULL, NULL),
+(15, 10, 33, 1, 10.00, 10.00, NULL, NULL),
+(16, 10, 33, 1, 10.00, 10.00, NULL, NULL),
+(17, 10, 33, 1, 10.00, 10.00, NULL, NULL),
+(18, 10, 33, 1, 10.00, 10.00, NULL, NULL),
+(19, 10, 33, 1, 10.00, 10.00, NULL, NULL),
+(20, 10, 33, 1, 10.00, 10.00, NULL, NULL),
+(21, 10, 33, 1, 10.00, 10.00, NULL, NULL),
+(22, 10, 33, 1, 10.00, 10.00, NULL, NULL),
+(23, 10, 33, 1, 10.00, 10.00, NULL, NULL),
+(24, 10, 33, 1, 10.00, 10.00, NULL, NULL),
+(25, 8, 33, 1, 10.00, 10.00, NULL, NULL),
+(26, 7, 33, 2, 20.00, 10.00, NULL, NULL),
+(27, 7, 33, 2, 20.00, 10.00, NULL, NULL),
+(28, 7, 33, 2, 20.00, 10.00, NULL, NULL),
+(29, 7, 33, 2, 20.00, 10.00, NULL, NULL),
+(30, 7, 33, 2, 20.00, 10.00, NULL, NULL),
+(31, 14, 33, 2, 20.00, 10.00, NULL, NULL),
+(32, 12, 37, 1, 10.00, 10.00, NULL, NULL),
+(34, 47, 31, 1, 270.00, 270.00, NULL, NULL),
+(35, 55, 31, 2, 2400.00, 1200.00, NULL, NULL),
+(36, 12, 36, 1, 10.00, 10.00, NULL, NULL),
+(37, 13, 36, 1, 10.00, 10.00, NULL, NULL),
+(38, 17, 40, 1, 13500.00, 13500.00, NULL, NULL),
+(39, 41, 40, 1, 9.00, 9.00, NULL, NULL),
+(40, 12, 40, 1, 10.00, 10.00, NULL, NULL),
+(41, 56, 39, 1, 390.00, 390.00, NULL, NULL),
+(42, 52, 39, 1, 720.00, 720.00, NULL, NULL),
+(43, 55, 39, 1, 1200.00, 1200.00, NULL, NULL),
+(44, 47, 39, 1, 270.00, 270.00, NULL, NULL),
+(45, 53, 39, 1, 450.00, 450.00, NULL, NULL),
+(46, 41, 39, 1, 9.00, 9.00, NULL, NULL),
+(47, 51, 39, 1, 720.00, 720.00, NULL, NULL),
+(48, 14, 42, 1, 10.00, 10.00, NULL, NULL),
+(49, 64, 38, 1, 4.90, 4.90, NULL, NULL),
+(50, 65, 38, 1, 680.00, 680.00, NULL, NULL),
+(51, 70, 38, 1, 186.20, 186.20, NULL, NULL),
+(52, 65, 301, 1, 680.00, 680.00, NULL, NULL),
+(53, 73, 301, 1, 860.00, 860.00, NULL, NULL),
+(54, 83, 301, 1, 860.00, 860.00, NULL, NULL),
+(55, 69, 301, 1, 3600.00, 3600.00, NULL, NULL),
+(56, 51, 302, 1, 720.00, 720.00, NULL, NULL),
+(57, 69, 303, 1, 3600.00, 3600.00, NULL, NULL),
+(58, 13, 38, 1, 10.00, 10.00, NULL, NULL),
+(59, 10, 307, 1, 10.00, 10.00, NULL, NULL),
+(60, 12, 310, 1, 10.00, 10.00, NULL, NULL),
+(61, 51, 313, 1, 720.00, 720.00, NULL, NULL),
+(62, 41, 315, 1, 9.00, 9.00, NULL, NULL),
+(63, 13, 315, 1, 10.00, 10.00, NULL, NULL),
+(64, 10, 318, 1, 10.00, 10.00, NULL, NULL),
+(65, 50, 325, 2, 540.00, 270.00, NULL, NULL),
+(66, 53, 325, 1, 450.00, 450.00, NULL, NULL),
+(67, 69, 325, 1, 3600.00, 3600.00, NULL, NULL),
+(68, 73, 326, 1, 860.00, 860.00, NULL, NULL),
+(69, 70, 326, 3, 558.60, 186.20, NULL, NULL),
+(70, 51, 327, 1, 720.00, 720.00, NULL, NULL),
+(71, 87, 328, 1, 860.00, 860.00, NULL, NULL),
+(72, 85, 328, 1, 860.00, 860.00, NULL, NULL),
+(73, 86, 328, 1, 860.00, 860.00, NULL, NULL),
+(74, 72, 329, 1, 860.00, 860.00, NULL, NULL),
+(75, 73, 330, 5, 4300.00, 860.00, NULL, NULL),
+(76, 48, 315, 1, 270.00, 270.00, NULL, NULL),
+(77, 77, 333, 1, 860.00, 860.00, NULL, NULL),
+(78, 87, 333, 1, 860.00, 860.00, NULL, NULL),
+(79, 41, 333, 1, 9.00, 9.00, NULL, NULL),
+(80, 58, 333, 3, 570.00, 190.00, NULL, NULL),
+(82, 87, 334, 1, 860.00, 860.00, NULL, NULL),
+(83, 86, 334, 1, 860.00, 860.00, NULL, NULL),
+(84, 84, 334, 1, 860.00, 860.00, NULL, NULL),
+(88, 87, 336, 1, 860.00, 860.00, NULL, NULL),
+(89, 87, 336, 1, 860.00, 860.00, NULL, NULL),
+(90, 87, 337, 1, 860.00, 860.00, NULL, NULL),
+(91, 86, 337, 1, 860.00, 860.00, NULL, NULL),
+(92, 51, 339, 2, 1440.00, 720.00, NULL, NULL),
+(93, 68, 340, 1, 890.00, 890.00, NULL, NULL),
+(94, 51, 340, 1, 720.00, 720.00, NULL, NULL),
+(95, 51, 341, 2, 1440.00, 720.00, NULL, NULL),
+(96, 51, 342, 2, 1440.00, 720.00, NULL, NULL),
+(97, 48, 35, 2, 540.00, 270.00, NULL, NULL),
+(98, 71, 35, 2, 1720.00, 860.00, NULL, NULL),
+(99, 50, 344, 1, 270.00, 270.00, NULL, NULL),
+(100, 51, 344, 1, 720.00, 720.00, NULL, NULL),
+(101, 59, 344, 1, 260.00, 260.00, NULL, NULL),
+(102, 39, 344, 1, 45.15, 45.15, NULL, NULL),
+(103, 41, 344, 1, 58.80, 58.80, NULL, NULL),
+(104, 49, 344, 1, 270.00, 270.00, NULL, NULL),
+(105, 59, 344, 1, 260.00, 260.00, NULL, NULL),
+(106, 58, 344, 1, 190.00, 190.00, NULL, NULL),
+(107, 50, 346, 1, 270.00, 270.00, NULL, NULL),
+(110, 61, 346, 1, 21.56, 21.56, NULL, NULL),
+(111, 76, 346, 1, 860.00, 860.00, NULL, NULL),
+(112, 85, 346, 1, 860.00, 860.00, NULL, NULL),
+(113, 55, 346, 1, 1200.00, 1200.00, NULL, NULL),
+(114, 50, 346, 1, 270.00, 270.00, NULL, NULL),
+(115, 57, 346, 1, 280.00, 280.00, NULL, NULL),
+(116, 41, 348, 1, 58.80, 58.80, NULL, NULL),
+(117, 50, 348, 1, 54.00, 54.00, NULL, NULL),
+(118, 75, 348, 1, 860.00, 860.00, NULL, NULL),
+(119, 50, 349, 1, 54.00, 54.00, NULL, NULL),
+(120, 51, 349, 1, 8280.00, 8280.00, NULL, NULL),
+(121, 85, 349, 1, 860.00, 860.00, NULL, NULL),
+(122, 39, 350, 1, 45.15, 45.15, NULL, NULL),
+(123, 83, 350, 1, 860.00, 860.00, NULL, NULL),
+(124, 66, 351, 1, 890.00, 890.00, NULL, NULL),
+(125, 68, 351, 1, 890.00, 890.00, NULL, NULL),
+(126, 50, 351, 1, 54.00, 54.00, NULL, NULL),
+(127, 41, 352, 1, 58.80, 58.80, NULL, NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `produto`
+--
+
+CREATE TABLE `produto` (
+  `id_produto` int(11) NOT NULL,
+  `id_categoria_produto` int(11) NOT NULL,
+  `nome_produto` varchar(30) NOT NULL,
+  `marca_produto` varchar(50) NOT NULL,
+  `datacadastro_produto` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+  `lote_produto` varchar(30) DEFAULT NULL,
+  `qtde_produto` int(11) NOT NULL,
+  `peso_produto` decimal(10,3) NOT NULL,
+  `dimensao_produto` varchar(50) NOT NULL,
+  `escala_produto` int(11) NOT NULL,
+  `valorunitario_produto` decimal(10,2) NOT NULL,
+  `valorcusto_produto` decimal(10,2) NOT NULL,
+  `desconto_produto` decimal(10,2) DEFAULT NULL,
+  `img_produto` longblob NOT NULL,
+  `img2_produto` longblob DEFAULT NULL,
+  `img3_produto` longblob DEFAULT NULL,
+  `obs_produto` varchar(255) DEFAULT NULL,
+  `status_produto` varchar(20) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Extraindo dados da tabela `produto`
+--
+
+INSERT INTO `produto` (`id_produto`, `id_categoria_produto`, `nome_produto`, `marca_produto`, `datacadastro_produto`, `lote_produto`, `qtde_produto`, `peso_produto`, `dimensao_produto`, `escala_produto`, `valorunitario_produto`, `valorcusto_produto`, `desconto_produto`, `img_produto`, `img2_produto`, `img3_produto`, `obs_produto`, `status_produto`) VALUES
+(7, 2, 'Estátua Quicksilver - X-men ', 'Marca oficial 211', '2023-07-22 00:17:04', '12', 2, 12.000, '100x100', 1, 99.99, 100.00, 0.00, 0x717569636b312e77656270, 0x717569636b322e77656270, 0x717569636b332e77656270, '', 'ativo'),
+(8, 1, 'Figura Morbius - Marvel - Marv', 'marvel', '2023-07-22 00:20:14', 's2', 2, 10.000, '1', 1, 45.00, 50.00, 10.00, 0x6d6f7262697573322e77656270, 0x6d6f7262697573322e77656270, 0x6d6f7262697573332e77656270, 'w', 'ativo'),
+(10, 1, 'Estátua Iron Man MK 46 - Capta', 'Marca oficial 4', '2023-07-22 00:22:17', '12', 3, 12.000, '100x100', 1, 10.00, 100.00, 0.00, 0x686f6d656d20312e77656270, 0x686f6d656d6e332e77656270, 0x686f6d656e322e77656270, '', 'ativo'),
+(12, 1, 'Estátua Grogu - The Mandaloria', 'Marca oficial 6', '2023-07-22 00:24:06', '12', 1, 12.000, '100x100', 1, 10.00, 100.00, 0.00, 0x796f6461312e6a7067, 0x796f6461322e77656270, 0x796f6461332e77656270, '', 'ativo'),
+(13, 1, 'Figura The Mandalorian and The', 'Marca oficial 7', '2023-07-22 00:26:23', '12', 8, 12.000, '100x100', 1, 110.00, 110.00, 0.00, 0x6d616e6461312e6a7067, 0x6d616e6461322e77656270, 0x6d616e6461332e6a7067, '', 'ativo'),
+(14, 1, 'Estátua The Joker - Multi Part', 'Marca oficial 25', '2023-07-22 00:28:23', '12', 2, 12.000, '100x100', 1, 970.20, 980.00, 1.00, 0x636f72696e6761312e77656270, 0x636f72696e6761322e77656270, 0x636f72696e6761332e77656270, '', 'ativo'),
+(17, 1, 'Estátua Teela Legends - Master', '', '2023-07-22 00:30:56', '', 3, 0.000, '', 0, 10800.00, 12000.00, 10.00, 0x636865312e77656270, 0x636865322e77656270, 0x636865332e77656270, 's', 'ativo'),
+(39, 2, 'Figura Ahsoka Tano - Star Wars', 'sad', '2023-07-22 00:36:23', 'sad', 2, 0.000, 'sad', 0, 45.15, 43.00, -5.00, 0x6631312e77656270, 0x66312e77656270, 0x6631332e77656270, '', 'ativo'),
+(41, 2, 'Estátua Scarlet Witch Premium ', 's', '2023-07-22 00:35:07', '11', 1, 0.000, '2', 2, 58.80, 60.00, 2.00, 0x657363322e6a7067, 0x657363332e77656270, 0x6573322e77656270, '', 'ativo'),
+(42, 1, 'Estátua Loki - Infinity Saga', 'Marca oficial 7', '2023-07-22 00:37:50', '12', 8, 12.000, '100x100', 1, 88.00, 88.00, 0.00, 0x6c312e6a7067, 0x6c322e77656270, 0x6c332e77656270, '', 'ativo'),
+(44, 1, 'Estátua Daredevil - Marvel Com', 's', '2023-07-22 00:39:18', '1', 1, 1.000, '1', 1, 90.09, 91.00, 1.00, 0x64312e77656270, 0x64322e77656270, 0x64332e77656270, '', 'ativo'),
+(47, 1, 'Figura Apocalypse - Marvel ', 'Marca', '2023-07-22 00:41:02', '7', 10, 2.000, '10/32', 5, 270.00, 70.00, 0.00, 0x61312e77656270, 0x61322e77656270, 0x61332e77656270, '', 'ativo'),
+(48, 1, 'Estátua Doctor Octopus - Marve', 'Marca', '2023-07-22 00:45:23', '7', 10, 2.000, '10/32', 5, 270.00, 70.00, 0.00, 0x30312e77656270, 0x30332e77656270, 0x6f322e77656270, '', 'ativo'),
+(49, 1, 'Galactus - Marvel', 'Marca', '2023-07-22 00:47:06', '7', 10, 2.000, '10/32', 5, 78.00, 78.00, 0.00, 0x67312e77656270, 0x67322e77656270, 0x67332e77656270, '', 'ativo'),
+(50, 1, ' Estátua Ant-Man', 'Marca', '2023-07-22 00:48:49', '7', 10, 2.000, '10/32', 5, 54.00, 60.00, 10.00, 0x666f312e77656270, 0x666f322e77656270, 0x666f332e77656270, '', 'ativo'),
+(51, 1, 'Estátua Thor The Bronze Age - ', 'Marca', '2023-07-22 00:50:24', '7', 10, 2.000, '10/32', 5, 8280.00, 9200.00, 10.00, 0x74312e77656270, 0x74322e77656270, 0x74332e77656270, '', 'ativo'),
+(52, 1, 'Figura Thanos (Final Battle Ed', 'Marca', '2023-07-22 00:51:53', '7', 10, 2.000, '10/32', 5, 45.00, 45.00, 0.00, 0x7461312e77656270, 0x7461322e77656270, 0x7461332e77656270, '', 'ativo'),
+(53, 1, 'Estátua Ultraman Artlized', 'Marca', '2023-07-22 00:53:18', '7', 10, 2.000, '10/32', 5, 77.00, 77.00, 0.00, 0x75312e77656270, 0x75322e77656270, 0x75332e77656270, '', 'ativo'),
+(54, 1, 'Figura Batman Ninja 2.0', 'Marca', '2023-07-22 00:54:50', '7', 10, 2.000, '10/32', 5, 70.20, 78.00, 10.00, 0x62312e6a7067, 0x62322e6a7067, 0x62332e77656270, '', 'ativo'),
+(55, 1, 'Figura Harley Quinn', 'Marca', '2023-07-22 00:57:28', '7', 10, 2.000, '10/32', 5, 60.30, 67.00, 10.00, 0x6172312e77656270, 0x6172322e77656270, 0x6172332e77656270, '', 'ativo'),
+(56, 1, ' Estátua Nightcrawler - X-Men', 'Marca', '2023-07-22 00:58:58', '7', 10, 2.000, '10/32', 5, 34.00, 34.00, 0.00, 0x6e312e77656270, 0x6e322e77656270, 0x6e332e77656270, '', 'ativo'),
+(57, 1, 'Estátua Magneto - Marvel', 'Marca', '2023-07-22 01:00:50', '7', 10, 2.000, '10/32', 5, 68.40, 76.00, 10.00, 0x6d312e77656270, 0x6d322e77656270, 0x6d332e77656270, '', 'ativo'),
+(58, 1, 'Space Jam', 'Marca', '2023-07-21 03:00:00', '7', 10, 2.000, '10/32', 5, 75.20, 80.00, 6.00, 0x7765312e77656270, 0x7765322e77656270, 0x7765332e77656270, '', 'ativo'),
+(59, 1, 'Estátua Ghost Rider - Ghost Ri', 'Marca', '2023-07-21 03:00:00', '7', 10, 2.000, '10/32', 5, 69.00, 69.00, 0.00, 0x676f332e77656270, 0x6773322e77656270, 0x676f332e77656270, '', 'ativo'),
+(60, 1, ' Estátua Venom - Venom 2: Let ', 'ss', '2023-07-22 01:05:47', 's3', 1, 1.000, '1', 1, 76.44, 78.00, 2.00, 0x766573312e77656270, 0x766573322e77656270, 0x766573332e77656270, '', 'ativo'),
+(61, 2, 'Figura Kakashi Hatake The Fame', 'ss', '2023-07-22 01:06:09', 's3', 1, 1.000, '1', 1, 71.54, 73.00, 2.00, 0x6666312e77656270, 0x6666322e77656270, 0x6666332e77656270, '', 'ativo'),
+(62, 2, 'tet', 's', '2023-07-22 01:08:13', '1', 1, 1.000, '1', 1, 53.90, 55.00, 2.00, 0x7777312e77656270, 0x7777322e77656270, 0x7777332e77656270, '', 'ativo'),
+(63, 1, 'tet2', 's', '2023-07-18 03:00:00', '1', 1, 1.000, '1', 1, 4.90, 5.00, 2.00, 0x6b7261746f732e6a7067, 0x6775617264696f65732e6a7067, 0x6d697a75636f2e6a7067, '', 'ativo'),
+(64, 1, 'tet3', 's', '2023-07-19 00:13:14', '1', 1, 1.000, '1', 1, 4.90, 5.00, 2.00, 0x66656e69782e6a7067, 0x6d697a75636f2e6a7067, 0x64656d6f6c69646f722e6a7067, '', 'ativo'),
+(65, 1, 'Moon Knight', 'ss', '2023-07-19 23:24:08', 's3', 1, 1.000, '1', 1, 680.00, 190.00, 2.00, 0x6d6f6f6e206b6e6967687420312e77656270, 0x6d6f6f6e206b6e6967687420322e77656270, 0x6d6f6f6e206b6e6967687420332e77656270, '', 'ativo'),
+(66, 1, ' Bloodsport', 'ss', '2023-07-19 23:26:45', 's3', 1, 1.000, '1', 1, 890.00, 190.00, 2.00, 0x426c6f6f6473706f727420312e77656270, 0x426c6f6f6473706f727420322e77656270, 0x426c6f6f6473706f727420332e77656270, '', 'ativo'),
+(67, 1, 'Batman Knightmare', 'ss', '2023-07-19 23:27:57', 's3', 1, 1.000, '1', 1, 1200.00, 190.00, 2.00, 0x4261746d616e204b6e696768746d61726520312e77656270, 0x4261746d616e204b6e696768746d6172652020322e77656270, 0x4261746d616e204b6e696768746d61726520332e77656270, '', 'ativo'),
+(68, 1, 'Scorpion', 'ss', '2023-07-19 23:29:12', 's3', 1, 1.000, '1', 1, 890.00, 190.00, 2.00, 0x53636f7270696f6e20312e77656270, 0x53636f7270696f6e20322e77656270, 0x53636f7270696f6e20332e77656270, '', 'ativo'),
+(69, 1, 'Black Widow', 'ss', '2023-07-19 23:34:20', 's3', 1, 1.000, '1', 1, 3600.00, 680.00, 2.00, 0x426c61636b205769646f7720312e77656270, 0x426c61636b205769646f7720322e77656270, 0x426c61636b205769646f7720332e77656270, '', 'ativo'),
+(70, 1, 'Skywalker Combat Ver', 'ss', '2023-07-19 23:37:33', 's3', 50, 1.000, '1', 1, 186.20, 190.00, 2.00, 0x536b7977616c6b657220436f6d626174205665722e77656270, 0x536b7977616c6b657220436f6d6261742056657220322e77656270, 0x536b7977616c6b657220436f6d6261742056657220332e77656270, '', 'ativo'),
+(71, 1, 'The Joker Deluxe', 'ss', '2023-07-20 00:01:13', 's3', 50, 1.000, '1', 1, 860.00, 190.00, 2.00, 0x546865204a6f6b65722044656c7578652e77656270, 0x546865204a6f6b65722044656c75786520322e77656270, 0x546865204a6f6b65722044656c75786520332e77656270, '', 'ativo'),
+(72, 1, 'Voldemort and Nagini', 'ss', '2023-07-20 00:03:37', 's3', 50, 1.000, '1', 1, 860.00, 190.00, 2.00, 0x566f6c64656d6f727420616e64204e6167696e692e77656270, 0x566f6c64656d6f727420616e64204e6167696e6920322e77656270, 0x566f6c64656d6f727420616e64204e6167696e6920332e77656270, '', 'ativo'),
+(73, 1, 'Old Man Logan', 'ss', '2023-07-20 00:04:58', 's3', 50, 1.000, '1', 1, 860.00, 190.00, 2.00, 0x4f6c64204d616e204c6f67616e2e77656270, 0x4f6c64204d616e204c6f67616e20322e77656270, 0x4f6c64204d616e204c6f67616e20332e77656270, '', 'ativo'),
+(74, 1, 'Cyclops Unleashed', 'ss', '2023-07-20 00:06:25', 's3', 50, 1.000, '1', 1, 860.00, 190.00, 2.00, 0x4379636c6f707320556e6c6561736865642e77656270, 0x4379636c6f707320556e6c65617368656420322e77656270, 0x4379636c6f707320556e6c65617368656420332e77656270, '', 'ativo'),
+(75, 1, 'Vision - WandaVision', 'ss', '2023-07-20 00:08:16', 's3', 50, 1.000, '1', 1, 860.00, 190.00, 2.00, 0x566973696f6e202d2057616e6461566973696f6e2e77656270, 0x566973696f6e202d2057616e6461566973696f6e20322e77656270, 0x566973696f6e202d2057616e6461566973696f6e20332e77656270, '', 'ativo'),
+(76, 1, 'Man Mark XLII', 'ss', '2023-07-20 00:10:20', 's3', 50, 1.000, '1', 1, 860.00, 190.00, 2.00, 0x4d616e204d61726b20584c49492e77656270, 0x4d616e204d61726b20584c494920322e77656270, 0x4d616e204d61726b20584c494920332e77656270, '', 'ativo'),
+(77, 1, 'Iron Man Illusion', 'ss', '2023-07-20 00:12:45', 's3', 50, 1.000, '1', 1, 860.00, 190.00, 2.00, 0x49726f6e204d616e20496c6c7573696f6e2e77656270, 0x49726f6e204d616e20496c6c7573696f6e20322e77656270, 0x49726f6e204d616e20496c6c7573696f6e20332e77656270, '', 'ativo'),
+(78, 1, 'Witch - X-men', 'ss', '2023-07-20 00:14:12', 's3', 50, 1.000, '1', 1, 860.00, 190.00, 2.00, 0x5769746368202d20582d6d656e2e706e67, 0x5769746368202d20582d6d656e20322e77656270, 0x5769746368202d20582d6d656e20332e77656270, '', 'ativo'),
+(79, 1, 'Kurihana Ochi Kanao', 'ss', '2023-07-20 00:15:21', 's3', 50, 1.000, '1', 1, 860.00, 190.00, 2.00, 0x4b75726968616e61204f636869204b616e616f2e77656270, 0x4b75726968616e61204f636869204b616e616f20322e77656270, 0x4b75726968616e61204f636869204b616e616f20332e77656270, '', 'ativo'),
+(80, 1, 'Johnny Silverhand', 'ss', '2023-07-19 03:00:00', 's3', 50, 1.000, '1', 1, 860.00, 190.00, 2.00, 0x4a6f686e6e792053696c76657268616e642e77656270, 0x4a6f686e6e792053696c76657268616e6420322e77656270, 0x4a6f686e6e792053696c76657268616e6420332e77656270, '', 'ativo'),
+(81, 1, 'Magneto', 'ss', '2023-07-20 00:18:04', 's3', 50, 1.000, '1', 1, 860.00, 190.00, 2.00, 0x4d61676e65746f2e77656270, 0x4d61676e65746f20322e77656270, 0x4d61676e65746f20332e77656270, '', 'ativo'),
+(82, 1, 'Black Panther', 'ss', '2023-07-20 00:19:44', 's3', 50, 1.000, '1', 1, 860.00, 190.00, 2.00, 0x426c61636b2050616e746865722e77656270, 0x426c61636b2050616e7468657220322e77656270, 0x426c61636b2050616e7468657220332e77656270, '', 'ativo'),
+(83, 1, 'Venom', 'ss', '2023-07-20 00:20:40', 's3', 50, 1.000, '1', 1, 860.00, 190.00, 2.00, 0x56656e6f6d2e77656270, 0x56656e6f6d20322e77656270, 0x56656e6f6d20332e77656270, '', 'ativo'),
+(84, 1, 'Kakashi Hatake', 'ss', '2023-07-20 00:21:33', 's3', 50, 1.000, '1', 1, 860.00, 190.00, 2.00, 0x4b616b6173686920486174616b652e77656270, 0x4b616b6173686920486174616b6520322e77656270, 0x4b616b6173686920486174616b6520332e77656270, '', 'ativo'),
+(85, 1, 'Batman Sonar Suit', 'ss', '2023-07-20 00:23:01', 's3', 50, 1.000, '1', 1, 860.00, 190.00, 2.00, 0x4261746d616e20536f6e617220537569742e77656270, 0x4261746d616e20536f6e6172205375697420322e77656270, 0x4261746d616e20536f6e6172205375697420332e77656270, '', 'ativo'),
+(86, 1, 'Spider-Man Premium Edition', 'ss', '2023-07-20 00:23:48', 's3', 50, 1.000, '1', 1, 860.00, 190.00, 2.00, 0x5370696465722d4d616e205072656d69756d2045646974696f6e2e77656270, 0x5370696465722d4d616e205072656d69756d2045646974696f6e20322e77656270, 0x5370696465722d4d616e205072656d69756d2045646974696f6e20332e77656270, '', 'ativo'),
+(87, 1, 'Hawkeye', 'ss', '2023-07-20 00:24:48', 's3', 50, 1.000, '1', 1, 860.00, 190.00, 2.00, 0x4861776b6579652e77656270, 0x4861776b65796520322e77656270, 0x4861776b65796520332e77656270, '', 'ativo'),
+(88, 2, 'Produto oficial 2', 'Estátua Ayrton Senna and Alain Prost Deluxe - The ', '2023-07-21 03:00:00', '12', 2, 12.000, '100x100', 1, 1000.00, 100.00, 0.00, 0x417972746f6e2e77656270, 0x417972746f6e322e77656270, 0x417972746f6e332e77656270, '', 'ativo');
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `usuario`
+--
+
+CREATE TABLE `usuario` (
+  `id_usuario` int(11) NOT NULL,
+  `nome_usuario` varchar(100) DEFAULT NULL,
+  `cpf_usuario` char(14) DEFAULT NULL,
+  `login_usuario` char(50) DEFAULT NULL,
+  `senha_usuario` char(50) DEFAULT NULL,
+  `img_usuario` longblob DEFAULT NULL,
+  `email_usuario` varchar(30) DEFAULT NULL,
+  `data_nasc_usuario` datetime DEFAULT NULL,
+  `endereco_usuario` varchar(30) DEFAULT NULL,
+  `numero_usuario` int(11) DEFAULT NULL,
+  `compl_usuario` decimal(10,3) DEFAULT NULL,
+  `bairro_usuario` varchar(100) DEFAULT NULL,
+  `cep_usuario` char(9) DEFAULT NULL,
+  `obs_usuario` varchar(255) DEFAULT NULL,
+  `status_usuario` varchar(20) DEFAULT NULL,
+  `estado_usuario` varchar(2) NOT NULL,
+  `cidade_usuario` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Extraindo dados da tabela `usuario`
+--
+
+INSERT INTO `usuario` (`id_usuario`, `nome_usuario`, `cpf_usuario`, `login_usuario`, `senha_usuario`, `img_usuario`, `email_usuario`, `data_nasc_usuario`, `endereco_usuario`, `numero_usuario`, `compl_usuario`, `bairro_usuario`, `cep_usuario`, `obs_usuario`, `status_usuario`, `estado_usuario`, `cidade_usuario`) VALUES
+(1, 'Adm', '123.123.123-12', 'adm', 'adm', 0x746974652e6a7067, 'adm@gmail.com', '2023-07-12 00:00:00', 'endereco 1', 12, 0.000, 'endereco 1', '12345-678', '', '', '', ''),
+(2, 'Gabriel', '45612378925', 'jrgabriel', 'gabriel280203', 0x726f6765722e6a7067, 'gabrieldeiro2018@gmail.com', '2003-02-28 00:00:00', 'Rua Primavera 535', 535, 0.000, 'Rua Primavera 535', '07629374', '', '', '', ''),
+(3, 'mauci', '4532165', 'abril', 'abril', NULL, 'eee@ddd.com', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '', ''),
+(5, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ss', 0, 0.000, 's', '654156', NULL, NULL, 's', 's'),
+(6, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ss', 0, 0.000, 's', '654156', NULL, NULL, 's', 's'),
+(35, 'sss', 'sssssss', 'sssssss', 'sss', NULL, 'sss@erf', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '', ''),
+(49, 'ultimoteste', NULL, 'ultimoteste', '123', NULL, 'ultimoteste@asasa', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '', ''),
+(54, 'Jeffao da pica de ferro', '13141414141', 'JEFFPICUDO', '123456', 0x687164656661756c742e6a7067, 'asbafba@gmail.com', '2023-07-11 00:00:00', 'Rua Seis A', 80, 0.000, 'Parque Continental IV', '07124706', NULL, 'Ativo', 'SP', 'Guarulhos'),
+(55, 'luiz', '44963867800', 'luiz', '123', 0x726f6765722e6a7067, 'lzeduardo775@gmail.com', '1996-10-25 00:00:00', 'Rua Mogi das Cruzes', 161, 0.000, 'Gopoúva', '07022010', NULL, 'Ativo', 'SP', 'Guarulhos'),
+(56, 'fsafasf', NULL, 'tafasfas', '213', NULL, 'fsafasfsa@fsafasfas', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '', ''),
+(58, 'fsafasf', NULL, 'tafasfas14421', '213', NULL, 'fsafasfsa@fsafasfas', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '', ''),
+(59, 'Gustavo', '120.361.928-36', 'Gusta', 'gustavo', 0x6b697262792e706e67, 'tgustavo@blabla.com', '2004-04-08 00:00:00', 'Rua Edmundo Pereira', 120, 0.000, 'Jardim Fortaleza', '07153-050', NULL, 'Ativo', 'SP', 'Guarulhos'),
+(61, 'Gustavo Tosta', '109.273.109-27', 'Gustavo', 'Gusta', 0x6b697262792070616f2e61766966, 'tgustavo@outlook.com', '2004-08-04 00:00:00', 'Rua Edmundo Pereira', 111, 0.000, 'Jardim Fortaleza', '07153-050', NULL, 'Ativo', 'SP', 'Guarulhos'),
+(62, 'Homer Simpson', '123.709.120-36', 'Homer', 'Simpson', 0x31333237303939363036313933373835363134312e706e67, 'dooh@outook.com', '0000-00-00 00:00:00', 'Rua Evergreen Terrace', 142, 0.000, 'Chernobyl', '12412-512', NULL, 'Ativo', 'Al', 'Springfield'),
+(64, 'mayco', '147.357.951-12', 'as', 'as', '', 'sss@sss.comsa', '2023-07-12 00:00:00', 'Rua Soldado José Fernandes da ', 20, 0.000, 'Vila Rosália', '07070-020', '', 'ativo', 'SP', 'Guarulhos'),
+(65, 'niver', '124.124.125-41', 'Niver', 'niver', 0x74756d626c725f6f3333317a637a4a3830317478333274746f335f3235302e706e67, 'niver@niver.com', '2023-07-19 00:00:00', 'Rua Edmundo Pereira', 111, 0.000, 'Jardim Fortaleza', '07153-050', NULL, 'Ativo', 'SP', 'Guarulhos'),
+(67, 'Link', '124.125.125-12', 'Link', 'link', 0x3131353838312d6f662d7468652d6c696e6b2d6c6567656e642d7a656c64612e706e67, 'link@hotmail.com', '2023-07-20 00:00:00', 'Rua Edmundo Pereira', 120, 0.000, 'Jardim Fortaleza', '07153-050', NULL, 'Ativo', 'SP', 'Guarulhos'),
+(68, 'Gabriel Oriedd', '123.123.123-31', 'oriedd', 'oried123', 0x70696e6775696e735f6d6164616761736361725f6963656c616e645f6261725f64655f67656c6f2d363430783438302e6a7067, 'gabrieldeiro2015@outlook.com', '2003-02-28 00:00:00', 'Rua da Primavera', 123, 0.000, 'Capoavinha', '07629-374', NULL, 'Ativo', 'Ru', 'SP'),
+(69, 'Cassio Ramos', '151.561.561-65', 'Cassio', 'cassio123', 0x43617373696f6e61746163612e6a7067, 'cassio@cassio.com', '2023-07-20 00:00:00', 'Rua da Primavera', 0, 0.000, 'Capoavinha', '07629-374', NULL, 'Ativo', 'SP', 'Mairiporã'),
+(70, 'niver', '615.615.615-61', 'niver2', 'niver', 0x6b697262792e706e67, 'niver@niver', '2003-07-21 00:00:00', 'niver', 123, 0.000, 'NIVER', '06515-615', NULL, 'Ativo', 'NI', 'NIVER'),
+(71, 'AAAAAAAAAAAAAAAAAAAA', '', 'teste', 'teste', 0x70696b616368752e6a7067, 'testeCaracteres@outlook.com', NULL, '', 0, NULL, '', '', NULL, NULL, '', ''),
+(72, 'bananaaaaaaaaaaaaaaa', NULL, 'bananaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa', 'banana', NULL, 'banana@banana.cmo', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '', ''),
+(73, 'bananaaaaaaaaaaaaaaa', '86912869124896', 'banana2', 'banana', 0x62616e616e612e706e67, 'bana@banana.com', NULL, '', 0, NULL, '', '', NULL, NULL, '', ''),
+(74, 'Peeeeeeeeeeedrinho', '691.246.814-28', 'PedroReiDelas', 'pedro', 0x6b69642e6a7067, 'pedrinho@outlook.com.br', '2004-02-08 00:00:00', 'Rua Edmundo Pereira', 111, 0.000, 'Jardim Fortaleza', '07153-050', NULL, 'Ativo', 'Ru', 'SP');
+
+--
+-- Índices para tabelas despejadas
+--
+
+--
+-- Índices para tabela `categoria`
+--
+ALTER TABLE `categoria`
+  ADD PRIMARY KEY (`id_categoria`);
+
+--
+-- Índices para tabela `compra`
+--
+ALTER TABLE `compra`
+  ADD PRIMARY KEY (`id_compra`),
+  ADD KEY `FK_ID_Usuario_Compra` (`id_usuario_compra`);
+
+--
+-- Índices para tabela `funcionario`
+--
+ALTER TABLE `funcionario`
+  ADD PRIMARY KEY (`id_funcionario`),
+  ADD UNIQUE KEY `login_funcionario` (`login_funcionario`),
+  ADD UNIQUE KEY `cpf_funcionario` (`cpf_funcionario`);
+
+--
+-- Índices para tabela `itemproduto`
+--
+ALTER TABLE `itemproduto`
+  ADD PRIMARY KEY (`id_itemproduto`),
+  ADD KEY `FK_ID_Produto_ItemProduto` (`id_produto_itemproduto`),
+  ADD KEY `FK_ID_Compra_ItemProduto` (`id_compra_itemproduto`);
+
+--
+-- Índices para tabela `produto`
+--
+ALTER TABLE `produto`
+  ADD PRIMARY KEY (`id_produto`),
+  ADD KEY `FK_ID_Categoria_Produto` (`id_categoria_produto`);
+
+--
+-- Índices para tabela `usuario`
+--
+ALTER TABLE `usuario`
+  ADD PRIMARY KEY (`id_usuario`),
+  ADD UNIQUE KEY `cpf_usuario` (`cpf_usuario`),
+  ADD UNIQUE KEY `login_usuario` (`login_usuario`);
+
+--
+-- AUTO_INCREMENT de tabelas despejadas
+--
+
+--
+-- AUTO_INCREMENT de tabela `categoria`
+--
+ALTER TABLE `categoria`
+  MODIFY `id_categoria` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+
+--
+-- AUTO_INCREMENT de tabela `compra`
+--
+ALTER TABLE `compra`
+  MODIFY `id_compra` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=354;
+
+--
+-- AUTO_INCREMENT de tabela `funcionario`
+--
+ALTER TABLE `funcionario`
+  MODIFY `id_funcionario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+
+--
+-- AUTO_INCREMENT de tabela `itemproduto`
+--
+ALTER TABLE `itemproduto`
+  MODIFY `id_itemproduto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=128;
+
+--
+-- AUTO_INCREMENT de tabela `produto`
+--
+ALTER TABLE `produto`
+  MODIFY `id_produto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=89;
+
+--
+-- AUTO_INCREMENT de tabela `usuario`
+--
+ALTER TABLE `usuario`
+  MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=75;
+
+--
+-- Restrições para despejos de tabelas
+--
+
+--
+-- Limitadores para a tabela `compra`
+--
+ALTER TABLE `compra`
+  ADD CONSTRAINT `FK_ID_Usuario_Compra` FOREIGN KEY (`id_usuario_compra`) REFERENCES `usuario` (`id_usuario`);
+
+--
+-- Limitadores para a tabela `itemproduto`
+--
+ALTER TABLE `itemproduto`
+  ADD CONSTRAINT `FK_ID_Compra_ItemProduto` FOREIGN KEY (`id_compra_itemproduto`) REFERENCES `compra` (`id_compra`),
+  ADD CONSTRAINT `FK_ID_Produto_ItemProduto` FOREIGN KEY (`id_produto_itemproduto`) REFERENCES `produto` (`id_produto`);
+
+--
+-- Limitadores para a tabela `produto`
+--
+ALTER TABLE `produto`
+  ADD CONSTRAINT `FK_ID_Categoria_Produto` FOREIGN KEY (`id_categoria_produto`) REFERENCES `categoria` (`id_categoria`);
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

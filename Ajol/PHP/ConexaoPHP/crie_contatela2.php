@@ -33,10 +33,6 @@
                     cpf_usuario=:cpf_usuario,
                     data_nasc_usuario=:data_nasc_usuario
                     where id_usuario=:id_usuario
-
-                    
-                            
-
             ");
             
             $sql->execute(array(

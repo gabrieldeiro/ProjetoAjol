@@ -11,6 +11,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="shortcut icon" href="../../../resto/icone.png" type="image/x-icon">
+
     <?php
     include_once('../ConexaoPHP/conexao.php');
     ?>
@@ -34,7 +36,7 @@
         <div class="row">
             <div class="col-sm-3">
             </div>
-            <div class="col-md-6 border mt-5 bg-white" style="border-radius: 25px;">
+            <div class="col-md-6 border mt-3 bg-white" style="border-radius: 25px;">
                 <form action="" method="post" enctype="multipart/form-data">
                 <input type="text" name="txtIdtemp" hidden id="txtIdtemp" value="<?= $_GET['id'] ?>">
                     <div class="row text-center">
