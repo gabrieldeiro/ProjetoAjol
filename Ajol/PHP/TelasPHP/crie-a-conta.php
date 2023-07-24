@@ -11,6 +11,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="shortcut icon" href="../../../resto/icone.png" type="image/x-icon">
+
     <?php
     include_once('../ConexaoPHP/conexao.php');
     ?>
@@ -55,7 +57,7 @@
                     <div class="row mt-3">
                         <div class="col-sm-12">
                             <div class="col-sm-12">
-                                <input type="text" class="form-control" name="txtNome" id="txtNome" placeholder="Nome">
+                                <input type="text" class="form-control" name="txtNome" id="txtNome" maxlength="20" placeholder="Nome">
                             </div>
                         </div>
                     </div>

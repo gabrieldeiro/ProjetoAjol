@@ -149,9 +149,9 @@
     } 
     else
     {
-        header('Location:../TelasPHP/frm_funcionario.php');
+        header('Location:../TelasPHP/sistema.php?tela=funcionario');
     }
 
 ?>
 
-<a href="../TelasPHP/frm_funcionario.php">Voltar</a>
+<a href="../TelasPHP/sistema.php?tela=funcionario">Voltar</a>
