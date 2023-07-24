@@ -22,8 +22,12 @@
         $status_compra = 'FINALIZADO';
         $estagio_compra= ' ';
 
+        //$valortotalf_compra = str_replace(".",",",$valortotal_compra);
+        // echo '<hr>';
+        //echo print_r($_POST);
+        // echo '<hr>';
         // echo print_r($_POST);
-        // return;
+        //return;
 
         try 
         {

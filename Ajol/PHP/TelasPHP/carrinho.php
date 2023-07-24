@@ -263,7 +263,7 @@
                         <h5>Produtos (<?= $contteste ?>)</h5>
                     </div>
                     <div class="col-sm-6 text-end">
-                        <input type="text" hidden name="txtValorf" value="<?=number_format($vltotal, 2, ',', '.')?>">
+                        <input type="text" hidden name="txtValorf" value="<?=number_format($vltotal, 2, '.', '')?>">
                         <h5>R$ <?=number_format($vltotal, 2, ',', '.')?></h5>
                     </div>
                 </div>
@@ -290,7 +290,7 @@
                             </h4>
                         </div>
                         <div class="col-sm-9">
-                            <input type="text-success" hidden name="txtValortotal" value="<?= number_format($vltotalf, 2, '', '.')?>">
+                            <input type="text-success" hidden name="txtValortotal" value="<?= number_format($vltotalf, 2, '.', '')?>">
                             <h4 class="text-success"><?= number_format($vltotalf, 2, ',', '.')?></h4>
                         </div>
                     </div>
