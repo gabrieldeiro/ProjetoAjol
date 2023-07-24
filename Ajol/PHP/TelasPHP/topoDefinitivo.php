@@ -55,6 +55,7 @@
     include_once('../conexaoPHP/conexao.php');
 
     //Frescurinhas de aniversário
+    $corFrufu = false;
     if ($idusuariologin) 
     {
     $sqlAniversario = $conn->query('select data_nasc_usuario from usuario where id_usuario='.$idusuariologin);

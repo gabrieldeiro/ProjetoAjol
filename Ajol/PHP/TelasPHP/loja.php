@@ -24,7 +24,6 @@
     <?php
     include_once('../ConexaoPHP/conexao.php');
     include_once('../ConexaoPHP/loginautenticar.php');
-
     //Frescurinhas de aniversário
     if ($idusuariologin) 
     {
@@ -121,6 +120,7 @@
         <div class="row">
           <?php include_once("topoDefinitivo.php")?>  
         </div>
+
         <!-- CAROSSEL -->
         <div class="row mt-4">
             
