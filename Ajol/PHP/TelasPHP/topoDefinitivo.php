@@ -167,7 +167,7 @@
             <div class="col-sm-5 mt-4">
                 <input type="text" placeholder="Pesquisa..." class="form-control ms-2 mt-1" style="border-radius: 25px;" name="txtPesquisa" id="txtPesquisa">
             </div>
-            <div class="col-sm-2 mt-2">
+            <div class="col-sm-2 mt-4">
                 <p style="display: inline-block; color:white">
                     <a href="" style="text-decoration: none;">
                         <img src="../../img/icone-loupe-gris.png" class="img-fluid mb-2 me-2 " style="width: 33px; height:30px; text-decoration:none" alt="">
