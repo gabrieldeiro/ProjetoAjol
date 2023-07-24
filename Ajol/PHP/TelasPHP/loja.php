@@ -117,14 +117,15 @@
 
 <body>
     <div class="container-fluid" style="background-color: #404040;">
+        <!-- TOPO -->
         <div class="row">
-            <!-- TOPO -->
-            <?php include_once("topoDefinitivo.php") ?>
+          <?php include_once("topoDefinitivo.php")?>  
         </div>
         <!-- CAROSSEL -->
         <div class="row mt-4">
+            
             <div class="col-sm-1">
-
+    
             </div>
             <div class="col-sm-2 bg-gradient" style="background-color: #783ebf; border-top-left-radius:30px; border-bottom-left-radius:30px">
 
