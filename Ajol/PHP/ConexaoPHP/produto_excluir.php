@@ -14,7 +14,7 @@
             ");
             
             $sql->execute(array(
-                ':id_produto'=> $id
+                ':id_produto'=> $idt
             ));
 
             if($sql->rowCount()>=1)
