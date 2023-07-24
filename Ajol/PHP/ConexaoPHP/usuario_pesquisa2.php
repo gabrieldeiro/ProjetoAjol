@@ -42,8 +42,8 @@
                 $numeroUsuario=$row[9];
                 $complementoUsuario=$row[10];
                 $cepUsuario=$row[12];
-                $cidadeUsuario =$row[16];
-                $estadoUsuario = $row[15];
+                $cidadeUsuario =$row[15];
+                $estadoUsuario = $row[16];
                 $emailUsuario=$row[6];
                 $obsUsuario=$row[13];
                 $statusUsuario=$row[14];
