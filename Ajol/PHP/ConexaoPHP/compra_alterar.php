@@ -12,7 +12,7 @@
 
         $id_compra = $idCompra;
         $id_usuario_compra = $idusuariologin;
-        $valortotal_compra = $_POST['txtValortotal'];
+        $valortotal_compra = $_POST['txtValorf'];
         $qtde_compra = $_POST['txtQtde'];
         $datafechamento_compra = $dataf;
         $formadepagamento_compra = ' ';
@@ -21,9 +21,6 @@
         $obs_compra= ' ';
         $status_compra = 'FINALIZADO';
         $estagio_compra= ' ';
-
-        // echo print_r($_POST);
-        // return;
 
         try 
         {
@@ -46,9 +43,6 @@
 
             ");
 
-            // echo $valortotal_compra;
-            // return;
-
             $sql->execute(array(
                 ':id_compra'=>$id_compra,
                 ':id_usuario_compra'=>$id_usuario_compra,
@@ -61,6 +55,7 @@
                 ':obs_compra'=>$obs_compra,
                 ':status_compra'=>$status_compra,
                 ':estagio_compra'=>$estagio_compra
+                
             ));
                 
             if($sql->rowCount()>=1)

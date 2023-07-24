@@ -1,4 +1,3 @@
-<link rel="shortcut icon" href="../../../resto/icone.png" type="image/x-icon">
  <div class="row" style="background-color:#783ebf;">
         <div class="col-sm-12 mt-3 mb-3">
             <div class="row">

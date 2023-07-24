@@ -10,19 +10,16 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-  <link rel="shortcut icon" href="../../../resto/icone.png" type="image/x-icon">
   <link rel="stylesheet" href="../css/style.css">
   <?php
   include_once('../ConexaoPHP/conexao.php');
   ?>
 </head>
 
-<body style="background-color: #404040;">
+<body style="background-color: grey!important;">
   <?php
   include_once('topo2.php');
-
   $mensagem = '';
-  
   if ($_POST) {
     include_once('../ConexaoPHP/conexao.php');
     $login = $_POST['txtlogin'];
@@ -33,12 +30,25 @@
       if ($sql->rowcount() == 1) {
         session_start();
 
+        //Login Temporário, remover depois
+        
+        if ($login == 'adm' and $senha == '123') {
+          foreach ($sql as $row) {
+            $_SESSION['id_usuario'] = $row[0];
+            $_SESSION['login_usuario'] = $row[1];
+            $_SESSION['senha_usuario'] = $row[4];
+
+            header('Location:sistema.php');
+            die;
+          }
+        }
+
         foreach ($sql as $row) {
           $_SESSION['id_usuario'] = $row[0];
           $_SESSION['login_usuario'] = $row[1];
           $_SESSION['senha_usuario'] = $row[4];
 
-          header('Location:loja.php?pag=');
+          header('Location:loja.php');
         }
       } else {
         $mensagem = 'Erro, usuário ou senha inválido';
@@ -60,19 +70,18 @@
           <form class="centro" class="card-body cardbody-color p-lg-5" action="" method="post">
 
             <div class="text-center">
-              <img src="../../../resto/icone.png" class="img-fluid w-25 p-3 my-3" width="200px" alt="profile">
+              <img src="../../../resto/Logo-prototipo.png" class="img-fluid p-3 my-3" width="200px" alt="profile">
             </div>
 
             <div class="col-sm-12 mb-3">
-              <input type="text" class="form-control" id="txtlogin" name="txtlogin" placeholder="Login">
+              <input type="text" class="form-control" id="txtlogin" name="txtlogin" placeholder="Nome">
             </div>
             <div class="col-sm-12 mb-3">
               <input type="password" class="form-control" id="txtsenha" name="txtsenha" placeholder="Senha">
 
             </div>
-              <p><?=$mensagem?></p>
             <div class="text-center">
-              
+
               <button class="btn btn-info btn-md" value="Entrar" formaction="index.php">Login</button>
               <!-- botao de entrar na tela loja index -->
 
@@ -90,9 +99,9 @@
                 <button type="button" class="btn btn-danger mt-2 mb-3">
                   <a style="color:white" href="esqueceusenha.php">Esqueceu a senha?</button>
                 </a>
-                <a href="indexadm.php">
-                <button type="button" style="color:white" class="btn btn-warning mb-2" >Login administrativo</button>
-                </a>
+                <button type="button" class="btn btn-warning mb-2" >
+                  <a href="sistema.php" style="color:white">Login administrativo</a>
+                </button>
               </div>
           </form>
         </div>

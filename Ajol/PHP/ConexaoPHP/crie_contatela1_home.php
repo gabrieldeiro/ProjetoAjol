@@ -20,6 +20,7 @@
                 insert into usuario
                 (
 	                nome_usuario,
+                   
                     login_usuario,
                     senha_usuario,
                     email_usuario
@@ -36,6 +37,7 @@
             
             $sql->execute(array(
                 ':nome_usuario'=>$nome,
+                
                 ':login_usuario'=>$login,
                 ':senha_usuario'=>$senha,
                 ':email_usuario'=>$email

@@ -1,8 +1,6 @@
 <?php
     include_once('conexao.php');
 
-    $idt = $_GET['id'];
-
     if($_POST)
     {
         $id = $_POST['txtId'];
@@ -30,8 +28,8 @@
     }
     else
     {
-        header('location:../TelasPHP/sistema.php?tela=produto&id='.$idt);
+        header('location:../TelasPHP/sistema.php?tela=produto');
     }
 ?>
 
-<a href="../TelasPHP/sistema.php?tela=produto&id=<?=$idt?>">Voltar</a>
+<a href="../TelasPHP/sistema.php?tela=produto">Voltar</a>

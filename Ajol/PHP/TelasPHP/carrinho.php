@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <link rel="shortcut icon" href="../../../resto/icone.png" type="image/x-icon">
     <link rel="stylesheet" href="../css/style.css">
     <?php
     include_once('../ConexaoPHP/conexao.php');
@@ -20,14 +19,9 @@
 
 <body>
     <style>
-        .botLimpo 
-        {
+        .botLimpo {
             border: none;
             background-color: transparent;
-        }
-        body
-        {
-            background-color: #404040;
         }
     </style>
 
@@ -290,8 +284,8 @@
                             </h4>
                         </div>
                         <div class="col-sm-9">
-                            <input type="text-success" hidden name="txtValortotal" value="<?= number_format($vltotalf, 2, '', '.')?>">
-                            <h4 class="text-success"><?= number_format($vltotalf, 2, ',', '.')?></h4>
+                            <h4 class="text-success" name="txtValortotal">R$
+                            <?= number_format($vltotalf, 2, ',', '.')?></h4>
                         </div>
                     </div>
                 </div>

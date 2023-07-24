@@ -1,5 +1,4 @@
 <?php include_once('../ConexaoPHP/funcionario_pesquisa.php') ?>
-<link rel="shortcut icon" href="../../../resto/icone.png" type="image/x-icon">
 <style>
     .textarea1 {
         resize: none !important;
@@ -182,7 +181,7 @@
             return;
         }
 
-        formulario.action = "../ConexaoPHP/funcionario_alterar.php";
+        formulario.action = "sistema.php?tela=funcionario";
         formulario.submit();
 
     }
@@ -197,7 +196,7 @@
             return;
         }
 
-        formulario.action = "../ConexaoPHP/funcionario_excluir.php";
+        formulario.action = "sistema.php?tela=funcionario";
         formulario.submit();
 
     }

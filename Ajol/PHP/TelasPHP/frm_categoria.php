@@ -1,4 +1,3 @@
-<link rel="shortcut icon" href="../../../resto/icone.png" type="image/x-icon">
 <?php include_once('../ConexaoPHP/categoria_pesquisa.php') ?>
 
     <form action="" method="post" id="frmcategoria" enctype="multipart/form-data" onsubmit="return false;" style="background-color:darkgray;">
