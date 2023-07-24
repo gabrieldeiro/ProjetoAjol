@@ -1,8 +1,8 @@
 <?php
-$host = "localhost";
+$host = "10.37.46.21";
 $dbn = "ajol";
-$user = "root";
-$pass = "";
+$user = "username";
+$pass = "password";
 
 try
 {
