@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 22-Jul-2023 às 03:09
+-- Tempo de geração: 25-Jul-2023 às 03:10
 -- Versão do servidor: 10.4.28-MariaDB
 -- versão do PHP: 8.2.4
 
@@ -361,10 +361,10 @@ INSERT INTO `compra` (`id_compra`, `id_usuario_compra`, `valortotal_compra`, `qt
 (318, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
 (319, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
 (320, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
-(321, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
-(322, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
-(323, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
-(324, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(321, 1, 880.00, 1, '2023-07-24 20:54:31', ' ', ' ', 0.00, ' ', 'FINALIZADO', ' '),
+(322, 1, 30.00, 1, '2023-07-24 20:28:03', ' ', ' ', 0.00, ' ', 'FINALIZADO', ' '),
+(323, 1, 12726.20, 4, '2023-07-24 20:27:51', ' ', ' ', 0.00, ' ', 'FINALIZADO', ' '),
+(324, 1, 1020.00, 1, '2023-07-24 20:27:13', ' ', ' ', 0.00, ' ', 'FINALIZADO', ' '),
 (325, 69, 4.59, 3, '2023-07-20 21:45:29', ' ', ' ', 0.00, ' ', 'FINALIZADO', ' '),
 (326, 69, 1.42, 2, '2023-07-20 21:46:25', ' ', ' ', 0.00, ' ', 'FINALIZADO', ' '),
 (327, 69, 720.00, 1, '2023-07-20 21:46:59', ' ', ' ', 0.00, ' ', 'FINALIZADO', ' '),
@@ -383,9 +383,9 @@ INSERT INTO `compra` (`id_compra`, `id_usuario_compra`, `valortotal_compra`, `qt
 (340, 2, 1.63, 2, '2023-07-21 20:14:01', ' ', ' ', 0.00, ' ', 'FINALIZADO', ' '),
 (341, 2, 1.46, 1, '2023-07-21 20:18:21', ' ', ' ', 0.00, ' ', 'FINALIZADO', ' '),
 (342, 2, 1.46, 1, '2023-07-21 20:27:33', ' ', ' ', 0.00, ' ', 'FINALIZADO', ' '),
-(343, 2, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(343, 2, 10.88, 2, '2023-07-24 19:27:17', ' ', ' ', 0.00, ' ', 'FINALIZADO', ' '),
 (344, 59, 2.09, 8, '2023-07-21 21:43:01', ' ', ' ', 0.00, ' ', 'FINALIZADO', ' '),
-(345, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(345, 1, NULL, 1, '2023-07-24 20:26:24', ' ', ' ', 0.00, ' ', 'FINALIZADO', ' '),
 (346, 59, 3.78, 7, '2023-07-21 21:45:04', ' ', ' ', 0.00, ' ', 'FINALIZADO', ' '),
 (347, 59, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
 (348, 74, 99280.00, 3, '2023-07-21 21:57:45', ' ', ' ', 0.00, ' ', 'FINALIZADO', ' '),
@@ -393,7 +393,21 @@ INSERT INTO `compra` (`id_compra`, `id_usuario_compra`, `valortotal_compra`, `qt
 (350, 74, 92515.00, 2, '2023-07-21 22:03:42', ' ', ' ', 0.00, ' ', 'FINALIZADO', ' '),
 (351, 74, 1.85, 3, '2023-07-21 22:04:00', ' ', ' ', 0.00, ' ', 'FINALIZADO', ' '),
 (352, 74, 7880.00, 1, '2023-07-21 22:05:03', ' ', ' ', 0.00, ' ', 'FINALIZADO', ' '),
-(353, 74, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL);
+(353, 74, 62880.00, 4, '2023-07-24 19:07:26', ' ', ' ', 0.00, ' ', 'FINALIZADO', ' '),
+(354, 74, 19.33, 4, '2023-07-24 19:08:17', ' ', ' ', 0.00, ' ', 'FINALIZADO', ' '),
+(355, 74, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(356, 2, 13535.00, 2, '2023-07-24 19:27:41', ' ', ' ', 0.00, ' ', 'FINALIZADO', ' '),
+(357, 2, 10.82, 1, '2023-07-24 19:29:15', ' ', ' ', 0.00, ' ', 'FINALIZADO', ' '),
+(358, 2, NULL, 1, '2023-07-24 19:32:31', ' ', ' ', 0.00, ' ', 'FINALIZADO', ' '),
+(359, 2, 122000.00, 1, '2023-07-24 19:33:15', ' ', ' ', 0.00, ' ', 'FINALIZADO', ' '),
+(360, 2, 1.00, 1, '2023-07-24 19:36:33', ' ', ' ', 0.00, ' ', 'FINALIZADO', ' '),
+(361, 2, 2.00, 2, '2023-07-24 19:44:47', ' ', ' ', 0.00, ' ', 'FINALIZADO', ' '),
+(362, 75, 7880.00, 1, '2023-07-24 19:43:38', ' ', ' ', 0.00, ' ', 'FINALIZADO', ' '),
+(363, 75, 1.96, 1, '2023-07-24 19:45:59', ' ', ' ', 0.00, ' ', 'FINALIZADO', ' '),
+(364, 2, NULL, 1, '2023-07-24 20:25:58', ' ', ' ', 0.00, ' ', 'FINALIZADO', ' '),
+(365, 75, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(366, 2, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL),
+(367, 80, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ATIVO', NULL);
 
 -- --------------------------------------------------------
 
@@ -574,7 +588,38 @@ INSERT INTO `itemproduto` (`id_itemproduto`, `id_produto_itemproduto`, `id_compr
 (124, 66, 351, 1, 890.00, 890.00, NULL, NULL),
 (125, 68, 351, 1, 890.00, 890.00, NULL, NULL),
 (126, 50, 351, 1, 54.00, 54.00, NULL, NULL),
-(127, 41, 352, 1, 58.80, 58.80, NULL, NULL);
+(127, 41, 352, 1, 58.80, 58.80, NULL, NULL),
+(128, 10, 353, 1, 10.00, 10.00, NULL, NULL),
+(129, 41, 353, 1, 58.80, 58.80, NULL, NULL),
+(130, 48, 353, 1, 270.00, 270.00, NULL, NULL),
+(131, 48, 353, 1, 270.00, 270.00, NULL, NULL),
+(132, 39, 354, 1, 45.15, 45.15, NULL, NULL),
+(133, 17, 354, 1, 10800.00, 10800.00, NULL, NULL),
+(134, 51, 354, 1, 8280.00, 8280.00, NULL, NULL),
+(135, 70, 354, 1, 186.20, 186.20, NULL, NULL),
+(136, 41, 343, 1, 58.80, 58.80, NULL, NULL),
+(137, 17, 343, 1, 10800.00, 10800.00, NULL, NULL),
+(138, 39, 356, 1, 45.15, 45.15, NULL, NULL),
+(139, 54, 356, 1, 70.20, 70.20, NULL, NULL),
+(140, 17, 357, 1, 10800.00, 10800.00, NULL, NULL),
+(141, 17, 358, 1, 10800.00, 10800.00, NULL, NULL),
+(142, 67, 359, 1, 1200.00, 1200.00, NULL, NULL),
+(143, 88, 360, 1, 1000.00, 1000.00, NULL, NULL),
+(144, 88, 361, 1, 1000.00, 1000.00, NULL, NULL),
+(146, 41, 362, 1, 58.80, 58.80, NULL, NULL),
+(147, 88, 361, 1, 1000.00, 1000.00, NULL, NULL),
+(148, 88, 364, 1, 1000.00, 1000.00, NULL, NULL),
+(149, 14, 363, 2, 1940.40, 970.20, NULL, NULL),
+(150, 88, 345, 1, 1000.00, 1000.00, NULL, NULL),
+(151, 88, 324, 1, 1000.00, 1000.00, NULL, NULL),
+(152, 77, 323, 1, 860.00, 860.00, NULL, NULL),
+(153, 17, 323, 1, 10800.00, 10800.00, NULL, NULL),
+(154, 70, 323, 1, 186.20, 186.20, NULL, NULL),
+(155, 75, 323, 1, 860.00, 860.00, NULL, NULL),
+(156, 10, 322, 1, 10.00, 10.00, NULL, NULL),
+(161, 84, 321, 1, 860.00, 860.00, NULL, NULL),
+(162, 75, 367, 1, 860.00, 860.00, NULL, NULL),
+(163, 8, 367, 1, 45.00, 45.00, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -608,34 +653,34 @@ CREATE TABLE `produto` (
 --
 
 INSERT INTO `produto` (`id_produto`, `id_categoria_produto`, `nome_produto`, `marca_produto`, `datacadastro_produto`, `lote_produto`, `qtde_produto`, `peso_produto`, `dimensao_produto`, `escala_produto`, `valorunitario_produto`, `valorcusto_produto`, `desconto_produto`, `img_produto`, `img2_produto`, `img3_produto`, `obs_produto`, `status_produto`) VALUES
-(7, 2, 'Estátua Quicksilver - X-men ', 'Marca oficial 211', '2023-07-22 00:17:04', '12', 2, 12.000, '100x100', 1, 99.99, 100.00, 0.00, 0x717569636b312e77656270, 0x717569636b322e77656270, 0x717569636b332e77656270, '', 'ativo'),
-(8, 1, 'Figura Morbius - Marvel - Marv', 'marvel', '2023-07-22 00:20:14', 's2', 2, 10.000, '1', 1, 45.00, 50.00, 10.00, 0x6d6f7262697573322e77656270, 0x6d6f7262697573322e77656270, 0x6d6f7262697573332e77656270, 'w', 'ativo'),
+(7, 1, 'Estátua Quicksilver - X-men ', 'Marca oficial 211', '2023-07-24 03:00:00', '12', 2, 12.000, '100x100', 1, 99.99, 100.00, 0.00, 0x717569636b332e77656270, 0x717569636b322e77656270, 0x717569636b312e77656270, '', 'ativo'),
+(8, 1, 'Figura Morbius - Marvel - Marv', 'marvel', '2023-07-24 23:33:37', 's2', 2, 10.000, '1', 1, 45.00, 50.00, 10.00, 0x6d6f726269757320312e77656270, 0x6d6f7262697573322e77656270, 0x6d6f7262697573322e77656270, '', 'ativo'),
 (10, 1, 'Estátua Iron Man MK 46 - Capta', 'Marca oficial 4', '2023-07-22 00:22:17', '12', 3, 12.000, '100x100', 1, 10.00, 100.00, 0.00, 0x686f6d656d20312e77656270, 0x686f6d656d6e332e77656270, 0x686f6d656e322e77656270, '', 'ativo'),
 (12, 1, 'Estátua Grogu - The Mandaloria', 'Marca oficial 6', '2023-07-22 00:24:06', '12', 1, 12.000, '100x100', 1, 10.00, 100.00, 0.00, 0x796f6461312e6a7067, 0x796f6461322e77656270, 0x796f6461332e77656270, '', 'ativo'),
-(13, 1, 'Figura The Mandalorian and The', 'Marca oficial 7', '2023-07-22 00:26:23', '12', 8, 12.000, '100x100', 1, 110.00, 110.00, 0.00, 0x6d616e6461312e6a7067, 0x6d616e6461322e77656270, 0x6d616e6461332e6a7067, '', 'ativo'),
-(14, 1, 'Estátua The Joker - Multi Part', 'Marca oficial 25', '2023-07-22 00:28:23', '12', 2, 12.000, '100x100', 1, 970.20, 980.00, 1.00, 0x636f72696e6761312e77656270, 0x636f72696e6761322e77656270, 0x636f72696e6761332e77656270, '', 'ativo'),
-(17, 1, 'Estátua Teela Legends - Master', '', '2023-07-22 00:30:56', '', 3, 0.000, '', 0, 10800.00, 12000.00, 10.00, 0x636865312e77656270, 0x636865322e77656270, 0x636865332e77656270, 's', 'ativo'),
-(39, 2, 'Figura Ahsoka Tano - Star Wars', 'sad', '2023-07-22 00:36:23', 'sad', 2, 0.000, 'sad', 0, 45.15, 43.00, -5.00, 0x6631312e77656270, 0x66312e77656270, 0x6631332e77656270, '', 'ativo'),
-(41, 2, 'Estátua Scarlet Witch Premium ', 's', '2023-07-22 00:35:07', '11', 1, 0.000, '2', 2, 58.80, 60.00, 2.00, 0x657363322e6a7067, 0x657363332e77656270, 0x6573322e77656270, '', 'ativo'),
-(42, 1, 'Estátua Loki - Infinity Saga', 'Marca oficial 7', '2023-07-22 00:37:50', '12', 8, 12.000, '100x100', 1, 88.00, 88.00, 0.00, 0x6c312e6a7067, 0x6c322e77656270, 0x6c332e77656270, '', 'ativo'),
+(13, 2, 'Figura The Mandalorian and The', 'Marca oficial 7', '2023-07-21 03:00:00', '12', 8, 12.000, '100x100', 1, 110.00, 110.00, 0.00, 0x6d616e6461312e6a7067, 0x6d616e6461322e77656270, 0x6d616e6461332e6a7067, '', 'ativo'),
+(14, 3, 'Estátua The Joker - Multi Part', 'Marca oficial 25', '2023-07-21 03:00:00', '12', 2, 12.000, '100x100', 1, 970.20, 980.00, 1.00, 0x636f72696e6761312e77656270, 0x636f72696e6761322e77656270, 0x636f72696e6761332e77656270, '', 'ativo'),
+(17, 3, 'Estátua Teela Legends - Master', '', '2023-07-21 03:00:00', '', 3, 0.000, '', 0, 10800.00, 12000.00, 10.00, 0x636865312e77656270, 0x636865322e77656270, 0x636865332e77656270, '', 'ativo'),
+(39, 3, 'Figura Ahsoka Tano - Star Wars', 'sad', '2023-07-21 03:00:00', 'sad', 2, 0.000, 'sad', 0, 45.15, 43.00, -5.00, 0x6631312e77656270, 0x66312e77656270, 0x6631332e77656270, '', 'ativo'),
+(41, 1, 'Estátua Scarlet Witch Premium ', 's', '2023-07-21 03:00:00', '11', 1, 0.000, '2', 2, 58.80, 60.00, 2.00, 0x657363322e6a7067, 0x657363332e77656270, 0x6573322e77656270, '', 'ativo'),
+(42, 1, 'Estátua Loki - Infinity Saga', 'Marca oficial 7', '2023-07-24 22:36:38', '12', 8, 12.000, '100x100', 1, 88.00, 88.00, 0.00, 0x6c6f6b69312e6a7067, 0x6c6f6b69322e77656270, 0x6c6f6b69332e77656270, '', 'ativo'),
 (44, 1, 'Estátua Daredevil - Marvel Com', 's', '2023-07-22 00:39:18', '1', 1, 1.000, '1', 1, 90.09, 91.00, 1.00, 0x64312e77656270, 0x64322e77656270, 0x64332e77656270, '', 'ativo'),
-(47, 1, 'Figura Apocalypse - Marvel ', 'Marca', '2023-07-22 00:41:02', '7', 10, 2.000, '10/32', 5, 270.00, 70.00, 0.00, 0x61312e77656270, 0x61322e77656270, 0x61332e77656270, '', 'ativo'),
-(48, 1, 'Estátua Doctor Octopus - Marve', 'Marca', '2023-07-22 00:45:23', '7', 10, 2.000, '10/32', 5, 270.00, 70.00, 0.00, 0x30312e77656270, 0x30332e77656270, 0x6f322e77656270, '', 'ativo'),
-(49, 1, 'Galactus - Marvel', 'Marca', '2023-07-22 00:47:06', '7', 10, 2.000, '10/32', 5, 78.00, 78.00, 0.00, 0x67312e77656270, 0x67322e77656270, 0x67332e77656270, '', 'ativo'),
+(47, 3, 'Figura Apocalypse - Marvel ', 'Marca', '2023-07-21 03:00:00', '7', 10, 2.000, '10/32', 5, 270.00, 70.00, 0.00, 0x61312e77656270, 0x61322e77656270, 0x61332e77656270, '', 'ativo'),
+(48, 3, 'Estátua Doctor Octopus - Marve', 'Marca', '2023-07-21 03:00:00', '7', 10, 2.000, '10/32', 5, 270.00, 70.00, 0.00, 0x30312e77656270, 0x30332e77656270, 0x6f322e77656270, '', 'ativo'),
+(49, 3, 'Galactus - Marvel', 'Marca', '2023-07-21 03:00:00', '7', 10, 2.000, '10/32', 5, 78.00, 78.00, 0.00, 0x67312e77656270, 0x67322e77656270, 0x67332e77656270, '', 'ativo'),
 (50, 1, ' Estátua Ant-Man', 'Marca', '2023-07-22 00:48:49', '7', 10, 2.000, '10/32', 5, 54.00, 60.00, 10.00, 0x666f312e77656270, 0x666f322e77656270, 0x666f332e77656270, '', 'ativo'),
 (51, 1, 'Estátua Thor The Bronze Age - ', 'Marca', '2023-07-22 00:50:24', '7', 10, 2.000, '10/32', 5, 8280.00, 9200.00, 10.00, 0x74312e77656270, 0x74322e77656270, 0x74332e77656270, '', 'ativo'),
 (52, 1, 'Figura Thanos (Final Battle Ed', 'Marca', '2023-07-22 00:51:53', '7', 10, 2.000, '10/32', 5, 45.00, 45.00, 0.00, 0x7461312e77656270, 0x7461322e77656270, 0x7461332e77656270, '', 'ativo'),
-(53, 1, 'Estátua Ultraman Artlized', 'Marca', '2023-07-22 00:53:18', '7', 10, 2.000, '10/32', 5, 77.00, 77.00, 0.00, 0x75312e77656270, 0x75322e77656270, 0x75332e77656270, '', 'ativo'),
-(54, 1, 'Figura Batman Ninja 2.0', 'Marca', '2023-07-22 00:54:50', '7', 10, 2.000, '10/32', 5, 70.20, 78.00, 10.00, 0x62312e6a7067, 0x62322e6a7067, 0x62332e77656270, '', 'ativo'),
-(55, 1, 'Figura Harley Quinn', 'Marca', '2023-07-22 00:57:28', '7', 10, 2.000, '10/32', 5, 60.30, 67.00, 10.00, 0x6172312e77656270, 0x6172322e77656270, 0x6172332e77656270, '', 'ativo'),
-(56, 1, ' Estátua Nightcrawler - X-Men', 'Marca', '2023-07-22 00:58:58', '7', 10, 2.000, '10/32', 5, 34.00, 34.00, 0.00, 0x6e312e77656270, 0x6e322e77656270, 0x6e332e77656270, '', 'ativo'),
+(53, 7, 'Estátua Ultraman Artlized', 'Marca', '2023-07-21 03:00:00', '7', 10, 2.000, '10/32', 5, 77.00, 77.00, 0.00, 0x75312e77656270, 0x75322e77656270, 0x75332e77656270, '', 'ativo'),
+(54, 3, 'Figura Batman Ninja 2.0', 'Marca', '2023-07-21 03:00:00', '7', 10, 2.000, '10/32', 5, 70.20, 78.00, 10.00, 0x62312e6a7067, 0x62322e6a7067, 0x62332e77656270, '', 'ativo'),
+(55, 3, 'Figura Harley Quinn', 'Marca', '2023-07-21 03:00:00', '7', 10, 2.000, '10/32', 5, 60.30, 67.00, 10.00, 0x6172312e77656270, 0x6172322e77656270, 0x6172332e77656270, '', 'ativo'),
+(56, 3, ' Estátua Nightcrawler - X-Men', 'Marca', '2023-07-21 03:00:00', '7', 10, 2.000, '10/32', 5, 34.00, 34.00, 0.00, 0x6e312e77656270, 0x6e322e77656270, 0x6e332e77656270, '', 'ativo'),
 (57, 1, 'Estátua Magneto - Marvel', 'Marca', '2023-07-22 01:00:50', '7', 10, 2.000, '10/32', 5, 68.40, 76.00, 10.00, 0x6d312e77656270, 0x6d322e77656270, 0x6d332e77656270, '', 'ativo'),
-(58, 1, 'Space Jam', 'Marca', '2023-07-21 03:00:00', '7', 10, 2.000, '10/32', 5, 75.20, 80.00, 6.00, 0x7765312e77656270, 0x7765322e77656270, 0x7765332e77656270, '', 'ativo'),
-(59, 1, 'Estátua Ghost Rider - Ghost Ri', 'Marca', '2023-07-21 03:00:00', '7', 10, 2.000, '10/32', 5, 69.00, 69.00, 0.00, 0x676f332e77656270, 0x6773322e77656270, 0x676f332e77656270, '', 'ativo'),
+(58, 3, 'Space Jam', 'Marca', '2023-07-21 03:00:00', '7', 10, 2.000, '10/32', 5, 75.20, 80.00, 6.00, 0x7765312e77656270, 0x7765322e77656270, 0x7765332e77656270, '', 'ativo'),
+(59, 1, 'E.T. The Extra-Terrestrial ', 'Marca', '2023-07-24 23:36:23', '7', 10, 2.000, '10/32', 5, 480.00, 480.00, 0.00, 0x657420312e77656270, 0x657420322e77656270, 0x657420332e77656270, '', 'ativo'),
 (60, 1, ' Estátua Venom - Venom 2: Let ', 'ss', '2023-07-22 01:05:47', 's3', 1, 1.000, '1', 1, 76.44, 78.00, 2.00, 0x766573312e77656270, 0x766573322e77656270, 0x766573332e77656270, '', 'ativo'),
-(61, 2, 'Figura Kakashi Hatake The Fame', 'ss', '2023-07-22 01:06:09', 's3', 1, 1.000, '1', 1, 71.54, 73.00, 2.00, 0x6666312e77656270, 0x6666322e77656270, 0x6666332e77656270, '', 'ativo'),
-(62, 2, 'tet', 's', '2023-07-22 01:08:13', '1', 1, 1.000, '1', 1, 53.90, 55.00, 2.00, 0x7777312e77656270, 0x7777322e77656270, 0x7777332e77656270, '', 'ativo'),
-(63, 1, 'tet2', 's', '2023-07-18 03:00:00', '1', 1, 1.000, '1', 1, 4.90, 5.00, 2.00, 0x6b7261746f732e6a7067, 0x6775617264696f65732e6a7067, 0x6d697a75636f2e6a7067, '', 'ativo'),
+(61, 7, 'Figura Kakashi Hatake The Fame', 'ss', '2023-07-21 03:00:00', 's3', 1, 1.000, '1', 1, 71.54, 73.00, 2.00, 0x6666312e77656270, 0x6666322e77656270, 0x6666332e77656270, '', 'ativo'),
+(62, 1, 'Pantera Negra', 's', '2023-07-21 03:00:00', '1', 1, 1.000, '1', 1, 53.90, 55.00, 2.00, 0x7777312e77656270, 0x7777322e77656270, 0x7777332e77656270, '', 'ativo'),
+(63, 3, 'Robin', 's', '2023-07-24 23:46:09', '1', 1, 1.000, '1', 1, 176.40, 180.00, 2.00, 0x726f62696e20312e77656270, 0x726f62696e20322e77656270, 0x726f62696e20322e77656270, '', 'ativo'),
 (64, 1, 'tet3', 's', '2023-07-19 00:13:14', '1', 1, 1.000, '1', 1, 4.90, 5.00, 2.00, 0x66656e69782e6a7067, 0x6d697a75636f2e6a7067, 0x64656d6f6c69646f722e6a7067, '', 'ativo'),
 (65, 1, 'Moon Knight', 'ss', '2023-07-19 23:24:08', 's3', 1, 1.000, '1', 1, 680.00, 190.00, 2.00, 0x6d6f6f6e206b6e6967687420312e77656270, 0x6d6f6f6e206b6e6967687420322e77656270, 0x6d6f6f6e206b6e6967687420332e77656270, '', 'ativo'),
 (66, 1, ' Bloodsport', 'ss', '2023-07-19 23:26:45', 's3', 1, 1.000, '1', 1, 890.00, 190.00, 2.00, 0x426c6f6f6473706f727420312e77656270, 0x426c6f6f6473706f727420322e77656270, 0x426c6f6f6473706f727420332e77656270, '', 'ativo'),
@@ -716,7 +761,11 @@ INSERT INTO `usuario` (`id_usuario`, `nome_usuario`, `cpf_usuario`, `login_usuar
 (71, 'AAAAAAAAAAAAAAAAAAAA', '', 'teste', 'teste', 0x70696b616368752e6a7067, 'testeCaracteres@outlook.com', NULL, '', 0, NULL, '', '', NULL, NULL, '', ''),
 (72, 'bananaaaaaaaaaaaaaaa', NULL, 'bananaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa', 'banana', NULL, 'banana@banana.cmo', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '', ''),
 (73, 'bananaaaaaaaaaaaaaaa', '86912869124896', 'banana2', 'banana', 0x62616e616e612e706e67, 'bana@banana.com', NULL, '', 0, NULL, '', '', NULL, NULL, '', ''),
-(74, 'Peeeeeeeeeeedrinho', '691.246.814-28', 'PedroReiDelas', 'pedro', 0x6b69642e6a7067, 'pedrinho@outlook.com.br', '2004-02-08 00:00:00', 'Rua Edmundo Pereira', 111, 0.000, 'Jardim Fortaleza', '07153-050', NULL, 'Ativo', 'Ru', 'SP');
+(74, 'Peeeeeeeeeeedrinho', '691.246.814-28', 'PedroReiDelas', 'pedro', 0x6b69642e6a7067, 'pedrinho@outlook.com.br', '2004-02-08 00:00:00', 'Rua Edmundo Pereira', 111, 0.000, 'Jardim Fortaleza', '07153-050', NULL, 'Ativo', 'Ru', 'SP'),
+(75, 'jeffao', NULL, 'jeffao', '123', NULL, 'jeffao@gmail.com', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '', ''),
+(76, '', NULL, '', '', NULL, '', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '', ''),
+(77, 'jeff', NULL, 'jeff', '123', NULL, 'jeffao@gmail.com', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '', ''),
+(80, 'tosta', '129.486.129-88', 'tosta', 'tosta', 0x7061746f2e6a7067, 'niver@niver.com', '2023-07-24 00:00:00', 'Rua Edmundo Pereira', 11, 0.000, 'Jardim Fortaleza', '07153-050', NULL, 'Ativo', 'SP', 'Guarulhos');
 
 --
 -- Índices para tabelas despejadas
@@ -780,7 +829,7 @@ ALTER TABLE `categoria`
 -- AUTO_INCREMENT de tabela `compra`
 --
 ALTER TABLE `compra`
-  MODIFY `id_compra` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=354;
+  MODIFY `id_compra` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=368;
 
 --
 -- AUTO_INCREMENT de tabela `funcionario`
@@ -792,7 +841,7 @@ ALTER TABLE `funcionario`
 -- AUTO_INCREMENT de tabela `itemproduto`
 --
 ALTER TABLE `itemproduto`
-  MODIFY `id_itemproduto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=128;
+  MODIFY `id_itemproduto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=164;
 
 --
 -- AUTO_INCREMENT de tabela `produto`
@@ -804,7 +853,7 @@ ALTER TABLE `produto`
 -- AUTO_INCREMENT de tabela `usuario`
 --
 ALTER TABLE `usuario`
-  MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=75;
+  MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=81;
 
 --
 -- Restrições para despejos de tabelas
